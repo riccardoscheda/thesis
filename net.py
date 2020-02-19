@@ -11,7 +11,7 @@ import pandas as pd
 #iterations
 frames = 100
 #particles
-N = 5000
+n = 10
 #time step
 dt = 0.1
 ###################################
@@ -19,22 +19,23 @@ fig = plt.figure()
 
 matrix =  np.random.randint(2, size=(10,10))
 
+nodes = np.ones((10,10))
 def init():
 
     
-    im = plt.imshow(matrix)
+    im = plt.imshow(nodes)
     
     return im,
 
 
 def evo(frames):
     plt.clf()
+    for i in range(n):
+        for j in range(n):
+            nodes[i][j] = matrix[i][j] + nodes[i][j]
     
-    for i in range(10):
-        for j in range(10):    
-            matrix[i,j] = matrix[j,i]*matrix[i,j]
-    im = plt.imshow(matrix)
-    print(matrix)
+    im = plt.imshow(nodes)
+    #print(nodes)
     return im
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 200,init_func = init, blit = False)

@@ -6,7 +6,7 @@ from matplotlib.animation import FuncAnimation
 import matplotlib.animation as animation # animation plot
 import pandas as pd
 
-
+import networkx as nx
 
 #iterations
 frames = 100
@@ -27,6 +27,8 @@ up = np.zeros((n,1))
 #initial state
 nodes[0] = 1
 
+g = nx.Graph()
+
 def init():
 
     
@@ -35,7 +37,10 @@ def init():
     return im,
 
 
-
+def decimal(u):
+    b = '\n'.join(''.join('%d' %x for x in y) for y in u)
+    return int(b,2)
+    
 def evo(frames):
     plt.clf()
     up = np.zeros((n,1))
@@ -49,15 +54,16 @@ def evo(frames):
     
     up = matrix.dot(nodes)
 
-    im = plt.imshow(up)
+    #im = plt.imshow(up)
+    previous_state = decimal(nodes.T)
     
     for i in range(n):
         nodes[i] = up[i]
         
-    b = '\n'.join(''.join('%d' %x for x in y) for y in nodes.T)
-    decimal = int(b,2)
-    print(decimal)
-    
+    state = decimal(nodes.T)
+    g.add_edge(previous_state,state)
+    #print(g.nodes())
+    nx.draw(g)
     return im
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 200,init_func = init, blit = False)

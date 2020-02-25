@@ -53,7 +53,10 @@ def evo(frames):
     
     for i in range(n):
         nodes[i] = up[i]
-    print(nodes.T)
+        
+    b = '\n'.join(''.join('%d' %x for x in y) for y in nodes.T)
+    decimal = int(b,2)
+    print(decimal)
     
     return im
 

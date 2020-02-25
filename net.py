@@ -31,7 +31,7 @@ up = np.zeros((n,1))
 nodes[0] = 1
 
 g = nx.Graph()
-
+pos = nx.layout.spring_layout(g)
 
 def decimal(u):
     b = '\n'.join(''.join('%d' %x for x in y) for y in u)
@@ -82,8 +82,16 @@ def evo(frames):
     g.add_edge(previous_state,state)
 
     ax[0].imshow(nodes.T)
-    ax[1] = nx.draw_circular(g)
+    pos = nx.layout.circular_layout(g)
+    ax[1] = nx.draw(g,pos = pos)
+    ax[1] = nx.draw_networkx_nodes(g,pos,
+                       nodelist=[state],
+                       node_color='g')
+    ax[1] = nx.draw_networkx_nodes(g,pos,
+                       nodelist=[previous_state],
+                       node_color='y')
     
+
     
     return  ax[0], ax[1] 
 

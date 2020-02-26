@@ -1,4 +1,6 @@
 
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
@@ -13,9 +15,8 @@ frames = 100
 #particles
 n = 100
 #time step
-dt = 0.1
+
 ###################################
-fig, ax = plt.subplots(2,2)
 
 #matrix =  np.random.randint(2, size=(n,n))
 # matrix = np.array([[0,1,0,0,0],
@@ -29,7 +30,7 @@ nodes = np.zeros((n,1))
 up = np.zeros((n,1))
 #initial state
 # nodes[0] = 1
-nodes[-3] = 1
+#nodes[-3] = 1
 #nodes = np.random.randint(2,size= (n,1))
 
 labels = {}
@@ -55,62 +56,38 @@ g1 = nx.from_numpy_matrix(matrix)
 
 
 
-def init():
+initial_states = []
 
-    
-    ax[0,0].imshow(nodes.T)
-    ax[1,0] = nx.draw(g)
-    ax[0,1].imshow(matrix)
-    
-    return ax[0,0],
-
-
-def change():
-    nodes = np.zeros((n,1))
-    up = np.zeros((n,1))
-
-
-def evo(frames):
-    plt.ion()
-    plt.cla()
-    
-    
+def evo(nodes,t):
     
     up = np.zeros((n,1))
     up = matrix.dot(nodes)
     previous_state = decimal(nodes.T)
-    
+    if t == 1:
+        initial_states.append(previous_state)
+        
     for i in range(n):
         nodes[i] = up[i]
     state = decimal(nodes.T)
     g.add_edge(previous_state,state)
-
-    # for i in range(n):
-    #     somma = 0
-    #     for j in range(n):
-    #         somma  = somma + matrix[i][j] * nodes[i]
-    #    # up[i]= somma
-    
-    
-    
-
-    ax[0,0].imshow(nodes.T)
-    pos = nx.layout.circular_layout(g)
-    ax[1,0] = nx.draw(g,pos = pos)
-    ax[1,0] = nx.draw_networkx_nodes(g,pos,
-                       nodelist=[state],
-                       node_color='g')
-    ax[1,0] = nx.draw_networkx_nodes(g,pos,
-                       nodelist=[previous_state],
-                       node_color='y')
     labels[state] = state
-    ax[1,0] = nx.draw_networkx_labels(g,pos,labels,font_size=5)
-
     
-    ### changin initial conditions after a time t
-      
-    return  ax[0,0], ax[1,0] ,ax[1,1], [0,1]
+def shuffle(nodes):
+    for i in range(n):
+        nodes = np.zeros((n,1))
+        nodes[i] = 1
+        for t in range(100):
+            evo(nodes,t)
+            
+            
+shuffle(nodes) 
+       
 
+pos = nx.layout.kamada_kawai_layout(g)
 
-ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 200,init_func = init, blit = False)
+nx.draw(g,pos = pos)
+nx.draw_networkx_nodes(g,pos,
+                       nodelist=initial_states,node_color='r')
+#nx.draw(g1)
+nx.draw_networkx_labels(g,pos,labels,font_size=1)
 

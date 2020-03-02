@@ -11,25 +11,26 @@ import networkx as nx
 #iterations
 frames = 100
 #particles
-n = 100
+n = 5
 #time step
 dt = 0.1
 ###################################
 fig, ax = plt.subplots(2,2)
 
 #matrix =  np.random.randint(2, size=(n,n))
-# matrix = np.array([[0,1,0,0,0],
-#           [0,0,1,0,0],
-#           [1,0,0,0,0],
-#           [0,1,0,0,0],
-#           [0,0,1,0,0]])
+matrix = np.array([[0,1,0,0,0],
+          [0,0,1,0,0],
+          [0,0,0,1,0],
+          [0,0,0,0,1],
+          [0,0,1,0,0]])
 
 
+matrix = matrix.T
 nodes = np.zeros((n,1))
 up = np.zeros((n,1))
 #initial state
 # nodes[0] = 1
-nodes[-3] = 1
+nodes[0] = 1
 #nodes = np.random.randint(2,size= (n,1))
 
 labels = {}
@@ -48,8 +49,8 @@ def random_adjancency_matrix(n):
 
     return matrix
 
-matrix = random_adjancency_matrix(n).T
-print(matrix)
+# matrix = random_adjancency_matrix(n).T
+# print(matrix)
 
 g1 = nx.from_numpy_matrix(matrix)
 
@@ -60,7 +61,7 @@ def init():
     
     ax[0,0].imshow(nodes.T)
     ax[1,0] = nx.draw(g)
-    ax[0,1].imshow(matrix)
+    ax[0,1].imshow(matrix.T)
     
     return ax[0,0],
 

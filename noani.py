@@ -13,7 +13,7 @@ import networkx as nx
 #iterations
 frames = 100
 #particles
-n = 20
+n = 5
 
 ###################################
 
@@ -51,6 +51,13 @@ def random_adjancency_matrix(n):
 
 matrix = random_adjancency_matrix(n).T
 matrix = np.random.randint(2,size= (n,n))
+
+matrix = np.array([[0,1,0,0,0],
+          [0,0,1,0,0],
+          [0,0,0,1,0],
+          [0,0,0,0,1],
+          [0,0,1,0,0]])
+
 
 print(matrix)
 

@@ -11,18 +11,19 @@ import networkx as nx
 #iterations
 frames = 100
 #particles
-n = 5
+n = 6
 #time step
 dt = 0.1
 ###################################
 fig, ax = plt.subplots(2,2)
 
 #matrix =  np.random.randint(2, size=(n,n))
-matrix = np.array([[0,1,0,0,0],
-          [0,0,1,0,0],
-          [0,0,0,1,0],
-          [0,0,0,0,1],
-          [0,0,1,0,0]])
+matrix = np.array([[0,1,0,0,0,0],
+          [0,0,1,0,0,0],
+          [0,0,0,1,0,0],
+          [0,0,0,0,1,0],
+          [0,0,1,0,0,0],
+          [0,0,0,0,0,0]])
 
 
 matrix = matrix.T
@@ -40,7 +41,8 @@ time = []
 
 def decimal(u):
     b = '\n'.join(''.join('%d' %x for x in y) for y in u)
-    return int(b,2)
+    #return int(b,2)
+    return b
     
 def random_adjancency_matrix(n):
     matrix = np.zeros((n,n))
@@ -92,9 +94,14 @@ def evo(frames):
     #         somma  = somma + matrix[i][j] * nodes[i]
     #    # up[i]= somma
     
-    
-    
 
+    time.append(1)
+    ### changin initial conditions after a time t
+    if len(time)>5:
+        nodes[-1] = 0
+        #matrix[0][5] = 1
+        
+        
     ax[0,0].imshow(nodes.T)
     pos = nx.layout.circular_layout(g)
     ax[1,0] = nx.draw(g,pos = pos)
@@ -107,9 +114,6 @@ def evo(frames):
     labels[state] = state
     ax[1,0] = nx.draw_networkx_labels(g,pos,labels,font_size=5)
 
-    
-    ### changin initial conditions after a time t
-      
     return  ax[0,0], ax[1,0] ,ax[1,1], [0,1]
 
 

@@ -1,28 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 <gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
-  <meta lastmodifieddate="2020-03-02">
+  <meta lastmodifieddate="2020-03-03">
     <creator>NetworkX 2.4</creator>
   </meta>
   <graph defaultedgetype="directed" mode="static" name="">
     <nodes>
       <node id="10000" label="10000" />
-      <node id="00000" label="00000" />
       <node id="01000" label="01000" />
       <node id="00100" label="00100" />
-      <node id="01001" label="01001" />
-      <node id="10010" label="10010" />
       <node id="00010" label="00010" />
       <node id="00001" label="00001" />
     </nodes>
     <edges>
-      <edge id="0" source="10000" target="00000" />
-      <edge id="1" source="00000" target="00000" />
-      <edge id="2" source="01000" target="10000" />
-      <edge id="3" source="00100" target="01001" />
-      <edge id="4" source="01001" target="10010" />
-      <edge id="5" source="10010" target="00100" />
-      <edge id="6" source="00010" target="00100" />
-      <edge id="7" source="00001" target="00010" />
+      <edge id="0" source="10000" target="01000" />
+      <edge id="1" source="01000" target="00100" />
+      <edge id="2" source="00100" target="00010" />
+      <edge id="3" source="00010" target="00001" />
+      <edge id="4" source="00001" target="00100" />
     </edges>
   </graph>
 </gexf>

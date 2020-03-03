@@ -49,8 +49,8 @@ def random_adjancency_matrix(n):
 
     return matrix
 
-matrix = random_adjancency_matrix(n).T
-matrix = np.random.randint(2,size= (n,n))
+#matrix = random_adjancency_matrix(n).T
+#matrix = np.random.randint(2,size= (n,n))
 
 matrix = np.array([[0,1,0,0,0],
           [0,0,1,0,0],
@@ -61,7 +61,7 @@ matrix = np.array([[0,1,0,0,0],
 
 print(matrix)
 
-g1 = nx.from_numpy_matrix(matrix)
+#g1 = nx.from_numpy_matrix(matrix)
 
 
 
@@ -72,13 +72,26 @@ final_states = []
 def evo(nodes,t):
     
     up = np.zeros((n,1))
-    up = matrix.dot(nodes)
+    #up = matrix.dot(nodes)
     previous_state = decimal(nodes.T)
     if t == 0:
         initial_states.append(previous_state)
         
+    # for i in range(n):
+    #     nodes[i] = up[i]
+        
     for i in range(n):
-        nodes[i] = up[i]
+        somma = 0 
+        for j in range(n):
+            somma = somma + matrix[j][i]*nodes[j]
+        up[i] = somma
+    
+    for i in range(n):
+        if up[i] != 0:
+            nodes[i] = 1
+        else:
+            nodes[i] = 0 
+        
     state = decimal(nodes.T)
     g.add_edge(previous_state,state)
     labels[state] = state
@@ -92,7 +105,8 @@ def shuffle(nodes):
         for t in range(100):
             evo(nodes,t)
             
-            
+state = decimal(nodes.T)
+labels[state] = state         
 shuffle(nodes) 
 
 
@@ -102,7 +116,7 @@ g1 = nx.from_numpy_matrix(matrix)
 
 pos = nx.layout.spring_layout(g)
 
-nx.draw_networkx(g,pos = pos,node_size = 15,with_labels= False)
+nx.draw_networkx(g,pos = pos,node_size = 15,with_labels= True)
 nx.draw_networkx_nodes(g,pos,
                        nodelist=initial_states,node_color='y',node_size = 15)
 nx.draw_networkx_nodes(g,pos,
@@ -111,6 +125,6 @@ nx.draw_networkx_nodes(g,pos,
 plt.show()
 #nx.draw(g1)
 plt.show
-#nx.draw_networkx_labels(g,pos,labels,font_size=1)
+#nx.draw_networkx_labels(g,pos,labels,font_size=10)
 
 nx.write_gexf(g,"net.gexf")

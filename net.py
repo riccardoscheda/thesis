@@ -54,7 +54,7 @@ def random_adjancency_matrix(n):
 # matrix = random_adjancency_matrix(n).T
 # print(matrix)
 
-g1 = nx.from_numpy_matrix(matrix)
+#g1 = nx.from_numpy_matrix(matrix)
 
 
 
@@ -62,9 +62,13 @@ def init():
 
     
     ax[0,0].imshow(nodes.T)
-    ax[1,0] = nx.draw(g)
+    #ax[1,0] = nx.draw(g)
     ax[0,1].imshow(matrix.T)
+    ax[1,0] = nx.draw(g)
     
+    state = decimal(nodes.T)
+    labels[state] = state
+    ax[1,0] = nx.draw_networkx_labels(g,labels,font_size=5)
     return ax[0,0],
 
 
@@ -80,14 +84,20 @@ def evo(frames):
     
     
     up = np.zeros((n,1))
-    up = matrix.dot(nodes)
+    #up = matrix.dot(nodes)
     previous_state = decimal(nodes.T)
     
     for i in range(n):
-        nodes[i] = up[i]
-    state = decimal(nodes.T)
-    g.add_edge(previous_state,state)
-
+        somma = 0 
+        for j in range(n):
+            somma = somma + matrix[i][j]*nodes[j]
+        up[i] = somma
+        
+    for i in range(n):
+        if up[i] != 0:
+            nodes[i] = 1
+        else:
+            nodes[i] = 0 
     # for i in range(n):
     #     somma = 0
     #     for j in range(n):
@@ -97,25 +107,29 @@ def evo(frames):
 
     time.append(1)
     ### changin initial conditions after a time t
-    if len(time)>5:
-        nodes[-1] = 0
-        #matrix[0][5] = 1
+    if len(time)>10:
+        nodes[-1] = 1
+        matrix[0][5] = 0
         
-        
+    state = decimal(nodes.T)
+    g.add_edge(previous_state,state)
+
     ax[0,0].imshow(nodes.T)
-    pos = nx.layout.circular_layout(g)
-    ax[1,0] = nx.draw(g,pos = pos)
-    ax[1,0] = nx.draw_networkx_nodes(g,pos,
+    npos = nx.layout.shell_layout(g)
+    
+    ax[1,0] = nx.draw(g,pos = npos)
+    ax[1,0] = nx.draw_networkx_nodes(g,npos,
                        nodelist=[state],
                        node_color='g')
-    ax[1,0] = nx.draw_networkx_nodes(g,pos,
+    ax[1,0] = nx.draw_networkx_nodes(g,npos,
                        nodelist=[previous_state],
                        node_color='y')
     labels[state] = state
-    ax[1,0] = nx.draw_networkx_labels(g,pos,labels,font_size=5)
+    ax[1,0] = nx.draw_networkx_labels(g,npos,labels,font_size=5)
+    ax[0,1].imshow(matrix.T)
+    
+    return  ax[0,0], ax[1,0] ,ax[1,1], ax[0,1]
 
-    return  ax[0,0], ax[1,0] ,ax[1,1], [0,1]
 
-
-ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 200,init_func = init, blit = False)
+ani = FuncAnimation(fig, evo, frames = np.arange(0,1000), interval = 200,init_func = init, blit = False)
 

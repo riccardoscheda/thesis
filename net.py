@@ -98,18 +98,12 @@ def evo(frames):
             nodes[i] = 1
         else:
             nodes[i] = 0 
-    # for i in range(n):
-    #     somma = 0
-    #     for j in range(n):
-    #         somma  = somma + matrix[i][j] * nodes[i]
-    #    # up[i]= somma
-    
 
     time.append(1)
     ### changin initial conditions after a time t
-    if len(time)>10:
+    if len(time)>20:
         nodes[-1] = 1
-        matrix[0][5] = 0
+        matrix[4][5] = 1
         
     state = decimal(nodes.T)
     g.add_edge(previous_state,state)
@@ -126,10 +120,11 @@ def evo(frames):
                        node_color='y')
     labels[state] = state
     ax[1,0] = nx.draw_networkx_labels(g,npos,labels,font_size=5)
-    ax[0,1].imshow(matrix.T)
+    ax[0,1].imshow(matrix)
     
     return  ax[0,0], ax[1,0] ,ax[1,1], ax[0,1]
 
 
-ani = FuncAnimation(fig, evo, frames = np.arange(0,1000), interval = 200,init_func = init, blit = False)
+ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 200,init_func = init, blit = False)
+#ani.save('network.gif',dpi = 100,writer = "imagemagick")
 

@@ -12,8 +12,8 @@ import integration as inte
 n = 2
 #transition matrix
 W = np.random.uniform(-1,1,size = (n,n))
-W = np.array([[-10,0],
-              [0,0]])
+W = np.array([[-0.5,0.2],
+              [0.5,-0.2]])
 #mean lifetime of ecited states
 gamma = np.random.uniform(0,1,size = (n))
 
@@ -26,7 +26,7 @@ L = W - gamma*np.identity(n)
 
 
 ############PARAMETERS######################################
-gamma = 1.
+gamma = 1.5
 eps = 0.6
 #######################################################
 
@@ -39,8 +39,8 @@ N = n
 dt = 0.1
 
 ##############################################################
-qx, px = np.ones(N), -np.ones(N)
-qx[0] = 1
+qx, px = np.ones(N)*0.5, np.zeros(N)
+
 ########################################################
 fig, ax = plt.subplots(2,2)
 
@@ -70,7 +70,7 @@ shannon = []
 def init():
 
   ax[0,0].set_xlim(0,100)
-  ax[0,0].set_ylim(-10,10)
+  ax[0,0].set_ylim(-1,1)
   # ax[0,0].set_title("Distribution of momenta")
   # ax[0,0].set_xlabel("p")
   # ax[0,0].set_ylabel("rho_p")

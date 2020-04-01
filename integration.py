@@ -21,7 +21,7 @@ def phi(q,p,W,i):
     Return the derivative of the potential with respect to q.
     """
 
-    return p , W
+    return p , W  -q
 
 
 def entropy(rho,bins):
@@ -100,6 +100,9 @@ def simplettic(q,p,dt,eps,gamma,W,i):
     eps = 0
     #evolution of the coordinates q and p
     #evoq = q + phi(q,p + dt*phi(q, p,W,i)[1],W,i)[0]*dt
-    evoq = q + p*dt
+    #evoq = q + p*dt
     evop = p -gamma*p*dt + phi(q,p,W,i)[1]*dt + eps*np.sqrt(dt)*csi
+    
+    
+    evoq = q - gamma*q*dt + W
     return evoq, evop

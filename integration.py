@@ -104,5 +104,5 @@ def simplettic(q,p,dt,eps,gamma,W,i):
     evop = p -gamma*p*dt + phi(q,p,W,i)[1]*dt + eps*np.sqrt(dt)*csi
     
     
-    evoq = q - gamma*q*dt + W +  eps*abs(np.cos(q))
+    evoq = q - gamma*q*dt + W #+ eps*abs(np.cos(dt)*i)
     return evoq, evop

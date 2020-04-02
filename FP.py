@@ -9,20 +9,21 @@ import integration as inte
 
 
 #number of genes
-n = 2
+n = 5
 #transition matrix
 W = np.random.uniform(-1,1,size = (n,n))
-W = np.array([[-0.5,0.3],
-              [0.5,-0.7]])
+# W = np.array([[-0.5,0.3,0.1],
+#               [0.5,-0.7,0.2],
+#               [0.1,-0.1,0.2]])
 #mean lifetime of ecited states
-gamma = np.ones(n)*1.5
+gamma = np.ones(n)*2
 gammahat = sum(W)
 
 deltagamma = gamma - gammahat
 #laplacian matrix
 L = W - gammahat*np.identity(n)
 
-############PARAMETERS######################################
+############PARAMETERS#################################
 eps = 0.1
 #######################################################
 
@@ -35,13 +36,14 @@ N = n
 dt = 0.1
 
 ##############################################################
-qx, px = np.ones(N)*0, np.zeros(N)*0
+qx, px = np.ones(N)*0.5, np.zeros(N)*0.5
 
 ########################################################
 fig, ax = plt.subplots(2,2)
 
 particle, = ax[0,0].plot([],[], label = "p")
 trajectory = []
+nodes = np.ones((1,n))
 
 for i in range(n):
     t, = ax[0,0].plot([],[], label = "fit")
@@ -51,7 +53,7 @@ maxwelldist, = ax[1,0].step([],[],label = 'distribution')
 maxwellfit, = ax[1,0].plot([],[],label = "fit")
 # ax[0,0].legend()
 # ax[1,0].legend()
-phasespace, = ax[0,1].step([],[])
+#phasespace, = ax[0,1].step([],[])
 entr, = ax[1,1].plot([],[], label = "S")
 shan, = ax[1,1].plot([],[], linestyle = "--", label = "S_infty")
 #ax[1,1].legend()
@@ -59,18 +61,21 @@ shan, = ax[1,1].plot([],[], linestyle = "--", label = "S_infty")
 
 tx = []
 tp = []
+t3 = []
+
 entropy = []
 shannon = []
 
 
 def init():
 
-  ax[0,0].set_xlim(0,100)
-  ax[0,0].set_ylim(-1,1)
+  ax[0,0].set_xlim(-0.1,100)
+  ax[0,0].set_ylim(-1.5,1.5)
   # ax[0,0].set_title("Distribution of momenta")
   # ax[0,0].set_xlabel("p")
   # ax[0,0].set_ylabel("rho_p")
 
+  ax[0,1].imshow(nodes)
   # ax[0,1].set_xlim(-5,5)
   # ax[0,1].set_ylim(0,0.1)
   # ax[0,1].set_xlabel("x")
@@ -91,21 +96,33 @@ def init():
 
   return trajectory[0],
 
+def realization(p,nodes,i):
+    if np.random.uniform(0,1)<p:
+        nodes[0][i] = 1
+    else:
+        nodes[0][i] = 0 
+        
 def evo(frames):
     for i in range(N):
       s = np.sum(L [i].dot(qx))
+      s = 0 
       qx[i], px[i] = inte.simplettic(qx[i], px[i],dt,eps  ,deltagamma[i],s,i)
+      realization(qx[i],nodes,i)
       
-      
+    
     tx.append(qx[0])
     tp.append(qx[1])  
+    t3.append(qx[2])
     
     #particle.set_data(np.arange(0,len(tx)),tx)
     trajectory[0].set_data(np.arange(0,len(tx)),tx)
     trajectory[1].set_data(np.arange(0,len(tp)),tp)
+    trajectory[2].set_data(np.arange(0,len(t3)),t3)
         
-
-    return trajectory[0],trajectory[1], phasespace, maxwelldist, maxwellfit, entr, shan
+    
+    ax[0,1].imshow(nodes)
+    
+    return trajectory[0],trajectory[1],trajectory[2],trajectory[4], ax[0,1], maxwelldist, maxwellfit, entr, shan
 
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 50,init_func = init, blit = True)

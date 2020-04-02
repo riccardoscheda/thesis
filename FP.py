@@ -12,22 +12,18 @@ import integration as inte
 n = 2
 #transition matrix
 W = np.random.uniform(-1,1,size = (n,n))
-W = np.array([[-0.5,0.2],
-              [0.5,-0.2]])
+W = np.array([[-0.5,0.3],
+              [0.5,-0.7]])
 #mean lifetime of ecited states
-gamma = np.random.uniform(0,1,size = (n))
+gamma = np.ones(n)*1.5
+gammahat = sum(W)
 
-#probability tha the node is in the state 1
-p = np.ones(n)
-
-
+deltagamma = gamma - gammahat
 #laplacian matrix
-L = W - gamma*np.identity(n)
-
+L = W - gammahat*np.identity(n)
 
 ############PARAMETERS######################################
-gamma = 1.5
-eps = 0.6
+eps = 0.1
 #######################################################
 
 
@@ -39,7 +35,7 @@ N = n
 dt = 0.1
 
 ##############################################################
-qx, px = np.ones(N)*0.5, np.zeros(N)
+qx, px = np.ones(N)*0, np.zeros(N)*0
 
 ########################################################
 fig, ax = plt.subplots(2,2)
@@ -97,8 +93,8 @@ def init():
 
 def evo(frames):
     for i in range(N):
-      s = np.sum(W[i].dot(qx))
-      qx[i], px[i] = inte.simplettic(qx[i], px[i],dt,eps  ,gamma,s,i)
+      s = np.sum(L [i].dot(qx))
+      qx[i], px[i] = inte.simplettic(qx[i], px[i],dt,eps  ,deltagamma[i],s,i)
       
       
     tx.append(qx[0])

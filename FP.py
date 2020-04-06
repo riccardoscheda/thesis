@@ -66,6 +66,10 @@ t3 = []
 entropy = []
 shannon = []
 
+t = {}
+
+for i in range(n):
+    t[i] = []
 
 def init():
 
@@ -75,7 +79,7 @@ def init():
   # ax[0,0].set_xlabel("p")
   # ax[0,0].set_ylabel("rho_p")
 
-  ax[0,1].imshow(nodes)
+  #ax[0,1].imshow(nodes)
   # ax[0,1].set_xlim(-5,5)
   # ax[0,1].set_ylim(0,0.1)
   # ax[0,1].set_xlabel("x")
@@ -107,22 +111,14 @@ def evo(frames):
       s = np.sum(L [i].dot(qx))
       s = 0 
       qx[i]= inte.simplettic(qx[i],dt,eps  ,deltagamma[i],s,i)
-      realization(qx[i],nodes,i)
-      
+      #realization(qx[i],nodes,i)
+      t[i].append(qx[i])
+      trajectory[i].set_data(np.arange(0,len(t[i])),t[i])
     
-    tx.append(qx[0])
-    tp.append(qx[1])  
-    t3.append(qx[2])
     
-    #particle.set_data(np.arange(0,len(tx)),tx)
-    trajectory[0].set_data(np.arange(0,len(tx)),tx)
-    trajectory[1].set_data(np.arange(0,len(tp)),tp)
-    trajectory[2].set_data(np.arange(0,len(t3)),t3)
-        
+   # ax[0,1].imshow(nodes)
     
-    ax[0,1].imshow(nodes)
-    
-    return trajectory[0],trajectory[1],trajectory[2],trajectory[4], ax[0,1], maxwelldist, maxwellfit, entr, shan
+    return trajectory[0],trajectory[1],trajectory[2],trajectory[3],trajectory[4], maxwelldist, maxwellfit, entr, shan
 
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 50,init_func = init, blit = True)

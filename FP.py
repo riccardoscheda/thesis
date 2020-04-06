@@ -106,7 +106,7 @@ def evo(frames):
     for i in range(N):
       s = np.sum(L [i].dot(qx))
       s = 0 
-      qx[i], px[i] = inte.simplettic(qx[i], px[i],dt,eps  ,deltagamma[i],s,i)
+      qx[i]= inte.simplettic(qx[i],dt,eps  ,deltagamma[i],s,i)
       realization(qx[i],nodes,i)
       
     

@@ -82,7 +82,7 @@ def euler(q,p,dt ,eps,gamma):
     return evoq, evop
 
 
-def simplettic(q,p,dt,eps,gamma,W,i):
+def simplettic(q,dt,eps,gamma,W,i):
     """
     Simplettic integration method to obtain the evolution of the system
     Parameters:
@@ -101,8 +101,8 @@ def simplettic(q,p,dt,eps,gamma,W,i):
     #evolution of the coordinates q and p
     #evoq = q + phi(q,p + dt*phi(q, p,W,i)[1],W,i)[0]*dt
     #evoq = q + p*dt
-    evop = p -gamma*p*dt + phi(q,p,W,i)[1]*dt + eps*np.sqrt(dt)*csi
+    #evop = p -gamma*p*dt + phi(q,p,W,i)[1]*dt + eps*np.sqrt(dt)*csi
     
     
     evoq = q - gamma*q*dt + W #+ eps*abs(np.cos(dt)*i)
-    return evoq, evop
+    return evoq

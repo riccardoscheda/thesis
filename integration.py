@@ -96,7 +96,7 @@ def simplettic(q,dt,eps,gamma,W,i):
 
     """
     # white noise
-    csi = np.random.normal(0, 1.)
+    #csi = np.random.normal(0, 1.)
     
     #evolution of the coordinates q and p
     #evoq = q + phi(q,p + dt*phi(q, p,W,i)[1],W,i)[0]*dt
@@ -104,5 +104,5 @@ def simplettic(q,dt,eps,gamma,W,i):
     #evop = p -gamma*p*dt + phi(q,p,W,i)[1]*dt + eps*np.sqrt(dt)*csi
     
     
-    evoq = q - gamma*q*dt + W #+ eps*abs(np.cos(dt)*i)
+    evoq = q - gamma*q*dt + W*dt #+ eps*abs(np.cos(dt)*i)
     return evoq

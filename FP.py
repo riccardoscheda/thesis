@@ -11,16 +11,16 @@ import integration as inte
 #number of genes
 n = 3
 #transition matrix
-#W = np.random.uniform(-1,1,size = (n,n))
+W = np.random.uniform(0,1,size = (n,n))
 # W = np.array([[-0.5,0.3,0.1],
 #               [0.5,-0.7,0.2],
 #               [0.1,-0.1,0.2]])
-W = np.array([[0,1,0],
-              [1,0,0],
-              [0,0.,0]])
+# W = np.array([[0,1,0],
+#               [1,0,0],
+#               [0,0.,0]])
 
 #mean lifetime of ecited states
-gamma = np.ones(n)*1.
+gamma = np.ones(n)*2.
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat
@@ -44,7 +44,7 @@ dt = 0.1
 ##############################################################
 qx= np.ones(N)*0.5
 qx[0] = 1
-qx[1] = .0
+qx[1] = .5
 qx[2] = 0
 ########################################################
 fig, ax = plt.subplots(2,2)
@@ -127,11 +127,11 @@ def evo(frames):
       trajectory[i].set_data(np.arange(0,len(t[i])),t[i])
     
 
-    ax[0,1].imshow(nodes)
+    #ax[0,1].imshow(nodes)
     #print(nodes, end = "\r")
-    if frames == 50:
-        plt.savefig("ciao.png")
-    return trajectory[0],trajectory[1],trajectory[2],ax[0,1]
+    # if frames == 50:
+    #     plt.savefig("ciao.png")
+    return trajectory[0],trajectory[1],trajectory[2]#,ax[0,1]
 
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 50,init_func = init, blit = False)

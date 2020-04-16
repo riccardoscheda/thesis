@@ -9,7 +9,7 @@ import integration as inte
 
 
 #number of genes
-n = 3
+n = 100
 #transition matrix
 W = np.random.uniform(0,1,size = (n,n))
 # W = np.array([[-0.5,0.3,0.1],
@@ -19,13 +19,14 @@ W = np.random.uniform(0,1,size = (n,n))
 #               [1,0,0],
 #               [0,0.,0]])
 
+W = np.zeros((n,n))
+W[21] = 1
 #mean lifetime of ecited states
-gamma = np.ones(n)*2.
+gamma = np.ones(n)*10
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat
-deltagamma
-#deltagamma = np.ones(n)*2
+deltagamma = np.zeros(n)
 #laplacian matrix
 L = W - gammahat*np.identity(n)
 L
@@ -39,20 +40,21 @@ frames = 100
 #particles
 N = n
 #time step
-dt = 0.1
+dt = 0.05
 
 ##############################################################
-qx= np.ones(N)*0.5
-qx[0] = 1
-qx[1] = .5
-qx[2] = 0
+qx= np.zeros(N)*0.5
+qx[44] = 0.5
+qx[45] = 1
+qx[55] = 0
+qx[54] = 0
 ########################################################
 fig, ax = plt.subplots(2,2)
 
 upper, = ax[0,0].plot([],[], c="black",linestyle = "--",label = "p")
 lower, = ax[0,0].plot([],[], c="black",linestyle = "--",label = "p")
 trajectory = []
-nodes = np.ones((1,n))
+nodes = np.zeros((1,n))
 
 for i in range(n):
     t, = ax[0,0].plot([],[], label = "fit")
@@ -81,7 +83,7 @@ def init():
   # ax[0,0].set_xlabel("p")
   # ax[0,0].set_ylabel("rho_p")
 
-  ax[0,1].imshow(nodes)
+  ax[0,1].imshow(nodes.reshape(10,10))
   # ax[0,1].set_xlim(-5,5)
   # ax[0,1].set_ylim(0,0.1)
   # ax[0,1].set_xlabel("x")
@@ -117,21 +119,22 @@ def realization(p,nodes,i):
 def evo(frames):
     for i in range(N):
       #laplacian matrix
-      s = np.sum(L[i].dot(qx))
+      s = np.sum(L[i].dot(nodes[0]))
       #s = np.sum(W[i].dot(qx))
       #s = 0 
-      qx[i]= inte.simplettic(qx[i],dt,eps,deltagamma[i],s,i)
+      #print(s)
+      qx[i]= inte.simplettic(qx[i],nodes[0][i],dt,eps,deltagamma[i],s,i)
+      
       
       realization(qx[i],nodes,i)
       t[i].append(qx[i])
       trajectory[i].set_data(np.arange(0,len(t[i])),t[i])
     
 
-    #ax[0,1].imshow(nodes)
-    #print(nodes, end = "\r")
-    # if frames == 50:
-    #     plt.savefig("ciao.png")
-    return trajectory[0],trajectory[1],trajectory[2]#,ax[0,1]
+    ax[0,1].imshow(nodes.reshape(10,10))
+    #print(sum)
+
+    return ax[0,1], #trajectory[0]#,trajectory[1],trajectory[2]#,
 
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 50,init_func = init, blit = False)

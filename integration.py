@@ -110,7 +110,7 @@ def simplettic(q,node,dt,eps,gamma,W,i):
 
 import random
 
-precision = 100
+precision = 1000
 
 def create_transition_matrix(n) :
     matrix = []

@@ -12,22 +12,24 @@ import integration as inte
 n = 100
 #transition matrix
 W = inte.create_transition_matrix(n)
-# W = np.array([[-0.5,0.3,0.1],
-#               [0.5,-0.7,0.2],
-#               [0.1,-0.1,0.2]])
-# W = np.array([[0,1,0],
-#               [1,0,0],
-#               [0,0.,0]])
-print(sum(W[2]))
+
+W = np.zeros((n,n))
+W[0][2] = 0.5
+W[0][1] = 0.5
+W[1][0] = 0.5
+W[1][2] = 0.5
+W[2][0] = 0.5
+W[2][1] = 0.5
+
 #mean lifetime of ecited states
-gamma = np.ones(n)*10
+gamma = np.ones(n)*0.5
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat
 deltagamma = np.zeros(n)
 #laplacian matrix
 L = W - gammahat*np.identity(n)
-L
+
 ############PARAMETERS#################################
 eps = 0.1
 #######################################################
@@ -41,11 +43,10 @@ N = n
 dt = 0.05
 
 ##############################################################
-qx= np.zeros(N)*0.5
-qx[44] = 0.5
-qx[45] = 1
-qx[55] = 0
-qx[54] = 0
+qx= np.zeros(N)
+qx[0] = 1
+qx[1] = 1
+qx[2] = 0.8
 ########################################################
 fig, ax = plt.subplots(2,2)
 

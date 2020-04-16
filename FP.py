@@ -18,15 +18,21 @@ W[0][2] = 0.5
 W[0][1] = 0.5
 W[1][0] = 0.5
 W[1][2] = 0.5
-W[2][0] = 0.5
-W[2][1] = 0.5
+W[2][0] = 0
+W[2][10] = 0.5
+W[20][2] = 0.5
 
 #mean lifetime of ecited states
-gamma = np.ones(n)*0.5
+gamma = np.ones(n)*2
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat
+
+##########################        SETTANDO TUTTO A ZERO, HO SOLO LA MATRICE W        #################À
 deltagamma = np.zeros(n)
+gammahat = deltagamma
+######################
+
 #laplacian matrix
 L = W - gammahat*np.identity(n)
 
@@ -45,8 +51,9 @@ dt = 0.05
 ##############################################################
 qx= np.zeros(N)
 qx[0] = 1
-qx[1] = 1
-qx[2] = 0.8
+qx[1] = 0
+qx[2] = 0.
+qx[20] = 0.
 ########################################################
 fig, ax = plt.subplots(2,2)
 
@@ -119,6 +126,7 @@ def evo(frames):
     for i in range(N):
       #laplacian matrix
       s = np.sum(L[i].dot(nodes[0]))
+      
       #s = np.sum(W[i].dot(qx))
       #s = 0 
       #print(s)

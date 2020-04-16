@@ -11,16 +11,14 @@ import integration as inte
 #number of genes
 n = 100
 #transition matrix
-W = np.random.uniform(0,1,size = (n,n))
+W = inte.create_transition_matrix(n)
 # W = np.array([[-0.5,0.3,0.1],
 #               [0.5,-0.7,0.2],
 #               [0.1,-0.1,0.2]])
 # W = np.array([[0,1,0],
 #               [1,0,0],
 #               [0,0.,0]])
-
-W = np.zeros((n,n))
-W[21] = 1
+print(sum(W[2]))
 #mean lifetime of ecited states
 gamma = np.ones(n)*10
 gammahat = sum(W.T)

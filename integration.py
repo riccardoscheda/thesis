@@ -106,3 +106,25 @@ def simplettic(q,node,dt,eps,gamma,W,i):
     
     evoq = q - gamma*node*dt + W*node*dt #+ eps*abs(np.cos(dt)*i)
     return evoq
+
+
+import random
+
+precision = 100
+
+def create_transition_matrix(n) :
+    matrix = []
+    for l in range(n) :
+        lineLst = []
+        sum = 0
+        crtPrec = precision
+        for i in range(n-1) :
+            val = random.randrange(crtPrec)
+            sum += val
+            lineLst.append(float(val)/precision)
+            crtPrec -= val
+        lineLst.append(float(precision - sum)/precision)
+        matrix.append(lineLst)
+    return np.array(matrix)
+
+

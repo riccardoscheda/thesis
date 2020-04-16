@@ -9,19 +9,16 @@ import integration as inte
 
 
 #number of genes
-n = 100
+n = 3
 #transition matrix
 W = inte.create_transition_matrix(n)
 
-#W = np.zeros((n,n))
+W = np.zeros((n,n))
+W[0][1] = 1
+W[1][0] = 1
 
-# W[5][0] = 1
-# W[35][5] = 1
-# W[42][35] = 1
-# W[89][42] = 1
-# W[0][89] = 1
 #mean lifetime of ecited states
-gamma = np.ones(n)*1
+gamma = np.ones(n)*2
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat
@@ -44,17 +41,17 @@ frames = 200
 #particles
 N = n
 #time step
-dt = 0.05
+dt = 0.1
 
 ################################### CONDIZIONI INIZIALI ########################
 
-p= np.zeros(N)
+p= np.ones(N)
 p[0] = 1
+p[1] = 0.5
 
-
-m = np.zeros(N)
+m = np.ones(N)
 m[0] = 1
-
+m[1] = 0.5
 ########################################################
 fig, ax = plt.subplots(2,2)
 
@@ -84,6 +81,7 @@ for i in range(n):
 
 t = {}
 means = {}
+
 for i in range(n):
     t[i] = []
     means[i] = []
@@ -139,13 +137,19 @@ def evo(frames):
       #laplacian matrix
       s = np.sum(L[i].dot(nodes[0]))
       
-      #s = np.sum(W[i].dot(p))
       #s = 0 
       #print(s)
       p[i]= inte.simplettic(p[i],nodes[0][i],dt,eps,deltagamma[i],s,i)
-      m[i] = inte.mean_field(p[i], dt, eps, deltagamma[i], s, i)
       t[i].append(p[i])
+      
+      #### mean field ###########
+      s = np.sum(L[i].dot(m))
+      #s = 0 
+      m[i] = inte.mean_field(m[i], dt, eps, deltagamma[i], s, i)
       means[i].append(m[i])
+      #######################à
+      
+      
       trajectory[i].set_data(np.arange(0,len(t[i])),t[i])
       mean[i].set_data(np.arange(0,len(t[i])),means[i])
       

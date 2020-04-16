@@ -13,24 +13,22 @@ n = 100
 #transition matrix
 W = inte.create_transition_matrix(n)
 
-W = np.zeros((n,n))
-W[0][2] = 0.5
-W[0][1] = 0.5
-W[1][0] = 0.5
-W[1][2] = 0.5
-W[2][0] = 0
-W[2][10] = 0.5
-W[20][2] = 0.5
+#W = np.zeros((n,n))
 
+# W[5][0] = 1
+# W[35][5] = 1
+# W[42][35] = 1
+# W[89][42] = 1
+# W[0][89] = 1
 #mean lifetime of ecited states
-gamma = np.ones(n)*2
+gamma = np.ones(n)*1
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat
 
 ##########################        SETTANDO TUTTO A ZERO, HO SOLO LA MATRICE W        #################À
-deltagamma = np.zeros(n)
-gammahat = deltagamma
+# deltagamma = np.zeros(n)
+# gammahat = deltagamma
 ######################
 
 #laplacian matrix
@@ -42,7 +40,7 @@ eps = 0.1
 
 
 #iterations
-frames = 100
+frames = 200
 #particles
 N = n
 #time step
@@ -83,7 +81,7 @@ for i in range(n):
 
 def init():
 
-  ax[0,0].set_xlim(-0.1,100)
+  ax[0,0].set_xlim(-0.1,300)
   ax[0,0].set_ylim(-1.5,1.5)
   # ax[0,0].set_title("Distribution of momenta")
   # ax[0,0].set_xlabel("p")
@@ -108,10 +106,10 @@ def init():
   # ax[1,1].set_ylabel("entropy")
   # ax[1,1].set_title("Entropy")
 
-  x = np.linspace(0,100, num = 100)
-  y = np.ones(100)
+  x = np.linspace(0,300, num = 300)
+  y = np.ones(300)
   upper.set_data(x,y)
-  y = np.zeros(100)
+  y = np.zeros(300)
   lower.set_data(x,y)
   
   return trajectory[0],
@@ -138,7 +136,7 @@ def evo(frames):
       trajectory[i].set_data(np.arange(0,len(t[i])),t[i])
     
 
-    ax[0,1].imshow(nodes.reshape(10,10))
+    #ax[0,1].imshow(nodes.reshape(10,10))
     #print(sum)
 
     return ax[0,1], #trajectory[0]#,trajectory[1],trajectory[2]#,

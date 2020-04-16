@@ -46,22 +46,30 @@ N = n
 #time step
 dt = 0.05
 
-##############################################################
-qx= np.zeros(N)
-qx[0] = 1
-qx[1] = 0
-qx[2] = 0.
-qx[20] = 0.
+################################### CONDIZIONI INIZIALI ########################
+
+p= np.zeros(N)
+p[0] = 1
+
+
+m = np.zeros(N)
+m[0] = 1
+
 ########################################################
 fig, ax = plt.subplots(2,2)
 
 upper, = ax[0,0].plot([],[], c="black",linestyle = "--",label = "p")
 lower, = ax[0,0].plot([],[], c="black",linestyle = "--",label = "p")
+upper2, = ax[1,0].plot([],[], c="black",linestyle = "--",label = "p")
+lower2, = ax[1,0].plot([],[], c="black",linestyle = "--",label = "p")
 trajectory = []
+mean = []
 nodes = np.zeros((1,n))
 
 for i in range(n):
-    t, = ax[0,0].plot([],[], label = "fit")
+    t, = ax[0,0].plot([],[])
+    means, = ax[1,0].plot([],[])
+    mean.append(means)
     trajectory.append(t)
     
 #maxwelldist, = ax[1,0].step([],[],label = 'distribution')
@@ -75,10 +83,11 @@ for i in range(n):
 
 
 t = {}
-
+means = {}
 for i in range(n):
     t[i] = []
-
+    means[i] = []
+    
 def init():
 
   ax[0,0].set_xlim(-0.1,300)
@@ -87,15 +96,15 @@ def init():
   # ax[0,0].set_xlabel("p")
   # ax[0,0].set_ylabel("rho_p")
 
-  ax[0,1].imshow(nodes.reshape(10,10))
+ # ax[0,1].imshow(nodes.reshape(10,10))
   # ax[0,1].set_xlim(-5,5)
   # ax[0,1].set_ylim(0,0.1)
   # ax[0,1].set_xlabel("x")
   # ax[0,1].set_ylabel("rho_x")
   # ax[0,1].set_title("Distribution of positions")
-
-  # ax[1,0].set_xlim(-0.1, 5)
-  # ax[1,0].set_ylim(-0.001, 0.1)
+  
+  ax[1,0].set_xlim(-0.1,300)
+  ax[1,0].set_ylim(-1.5,1.5)
   # ax[1,0].set_xlabel("v")
   # ax[1,0].set_ylabel("rho(v)")
   # ax[1,0].set_title("velocity Distribution")
@@ -111,6 +120,11 @@ def init():
   upper.set_data(x,y)
   y = np.zeros(300)
   lower.set_data(x,y)
+  x = np.linspace(0,300, num = 300)
+  y = np.ones(300)
+  upper2.set_data(x,y)
+  y = np.zeros(300)
+  lower2.set_data(x,y)
   
   return trajectory[0],
 
@@ -125,21 +139,23 @@ def evo(frames):
       #laplacian matrix
       s = np.sum(L[i].dot(nodes[0]))
       
-      #s = np.sum(W[i].dot(qx))
+      #s = np.sum(W[i].dot(p))
       #s = 0 
       #print(s)
-      qx[i]= inte.simplettic(qx[i],nodes[0][i],dt,eps,deltagamma[i],s,i)
-      
-      
-      realization(qx[i],nodes,i)
-      t[i].append(qx[i])
+      p[i]= inte.simplettic(p[i],nodes[0][i],dt,eps,deltagamma[i],s,i)
+      m[i] = inte.mean_field(p[i], dt, eps, deltagamma[i], s, i)
+      t[i].append(p[i])
+      means[i].append(m[i])
       trajectory[i].set_data(np.arange(0,len(t[i])),t[i])
-    
+      mean[i].set_data(np.arange(0,len(t[i])),means[i])
+      
+    for i in range(n):
+        realization(p[i],nodes,i)
 
     #ax[0,1].imshow(nodes.reshape(10,10))
     #print(sum)
 
-    return ax[0,1], #trajectory[0]#,trajectory[1],trajectory[2]#,
+    return  trajectory[0]#,trajectory[1],trajectory[2]#,#ax[0,1]
 
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 50,init_func = init, blit = False)

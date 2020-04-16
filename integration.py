@@ -108,6 +108,12 @@ def simplettic(q,node,dt,eps,gamma,W,i):
     return evoq
 
 
+
+def mean_field(q,dt,eps,gamma,W,i):
+
+    evoq = q - gamma*q*dt + W*dt #+ eps*abs(np.cos(dt)*i)
+    return evoq
+
 import random
 
 precision = 1000

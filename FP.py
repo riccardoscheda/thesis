@@ -9,21 +9,30 @@ import integration as inte
 
 
 #number of genes
-n = 3
+n = 100
 #transition matrix
 W = inte.create_transition_matrix(n)
 
-W = np.zeros((n,n))
-W[0][1] = 1
-W[1][0] = 1
+# W = np.zeros((n,n))
+# W[0][1] = 1
+# W[1][0] = 1
 
 #mean lifetime of ecited states
-gamma = np.ones(n)*2
+#gamma = np.random.uniform(1,1.5,size= n)
+
+#W = np.zeros((n,n))
+# for i in range(n-1):
+#     W[i+1][i] = 1
+
+#W[0][-90] = 1
+
+gamma = np.ones(n)
+
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat
 
-##########################        SETTANDO TUTTO A ZERO, HO SOLO LA MATRICE W        #################À
+##########################        SETTANDO TUTTO A ZERO, HO SOLO LA MATRICE W    #################
 # deltagamma = np.zeros(n)
 # gammahat = deltagamma
 ######################
@@ -45,13 +54,13 @@ dt = 0.1
 
 ################################### CONDIZIONI INIZIALI ########################
 
-p= np.ones(N)
+p= np.zeros(N)
 p[0] = 1
-p[1] = 0.5
+#p[1] = 0.5
 
-m = np.ones(N)
+m = np.zeros(N)
 m[0] = 1
-m[1] = 0.5
+#m[1] = 0.5
 ########################################################
 fig, ax = plt.subplots(2,2)
 
@@ -65,8 +74,8 @@ nodes = np.zeros((1,n))
 
 for i in range(n):
     t, = ax[0,0].plot([],[])
-    means, = ax[1,0].plot([],[])
-    mean.append(means)
+    field, = ax[1,0].plot([],[])
+    mean.append(field)
     trajectory.append(t)
     
 #maxwelldist, = ax[1,0].step([],[],label = 'distribution')
@@ -80,57 +89,58 @@ for i in range(n):
 
 
 t = {}
-means = {}
+field = {}
 
 for i in range(n):
     t[i] = []
-    means[i] = []
+    field[i] = []
     
 def init():
 
-  ax[0,0].set_xlim(-0.1,300)
+  ax[0,0].set_xlim(-0.1,200)
   ax[0,0].set_ylim(-1.5,1.5)
-  # ax[0,0].set_title("Distribution of momenta")
-  # ax[0,0].set_xlabel("p")
-  # ax[0,0].set_ylabel("rho_p")
+  ax[0,0].set_title("Equazione stocastica")
+  ax[0,0].set_xlabel("time")
+  ax[0,0].set_ylabel("p")
 
- # ax[0,1].imshow(nodes.reshape(10,10))
+  #ax[0,1].imshow(nodes.reshape(10,10))
   # ax[0,1].set_xlim(-5,5)
   # ax[0,1].set_ylim(0,0.1)
   # ax[0,1].set_xlabel("x")
   # ax[0,1].set_ylabel("rho_x")
   # ax[0,1].set_title("Distribution of positions")
   
-  ax[1,0].set_xlim(-0.1,300)
+  ax[1,0].set_xlim(-0.1,200)
   ax[1,0].set_ylim(-1.5,1.5)
-  # ax[1,0].set_xlabel("v")
-  # ax[1,0].set_ylabel("rho(v)")
-  # ax[1,0].set_title("velocity Distribution")
+ # ax[1,0].set_xlabel("time")
+  ax[1,0].set_ylabel("p")
+  ax[1,0].set_title("Equazione di campo medio")
 
-  # ax[1,1].set_xlim(0, 300)
-  # ax[1,1].set_ylim(-5, 5)
-  # ax[1,1].set_xlabel("time")
+  ax[1,1].set_xlim(-0.1,200)
+  ax[1,1].set_ylim(-1.5,1.5)
+  ax[1,1].set_xlabel("time")
   # ax[1,1].set_ylabel("entropy")
-  # ax[1,1].set_title("Entropy")
+  #ax[1,1].set_title("Media delle realizzazioni")
 
-  x = np.linspace(0,300, num = 300)
-  y = np.ones(300)
+  x = np.linspace(0,200, num = 200)
+  y = np.ones(200)
   upper.set_data(x,y)
-  y = np.zeros(300)
+  y = np.zeros(200)
   lower.set_data(x,y)
-  x = np.linspace(0,300, num = 300)
-  y = np.ones(300)
+  x = np.linspace(0,200, num = 200)
+  y = np.ones(200)
   upper2.set_data(x,y)
-  y = np.zeros(300)
+  y = np.zeros(200)
   lower2.set_data(x,y)
   
   return trajectory[0],
 
-def realization(p,nodes,i):
+def realization(p,n):
     if np.random.uniform(0,1)<p:
-        nodes[0][i] = 1
+        n = 1
     else:
-        nodes[0][i] = 0 
+        n = 0 
+    return n
         
 def evo(frames):
     for i in range(N):
@@ -142,19 +152,20 @@ def evo(frames):
       p[i]= inte.simplettic(p[i],nodes[0][i],dt,eps,deltagamma[i],s,i)
       t[i].append(p[i])
       
-      #### mean field ###########
+      
+      #### mean field ##################
       s = np.sum(L[i].dot(m))
       #s = 0 
       m[i] = inte.mean_field(m[i], dt, eps, deltagamma[i], s, i)
-      means[i].append(m[i])
-      #######################à
+      field[i].append(m[i])
+      ###############################
       
       
       trajectory[i].set_data(np.arange(0,len(t[i])),t[i])
-      mean[i].set_data(np.arange(0,len(t[i])),means[i])
+      mean[i].set_data(np.arange(0,len(t[i])),field[i])
       
     for i in range(n):
-        realization(p[i],nodes,i)
+        nodes[0][i] = realization(p[i],nodes[0][i])
 
     #ax[0,1].imshow(nodes.reshape(10,10))
     #print(sum)
@@ -162,6 +173,6 @@ def evo(frames):
     return  trajectory[0]#,trajectory[1],trajectory[2]#,#ax[0,1]
 
 
-ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 50,init_func = init, blit = False)
+ani = FuncAnimation(fig, evo, frames = np.arange(0,200), interval = 50,init_func = init, blit = False)
 #plt.tight_layout()
-#ani.save('transition.gif', dpi=140, writer='imagemagick')
+#ani.save('biblio/transition.gif', dpi=120, writer='imagemagick')

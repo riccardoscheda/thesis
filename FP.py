@@ -27,7 +27,7 @@ W = inte.create_transition_matrix(n)
 #W[0][-90] = 1
 
 gamma = np.ones(n)
-gamma = np.random.uniform(1,1.1,size= n)
+gamma = np.random.uniform(1,2,size= n)
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat

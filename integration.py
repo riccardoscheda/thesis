@@ -104,14 +104,14 @@ def simplettic(q,node,dt,eps,gamma,W,i):
     #evop = p -gamma*p*dt + phi(q,p,W,i)[1]*dt + eps*np.sqrt(dt)*csi
     
     
-    evoq = q - gamma*node*dt + W*dt #+ eps*abs(np.cos(dt)*i)
+    evoq = q - gamma*node*dt + W*dt + eps*dt
     return evoq
 
 
 
 def mean_field(q,dt,eps,gamma,W,i):
 
-    evoq = q - gamma*q*dt + W*dt #+ eps*abs(np.cos(dt)*i)
+    evoq = q - gamma*q*dt + W*dt + eps*dt
     return evoq
 
 import random

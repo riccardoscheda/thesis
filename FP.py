@@ -142,15 +142,31 @@ def realization(p,n):
         n = 0 
     return n
         
+
+up = np.zeros((1,n))
+ripetitions = 50
 def evo(frames):
+    
+    #local state
     for i in range(N):
-      #laplacian matrix
-      s = np.sum(L[i].dot(nodes[0]))
+        up[0][i] = nodes[0][i]
+        
+    for i in range(N):
+        
       
       #s = 0 
       #print(s)
-      p[i]= inte.simplettic(p[i],nodes[0][i],dt,eps,deltagamma[i],s,i)
+      media = 0
+      for j in range(ripetitions):
+          #laplacian matrix
+          s = np.sum(L[i].dot(nodes[0]))
+          ist = inte.simplettic(p[i],up[0][i],dt,eps,deltagamma[i],s,i)
+          media = media + ist
+          up[0][i] = realization(ist,nodes[0][i])
+          
+      p[i] = media/ripetitions    
       t[i].append(p[i])
+      
       
       
       #### mean field ##################
@@ -165,7 +181,7 @@ def evo(frames):
       mean[i].set_data(np.arange(0,len(t[i])),field[i])
       
     for i in range(n):
-        nodes[0][i] = realization(p[i],nodes[0][i])
+        nodes[0][i] = realization(p[i],up[0][i])
 
     #ax[0,1].imshow(nodes.reshape(10,10))
     #print(sum)

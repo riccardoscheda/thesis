@@ -9,7 +9,7 @@ import integration as inte
 
 
 #number of genes
-n = 100
+n = 20
 #transition matrix
 W = inte.create_transition_matrix(n)
 
@@ -27,7 +27,7 @@ W = inte.create_transition_matrix(n)
 #W[0][-90] = 1
 
 gamma = np.ones(n)
-
+gamma = np.random.uniform(1,1.1,size= n)
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat
@@ -54,12 +54,13 @@ dt = 0.1
 
 ################################### CONDIZIONI INIZIALI ########################
 
-p= np.zeros(N)
-p[0] = 1
+p= np.ones(N)*0.5
+p = np.random.uniform(0,1,size= n)
+#p[-1] = 1
 #p[1] = 0.5
 
-m = np.zeros(N)
-m[0] = 1
+m = np.random.uniform(0,1,size= n)
+#m[-1] = 1
 #m[1] = 0.5
 ########################################################
 fig, ax = plt.subplots(2,2)
@@ -143,28 +144,18 @@ def realization(p,n):
     return n
         
 
-up = np.zeros((1,n))
-ripetitions = 50
 def evo(frames):
     
-    #local state
-    for i in range(N):
-        up[0][i] = nodes[0][i]
-        
     for i in range(N):
         
       
       #s = 0 
       #print(s)
-      media = 0
-      for j in range(ripetitions):
-          #laplacian matrix
-          s = np.sum(L[i].dot(nodes[0]))
-          ist = inte.simplettic(p[i],up[0][i],dt,eps,deltagamma[i],s,i)
-          media = media + ist
-          up[0][i] = realization(ist,nodes[0][i])
-          
-      p[i] = media/ripetitions    
+
+      #laplacian matrix
+      s = np.sum(L[i].dot(nodes[0]))
+      p[i] = inte.simplettic(p[i],nodes[0][i],dt,eps,deltagamma[i],s,i)
+        
       t[i].append(p[i])
       
       
@@ -181,12 +172,16 @@ def evo(frames):
       mean[i].set_data(np.arange(0,len(t[i])),field[i])
       
     for i in range(n):
-        nodes[0][i] = realization(p[i],up[0][i])
+        nodes[0][i] = realization(p[i],nodes[0][i])
 
     #ax[0,1].imshow(nodes.reshape(10,10))
     #print(sum)
 
     return  trajectory[0]#,trajectory[1],trajectory[2]#,#ax[0,1]
+
+#print((L.shape))
+#print(np.linalg.eig(L)[0])
+
 
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,200), interval = 50,init_func = init, blit = False)

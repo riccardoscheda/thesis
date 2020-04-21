@@ -9,7 +9,7 @@ import integration as inte
 
 
 #number of genes
-n = 20
+n = 3
 #transition matrix
 W = inte.create_transition_matrix(n)
 
@@ -144,16 +144,17 @@ def realization(p,n):
     return n
         
 
-deltaL = inte.create_transition_matrix(n)
+deltaL = inte.create_transition_matrix(n)/100
 for i in range(n):
     for j in range(n):
-        deltaL[i][j] = deltaL[i][j]*np.random.randint(-1,1)
+        deltaL[i][j] = deltaL[i][j]*np.random.randint(0,2)
 
-deltaL = deltaL - gammahat*np.identity(n)
+deltaL = deltaL - gammahat*np.identity(n)/200
+#deltaL = np.zeros((n,n))
 
+perturbedL = L + deltaL
 
 def evo(frames):
-    
     
     if frames > 50:
         for i in range(n):

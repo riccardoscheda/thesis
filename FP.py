@@ -144,8 +144,22 @@ def realization(p,n):
     return n
         
 
+deltaL = inte.create_transition_matrix(n)
+for i in range(n):
+    for j in range(n):
+        deltaL[i][j] = deltaL[i][j]*np.random.randint(-1,1)
+
+deltaL = deltaL - gammahat*np.identity(n)
+
+
 def evo(frames):
     
+    
+    if frames > 50:
+        for i in range(n):
+            for j in range(n):
+                L[i][j] = L[i][j] + deltaL[i][j]
+        
     for i in range(N):
         
       

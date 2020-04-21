@@ -20,7 +20,7 @@ import integration as inte
 #number of genes
 n = 100
 
-vmax = 3
+vmax = 4
 nodes = np.random.randint(0,vmax,size=n)
 v =  np.random.randint(0,vmax,size = n)
 
@@ -98,7 +98,7 @@ def init():
   return trajectory[0],
 
 def realization(prev,d):
-    p = 0.5
+    p = 0
     if np.random.uniform(0,1)<p:
         
         return rule1(prev,d)
@@ -118,13 +118,16 @@ def rule2(prev,d):
 
 def evo(frames):
     
-    for i in range(n-1):
+    #nodes[0] = nodes[1] + realization(nodes[1],d(nodes[1],nodes[0]))
+    
+    for i in range(0,n-1):
         
-        nodes[i] = nodes[i] + realization(nodes[i],d(nodes[i],nodes[i+1]))
+        nodes[i] = nodes[i+1] + realization(nodes[i+1],d(nodes[i+1],nodes[i]))
         
     
     #periodic boundary conditions
-    nodes[-1] = nodes[-1] + realization(nodes[-1],d(nodes[-1],nodes[0]))
+
+    nodes[-1] = nodes[0] + realization(nodes[0],d(nodes[0],nodes[-1]))
     
     ax[0,1].imshow(nodes.reshape(10,10))
     #print(sum)

@@ -9,7 +9,7 @@ import integration as inte
 
 
 #number of genes
-n = 3
+n = 20
 #transition matrix
 W = inte.create_transition_matrix(n)
 
@@ -31,7 +31,7 @@ gamma = np.random.uniform(1,2,size= n)
 gammahat = sum(W.T)
 gammahat
 deltagamma = gamma - gammahat
-
+print(deltagamma)
 ##########################        SETTANDO TUTTO A ZERO, HO SOLO LA MATRICE W    #################
 # deltagamma = np.zeros(n)
 # gammahat = deltagamma
@@ -39,7 +39,7 @@ deltagamma = gamma - gammahat
 
 #laplacian matrix
 L = W - gammahat*np.identity(n)
-
+print(np.linalg.eig(L))
 ############PARAMETERS#################################
 eps = 0.1
 #######################################################
@@ -60,8 +60,8 @@ p = np.random.uniform(0,1,size= n)
 #p[1] = 0.5
 
 m = np.random.uniform(0,1,size= n)
-#m[-1] = 1
-#m[1] = 0.5
+m[0] = 1
+m[1] = 0.
 ########################################################
 fig, ax = plt.subplots(2,2)
 
@@ -150,7 +150,7 @@ for i in range(n):
         deltaL[i][j] = deltaL[i][j]*np.random.randint(0,2)
 
 deltaL = deltaL - gammahat*np.identity(n)/200
-#deltaL = np.zeros((n,n))
+deltaL = np.zeros((n,n))
 
 perturbedL = L + deltaL
 
@@ -161,6 +161,8 @@ def evo(frames):
             for j in range(n):
                 L[i][j] = L[i][j] + deltaL[i][j]
         
+    if frames == 80:
+        print(m[0],m[1])
     for i in range(N):
         
       

@@ -24,8 +24,16 @@ vmax = 4
 nodes = np.zeros((n,n))
 nodes[0] = np.random.randint(0,2,size=n)
 
-W = np.random.randint(0,2,size=(n,n))
-
+#W = np.random.randint(0,2,size=(n,n))
+W = np.zeros((n,n))
+W[0][10] = 1
+W[10][0] = 1
+W[1][29] = 1
+W[29][12] = 1
+W[12][25] = 1
+W[25][1] = 1
+W[25][22] = 1
+W[25][23] = 1
 
 fig, ax = plt.subplots(2,2)
 

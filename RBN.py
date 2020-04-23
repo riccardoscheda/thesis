@@ -18,7 +18,7 @@ import integration as inte
 
 
 #number of genes
-n = 30
+n = 50
 
 vmax = 4
 nodes = np.zeros((n,n))
@@ -26,15 +26,11 @@ nodes[0] = np.random.randint(0,2,size=n)
 
 #W = np.random.randint(0,2,size=(n,n))
 W = np.zeros((n,n))
-W[0][10] = 1
-W[10][0] = 1
-W[1][29] = 1
-W[29][12] = 1
-W[12][25] = 1
-W[25][1] = 1
-W[25][22] = 1
-W[25][23] = 1
-
+for i in range(n):
+    W[i][np.random.randint(0,n)] = 1
+#    W[i][np.random.randint(0,n)] = 1
+    
+print(W[0])    
 fig, ax = plt.subplots(2,2)
 
 upper, = ax[0,0].plot([],[], c="black",linestyle = "--",label = "p")
@@ -113,9 +109,7 @@ def evo(frames):
     #nodes[0] = nodes[1] + realization(nodes[1],d(nodes[1],nodes[0]))
     for i in range(n):
         somma = 0 
-        for j in range(n):
-            somma = somma + W[i][j]*nodes[frames][j]
-        nodes[frames+1][i] = somma
+        nodes[frames+1][i] = np.sum(W[i].dot(nodes[0]))
         
     for i in range(n):
         if nodes[frames+1][i] != 0:

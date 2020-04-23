@@ -28,9 +28,7 @@ nodes[0] = np.random.randint(0,2,size=n)
 W = np.zeros((n,n))
 for i in range(n):
     W[i][np.random.randint(0,n)] = 1
-#    W[i][np.random.randint(0,n)] = 1
     
-print(W[0])    
 fig, ax = plt.subplots(2,2)
 
 upper, = ax[0,0].plot([],[], c="black",linestyle = "--",label = "p")
@@ -109,8 +107,9 @@ def evo(frames):
     #nodes[0] = nodes[1] + realization(nodes[1],d(nodes[1],nodes[0]))
     for i in range(n):
         somma = 0 
-        nodes[frames+1][i] = np.sum(W[i].dot(nodes[0]))
-        
+        for j in range(n): 
+            somma = somma + W[i][j]*nodes[frames][j]
+        nodes[frames+1][i] = somma
     for i in range(n):
         if nodes[frames+1][i] != 0:
             nodes[frames+1][i] = 1

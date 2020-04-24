@@ -18,17 +18,21 @@ import integration as inte
 
 
 #number of genes
-n = 50
-
+n = 100
+threshold = 0
 vmax = 4
 nodes = np.zeros((n,n))
 nodes[0] = np.random.randint(0,2,size=n)
 
-#W = np.random.randint(0,2,size=(n,n))
+#W = np.random.randint(-1,2,size=(n,n))
+
 W = np.zeros((n,n))
 for i in range(n):
-    W[i][np.random.randint(0,n)] = 1
-    
+    W[i][np.random.randint(0,n)] = 2
+    W[i][np.random.randint(0,n)] = -1
+    W[i][np.random.randint(0,n)] = -1
+    W[i][np.random.randint(0,n)] = -1
+
 fig, ax = plt.subplots(2,2)
 
 upper, = ax[0,0].plot([],[], c="black",linestyle = "--",label = "p")
@@ -102,14 +106,23 @@ def init():
   return trajectory[0],
 
 
+def realization(s,sigma,threshold):
+    if s - threshold > 0 :
+        return 1
+    elif s - threshold < 0 :
+        return 0
+    else:
+        return sigma
+    
 def evo(frames):
     
-    #nodes[0] = nodes[1] + realization(nodes[1],d(nodes[1],nodes[0]))
     for i in range(n):
         somma = 0 
         for j in range(n): 
             somma = somma + W[i][j]*nodes[frames][j]
-        nodes[frames+1][i] = somma
+        
+        nodes[frames+1][i] = realization(somma, nodes[frames][i], threshold)
+        
     for i in range(n):
         if nodes[frames+1][i] != 0:
             nodes[frames+1][i] = 1

@@ -24,14 +24,19 @@ vmax = 4
 nodes = np.zeros((n,n))
 nodes[0] = np.random.randint(0,2,size=n)
 
+for i in range(n):
+    if nodes[0][i] == 0:
+        nodes[0][i] = -1
+        
+        print(nodes[0])
 #W = np.random.randint(-1,2,size=(n,n))
 
 W = np.zeros((n,n))
 for i in range(n):
-    W[i][np.random.randint(0,n)] = 2
-    W[i][np.random.randint(0,n)] = -1
-    W[i][np.random.randint(0,n)] = -1
-    W[i][np.random.randint(0,n)] = -1
+    W[i][np.random.randint(0,n)] = +1
+    #W[i][np.random.randint(0,n)] = +1
+    #W[i][np.random.randint(0,n)] = +1
+
 
 fig, ax = plt.subplots(2,2)
 
@@ -121,13 +126,14 @@ def evo(frames):
         for j in range(n): 
             somma = somma + W[i][j]*nodes[frames][j]
         
-        nodes[frames+1][i] = realization(somma, nodes[frames][i], threshold)
+        nodes[frames+1][i] = somma
+        #nodes[frames+1][i] = realization(somma, nodes[frames][i], threshold)
         
-    for i in range(n):
-        if nodes[frames+1][i] != 0:
-            nodes[frames+1][i] = 1
-        else:
-            nodes[frames+1][i] = 0 
+    # for i in range(n):
+    #     if nodes[frames+1][i] != 0:
+    #         nodes[frames+1][i] = 1
+    #     else:
+    #         nodes[frames+1][i] = 0 
 
     ax[0,1].imshow(nodes)
  

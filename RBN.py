@@ -18,17 +18,18 @@ import integration as inte
 
 
 #number of genes
-n = 100
+n = 2
 threshold = 0
 vmax = 4
 nodes = np.zeros((n,n))
 nodes[0] = np.random.randint(0,2,size=n)
-
+nodes[0][0] = 0
+nodes[0][1] = 1
 for i in range(n):
     if nodes[0][i] == 0:
         nodes[0][i] = -1
         
-        print(nodes[0])
+
 #W = np.random.randint(-1,2,size=(n,n))
 
 W = np.zeros((n,n))
@@ -36,8 +37,10 @@ for i in range(n):
     W[i][np.random.randint(0,n)] = +1
     #W[i][np.random.randint(0,n)] = +1
     #W[i][np.random.randint(0,n)] = +1
+W = np.array([[0,-1],
+              [-1,0]])
 
-
+print(np.linalg.eig(W)[0])
 fig, ax = plt.subplots(2,2)
 
 upper, = ax[0,0].plot([],[], c="black",linestyle = "--",label = "p")
@@ -136,7 +139,12 @@ def evo(frames):
     #         nodes[frames+1][i] = 0 
 
     ax[0,1].imshow(nodes)
- 
+        
+    # extent = ax[0,1].get_window_extent().transformed(fig.dpi_scale_trans.inverted())
+    # fig.savefig('ax2_figure.png', bbox_inches=extent)
+    print(nodes[0][frames])
+    # # Pad the saved area by 10% in the x-direction and 20% in the y-direction
+    # fig.savefig('ax2_figure_expanded.png', bbox_inches=extent.expanded(1.1, 1.2))
     return  trajectory[0]#,trajectory[1],trajectory[2]#,#ax[0,1]
 
 #print((L.shape))

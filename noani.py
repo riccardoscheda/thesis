@@ -13,7 +13,7 @@ import networkx as nx
 #iterations
 frames = 100
 #particles
-n = 6
+n = 8
 
 ###################################
 
@@ -39,7 +39,7 @@ time = []
 
 def decimal(u):
     b = '\n'.join(''.join('%d' %x for x in y) for y in u)
-    #return int(b,2)
+    return int(b,2)
     return b
 
 def random_adjancency_matrix(n):
@@ -62,12 +62,12 @@ matrix = random_adjancency_matrix(n)
 #           [0,0,1,0,0]])
 
 #network con ambiente
-matrix = np.array([[0,1,0,0,0,0],
-          [0,0,1,0,0,0],
-          [0,0,0,1,0,0],
-          [0,0,0,0,1,0],
-          [0,0,1,0,0,0],
-          [0,0,0,0,1,0]])
+# matrix = np.array([[0,1,0,0,0,0],
+#           [0,0,1,0,0,0],
+#           [0,0,0,1,0,0],
+#           [0,0,0,0,1,0],
+#           [0,0,1,0,0,0],
+#           [0,0,0,0,1,0]])
 
 
 #print(matrix)
@@ -97,7 +97,7 @@ def evo(nodes,t):
     for i in range(n):
         somma = 0 
         for j in range(n):
-            somma = somma + matrix[j][i]*nodes[j]
+            somma = somma + matrix[i][j]*nodes[j]
         up[i] = somma
     
     for i in range(n):
@@ -129,10 +129,10 @@ g1 = nx.from_numpy_matrix(matrix)
 
 
 
-pos = nx.layout.spring_layout(g)
+pos = nx.layout.planar_layout(g)
 
-nx.draw_networkx(g,pos = pos,node_size = 15,with_labels= True)
-nx.draw_networkx_nodes(g,pos,
+nx.draw_networkx(g,pos = pos,node_size = 35,with_labels= False)
+nx.draw_networkx_nodes(g,pos= pos,
                        nodelist=initial_states,node_color='y',node_size = 35)
 nx.draw_networkx_nodes(g,pos,
                        nodelist=final_states,node_color='r',node_size = 35)
@@ -141,6 +141,6 @@ nx.draw_networkx_nodes(g,pos,
 #nx.draw(g1)
 #plt.show
 #nx.draw_networkx_labels(g,pos,labels,font_size=20)
-plt.show()
-plt.savefig("confenv.png")
+#plt.show()
+#plt.savefig("confenv.png")
 #nx.write_gexf(g,"net.gexf")

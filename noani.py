@@ -13,7 +13,7 @@ import networkx as nx
 #iterations
 frames = 100
 #particles
-n = 8
+n = 10
 
 ###################################
 
@@ -75,7 +75,7 @@ matrix = random_adjancency_matrix(n)
 #g1 = nx.from_numpy_matrix(matrix)
 
 #matrix = matrix.T
-print(matrix)
+#print(matrix)
 
 
 initial_states = []
@@ -106,7 +106,7 @@ def evo(nodes,t):
         else:
             nodes[i] = 0 
         
-    nodes[-1] = 1
+   
     state = decimal(nodes.T)
     g.add_edge(previous_state,state)
     labels[state] = state
@@ -124,12 +124,15 @@ state = decimal(nodes.T)
 labels[state] = state         
 shuffle(nodes) 
 
+binary = bin(3)[2:]
+
+print(np.fromstring(binary,dtype=int, sep=' '))
 
 g1 = nx.from_numpy_matrix(matrix)
 
 
 
-pos = nx.layout.planar_layout(g)
+pos = nx.layout.spring_layout(g)
 
 nx.draw_networkx(g,pos = pos,node_size = 35,with_labels= False)
 nx.draw_networkx_nodes(g,pos= pos,
@@ -138,6 +141,11 @@ nx.draw_networkx_nodes(g,pos,
                        nodelist=final_states,node_color='r',node_size = 35)
 
 
+
+attractors = final_states
+eden_garden_states = len(initial_states)
+
+print(np.unique(attractors))
 #nx.draw(g1)
 #plt.show
 #nx.draw_networkx_labels(g,pos,labels,font_size=20)

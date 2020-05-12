@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{systeme}
+\title{Network}
+\author{Riccardo Scheda}
+
+\begin{document}
+
+\section{Boolean Dynamica with random couplings}
+
+In some sense, the type of Boolean networks introduced by Kauffman can
+be considered as a prototype of generic dynamical system, as they present
+chaotic as well as regular behavior and many other typical structures of
+dynamical systems. In the thermodynamic limit $N\to \infty$, there can be
+“phase transitions” characterized by a critical line dividing chaotic from
+regular regions of state space.
+
+
+As we shall describe in more detail below, these models are often studied
+in a version in which the couplings among the Boolean variables are picked
+randomly from some sort of ensemble. In fact, they are often called N-K
+models because each of the N elements composing the system, interact with
+exactly K others (randomly chosen)
+
+In addition, their coupling functions
+are usually picked at random from the space of all possible functions of K
+Boolean variables.
+Another simplification is the binary nature of the variables under study.
+Nevertheless, many systems have important changes in behavior when
+“threshold” values of the dynamical variables are reached (e.g. the synapses
+firing potential of a neuron, or the activation potential of a given chemical
+reaction in a metabolic network).
+
+
+\section{Structure of models}
+
+Any model of a boolean networks starts from $N$ elements $\sigma_i \in \{0,1\}$. In the time stepping each node is given by a function of other $K$ elements:
+\begin{equation}
+\sigma_i(t+1) = \Lambda_i(\sigma_{i_1}(t),\sigma_{i_2}(t),...\sigma_{i_K}(t))
+\label{eq:1}
+\end{equation}
+
+To establish completely the model it is necessary to specify:
+\begin{enumerate}
+\item the connectivity $K$ of each element;
+\item the linkage of each element;
+\item the evolution rule $\Lambda_i$ of each element.
+
+Once these quantities have been specified, equation ~\eqref{eq:1} fully determins the dynamics of the system. In the most general cases the connectivity $K_i$ may vary for each node $\sigma_i$, but in this work we consider $K_i = K$ for all the nodes. 
+Of fundamental importance is the way linkages are assigned to the elements. 
+
+Now we can denote the whole condifuguration of the $\sigma_i$ as the state of the system $\Sigma_t$ at time $t$:
+$$
+\Sigma_t = \{\sigma_1(t),\sigma_2(t),...,\sigma_N(t)\}
+$$
+We can think of $\Sigma_t$ as an integer number which is the base-10 representation of the binary chain. Since each $\sigma_i$ has only two possible values, the number of all the possible configurations is $\Omega = 2^N$, so that $\Sigma_i$ can be thought as an integer satisyng $0\le \Sigma_t < 2^N$. This collection of integers is called \emph{the state space} of the dynamics of the network.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

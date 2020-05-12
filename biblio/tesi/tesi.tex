@@ -1,0 +1,103 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[english]{babel}
+%\usepackage{newlfont}
+%\usepackage[utf8x]{inputenc}
+%\usepackage{pgfplots}
+%\usepackage{tikz}
+\usepackage{pdfpages}
+%\usepackage{standalone}
+\usepackage{bm}
+\usepackage{newlfont}
+\usepackage{color}
+\textwidth=450pt\oddsidemargin=0pt
+\usepackage{systeme}
+%\tikzexternalize 
+%\textwidth=450pt\oddsidemargin=0pt
+\newcommand{\facciatabianca}{\newpage\shipout\null\stepcounter{page}}
+
+\newcommand{\xtodo}[2][]{\tikzexternaldisable\todo[#1]{#2}\tikzexternalenable}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%libreria per impostare il documento
+\usepackage{fancyhdr}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%libreria per avere l'indentazione
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   all'inizio dei capitoli, ...
+\usepackage{indentfirst}
+%
+%%%%%%%%%libreria per mostrare le etichette
+%\usepackage{showkeys}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%libreria per inserire grafici
+\usepackage{graphicx}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%libreria per utilizzare font
+                                        %   particolari ad esempio
+                                        %   \textsc{}
+\usepackage{newlfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%librerie matematiche
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsthm}
+%
+%\oddsidemargin=30pt \evensidemargin=20pt%impostano i margini
+\hyphenation{}                          %serve per la sillabazione
+\theoremstyle{plain}                    %stile corsivo
+\newtheorem{teo}{Teorema}[section]      %definizione ambiente teorema
+\newtheorem{prop}[teo]{Proposizione}    %definizione ambiente proposizione
+\newtheorem{cor}[teo]{Corollario}       %definizione ambiente corollario
+\newtheorem{lem}[teo]{Lemma}            %definizione ambiente lemma
+\theoremstyle{definition}               %stile roman
+\newtheorem{defin}{Definizione}[chapter]%definizione ambiente definizione
+\newtheorem{ese}{Esempio}[chapter]      %definizione ambiente esempio
+\theoremstyle{remark}                   %stile per osservazioni
+\newtheorem{oss}{Osservazione}          %definizione ambiente osservazione
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%comandi per l'impostazione
+                                        %   della pagina, vedi il manuale
+                                        %   della libreria fancyhdr
+                                        %   per ulteriori delucidazioni
+\pagestyle{fancy}\addtolength{\headwidth}{20pt}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection \ #1}{}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\linespread{1.3}                        %comando per impostare l'interlinea
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%definisce nuovi comandi
+\newcommand{\df}{\displaystyle\frac}    %crea un comando che visualizza le
+                                        %   frazioni in modo più esteso
+\newcommand{\seq}[1]{\left<#1\right>}   %crea un comando per il "generato"
+                                        %   di un insieme, per richiamarlo
+                                        %   si può scrivere ad esempio:
+                                        %           $\seq{q_1,q_2}$
+\begin{document}
+
+
+\input{copertina}
+\facciatabianca
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\tableofcontents                        %crea l'indice
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
+\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
+\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries
+INDICE}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\listoffigures                          %crea l'elenco delle figure
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
+
+
+
+\input{introduzione}
+
+\input{cancerattractors}
+\input{RBN}
+\input{model}
+\input{appendice}
+\input{biblio}
+\end{document}
+

@@ -1,0 +1,38 @@
+\documentclass[border=20pt]{standalone}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{standalone}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{graphicx}
+
+\begin{document}
+\centering
+\begin{figure}
+\centering
+\begin{tikzpicture} [scale=1]
+
+
+
+
+
+\node (a)[draw, circle] at (0,0) {$2$} ;
+\node (b)[draw, circle] at (-2,0){$3$};
+\node (c)[draw, circle] at (-1,1){$1$};
+\node (d)[draw, circle] at (2,-1){$4$};
+
+
+\draw [-latex] (a) to  (b);
+\draw [-latex] (b) to  (c);
+\draw [-latex] (c) to  (a);
+\draw [-latex] (a) to  (d);
+
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

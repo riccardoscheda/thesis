@@ -1,0 +1,52 @@
+\documentclass[border=20pt]{standalone}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{standalone}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{graphicx}
+
+\begin{document}
+\centering
+\begin{figure}
+\centering
+\begin{tikzpicture} [scale=1]
+
+
+
+
+
+\node (a)[draw, circle] at (-2,-2) ;
+\node (b)[draw, circle] at (0,-2);
+\draw [thick,-latex](a) to [out=90,in=160,loop] (a);
+\node (n) at (1,0.7) {};
+\node (r) at (3,0.7) {};
+\node (s) at (-1,-0.7) {};
+\node (t) at (1,-0.7) {};
+\node (u) at (3,-0.7) {};
+\node(z) at (-4.1,0.1);
+\draw [-latex, bend right] (b) to (a);
+
+\node (c)[draw, circle] at (0,0) {};
+\node (d)[draw, circle] at (2,0) {};
+\draw [-latex, bend right] (c) to (d);
+\draw [-latex, bend right] (d) to (c);
+
+\node (q)[draw, circle] at (-4,0);
+\node (p)[draw, circle] at (-3,0);
+\draw [thick,-latex](q) to [out=90,in=160,loop] (q);
+\draw [thick,-latex](p) to [out=90,in=160,loop] (p);
+
+\node (a) at (-3.5,-0.7) {$(a)$};
+\node (b) at (1,-0.7) {$(b)$};
+\node (c) at (-1,-2.6) {$(c)$}
+
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

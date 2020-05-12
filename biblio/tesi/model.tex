@@ -1,0 +1,107 @@
+\chapter{Cancer attractors}
+\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
+
+%\newcommand{\folder}{/path/to/folder}
+\newenvironment{sistema}%
+{\left\lbrace\begin{array}{@{}l@{}}}%
+{\end{array}\right.}
+In questo capitolo viene fatta una piccola introduzione al modello classico preda-predatore di Lotka-Volterra.
+\section{The model}
+We consider a physical system that can be described by an weighted interaction network among nodes that can assume different
+dynamical states (in the case of a gene network the states $\sigma\in [0,1]$ and we have models similar to spin models).
+In the simplest case, we introduce a stochastic dynamics using the probability $p_i(t)$ that the node $i$ is in the state $\sigma_i=1$
+(then $1-p_i(t)$ is the probability to get $\sigma_i=0$) and we define a linear equation for the probability evolution
+\begin{equation}
+\dot p_i(t)=\sum_j \mathcal{P}_{ij}p_j(t)-\gamma_i p_i(t)
+\label{average}
+\end{equation}
+where $\mathcal{P}_{ij}$ are transition probability rates and $\gamma_i^{-1}$ defines the mean lifetime of the excited state.
+The meaning of the rates $\mathcal{P}_{ij}$ is the rate at which the excited state of the node $j$ increases (or decreases if
+$\mathcal{P}_{ij}<0$) the probability of a transition to the excited state of the node $i$. Since $0\le p_i\le 1$ for all $i$, this space should be invariant for the dynamics. This condition depends on the spectral properties of the matrix
+\begin{equation}
+\mathcal{P}_{ij}-\gamma_j\delta_{ij}
+\label{matrix}
+\end{equation}
+associated to the system. Let consider the case $\mathcal{L}_{ij}\ge 0$ (i.e. we have no inhibitory link),
+the first quadrant is clearly invariant and if we define
+$$
+\sum_i  \mathcal{P}_{ij}=\hat \gamma_j>0
+$$
+the matrix 
+$$
+\mathcal{L}_{ij}=\mathcal{P}_{ij}-\hat \gamma_j \delta_{ij}
+$$
+is a Laplacian matrix and the system (\ref{average}) can be written in the form
+$$
+\dot p_i(t)=\sum_j \mathcal{L}_{ij}p_j(t)-\Delta \gamma_i p_i(t)\qquad \Delta \gamma_i=\gamma_i-\hat \gamma_i
+$$
+and by assumption we have $\gamma_i>\hat \gamma_i$. The eigenvalues of the matrix $\mathcal{L}_{ij}$
+have all negative real part except the null eigenvalue. It follows that all the eigenvalue of the matrix (\ref{matrix})
+has negative real part and the dynamics is a contraction towards the origin:
+a stable solution (i.e. without any external stimulus the system relaxes to the $\sigma_i=0$ state).
+A non trivial stationary can be achieved only if an external stimulus is inserted
+\begin{equation}
+\dot p_i(t)=\sum_j \mathcal{P}_{ij}p_j(t)-\gamma_i p_i(t)+\epsilon f_i(t)
+\label{average_ext}
+\end{equation}
+The stationary solution has to satisfy $p_i\in [0,1]$ so that $f_i(t)\ge 0$ otherwise we can have negative probability 
+when $p_i\simeq 0$. The case of a Laplacian matrix
+$$
+\hat \gamma_i=\gamma_i
+$$
+we get another possible stationary solution for $\mathcal{L}_{ij}p^\ast_j=0$ in the first quadrant and
+the subspace $\sum p_i=0$ is invariant and the dynamics is a contraction in this subspace (in general).
+Then the system a stable stationary solution even in absence of an external stimulus.\par\noindent
+The presence of inhibitory links complicates the model and one has to prove that
+\begin{itemize}
+\item 1) there exists a physical space: an invariant cone in the first quadrant where the dynamics is a contraction towards
+the origin;\par
+\item 2) the external stimulus maintains the solution in the physical space.
+\end{itemize}
+Another solution could be to introduce boundary conditions so that $p_i\ge 0$ in any case (the system is non linear in such a case).
+\par\noindent
+The eigenvalues of the matrix (\ref{matrix}) define the different relaxation time scale the process and determine its rectivity
+to the change of the external stimulus: in a typical problem one consider a slowly varying external stimulus so that the
+system could be considered i a quasi stationary state
+$$
+\sum_j \mathcal{L}_{ij}p_j-\Delta \gamma_i p_i=-\epsilon f_i(t) \qquad \frac{df_i}{dt}\ll 1
+$$
+the derivative is small with respect to the eigenvalues of th matrix (adiabatic approximation). On the other hand we have the effect
+of a correlated noise (we need to introduce a correlation in order have a continuous function $f_i(t)$). The problem is to
+study the relation between the solution and the spectral properties of the matrix $\mathcal{L}_{ij}$: we simplify the
+equation by assuming $\Delta \gamma_i=\Delta \gamma$ so that if $\lambda$ is an eigenvalue of $\mathcal{L}_{ij}$
+then $\lambda-\Delta \gamma$ is an eigenvalue of the matrix (\ref{matrix}) and we assume that the dynamics
+is perturbed by
+\begin{equation}
+\dot p_i(t)=\sum_j\left ( \mathcal{L}_{ij}+\Delta \mathcal{L}_{ij}\right ) p_j(t)-\Delta \gamma p_i(t)+\epsilon f_i(t)
+\label{average_p}
+\end{equation}
+where the perturbation $\Delta\mathcal{L}_{ij}$ is a Laplacian matrix ($\sum_i \Delta\mathcal{L}_{ij}=0$ and we
+assume $<\mathcal{L}>=0$) that can
+represent an error in the measure of the transition rates $\mathcal{L}_{ij}$ or possible evolution of network due to
+in time. In the first case we have an ensemble of transition matrices and we have to study the eigenvalue distribution
+due to perturbation and the possible presence of bifurcation phenomena. In the second case we have a stochastic 
+differential equation (since $\Delta \mathcal{L}_{ij}(t)$ can be represented as a realization of a stochastic process).
+The possible approach are Perturbation Theory, Random Matrix Theory and Statistical Physics Methods for random matrices.
+The external signal form the environment  (the environmental node) can be considered in the adiabatic approximation
+(to be justified form a biological point of view).\par\noindent
+The underlying stochastic process on the graph is defined by assigning the state $\xi_i(t)\in [0,1]$ at each node $i$ according 
+to a probability distribution $\pi_i(t)$ that evolves as
+$$
+\dot \pi_i(t)=\sum_j \mathcal{L}_{ij}\xi_j(t)-\Delta \gamma \xi_i(t)+\epsilon f_i(t)
+$$
+By discretizing the dynamics for a time step $\Delta t$ we have the evolution
+$$
+\pi_i(t+\Delta t)=\pi(t)+\sum_j \mathcal{L}_{ij}\xi_j(t)\Delta t-\Delta \gamma \Delta t\xi_i(t)+\epsilon f_i(t)\Delta t
+$$
+and $\xi(t+\Delta t)$ realized according to the distribution $\pi_i(t+\Delta t)$ (stochastic cellular automata).
+The average dynamics is computed by
+\begin{eqnarray}
+\dot <\pi_i(t)>&=&\sum_j \mathcal{L}_{ij}<\xi_j(t)>-\Delta \gamma <\xi_i(t)>+\epsilon f_i(t)\nonumber \\
+&=&\sum_j \mathcal{L}_{ij}p_j(t)-\Delta \gamma p_i(t)+\epsilon f_i(t)=\dot p_i(t)\nonumber
+\end{eqnarray}
+and we recover the average equation (\ref{average}). But the stochastic dynamics gives information on the applicability
+of the average approximation and the variability at the critical states (at bifurcation of the spectrum of $\mathcal{L}$).
+The stochastic dynamics can be studied for stochastic connection matrices $\mathcal{L}+\Delta \mathcal{L}$.
+
+

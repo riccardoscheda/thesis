@@ -52,7 +52,11 @@ def random_adjancency_matrix(n):
     
     return matrix
 
-matrix = random_adjancency_matrix(n)
+#matrix = random_adjancency_matrix(n)
+
+L = {}
+for i in range(2**n):
+    L[i] = np.random.randint(0,2)
 #matrix = np.random.randint(2,size= (n,n))
 
 # matrix = np.array([[0,1,0,0,0],
@@ -84,8 +88,7 @@ final_states = []
 
 def evo(nodes,t):
     
-    up = np.zeros((n,1))
-    up[-1] = 1
+    nodes[-1] = 1
     #up = matrix.dot(nodes)
     previous_state = decimal(nodes.T)
     if t == 0:
@@ -94,19 +97,25 @@ def evo(nodes,t):
     # for i in range(n):
     #     nodes[i] = up[i]
         
-    for i in range(n):
-        somma = 0 
-        for j in range(n):
-            somma = somma + matrix[i][j]*nodes[j]
-        up[i] = somma
+    # for i in range(n):
+    #     somma = 0 
+    #     for j in range(n):
+    #         somma = somma + matrix[i][j]*nodes[j]
+    #     up[i] = somma
     
-    for i in range(n):
-        if up[i] != 0:
-            nodes[i] = 1
-        else:
-            nodes[i] = 0 
+    # for i in range(n):
+    #     if up[i] != 0:
+    #         nodes[i] = 1
+    #     else:
+    #         nodes[i] = 0 
         
    
+    for i in range(n):
+        nodes[i] = L[previous_state]
+        
+        
+     
+    
     state = decimal(nodes.T)
     g.add_edge(previous_state,state)
     labels[state] = state
@@ -128,7 +137,7 @@ binary = bin(3)[2:]
 
 print(np.fromstring(binary,dtype=int, sep=' '))
 
-g1 = nx.from_numpy_matrix(matrix)
+#g1 = nx.from_numpy_matrix(matrix)
 
 
 

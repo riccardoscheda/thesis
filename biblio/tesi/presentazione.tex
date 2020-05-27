@@ -16,6 +16,7 @@
 \usepackage{amsthm}
 \usepackage{amscd}
 \usepackage{multicol}
+\usepackage{tikz}
 \newenvironment{sistema}%
 {\left\lbrace\begin{array}{@{}l@{}}}%
 {\end{array}\right.}
@@ -107,7 +108,18 @@ $$
 \begin{frame}
 \frametitle{RBN Dynamics}
 \begin{figure}
-\centering
+\begin{tikzpicture} [scale=1]
+
+\node (a) at (0,0) {};
+\node (b) at (0,-1) {};
+
+
+
+\draw [-latex] (a) to  (b){$time$};
+
+
+\end{tikzpicture} 
+
 \includegraphics{rbn.png}
 \caption{Example of a RBN with $N=50$ and $K=1$. }
 \end{figure}

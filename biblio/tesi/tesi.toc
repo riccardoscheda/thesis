@@ -1,12 +1,15 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Introduction}{4}
-\contentsline {chapter}{\numberline {1}Cancer attractors}{5}
-\contentsline {section}{\numberline {1.1}}{5}
-\contentsline {chapter}{\numberline {2}Random Boolean Networks}{6}
-\contentsline {section}{\numberline {2.1}The model}{6}
-\contentsline {section}{\numberline {2.2}Topology}{8}
-\contentsline {section}{\numberline {2.3}Dynamics}{9}
-\contentsline {section}{\numberline {2.4}Applications}{11}
-\contentsline {chapter}{\numberline {3}Cancer attractors}{14}
-\contentsline {section}{\numberline {3.1}The model}{14}
-\contentsline {chapter}{Bibliografia}{19}
+\contentsline {chapter}{\numberline {1}Cell Differentiation and cancer cells}{5}
+\contentsline {section}{\numberline {1.1}Gene Regulatory Networks}{5}
+\contentsline {section}{\numberline {1.2}Cell Differentiation}{6}
+\contentsline {chapter}{\numberline {2}Cancer attractors}{7}
+\contentsline {section}{\numberline {2.1}}{7}
+\contentsline {chapter}{\numberline {3}Random Boolean Networks}{8}
+\contentsline {section}{\numberline {3.1}The model}{8}
+\contentsline {section}{\numberline {3.2}Topology}{10}
+\contentsline {section}{\numberline {3.3}Dynamics}{11}
+\contentsline {section}{\numberline {3.4}Applications}{13}
+\contentsline {chapter}{\numberline {4}Cancer attractors}{16}
+\contentsline {section}{\numberline {4.1}The model}{16}
+\contentsline {chapter}{Bibliografia}{21}

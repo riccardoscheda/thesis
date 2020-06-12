@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  25 APR 2020 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  27 MAY 2020 17:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -402,14 +402,25 @@ l.21 \\
 
 
 
-]) (./cancerattractors.tex [4
+]) (./celldiff.tex [4
 
 ]
 Chapter 1.
-) (./RBN.tex [5
+[5
+
+]) (./cancerattractors.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+Chapter 2.
+) (./RBN.tex [7
 
 ]
-Chapter 2.
+Chapter 3.
 
 ! LaTeX Error: Command \sistema already defined.
                Or name \end... illegal, see p.192 of the manual.
@@ -433,7 +444,7 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-[6
+[8
 
 ]
 
@@ -618,8 +629,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]
-<figurenetworks.pdf, id=38, 264.03444pt x 145.55981pt>
+[9]
+<figurenetworks.pdf, id=44, 264.03444pt x 145.55981pt>
 File: figurenetworks.pdf Graphic file (type pdf)
 <use figurenetworks.pdf>
 Package pdftex.def Info: figurenetworks.pdf  used on input line 93.
@@ -631,14 +642,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./figurenetworks.pdf>]
+[10 <./figurenetworks.pdf>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-<figurenetworks2.pdf, id=53, 171.69144pt x 114.78584pt>
+<figurenetworks2.pdf, id=59, 171.69144pt x 114.78584pt>
 File: figurenetworks2.pdf Graphic file (type pdf)
 <use figurenetworks2.pdf>
 Package pdftex.def Info: figurenetworks2.pdf  used on input line 149.
@@ -650,7 +661,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./figurenetworks2.pdf>]
+[11 <./figurenetworks2.pdf>]
 File: figurenetworks2.pdf Graphic file (type pdf)
 <use figurenetworks2.pdf>
 Package pdftex.def Info: figurenetworks2.pdf  used on input line 173.
@@ -681,7 +692,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10]
+[12]
 Missing character: There is no ‚ in font cmr8!
 Missing character: There is no à in font cmr8!
 Missing character: There is no í in font cmr8!
@@ -695,7 +706,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]
+[13]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no à in font cmr12!
 Missing character: There is no í in font cmr12!
@@ -721,15 +732,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12]
+[14]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
-Chapter 3.
+[15]
+Chapter 4.
 
 ! LaTeX Error: Command \sistema already defined.
                Or name \end... illegal, see p.192 of the manual.
@@ -741,7 +752,7 @@ Type  H <return>  for immediate help.
 l.7 {\end{array}\right.}
                         
 ? 
-[14
+[16
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
@@ -757,14 +768,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[17]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]) (./appendice.tex [17]) (./biblio.tex [18
+[18]) (./appendice.tex [19]) (./biblio.tex [20
 
 ]
 Missing character: There is no √ in font cmr12!
@@ -779,7 +790,7 @@ Missing character: There is no ì in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- [19
+ [21
 
 ]
 Missing character: There is no ‚ in font cmti12!
@@ -792,11 +803,11 @@ Missing character: There is no ƒ in font cmr12!
 Missing character: There is no ± in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no Å in font cmr12!
- [20] [21]) (./tesi.aux) ) 
+ [22] [23]) (./tesi.aux) ) 
 Here is how much of TeX's memory you used:
- 5030 strings out of 494847
- 68294 string characters out of 6179080
- 142871 words of memory out of 5000000
+ 5033 strings out of 494847
+ 68328 string characters out of 6179080
+ 142873 words of memory out of 5000000
  8194 multiletter control sequences out of 15000+600000
  18452 words of font info for 70 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -816,10 +827,10 @@ blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb>
-Output written on tesi.pdf (22 pages, 203649 bytes).
+Output written on tesi.pdf (24 pages, 207037 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 153 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

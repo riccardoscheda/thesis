@@ -30,7 +30,7 @@ up = np.zeros((n,1))
 #initial state
 # nodes[0] = 1
 #nodes[-3] = 1
-#nodes = np.random.randint(2,size= (n,1))
+nodes = np.random.randint(2,size= (n,1))
 
 labels = {}
 g = nx.DiGraph()
@@ -55,6 +55,8 @@ def random_adjancency_matrix(n):
 #matrix = random_adjancency_matrix(n)
 
 L = {}
+
+
 for i in range(2**n):
     L[i] = np.random.randint(0,2)
 #matrix = np.random.randint(2,size= (n,n))
@@ -88,7 +90,7 @@ final_states = []
 
 def evo(nodes,t):
     
-    nodes[-1] = 1
+
     #up = matrix.dot(nodes)
     previous_state = decimal(nodes.T)
     if t == 0:
@@ -115,7 +117,7 @@ def evo(nodes,t):
         
         
      
-    
+    #print(nodes)
     state = decimal(nodes.T)
     g.add_edge(previous_state,state)
     labels[state] = state
@@ -143,7 +145,7 @@ print(np.fromstring(binary,dtype=int, sep=' '))
 
 pos = nx.layout.spring_layout(g)
 
-nx.draw_networkx(g,pos = pos,node_size = 35,with_labels= False)
+nx.draw_networkx(g,pos = pos,node_size = 35,with_labels= True)
 nx.draw_networkx_nodes(g,pos= pos,
                        nodelist=initial_states,node_color='y',node_size = 35)
 nx.draw_networkx_nodes(g,pos,
@@ -154,7 +156,7 @@ nx.draw_networkx_nodes(g,pos,
 attractors = final_states
 eden_garden_states = len(initial_states)
 
-print(np.unique(attractors))
+#print(np.unique(attractors))
 #nx.draw(g1)
 #plt.show
 #nx.draw_networkx_labels(g,pos,labels,font_size=20)

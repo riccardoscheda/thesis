@@ -38,15 +38,25 @@ def decimal(u):
     
 def random_adjancency_matrix(n):
     matrix = np.zeros((n,n))
+    
+    
     for i in range(n):
-        matrix[i][np.random.randint(n//2)] = 1
-        #matrix[n//2-i][np.random.randint(n//2)] = 1
+        matrix[i][np.random.randint(n)] = 1
+        matrix[i][np.random.randint(n)] = 1
+
+    
+
+    #per creare due cluster questa:
+    # for i in range(n//2):
+    #     matrix[i][np.random.randint(n//2 + 1)] = 1
+    #     matrix[i + n//2][np.random.randint(n//2 - 1 , n  )] = 1
+    #     #matrix[n//2-i][np.random.randint(n//2)] = 1
         
 
     return matrix
 
-matrix = random_adjancency_matrix(n).T
-g = nx.from_numpy_matrix(matrix,create_using= nx.DiGraph)
+matrix = random_adjancency_matrix(n)
+g = nx.from_numpy_matrix(matrix.T,create_using= nx.DiGraph)
 npos = nx.layout.spring_layout(g)
     
 #g = nx.DiGraph(g)
@@ -58,7 +68,7 @@ def init():
     
     #ax[0,0].imshow(nodes.T)
 
-    ax[0,1].imshow(matrix.T)
+    ax[0,1].imshow(matrix)
 
     ax[1,0] = nx.draw(g,pos = npos)
     active_nodes = []
@@ -75,9 +85,9 @@ def init():
                         nodelist=active_nodes,
                         node_color='y')
     
-    ax[1,0] = nx.draw_networkx_nodes(g,npos,
-                        nodelist=non_active_nodes,
-                        node_color='black')
+    # ax[1,0] = nx.draw_networkx_nodes(g,npos,
+    #                     nodelist=non_active_nodes,
+    #                     node_color='black')
     
     return ax[1,0],
 
@@ -112,7 +122,7 @@ def evo(frames):
             nodes[i] = 0 
 
     for i in range(n):
-            p = 0.5
+            p = 1
             if np.random.uniform(0,1)>p:
                 nodes[i] = 1
         
@@ -128,15 +138,16 @@ def evo(frames):
         else:
             non_active_nodes.append(i)
         
-        
+    ax[1,0] = nx.draw_networkx(g,npos, with_labels= True)
+    
     ax[1,0] = nx.draw_networkx_nodes(g,npos,
                         nodelist=active_nodes,
                         node_color='y')
     
-    ax[1,0] = nx.draw_networkx_nodes(g,npos,
-                        nodelist=non_active_nodes,
-                        node_color='black')
-
+    # ax[1,0] = nx.draw_networkx_nodes(g,npos,
+    #                     nodelist=non_active_nodes,
+    #                     node_color='b')
+    
     
     ax[0,1].imshow(matrix)
     
@@ -145,4 +156,3 @@ def evo(frames):
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 200,init_func = init, blit = False)
 #ani.save('network.gif',dpi = 100,writer = "imagemagick")
-

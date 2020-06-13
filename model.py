@@ -39,21 +39,24 @@ def decimal(u):
 def random_adjancency_matrix(n):
     matrix = np.zeros((n,n))
     for i in range(n):
-        matrix[i][np.random.randint(n)] = 1
+        matrix[i][np.random.randint(n//2)] = 1
+        #matrix[n//2-i][np.random.randint(n//2)] = 1
+        
 
     return matrix
 
 matrix = random_adjancency_matrix(n).T
-g = nx.from_numpy_matrix(matrix)
-npos = nx.layout.shell_layout(g)
+g = nx.from_numpy_matrix(matrix,create_using= nx.DiGraph)
+npos = nx.layout.spring_layout(g)
     
+#g = nx.DiGraph(g)
 
 
 
 def init():
 
     
-    ax[0,0].imshow(nodes.T)
+    #ax[0,0].imshow(nodes.T)
 
     ax[0,1].imshow(matrix.T)
 
@@ -76,7 +79,7 @@ def init():
                         nodelist=non_active_nodes,
                         node_color='black')
     
-    return ax[0,0],
+    return ax[1,0],
 
 
 def change():
@@ -113,7 +116,7 @@ def evo(frames):
             if np.random.uniform(0,1)>p:
                 nodes[i] = 1
         
-    ax[0,0].imshow(nodes.T)
+    #ax[0,0].imshow(nodes.T)
     ax[1,0] = nx.draw(g,pos = npos)
 
     active_nodes = []
@@ -134,6 +137,7 @@ def evo(frames):
                         nodelist=non_active_nodes,
                         node_color='black')
 
+    
     ax[0,1].imshow(matrix)
     
     return  ax[0,0], ax[1,0] ,ax[1,1], ax[0,1]

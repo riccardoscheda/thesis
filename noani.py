@@ -151,6 +151,9 @@ nx.draw_networkx_nodes(g,pos= pos,
 nx.draw_networkx_nodes(g,pos,
                        nodelist=final_states,node_color='r',node_size = 35)
 
+nx.draw_networkx_nodes(g,pos,
+                       nodelist=final_states,node_color='r',node_size = 35)
+
 
 
 attractors = final_states

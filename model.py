@@ -11,7 +11,7 @@ import networkx as nx
 #iterations
 frames = 100
 #particles
-n = 10
+n = 20
 #time step
 dt = 0.1
 ###################################
@@ -42,7 +42,7 @@ def random_adjancency_matrix(n):
     
     for i in range(n):
         matrix[i][np.random.randint(n)] = 1
-        matrix[i][np.random.randint(n)] = 1
+#        matrix[i][np.random.randint(n)] = 1
 
     
 

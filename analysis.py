@@ -4,7 +4,7 @@ import networkx as nx
 import  random_network  as rn
 
 
-n = 30
+n = 40
 
 for K in range(1,3):
     means = []
@@ -18,18 +18,16 @@ for K in range(1,3):
             #evolution
             for t in range(N):
                 up = np.zeros((N,1))
-                for k in range(N):
-                    somma = 0 
-                    for j in range(N):
-                        somma = somma + g.adj_matrix[k][j]*g.nodes[j]
-                    up[k] = somma
-                    
-                for k in range(N):
-                    if up[k] != 0:
-                        g.nodes[k] = 1
-                    else:
-                        g.nodes[k] = 0 
-                        
+                #NOISE
+                # for i in range(N):
+                #  p = 1
+                #  if np.random.uniform(0,1)>p:
+                #      g.nodes[i] = 1
+             
+                
+                up = g.adj_matrix.dot(g.nodes)
+                g.nodes = (up >0).astype(int)
+                   
             means.append(np.mean(g.nodes.T))
             #g.nodes = np.zeros((N,1))
         totmeans.append(np.mean(means))
@@ -38,22 +36,21 @@ for K in range(1,3):
     plt.ylim(0,1.2)
     plt.plot(totmeans)
     
-    
-    
-    
-plt.figure()
-graph = nx.from_numpy_matrix(g.adj_matrix,create_using = nx.DiGraph)
-active_nodes = []
-        
-for i in range(len(g.nodes)):
-    if g.nodes[i] == 1 :
-        active_nodes.append(i)
-        
-pos = nx.layout.spring_layout(graph)
-nx.draw_networkx(graph,pos = pos,with_labels=True)
-#nx.draw_networkx(graph, pos = pos, with_labels= True)
 
-nx.draw_networkx_nodes(g,pos,
-                        nodelist=active_nodes,
-                        node_color='y')
+# plt.figure()
+# graph = nx.from_numpy_matrix(g.adj_matrix,create_using = nx.DiGraph)
+# active_nodes = []
+        
+# for i in range(len(g.nodes)):
+#     if g.nodes[i] == 1 :
+#         active_nodes.append(i)
+        
+# pos = nx.layout.spring_layout(graph)
+# nx.draw_networkx(graph,pos = pos,with_labels=True)
+# #nx.draw_networkx(graph, pos = pos, with_labels= True)
+
+# nx.draw_networkx_nodes(g,pos,
+#                         nodelist=active_nodes,
+#                         node_color='y')
+
 

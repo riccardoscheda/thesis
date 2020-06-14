@@ -3,36 +3,44 @@ import numpy as np
 import networkx as nx
 import  random_network  as rn
 
-K = 1
-n = 20
-means = []
-totmeans = []
-for N in range(1,n):
-    g = rn.Random_Network(N, K)
-    for i in range(N):
-        g.nodes = np.zeros((N,1))
-        g.nodes[i] = 1
-        #evolution
-        for t in range(N):
-            up = np.zeros((N,1))
-            for i in range(N):
-                somma = 0 
-                for j in range(N):
-                    somma = somma + g.adj_matrix[i][j]*g.nodes[j]
-                up[i] = somma
-                
-            for i in range(N):
-                if up[i] != 0:
-                    g.nodes[i] = 1
-                else:
-                    g.nodes[i] = 0 
-        means.append(np.mean(g.nodes.T))
-        #g.nodes = np.zeros((N,1))
-    totmeans.append(np.mean(means))
-   
 
-plt.ylim(0,1.2)
-plt.plot(totmeans)
+n = 30
+
+for K in range(1,3):
+    means = []
+    totmeans = []
+    for N in range(1,n):
+        
+        for i in range(30):
+            g = rn.Random_Network(N, K)
+            g.nodes[np.random.randint(N)] = 1
+            
+            #evolution
+            for t in range(N):
+                up = np.zeros((N,1))
+                for k in range(N):
+                    somma = 0 
+                    for j in range(N):
+                        somma = somma + g.adj_matrix[k][j]*g.nodes[j]
+                    up[k] = somma
+                    
+                for k in range(N):
+                    if up[k] != 0:
+                        g.nodes[k] = 1
+                    else:
+                        g.nodes[k] = 0 
+                        
+            means.append(np.mean(g.nodes.T))
+            #g.nodes = np.zeros((N,1))
+        totmeans.append(np.mean(means))
+       
+    
+    plt.ylim(0,1.2)
+    plt.plot(totmeans)
+    
+    
+    
+    
 plt.figure()
 graph = nx.from_numpy_matrix(g.adj_matrix,create_using = nx.DiGraph)
 active_nodes = []

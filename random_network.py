@@ -6,8 +6,16 @@ class Random_Network:
         self.k = K
         self.nodes = np.zeros((self.n,1))
 
+    
         self.adj_matrix = np.zeros((self.n,self.n))
         for i in range(self.n):
             for j in range(self.k):
                 self.adj_matrix[i][np.random.randint(self.n)] = 1
-        
+                
+                
+class Network:
+    def __init__(self, matrix):
+
+        self.adj_matrix = matrix
+        self.nodes = np.zeros((len(self.adj_matrix),1))
+ 

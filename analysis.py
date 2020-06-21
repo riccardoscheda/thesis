@@ -4,7 +4,7 @@ import networkx as nx
 import  random_network  as rn
 
 
-n = 40
+n = 10
 
 for K in range(1,3):
     means = []
@@ -33,24 +33,28 @@ for K in range(1,3):
         totmeans.append(np.mean(means))
        
     
-    plt.ylim(0,1.2)
-    plt.plot(totmeans)
-    
-
-# plt.figure()
-# graph = nx.from_numpy_matrix(g.adj_matrix,create_using = nx.DiGraph)
-# active_nodes = []
+    # plt.ylim(0,1.2)
+    # plt.plot(totmeans, label = "mean of incoming links K = " + str(K) )
+    # plt.ylabel("active links")
+    # plt.xlabel("number of nodes N")
+    # plt.legend()    
+    # plt.savefig("active_links.png")
+# print(g.nodes.T)
+#plt.imshow(g.adj_matrix)
+plt.figure()
+graph = nx.from_numpy_matrix(g.adj_matrix.T,create_using = nx.DiGraph)
+active_nodes = []
         
-# for i in range(len(g.nodes)):
-#     if g.nodes[i] == 1 :
-#         active_nodes.append(i)
+for i in range(len(g.nodes)):
+    if g.nodes[i] == 1 :
+        active_nodes.append(i)
         
-# pos = nx.layout.spring_layout(graph)
-# nx.draw_networkx(graph,pos = pos,with_labels=True)
-# #nx.draw_networkx(graph, pos = pos, with_labels= True)
+pos = nx.layout.spring_layout(graph)
+nx.draw_networkx(graph,pos = pos,with_labels=True)
+#nx.draw_networkx(graph, pos = pos, with_labels= True)
 
-# nx.draw_networkx_nodes(g,pos,
-#                         nodelist=active_nodes,
-#                         node_color='y')
-
+nx.draw_networkx_nodes(g,pos,
+                        nodelist=active_nodes,
+                        node_color='y')
+# plt.savefig("net.png")
 

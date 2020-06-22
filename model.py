@@ -12,8 +12,8 @@ import  random_network  as rn
 #iterations
 frames = 100
 #particles
-N = 10
-M = 10
+N = 20
+M = 20
 K = 2
 #time step
 dt = 0.1
@@ -29,10 +29,12 @@ h = rn.Random_Network(M, K)
 
 #hinibitory links
 neg1 = np.zeros((N, M))
-neg1[np.random.randint(N)][np.random.randint(M)] = -20
-neg2 = np.zeros((M, N))
-neg2[np.random.randint(M)][np.random.randint(N)] = -20
 
+s = np.random.randint(N)
+neg1[s][np.random.randint(M)] = -1
+neg2 = np.zeros((M, N))
+s = np.random.randint(M)
+neg2[s][np.random.randint(N)] = -1
 
 tot = np.block([[g.adj_matrix,       neg1        ],
     [neg2, h.adj_matrix              ]])
@@ -68,7 +70,7 @@ def init():
     return ax,
 
 
-#mean_activity = []
+mean_activity = []
     
 def noise(node):
     p = 0.922
@@ -107,8 +109,8 @@ def evo(frames):
                         nodelist=active_nodes,
                         node_color='y')
     
-    #mean_activity.append(np.mean(Net.nodes))
-    
+    mean_activity.append(np.mean(Net.nodes))
+    #print(mean_activity)
     return  ax
 
 

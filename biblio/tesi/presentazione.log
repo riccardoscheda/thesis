@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  12 MAY 2020 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  3 JUL 2020 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1317,20 +1317,20 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 ))) (./presentazione.aux)
 \openout1 = `presentazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1398,7 +1398,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box102
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 31.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1408,9 +1408,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count336
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
 
 (./presentazione.out) (./presentazione.out)
 \@outlinefile=\write5
@@ -1443,302 +1443,60 @@ Dictionary: translator-theorem-dictionary, Language: English
 ) (./presentazione.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<celldiff.jpg, id=44, 742.775pt x 441.65pt>
-File: celldiff.jpg Graphic file (type jpg)
-<use celldiff.jpg>
-Package pdftex.def Info: celldiff.jpg  used on input line 45.
-(pdftex.def)             Requested size: 297.10474pt x 176.65686pt.
- [2
 
- <./celldiff.jpg>]
-<landscape.jpg, id=70, 308.352pt x 215.3646pt>
-File: landscape.jpg Graphic file (type jpg)
-<use landscape.jpg>
-Package pdftex.def Info: landscape.jpg  used on input line 55.
-(pdftex.def)             Requested size: 246.68193pt x 172.2919pt.
- [3
+LaTeX Warning: The counter will not be printed.
+             The label is:  on input line 52.
 
- <./landscape.jpg>]
-<GRN.png, id=96, 316.3017pt x 133.4586pt>
+<GRN.png, id=44, 316.3017pt x 133.4586pt>
 File: GRN.png Graphic file (type png)
 <use GRN.png>
-Package pdftex.def Info: GRN.png  used on input line 65.
-(pdftex.def)             Requested size: 316.30092pt x 133.45827pt.
-
-Overfull \hbox (9.01105pt too wide) in paragraph at lines 65--65
- [] 
- []
-
-[4
+Package pdftex.def Info: GRN.png  used on input line 52.
+(pdftex.def)             Requested size: 158.15045pt x 66.72913pt.
+[2
 
  <./GRN.png>]
-<mutation.jpg, id=122, 1606.0pt x 794.97pt>
-File: mutation.jpg Graphic file (type jpg)
-<use mutation.jpg>
-Package pdftex.def Info: mutation.jpg  used on input line 78.
-(pdftex.def)             Requested size: 321.19432pt x 158.99118pt.
+<bigdata.jpg, id=71, 334.06807pt x 361.35pt>
+File: bigdata.jpg Graphic file (type jpg)
+<use bigdata.jpg>
+Package pdftex.def Info: bigdata.jpg  used on input line 68.
+(pdftex.def)             Requested size: 133.62485pt x 144.53743pt.
+ [3
 
-Overfull \hbox (13.90445pt too wide) in paragraph at lines 78--78
- [] 
- []
+ <./bigdata.jpg>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 78.
 
-[5
-
- <./mutation.jpg>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 90.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 90.
+LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<figurenetworks2.pdf, id=149, 171.69144pt x 114.78584pt>
-File: figurenetworks2.pdf Graphic file (type pdf)
-<use figurenetworks2.pdf>
-Package pdftex.def Info: figurenetworks2.pdf  used on input line 90.
-(pdftex.def)             Requested size: 171.69101pt x 114.78555pt.
- [6
+) [4
 
- <./figurenetworks2.pdf>]
-File: figurenetworks2.pdf Graphic file (type pdf)
-<use figurenetworks2.pdf>
-Package pdftex.def Info: figurenetworks2.pdf  used on input line 106.
-(pdftex.def)             Requested size: 171.69101pt x 114.78555pt.
- [7
+] [5
+
+] [6
 
 ]
+<grn1.pdf, id=178, 337.01608pt x 276.6586pt>
+File: grn1.pdf Graphic file (type pdf)
+<use grn1.pdf>
+Package pdftex.def Info: grn1.pdf  used on input line 109.
+(pdftex.def)             Requested size: 168.50763pt x 138.32895pt.
+ [7
 
-! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+ <./grn1.pdf>]
+<grn.pdf, id=206, 239.14143pt x 149.8388pt>
+File: grn.pdf Graphic file (type pdf)
+<use grn.pdf>
+Package pdftex.def Info: grn.pdf  used on input line 122.
+(pdftex.def)             Requested size: 239.14084pt x 149.83842pt.
+ [8
 
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 \end{frame}
-                 
-? 
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-! Extra }, or forgotten $.
-<recently read> }
-                 
-l.126 \end{frame}
-                 
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.126 \end{frame}
-                 
-? 
-! Extra }, or forgotten \endgroup.
-\endpgfpicture ...globally \endgroup \hss \egroup 
-                                                  \pgf@restore@layerlist@fro...
-l.126 \end{frame}
-                 
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.126 \end{frame}
-                 
-? 
-! Extra }, or forgotten \endgroup.
-\endpgfpicture ...dpicture \endgroup \hss \egroup 
-                                                  \pgfsys@typesetpicturebox ...
-l.126 \end{frame}
-                 
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.126 \end{frame}
-                 
-? 
-<rbn.png, id=210, 121.4136pt x 121.4136pt>
-File: rbn.png Graphic file (type png)
-<use rbn.png>
-Package pdftex.def Info: rbn.png  used on input line 126.
-(pdftex.def)             Requested size: 121.4133pt x 121.4133pt.
+ <./grn.pdf>] [9
 
-! LaTeX Error: \begin{tikzpicture} on input line 126 ended by \end{center}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 \end{frame}
-                 
-? 
-
-! LaTeX Error: \begin{center} on input line 126 ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 \end{frame}
-                 
-? 
-
-! LaTeX Error: \begin{figure} on input line 126 ended by \end{beamer@framepause
-s}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 \end{frame}
-                 
-? 
-! Extra }, or forgotten \endgroup.
-\endbeamer@frameslide ...amer@framepauses}\egroup 
-                                                  \ifx \beamer@frametitle \@...
-l.126 \end{frame}
-                 
-? 
-
-! LaTeX Error: \begin{beamer@framepauses} on input line 126 ended by \end{beame
-r@frameslide}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 \end{frame}
-                 
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.130 \frametitle
-                 {State space}
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.130 \frametitle
-                 {State space}
-? 
-! Extra }, or forgotten \endgroup.
-\endframe ->\egroup 
-                    \begingroup \def \@currenvir {frame}
-l.150 \end{frame}
-                 
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.158 \frametitle
-                 {Attractors}
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.158 \frametitle
-                 {Attractors}
-? 
-<fg3.pdf, id=212, 170.7168pt x 170.7168pt>
-File: fg3.pdf Graphic file (type pdf)
-<use fg3.pdf>
-Package pdftex.def Info: fg3.pdf  used on input line 162.
-(pdftex.def)             Requested size: 170.71637pt x 170.71637pt.
-! Extra }, or forgotten \endgroup.
-\endframe ->\egroup 
-                    \begingroup \def \@currenvir {frame}
-l.164 \end{frame}
-                 
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.169 \frametitle
-                 {Perturbations}
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.169 \frametitle
-                 {Perturbations}
-? 
-<fg4.pdf, id=213, 170.7168pt x 170.7168pt>
-File: fg4.pdf Graphic file (type pdf)
-<use fg4.pdf>
-Package pdftex.def Info: fg4.pdf  used on input line 182.
-(pdftex.def)             Requested size: 136.57361pt x 136.57361pt.
-! Extra }, or forgotten \endgroup.
-\endframe ->\egroup 
-                    \begingroup \def \@currenvir {frame}
-l.187 \end{frame}
-                 
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.192 \frametitle
-                 {Attractors}
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.192 \frametitle
-                 {Attractors}
-? 
-<fg5.pdf, id=214, 227.62239pt x 227.62239pt>
-File: fg5.pdf Graphic file (type pdf)
-<use fg5.pdf>
-Package pdftex.def Info: fg5.pdf  used on input line 196.
-(pdftex.def)             Requested size: 136.57448pt x 136.57448pt.
-! Extra }, or forgotten \endgroup.
-\endframe ->\egroup 
-                    \begingroup \def \@currenvir {frame}
-l.199 \end{frame}
-                 
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.203 \frametitle
-                 {Stochastic process}
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.203 \frametitle
-                 {Stochastic process}
-? 
-<matrix.png, id=215, 826.08624pt x 671.50874pt>
-File: matrix.png Graphic file (type png)
-<use matrix.png>
-Package pdftex.def Info: matrix.png  used on input line 206.
-(pdftex.def)             Requested size: 165.21431pt x 134.29936pt.
-! Extra }, or forgotten \endgroup.
-\endframe ->\egroup 
-                    \begingroup \def \@currenvir {frame}
-l.210 \end{frame}
-                 
-? 
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.215 \frametitle
-                 {Conclusions}
-? 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.215 \frametitle
-                 {Conclusions}
-? 
-! Extra }, or forgotten \endgroup.
-\endframe ->\egroup 
-                    \begingroup \def \@currenvir {frame}
-l.223 \end{frame}
-                 
-? 
+]
 \tf@nav=\write6
 \openout6 = `presentazione.nav'.
 
@@ -1748,132 +1506,37 @@ l.223 \end{frame}
 \tf@snm=\write8
 \openout8 = `presentazione.snm'.
 
-
-! LaTeX Error: \begin{frame} on input line 214 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 \end{document}
-                    
-? 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
-(./presentazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
+ (./presentazione.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-! You can't use `\end' in internal vertical mode.
-\enddocument ...cumenthook \deadcycles \z@ \@@end 
-                                                  
-l.228 \end{document}
-                    
-? 
-
-! LaTeX Error: \begin{frame} on input line 214 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 \end{document}
-                    
-? 
-)
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*
-(Please type a command or say `\end')
-*X
-
-*D
-
-*D
-
-*
-(Please type a command or say `\end')
-*^^X
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-<*> ^^X
-       
-? ^^X^^X
-Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, 
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
-? X
- 
+ ) 
 Here is how much of TeX's memory you used:
- 28959 strings out of 494847
- 573018 string characters out of 6179080
- 618376 words of memory out of 5000000
- 31750 multiletter control sequences out of 15000+600000
- 548656 words of font info for 75 fonts, out of 8000000 for 9000
+ 28999 strings out of 494847
+ 574224 string characters out of 6179080
+ 618348 words of memory out of 5000000
+ 31783 multiletter control sequences out of 15000+600000
+ 552760 words of font info for 92 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 48i,14n,54p,10374b,636s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1095.60
-0pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss080
-0.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecs
-s1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-Output written on presentazione.pdf (7 pages, 884883 bytes).
+ 48i,14n,54p,10374b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.
+600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0
+600.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+css1000.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecss1095.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/ecss0800.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecss1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on presentazione.pdf (9 pages, 1082438 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 15 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 465 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
+ 19 named destinations out of 1000 (max. 500000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

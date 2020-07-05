@@ -12,9 +12,9 @@ import  random_network  as rn
 #iterations
 frames = 100
 #particles
-N = 20
-M = 20
-K = 2
+N = 5
+M = 3
+K = 1
 #time step
 dt = 0.1
 ###################################
@@ -23,18 +23,17 @@ fig, ax = plt.subplots(1,1)
 labels = {}
   
 
-
 g = rn.Random_Network(N,K)
 h = rn.Random_Network(M, K)
-
+print(h.adj_matrix)
 #hinibitory links
 neg1 = np.zeros((N, M))
 
 s = np.random.randint(N)
-neg1[s][np.random.randint(M)] = -1
+neg1[s][np.random.randint(M)] = 0
 neg2 = np.zeros((M, N))
 s = np.random.randint(M)
-neg2[s][np.random.randint(N)] = -1
+neg2[s][np.random.randint(N)] = 0
 
 tot = np.block([[g.adj_matrix,       neg1        ],
     [neg2, h.adj_matrix              ]])
@@ -73,7 +72,7 @@ def init():
 mean_activity = []
     
 def noise(node):
-    p = 0.922
+    p = 0.9
     if np.random.uniform(0,1)>p:
         #print("ok")
         return 0

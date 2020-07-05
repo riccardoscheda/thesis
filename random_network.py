@@ -8,9 +8,15 @@ class Random_Network:
 
     
         self.adj_matrix = np.zeros((self.n,self.n))
-        for i in range(self.n):
-            for j in range(self.k):
-                self.adj_matrix[i][np.random.randint(self.n)] = 1
+        if self.k == 1:
+            self.adj_matrix = np.identity(self.n)
+            np.random.shuffle(self.adj_matrix)
+            self.adj_matrix[np.random.randint(self.n)][np.random.randint(self.n)] = 1
+        else:
+            for i in range(self.n):
+                for j in range(self.k):
+                    self.adj_matrix[i][np.random.randint(self.n)] = 1
+            
                 
                 
 class Network:

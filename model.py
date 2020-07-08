@@ -13,7 +13,7 @@ import  random_network  as rn
 frames = 100
 #particles
 N = 10
-M = 1
+M = 10
 K = 2
 #time step
 dt = 0.1
@@ -22,28 +22,45 @@ fig, ax = plt.subplots(1,1)
 
 labels = {}
   
+num = 1
+gr = [rn.Random_Network(N,K) for i in range(num)]
 
-g = rn.Random_Network(N,K)
-h = rn.Random_Network(M, K)
-#print(h.adj_matrix)
-#hinibitory links
-neg1 = np.zeros((N, M))
+tot = gr[0].adj_matrix
 
-s = np.random.randint(N)
-neg1[s][np.random.randint(M)] = 0
-neg2 = np.zeros((M, N))
-s = np.random.randint(M)
-neg2[s][np.random.randint(N)] = 0
-
-tot = np.block([[g.adj_matrix,       neg1        ],
-    [neg2, h.adj_matrix              ]])
+if num>1:
+    for i in range(num):
+        neg1 = np.zeros((N*(i+1),N))
+        neg1[np.random.randint(N*i+1)][np.random.randint(N)] = -1
+        neg2 = np.zeros((N,N*(i+1)))
+        neg2[np.random.randint(N)][np.random.randint(N*(i+1))] = -1
+    
+        tot = np.block([[tot,       neg1        ],
+                        [neg2, gr[i].adj_matrix              ]])
+    
 
 #plt.imshow(tot)
+
+
+# g = rn.Random_Network(N,K)
+# h = rn.Random_Network(M, K)
+# #print(h.adj_matrix)
+# #hinibitory links
+# neg1 = np.zeros((N, M))
+# neg1[np.random.randint(N)][np.random.randint(M)] = -1
+# neg2 = np.zeros((M, N))
+# neg2[np.random.randint(M)][np.random.randint(N)] = -1
+
+# tot = np.block([[g.adj_matrix,       neg1        ],
+#     [neg2, h.adj_matrix              ]])
+
+# plt.imshow(tot)
+
+
 Net = rn.Network(tot)
 graph = nx.from_numpy_matrix(tot, create_using=nx.DiGraph)
 npos = nx.layout.spring_layout(graph)
 
-print(nx.cycle_basis(graph.to_undirected()))
+#print(nx.cycle_basis(graph.to_undirected()))
 
 def init():
 

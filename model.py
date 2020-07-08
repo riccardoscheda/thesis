@@ -12,9 +12,9 @@ import  random_network  as rn
 #iterations
 frames = 100
 #particles
-N = 5
-M = 3
-K = 1
+N = 10
+M = 1
+K = 2
 #time step
 dt = 0.1
 ###################################
@@ -25,7 +25,7 @@ labels = {}
 
 g = rn.Random_Network(N,K)
 h = rn.Random_Network(M, K)
-print(h.adj_matrix)
+#print(h.adj_matrix)
 #hinibitory links
 neg1 = np.zeros((N, M))
 
@@ -42,6 +42,8 @@ tot = np.block([[g.adj_matrix,       neg1        ],
 Net = rn.Network(tot)
 graph = nx.from_numpy_matrix(tot, create_using=nx.DiGraph)
 npos = nx.layout.spring_layout(graph)
+
+print(nx.cycle_basis(graph.to_undirected()))
 
 def init():
 
@@ -102,7 +104,7 @@ def evo(frames):
         else:
             non_active_nodes.append(i)
         
-    ax = nx.draw_networkx(graph,npos, with_labels= False)
+    ax = nx.draw_networkx(graph,npos, with_labels= True)
     
     ax = nx.draw_networkx_nodes(graph,npos,
                         nodelist=active_nodes,

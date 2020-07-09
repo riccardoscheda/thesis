@@ -22,24 +22,33 @@ fig, ax = plt.subplots(1,1)
 
 labels = {}
   
-num = 1
+num = 2
 gr = [rn.Random_Network(N,K) for i in range(num)]
 
 tot = gr[0].adj_matrix
-
+negedges = []
 if num>1:
-    for i in range(num):
+    for i in range(num-1):
         neg1 = np.zeros((N*(i+1),N))
-        neg1[np.random.randint(N*i+1)][np.random.randint(N)] = -1
+        a = [np.random.randint(N*(i+1))]
+        a.append(np.random.randint(N))
+        neg1[a[0]][a[1]] = -1
         neg2 = np.zeros((N,N*(i+1)))
-        neg2[np.random.randint(N)][np.random.randint(N*(i+1))] = -1
-    
+        c = [np.random.randint(N*(i+1))]
+        c.append(np.random.randint(N))
+        
+        neg2[c[1]][c[0]] = -1
+
+        #print(negedges)
+        
         tot = np.block([[tot,       neg1        ],
                         [neg2, gr[i].adj_matrix              ]])
     
 
-#plt.imshow(tot)
+negedges = list(zip(list(np.where(tot<0)[0]),list(np.where(tot<0)[1])))
+print(negedges)
 
+#plt.imshow(tot)
 
 # g = rn.Random_Network(N,K)
 # h = rn.Random_Network(M, K)
@@ -69,8 +78,9 @@ def init():
     active_nodes = []
     non_active_nodes = []
     
-    Net.nodes[0] = 1
-    Net.nodes[-1] = 1
+    for i in range(num):
+        Net.nodes[i*10] = 1
+    
     
     for i in range(len(Net.nodes)):
         if Net.nodes[i] == 1 :
@@ -85,6 +95,7 @@ def init():
                         nodelist=active_nodes,
                         node_color='y')
     
+    plt.imshow(tot)
     return ax,
 
 
@@ -126,7 +137,9 @@ def evo(frames):
     ax = nx.draw_networkx_nodes(graph,npos,
                         nodelist=active_nodes,
                         node_color='y')
-    
+    ax = nx.draw_networkx_edges(graph, npos,
+                       edgelist=negedges,
+                       width=3, alpha=0.4, edge_color='r')
     mean_activity.append(np.mean(Net.nodes))
     #print(mean_activity)
     return  ax

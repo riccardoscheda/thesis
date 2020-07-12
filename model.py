@@ -14,7 +14,7 @@ frames = 100
 #particles
 N = 10
 M = 10
-K = 2
+K = 1
 #time step
 dt = 0.1
 ###################################
@@ -22,7 +22,7 @@ fig, ax = plt.subplots(1,1)
 
 labels = {}
   
-num = 2
+num = 1
 gr = [rn.Random_Network(N,K) for i in range(num)]
 
 tot = gr[0].adj_matrix
@@ -95,14 +95,14 @@ def init():
                         nodelist=active_nodes,
                         node_color='y')
     
-    plt.imshow(tot)
+    #plt.imshow(tot)
     return ax,
 
 
 mean_activity = []
     
 def noise(node):
-    p = 0.9
+    p = 1
     if np.random.uniform(0,1)>p:
         #print("ok")
         return 0
@@ -116,7 +116,7 @@ def evo(frames):
     
     
  
-    up = Net.adj_matrix.dot(Net.nodes)
+    up = Net.adj_matrix.T.dot(Net.nodes)
     Net.nodes = (up >0).astype(int)
        
     for i in range(len(Net.nodes)):

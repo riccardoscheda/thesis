@@ -12,9 +12,9 @@ import  random_network  as rn
 #iterations
 frames = 100
 #particles
-N = 10
+N = 4
 M = 10
-K = 1
+K = 2
 #time step
 dt = 0.1
 ###################################
@@ -45,10 +45,9 @@ if num>1:
                         [neg2, gr[i].adj_matrix              ]])
     
 
-negedges = list(zip(list(np.where(tot<0)[0]),list(np.where(tot<0)[1])))
-print(negedges)
+#negedges = list(zip(list(np.where(tot<0)[0]),list(np.where(tot<0)[1])))
 
-#plt.imshow(tot)
+print(tot)
 
 # g = rn.Random_Network(N,K)
 # h = rn.Random_Network(M, K)
@@ -66,7 +65,7 @@ print(negedges)
 
 
 Net = rn.Network(tot)
-graph = nx.from_numpy_matrix(tot, create_using=nx.DiGraph)
+graph = nx.from_numpy_matrix(tot.T, create_using=nx.DiGraph)
 npos = nx.layout.spring_layout(graph)
 
 #print(nx.cycle_basis(graph.to_undirected()))
@@ -102,6 +101,7 @@ def init():
 mean_activity = []
     
 def noise(node):
+    ##### ATTENZIONE NOISE A ZERO #####
     p = 1
     if np.random.uniform(0,1)>p:
         #print("ok")
@@ -116,7 +116,7 @@ def evo(frames):
     
     
  
-    up = Net.adj_matrix.T.dot(Net.nodes)
+    up = Net.adj_matrix.dot(Net.nodes)
     Net.nodes = (up >0).astype(int)
        
     for i in range(len(Net.nodes)):
@@ -140,11 +140,10 @@ def evo(frames):
     ax = nx.draw_networkx_edges(graph, npos,
                        edgelist=negedges,
                        width=3, alpha=0.4, edge_color='r')
-    mean_activity.append(np.mean(Net.nodes))
+    #mean_activity.append(np.mean(Net.nodes))
     #print(mean_activity)
     return  ax
 
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 200,init_func = init, blit = False)
 #ani.save('network.gif',dpi = 100,writer = "imagemagick")
-# plt.plot(mean_activity)

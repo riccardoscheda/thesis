@@ -1,4 +1,6 @@
 import numpy as np
+import random
+
 
 class Random_Network:
     def __init__(self, N, K):
@@ -16,12 +18,13 @@ class Random_Network:
                 if np.trace(self.adj_matrix) == 0:
                     break
         else:
+        
             for i in range(self.n):
                 for j in range(self.k):
-                    self.adj_matrix[i][np.random.randint(self.n)] = 1
+                    numbers = list(range(0,i)) + list(range(i+1,self.n))
+                    r = random.choice(numbers)
+                    self.adj_matrix[i][r] = 1
             
-                
-                
 class Network:
     def __init__(self, matrix):
 

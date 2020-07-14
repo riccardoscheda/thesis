@@ -13,7 +13,7 @@ import  random_network  as rn
 frames = 100
 #particles
 N = 4
-M = 10
+M = 5
 K = 2
 #time step
 dt = 0.1
@@ -45,30 +45,16 @@ if num>1:
                         [neg2, gr[i].adj_matrix              ]])
     
 
-#negedges = list(zip(list(np.where(tot<0)[0]),list(np.where(tot<0)[1])))
+negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 
-print(tot)
-
-# g = rn.Random_Network(N,K)
-# h = rn.Random_Network(M, K)
-# #print(h.adj_matrix)
-# #hinibitory links
-# neg1 = np.zeros((N, M))
-# neg1[np.random.randint(N)][np.random.randint(M)] = -1
-# neg2 = np.zeros((M, N))
-# neg2[np.random.randint(M)][np.random.randint(N)] = -1
-
-# tot = np.block([[g.adj_matrix,       neg1        ],
-#     [neg2, h.adj_matrix              ]])
-
-# plt.imshow(tot)
-
+#print(tot)
+print("outgoing links: " + str(sum(tot)))
 
 Net = rn.Network(tot)
 graph = nx.from_numpy_matrix(tot.T, create_using=nx.DiGraph)
 npos = nx.layout.spring_layout(graph)
+print("cycles: " + str(nx.cycle_basis(graph.to_undirected())))
 
-#print(nx.cycle_basis(graph.to_undirected()))
 
 def init():
 
@@ -78,7 +64,7 @@ def init():
     non_active_nodes = []
     
     for i in range(num):
-        Net.nodes[i*10] = 1
+        Net.nodes[i*M] = 1
     
     
     for i in range(len(Net.nodes)):
@@ -99,7 +85,8 @@ def init():
 
 
 mean_activity = []
-    
+
+
 def noise(node):
     ##### ATTENZIONE NOISE A ZERO #####
     p = 1

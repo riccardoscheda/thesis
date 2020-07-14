@@ -31,3 +31,4 @@ class Network:
         self.adj_matrix = matrix
         self.nodes = np.zeros((len(self.adj_matrix),1))
  
+

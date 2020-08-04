@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
+from functools import reduce
+
 import matplotlib.animation as animation # animation plot
 import pandas as pd
 import networkx as nx
@@ -12,7 +14,7 @@ import  random_network  as rn
 #iterations
 frames = 100
 #particles
-N = 4
+N = 5
 M = 5
 K = 2
 #time step
@@ -53,8 +55,10 @@ print("outgoing links: " + str(sum(tot)))
 Net = rn.Network(tot)
 graph = nx.from_numpy_matrix(tot.T, create_using=nx.DiGraph)
 npos = nx.layout.spring_layout(graph)
-print("cycles: " + str(nx.cycle_basis(graph.to_undirected())))
-
+cycles = nx.cycle_basis(graph.to_undirected())
+print("cycles: " + str(cycles))
+driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
+print("driver node: "+ str(driver_node))
 
 def init():
 
@@ -64,7 +68,10 @@ def init():
     non_active_nodes = []
     
     for i in range(num):
-        Net.nodes[i*M] = 1
+        if len(driver_node)>0:
+            Net.nodes[driver_node[0]] = 1
+        else:
+            Net.nodes[i*M] = 1
     
     
     for i in range(len(Net.nodes)):

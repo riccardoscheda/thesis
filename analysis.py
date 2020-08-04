@@ -58,8 +58,8 @@ import  random_network  as rn
 #                         node_color='y')
 # # plt.savefig("net.png")
 #%%
-K = 2
-max_nodes = 40
+K = 1
+max_nodes = 100
 iterations = 10
 
 fig, ax = plt.subplots(1,2)
@@ -79,7 +79,13 @@ for i in range(2,max_nodes):
     mean_number_of_loops.append(np.mean(number_of_loops))
 
 
+x = np.linspace(0,max_nodes,num = max_nodes)
+y = np.ones(max_nodes)*K
+
+plt.suptitle("incoming links K =" + str(K))
 ax[0].plot(mean_outgoing_links)
+ax[0].plot(x,y,"--")
+ax[0].set_ylim(0.5,2.5)
 ax[0].set_xlabel("nodes")
 ax[0].set_ylabel("mean of outgoing links")
 
@@ -87,8 +93,9 @@ ax[1].plot(mean_number_of_loops)
 ax[1].set_xlabel("nodes")
 ax[1].set_ylabel("mean number of loops")
 
-plt.figure()
-nx.draw(nx.from_numpy_array(g.adj_matrix,create_using= nx.DiGraph))
+plt.savefig("k="+ str(K) +".png")
+# plt.figure()
+# nx.draw(nx.from_numpy_array(g.adj_matrix,create_using= nx.DiGraph))
 
 # if num>1:
 #     for i in range(num-1):

@@ -12,4 +12,5 @@
 \contentsline {section}{\numberline {3.4}Applications}{13}
 \contentsline {chapter}{\numberline {4}Cancer attractors}{16}
 \contentsline {section}{\numberline {4.1}The model}{16}
-\contentsline {chapter}{Bibliografia}{21}
+\contentsline {chapter}{\numberline {5}Cell Differentiation and cancer cells}{20}
+\contentsline {section}{\numberline {5.1}Stochastic models for dynamical systems on graphs}{20}

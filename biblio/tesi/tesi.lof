@@ -7,3 +7,4 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The state space of the network shown in Figure~\ref {fig:rb2}, if the functions copy, copy, invert, invert are assigned to the four nodes. The numbers in the squares represent states, and ar- rows indicate the successor of each state. States on attractors are shaded.}}{12}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces The state space of the network shown in Figure~\ref {fig:rb2}, if the functions 1, copy, invert, invert are assigned to the four nodes.}}{13}
 \addvspace {10\p@ }
+\addvspace {10\p@ }

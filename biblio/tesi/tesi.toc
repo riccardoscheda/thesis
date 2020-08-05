@@ -1,16 +1,19 @@
 \babel@toc {english}{}
-\contentsline {chapter}{Introduction}{4}
-\contentsline {chapter}{\numberline {1}Cell Differentiation and cancer cells}{5}
-\contentsline {section}{\numberline {1.1}Gene Regulatory Networks}{5}
-\contentsline {section}{\numberline {1.2}Cell Differentiation}{6}
-\contentsline {chapter}{\numberline {2}Cancer attractors}{7}
-\contentsline {section}{\numberline {2.1}}{7}
-\contentsline {chapter}{\numberline {3}Random Boolean Networks}{8}
-\contentsline {section}{\numberline {3.1}The model}{8}
-\contentsline {section}{\numberline {3.2}Topology}{10}
-\contentsline {section}{\numberline {3.3}Dynamics}{11}
-\contentsline {section}{\numberline {3.4}Applications}{13}
-\contentsline {chapter}{\numberline {4}Cancer attractors}{16}
-\contentsline {section}{\numberline {4.1}The model}{16}
-\contentsline {chapter}{\numberline {5}Cell Differentiation and cancer cells}{20}
-\contentsline {section}{\numberline {5.1}Stochastic models for dynamical systems on graphs}{20}
+\contentsline {chapter}{Introduction}{5}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Cell Differentiation and cancer cells}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Gene Regulatory Networks}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Cell Differentiation}{8}{section.1.2}
+\contentsline {chapter}{\numberline {2}Gene Regulatory Networks}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Gene Regulatory Networks}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}summary Kauffman}{10}{section.2.2}
+\contentsline {chapter}{\numberline {3}Random Boolean Networks}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Random Boolean Networks}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}The model}{12}{section.3.2}
+\contentsline {section}{\numberline {3.3}Topology}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}Dynamics}{13}{section.3.4}
+\contentsline {section}{\numberline {3.5}Applications}{16}{section.3.5}
+\contentsline {chapter}{\numberline {4}Cancer attractors}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}The model}{18}{section.4.1}
+\contentsline {chapter}{\numberline {5}The model}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}Stochastic models for dynamical systems on graphs}{22}{section.5.1}
+\contentsline {chapter}{Bibliography}{29}{chapter*.6}

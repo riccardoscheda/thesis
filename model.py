@@ -14,7 +14,7 @@ import  random_network  as rn
 #iterations
 frames = 100
 #particles
-N = 5
+N = 10
 M = 5
 K = 2
 #time step

@@ -4,55 +4,30 @@
 
 %%\usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{hyperref}
 \usepackage{bm}
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
-% Used for displaying a sample figure. If possible, figure files should
-% be included in EPS format.
-%
-% If you use the hyperref package, please uncomment the following line
-% to display URLs in blue roman font according to Springer's eBook style:
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
-%
-%
-%
-%\usepackage[utf8x]{inputenc}
-%\usepackage{pgfplots}
-%\usepackage{tikz}
+
 \usepackage{pdfpages}
-%\usepackage{standalone}
+
 \usepackage{bm}
 \usepackage{newlfont}
 \usepackage{color}
 \textwidth=450pt\oddsidemargin=0pt
 \usepackage{systeme}
-%\tikzexternalize 
-%\textwidth=450pt\oddsidemargin=0pt
+
 \newcommand{\facciatabianca}{\newpage\shipout\null\stepcounter{page}}
 
 \newcommand{\xtodo}[2][]{\tikzexternaldisable\todo[#1]{#2}\tikzexternalenable}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%libreria per impostare il documento
 \usepackage{fancyhdr}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%libreria per avere l'indentazione
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   all'inizio dei capitoli, ...
+
 \usepackage{indentfirst}
-%
-%%%%%%%%%libreria per mostrare le etichette
-%\usepackage{showkeys}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%libreria per inserire grafici
 \usepackage{graphicx}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%libreria per utilizzare font
-                                        %   particolari ad esempio
-                                        %   \textsc{}
 \usepackage{newlfont}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%librerie matematiche
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{latexsym}
@@ -93,6 +68,7 @@
 
 \input{copertina}
 \facciatabianca
+\input{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
@@ -112,11 +88,11 @@ INDICE}}
 \input{introduzione}
 
 \input{celldiff}
-\input{cancerattractors}
+\input{GRN}
 \input{RBN}
 \input{model}
 \input{outlineproblem}
-\input{appendice}
+\input{conclusions}
 \input{biblio}
 \end{document}
 

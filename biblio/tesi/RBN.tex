@@ -1,13 +1,10 @@
 \chapter{Random Boolean Networks}
 \lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
 
-%\newcommand{\folder}{/path/to/folder}
-\newenvironment{sistema}%
-{\left\lbrace\begin{array}{@{}l@{}}}%
-{\end{array}\right.}
+
 In this chapter we explain the basic concepts of Random Boolean Network proposed for the first time by Kauffman.
 
-
+\section{Random Boolean Networks}
 Random Boolean networks (RBNs) were introduced in
 1969 by S. Kauffman as a simple model of genetic systems.
 Each gene was represented by a node
@@ -39,33 +36,8 @@ of its $K$ inputs at the present time step. Since each of the
 $K$ inputs of a node can be on or off, there are $M = 2^K$ possible input states.
 The update function has to specify the new state of a node for each of these input states.
 Consequently, there are $2^M$ different update functions.
-Fo example let's consider a network with $K=1$, so all the functions $\Lambda_i$ receives the input from one single node. We can see the different possible functions for all the possible networks with $K=1$:
-
-$$
-one: \\\Lambda_i(\sigma_j) =  \[ 
-\systeme*{1 \;\; $if$ \;\; \sigma_j=0,1 \;\; $if$ \;\;\sigma_j = 1}
-\]
-$$
-
-$$
-zero: \\\Lambda_i(\sigma_j) =  \[ 
-\systeme*{0 \;\; $if$ \;\; \sigma_j=0,0 \;\; $if$ \;\;\sigma_j = 1}
-\]
-$$
-
-$$
-copy: \\\Lambda_i(\sigma_j) =  \[ 
-\systeme*{0 \;\; $if$ \;\; \sigma_j=0,1 \;\; $if$ \;\;\sigma_j = 1}
-\]
-$$
-
-$$
-invert: \\\Lambda_i(\sigma_j) =  \[ 
-\systeme*{1 \;\; $if$ \;\; \sigma_j=0,0 \;\; $if$ \;\;\sigma_j = 1}
-\]
-$$
-
-Now, in general each element 
+For example let's consider a network with $K=1$, so all the functions $\Lambda_i$ receives the input from one single node. 
+In general each element 
 receives inputs from exactly $K$ nodes, so we have a dynamical system defined from:
 
 \begin{equation}

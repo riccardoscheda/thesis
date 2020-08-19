@@ -59,10 +59,15 @@ cycles = nx.cycle_basis(graph.to_undirected())
 print("cycles: " + str(cycles))
 driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
 
+final = []
 z = list(reduce(lambda x,y: x+y,cycles))
 print("driver node: "+ str(driver_node))
 for i in range(N):
-    print("node " + str(i), z.count(i))
+    final.append(z.count(i))
+        
+print(np.argmax(final))
+
+
 def init():
 
 

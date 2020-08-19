@@ -58,8 +58,11 @@ npos = nx.layout.spring_layout(graph)
 cycles = nx.cycle_basis(graph.to_undirected())
 print("cycles: " + str(cycles))
 driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
-print("driver node: "+ str(driver_node))
 
+z = list(reduce(lambda x,y: x+y,cycles))
+print("driver node: "+ str(driver_node))
+for i in range(N):
+    print("node " + str(i), z.count(i))
 def init():
 
 
@@ -96,7 +99,7 @@ mean_activity = []
 
 def noise(node):
     ##### ATTENZIONE NOISE A ZERO #####
-    p = 1
+    p = 0.8
     if np.random.uniform(0,1)>p:
         #print("ok")
         return 0

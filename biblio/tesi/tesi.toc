@@ -18,4 +18,4 @@
 \contentsline {section}{\numberline {4.1}The model}{22}{section.4.1}
 \contentsline {chapter}{\numberline {5}The model}{26}{chapter.5}
 \contentsline {section}{\numberline {5.1}Stochastic models for dynamical systems on graphs}{26}{section.5.1}
-\contentsline {chapter}{Bibliography}{33}{chapter*.6}
+\contentsline {chapter}{Bibliography}{35}{chapter*.6}

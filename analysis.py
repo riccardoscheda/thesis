@@ -57,43 +57,43 @@ import  random_network  as rn
 #                         nodelist=active_nodes,
 #                         node_color='y')
 # # plt.savefig("net.png")
-#%%
-K = 1
-max_nodes = 100
-iterations = 10
+# #%%
+# K = 1
+# max_nodes = 100
+# iterations = 10
 
-fig, ax = plt.subplots(1,2)
-outgoing_links = []
-number_of_loops = []
-mean_number_of_loops = []
-mean_outgoing_links = []
-for i in range(2,max_nodes):
-    for j in range(iterations): 
-        g = rn.Random_Network(i, K)
-        outgoing_links.append(np.mean(sum(g.adj_matrix)))
-        graph = nx.from_numpy_matrix(g.adj_matrix.T, create_using=nx.DiGraph)
-        cycles = nx.cycle_basis(graph.to_undirected())
-        number_of_loops.append(len(cycles))
+# fig, ax = plt.subplots(1,2)
+# outgoing_links = []
+# number_of_loops = []
+# mean_number_of_loops = []
+# mean_outgoing_links = []
+# for i in range(2,max_nodes):
+#     for j in range(iterations): 
+#         g = rn.Random_Network(i, K)
+#         outgoing_links.append(np.mean(sum(g.adj_matrix)))
+#         graph = nx.from_numpy_matrix(g.adj_matrix.T, create_using=nx.DiGraph)
+#         cycles = nx.cycle_basis(graph.to_undirected())
+#         number_of_loops.append(len(cycles))
         
-    mean_outgoing_links.append(np.mean(outgoing_links))
-    mean_number_of_loops.append(np.mean(number_of_loops))
+#     mean_outgoing_links.append(np.mean(outgoing_links))
+#     mean_number_of_loops.append(np.mean(number_of_loops))
 
 
-x = np.linspace(0,max_nodes,num = max_nodes)
-y = np.ones(max_nodes)*K
+# x = np.linspace(0,max_nodes,num = max_nodes)
+# y = np.ones(max_nodes)*K
 
-plt.suptitle("incoming links K =" + str(K))
-ax[0].plot(mean_outgoing_links)
-ax[0].plot(x,y,"--")
-ax[0].set_ylim(0.5,2.5)
-ax[0].set_xlabel("nodes")
-ax[0].set_ylabel("mean of outgoing links")
+# plt.suptitle("incoming links K =" + str(K))
+# ax[0].plot(mean_outgoing_links)
+# ax[0].plot(x,y,"--")
+# ax[0].set_ylim(0.5,2.5)
+# ax[0].set_xlabel("nodes")
+# ax[0].set_ylabel("mean of outgoing links")
 
-ax[1].plot(mean_number_of_loops)
-ax[1].set_xlabel("nodes")
-ax[1].set_ylabel("mean number of loops")
+# ax[1].plot(mean_number_of_loops)
+# ax[1].set_xlabel("nodes")
+# ax[1].set_ylabel("mean number of loops")
 
-plt.savefig("k="+ str(K) +".png")
+# plt.savefig("k="+ str(K) +".png")
 # plt.figure()
 # nx.draw(nx.from_numpy_array(g.adj_matrix,create_using= nx.DiGraph))
 
@@ -113,4 +113,13 @@ plt.savefig("k="+ str(K) +".png")
         
 #         tot = np.block([[tot,       neg1        ],
 #                         [neg2, gr[i].adj_matrix              ]])
-    
+
+#%%
+import numpy as np
+import networkx as nx
+
+adj_matrix = np.loadtxt("network.txt", dtype='i', delimiter=' ')
+Net = rn.Network(adj_matrix)
+graph = nx.from_numpy_matrix(adj_matrix.T, create_using=nx.DiGraph)
+npos = nx.layout.spring_layout(graph)
+

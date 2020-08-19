@@ -149,3 +149,5 @@ def evo(frames):
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 200,init_func = init, blit = False)
 #ani.save('network.gif',dpi = 100,writer = "imagemagick")
+
+np.savetxt("network.txt", tot, fmt="%d",delimiter=" ")

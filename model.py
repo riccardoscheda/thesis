@@ -15,16 +15,16 @@ import  random_network  as rn
 frames = 100
 #particles
 N = 10
-M = 5
+M = 10
 K = 2
 #time step
 dt = 0.1
-###################################
+######################################
 fig, ax = plt.subplots(1,1)
 
 labels = {}
   
-num = 1
+num = 2
 gr = [rn.Random_Network(N,K) for i in range(num)]
 
 tot = gr[0].adj_matrix
@@ -64,8 +64,9 @@ z = list(reduce(lambda x,y: x+y,cycles))
 print("driver node: "+ str(driver_node))
 for i in range(N):
     final.append(z.count(i))
-        
-print(np.argmax(final))
+     
+control_node = np.argmax(final)
+print(control_node)
 
 
 def init():
@@ -104,7 +105,7 @@ mean_activity = []
 
 def noise(node):
     ##### ATTENZIONE NOISE A ZERO #####
-    p = 0.8
+    p = 1
     if np.random.uniform(0,1)>p:
         #print("ok")
         return 0
@@ -137,8 +138,12 @@ def evo(frames):
     ax = nx.draw_networkx(graph,npos, with_labels= True)
     
     ax = nx.draw_networkx_nodes(graph,npos,
+                        nodelist=[control_node],
+                        node_size=800)
+    ax = nx.draw_networkx_nodes(graph,npos,
                         nodelist=active_nodes,
                         node_color='y')
+  
     ax = nx.draw_networkx_edges(graph, npos,
                        edgelist=negedges,
                        width=3, alpha=0.4, edge_color='r')

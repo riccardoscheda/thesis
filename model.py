@@ -14,8 +14,8 @@ import  random_network  as rn
 #iterations
 frames = 100
 #particles
-N = 10
-M = 10
+N = 5
+M = 5
 K = 2
 #time step
 dt = 0.1
@@ -27,6 +27,26 @@ labels = {}
 num = 2
 gr = [rn.Random_Network(N,K) for i in range(num)]
 
+def find_control_nodes(gr):
+    graph = nx.from_numpy_matrix(gr.adj_matrix.T, create_using=nx.DiGraph)
+    npos = nx.layout.spring_layout(graph)
+    cycles = nx.cycle_basis(graph.to_undirected())
+    print("cycles: " + str(cycles))
+    driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
+    
+    final = []
+    z = list(reduce(lambda x,y: x+y,cycles))
+    print("driver node: "+ str(driver_node))
+    for i in range(N):
+        final.append(z.count(i))
+         
+    control_node = np.argmax(final)
+    print(control_node)
+    return control_node
+    
+
+control_nodes = [find_control_nodes(gr[i]) + i*N for i in range(num)]
+
 tot = gr[0].adj_matrix
 negedges = []
 if num>1:
@@ -34,12 +54,12 @@ if num>1:
         neg1 = np.zeros((N*(i+1),N))
         a = [np.random.randint(N*(i+1))]
         a.append(np.random.randint(N))
-        neg1[a[0]][a[1]] = -1
+        neg1[control_nodes[i]][a[1]] = -1
         neg2 = np.zeros((N,N*(i+1)))
         c = [np.random.randint(N*(i+1))]
         c.append(np.random.randint(N))
         
-        neg2[c[1]][c[0]] = -1
+        neg2[c[1]][control_nodes[i]] = -1
 
         #print(negedges)
         
@@ -77,11 +97,7 @@ def init():
     non_active_nodes = []
     
     for i in range(num):
-        if len(driver_node)>0:
-            Net.nodes[driver_node[0]] = 1
-        else:
-            Net.nodes[i*M] = 1
-    
+        Net.nodes[control_nodes[i]] = 1
     
     for i in range(len(Net.nodes)):
         if Net.nodes[i] == 1 :
@@ -138,7 +154,7 @@ def evo(frames):
     ax = nx.draw_networkx(graph,npos, with_labels= True)
     
     ax = nx.draw_networkx_nodes(graph,npos,
-                        nodelist=[control_node],
+                        nodelist=control_nodes,
                         node_size=800)
     ax = nx.draw_networkx_nodes(graph,npos,
                         nodelist=active_nodes,

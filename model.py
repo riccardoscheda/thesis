@@ -116,9 +116,6 @@ def init():
     return ax,
 
 
-mean_activity = []
-
-
 def noise(node):
     ##### ATTENZIONE NOISE A ZERO #####
     p = 1
@@ -163,8 +160,9 @@ def evo(frames):
     ax = nx.draw_networkx_edges(graph, npos,
                        edgelist=negedges,
                        width=3, alpha=0.4, edge_color='r')
-    #mean_activity.append(np.mean(Net.nodes))
-    #print(mean_activity)
+    
+    print(Net.activity())
+  
     return  ax
 
 

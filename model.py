@@ -59,7 +59,7 @@ if num>1:
         c = [np.random.randint(N*(i+1))]
         c.append(np.random.randint(N))
         
-        neg2[c[1]][control_nodes[i]] = -1
+        neg2[c[0]][control_nodes[i]] = -1
 
         #print(negedges)
         
@@ -118,7 +118,7 @@ def init():
 
 def noise(node):
     ##### ATTENZIONE NOISE A ZERO #####
-    p = 1
+    p = 0.8
     if np.random.uniform(0,1)>p:
         #print("ok")
         return 0

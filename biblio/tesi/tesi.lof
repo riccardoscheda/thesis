@@ -2,9 +2,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Set of all possible networks with $N=2$ and $K=1$.}}{17}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces A small network with $N=4$ and $K=1$.}}{18}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The state space of the network shown in Figure~\ref {fig:rb2}, if the functions copy, copy, invert, invert are assigned to the four nodes. The numbers in the squares represent states, and ar- rows indicate the successor of each state. States on attractors are shaded.}}{19}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The state space of the network shown in Figure~\ref {fig:rb2}, if the functions 1, copy, invert, invert are assigned to the four nodes.}}{19}{figure.3.4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Set of all possible networks with $N=2$ and $K=1$.}}{16}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A small network with $N=4$ and $K=1$.}}{17}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The state space of the network shown in Figure~\ref {fig:rb2}, if the functions copy, copy, invert, invert are assigned to the four nodes. The numbers in the squares represent states, and ar- rows indicate the successor of each state. States on attractors are shaded.}}{18}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The state space of the network shown in Figure~\ref {fig:rb2}, if the functions 1, copy, invert, invert are assigned to the four nodes.}}{18}{figure.3.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Possible behavior for the condition (\ref {condave}); the units are arbitrary and scale with the network dimension.}}{31}{figure.5.1}

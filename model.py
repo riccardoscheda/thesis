@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-
+from random import choice
 from functools import reduce
 
 import matplotlib.animation as animation # animation plot
@@ -45,27 +45,23 @@ def find_control_nodes(gr):
     return control_node
     
 
-control_nodes = [find_control_nodes(gr[i]) + i*N for i in range(num)]
-
+single_cluster_control_nodes = [find_control_nodes(gr[i]) for i in range(num)]
+control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(num)]
 tot = gr[0].adj_matrix
 negedges = []
+################### AGGIUNGE I LINK NEGATIVI TRA DUE CLUSTERS ###################
 if num>1:
     for i in range(num-1):
         neg1 = np.zeros((N*(i+1),N))
-        a = [np.random.randint(N*(i+1))]
-        a.append(np.random.randint(N))
-        neg1[control_nodes[i]][a[1]] = -1
         neg2 = np.zeros((N,N*(i+1)))
-        c = [np.random.randint(N*(i+1))]
-        c.append(np.random.randint(N))
-        
-        neg2[c[0]][control_nodes[i]] = -1
-
-        #print(negedges)
         
         tot = np.block([[tot,       neg1        ],
                         [neg2, gr[i].adj_matrix              ]])
     
+
+tot[control_nodes[0]][choice([i for i in range(N,N*num) if i not in control_nodes])] = -1
+tot[control_nodes[1]][choice([i for i in range(N) if i not in control_nodes])] = -1 
+############################################################################
 
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 
@@ -161,8 +157,8 @@ def evo(frames):
                        edgelist=negedges,
                        width=3, alpha=0.4, edge_color='r')
     
-    print(Net.activity())
-  
+    #print(Net.activity())
+    #plt.imshow(tot)
     return  ax
 
 

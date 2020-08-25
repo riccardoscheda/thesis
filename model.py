@@ -13,18 +13,18 @@ import  random_network  as rn
 
 #iterations
 frames = 100
-#particles
+
 N = 5
 M = 5
 K = 2
-#time step
-dt = 0.1
+num = 2
+
 ######################################
 fig, ax = plt.subplots(1,1)
 
 labels = {}
   
-num = 2
+
 gr = [rn.Random_Network(N,K) for i in range(num)]
 
 def find_control_nodes(gr):
@@ -59,8 +59,10 @@ if num>1:
                         [neg2, gr[i].adj_matrix              ]])
     
 
-tot[control_nodes[0]][choice([i for i in range(N,N*num) if i not in control_nodes])] = -1
-tot[control_nodes[1]][choice([i for i in range(N) if i not in control_nodes])] = -1 
+for j in range(num):
+    
+    #tot[control_nodes[num-1-j]][choice([i for i in range(N*j,N*(j+1)) if i not in control_nodes])] = -1
+     tot[control_nodes[-j]][control_nodes[-j-1]] = -1
 ############################################################################
 
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))

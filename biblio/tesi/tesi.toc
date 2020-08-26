@@ -1,21 +1,22 @@
 \babel@toc {english}{}
-\contentsline {chapter}{Introduction}{5}{chapter*.4}
-\contentsline {chapter}{\numberline {1}Cell Differentiation and cancer cells}{7}{chapter.1}
-\contentsline {section}{\numberline {1.1}Gene Regulatory Networks}{7}{section.1.1}
-\contentsline {section}{\numberline {1.2}Cell Differentiation}{8}{section.1.2}
-\contentsline {chapter}{\numberline {2}Gene Regulatory Networks}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Definition}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Role within the cell}{10}{section.2.2}
-\contentsline {section}{\numberline {2.3}Bo}{11}{section.2.3}
-\contentsline {section}{\numberline {2.4}summary Kauffman}{13}{section.2.4}
-\contentsline {chapter}{\numberline {3}Random Boolean Networks}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Random Boolean Networks}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}The model}{15}{section.3.2}
-\contentsline {section}{\numberline {3.3}Topology}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Dynamics}{16}{section.3.4}
-\contentsline {section}{\numberline {3.5}Applications}{19}{section.3.5}
-\contentsline {chapter}{\numberline {4}Cancer attractors}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}The model}{21}{section.4.1}
-\contentsline {chapter}{\numberline {5}The model}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1}The underlying philosophy of the model}{25}{section.5.1}
-\contentsline {section}{\numberline {5.2}The mathematical model and related problems}{26}{section.5.2}
+\contentsline {chapter}{Introduction}{6}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Cell Differentiation and cancer cells}{8}{chapter.1}
+\contentsline {section}{\numberline {1.1}Gene Regulatory Networks}{8}{section.1.1}
+\contentsline {section}{\numberline {1.2}Cell Differentiation}{9}{section.1.2}
+\contentsline {chapter}{\numberline {2}Gene Regulatory Networks}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Definition}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}Role within the cell}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}Bo}{12}{section.2.3}
+\contentsline {section}{\numberline {2.4}summary Kauffman}{14}{section.2.4}
+\contentsline {chapter}{\numberline {3}Random Boolean Networks}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Random Boolean Networks}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}The model}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}Topology}{16}{section.3.3}
+\contentsline {section}{\numberline {3.4}Dynamics}{17}{section.3.4}
+\contentsline {section}{\numberline {3.5}Applications}{20}{section.3.5}
+\contentsline {chapter}{\numberline {4}Cancer attractors}{22}{chapter.4}
+\contentsline {section}{\numberline {4.1}The model}{22}{section.4.1}
+\contentsline {chapter}{\numberline {5}The model}{26}{chapter.5}
+\contentsline {section}{\numberline {5.1}The underlying philosophy of the model}{26}{section.5.1}
+\contentsline {section}{\numberline {5.2}The mathematical model and related problems}{27}{section.5.2}
+\contentsline {chapter}{Bibliography}{39}{chapter*.6}

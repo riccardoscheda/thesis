@@ -98,16 +98,6 @@ def init():
     return ax,
 
 
-def noise(node):
-    ##### ATTENZIONE NOISE A ZERO #####
-    p = 0.9
-    if np.random.uniform(0,1)>p:
-        #print("ok")
-        return 0
-    else: 
-        return node
-    
-    
 def evo(frames):
     plt.ion()
     plt.cla()
@@ -116,10 +106,8 @@ def evo(frames):
  
     up = Net.adj_matrix.dot(Net.nodes)
     Net.nodes = (up >0).astype(int)
-       
-    for i in range(len(Net.nodes)):
-       Net.nodes[i] = noise(Net.nodes[i])
-        
+    rn.noise(Net,p=0.9)
+
         
     active_nodes = []
     non_active_nodes = []

@@ -67,15 +67,15 @@ def find_control_nodes(gr,N):
          
     control_node = np.argmax(final)
      
-    print("cycles: " + str(cycles))
-    print("driver node: "+ str(driver_node))
-    print(control_node)
+    # print("cycles: " + str(cycles))
+    # print("driver node: "+ str(driver_node))
+    # print(control_node)
     
     return control_node
 
 
 
-def activity(graph,N,number_of_clusters):
+def activity(graph,N,number_of_clusters=1):
     """
     Measures the activity of each cluster in the network
     
@@ -97,4 +97,27 @@ def activity(graph,N,number_of_clusters):
         
     return activity
     
+ 
+def noise(graph, p = 1.):
+    ##### ATTENZIONE NOISE A ZERO #####
+    for i in range(len(graph.nodes)):
+        if np.random.uniform(0,1)>p:
+            #print("ok")
+            graph.nodes[i] = 0
+        else: 
+            pass
     
+def evolution(graph,iterations = 10,p=1):
+    """
+    Dynamical evolution of the network.
+    -------------------------------------------------
+    
+    Parameters:
+        graph: Random Network graph
+        iterations: default = 10 int of iterations for which the evolution of the network
+        
+    """
+    for i in range(iterations):
+        next_state = graph.adj_matrix.dot(graph.nodes)
+        graph.nodes = (next_state >0).astype(int)
+        noise(graph,p)

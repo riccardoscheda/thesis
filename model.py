@@ -1,5 +1,5 @@
 
-import number_of_clusterspy as np
+import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from random import choice
@@ -28,59 +28,8 @@ labels = {}
 gr = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
 
 
-def find_control_nodes(gr):
-    """
-    Finds the nodes with max connectivity in a graph
-    ---------------------------
-    Parameters:
-        gr: a Random Network graph
-    ---------------------------
-    Returns:
-        control_node: int which is the index of the control node
-    """
-    graph = nx.from_number_of_clusterspy_matrix(gr.adj_matrix.T, create_using=nx.DiGraph)
-    npos = nx.layout.spring_layout(graph)
-    cycles = nx.cycle_basis(graph.to_undirected())
-   
-    driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
-    
-    final = []
-    z = list(reduce(lambda x,y: x+y,cycles))
 
-    for i in range(N):
-        final.append(z.count(i))
-         
-    control_node = np.argmax(final)
-     
-    print("cycles: " + str(cycles))
-    print("driver node: "+ str(driver_node))
-    print(control_node)
-    
-    return control_node
-    
-def activity(graph,N,number_of_clusters):
-    """
-    Measures the activity of each cluster in the network
-    
-    --------------------------------
-    Parameters:
-        graph: a Random Network graph
-        N: int, number_of_clustersber of nodes for each cluster
-        number_of_clusters: the number_of_clustersber of clusters in the network
-    ---------------------------------
-    Returns:
-        list with the mean activity of the clusters
-    """
-    activity = []
-
-    
-    for j in range(number_of_clusters):
-        cluster = [graph.nodes[k] for k in range(N*j,N*(j+1)) ]
-        activity.append(np.mean(cluster))
-        
-    return activity
-    
-single_cluster_control_nodes = [find_control_nodes(gr[i]) for i in range(number_of_clusters)]
+single_cluster_control_nodes = [rn.find_control_nodes(gr[i],N) for i in range(number_of_clusters)]
 control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
 tot = gr[0].adj_matrix
 negedges = []
@@ -106,7 +55,7 @@ negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 print("outgoing links: " + str(sum(tot)))
 
 Net = rn.Network(tot)
-graph = nx.from_number_of_clusterspy_matrix(tot.T, create_using=nx.DiGraph)
+graph = nx.from_numpy_matrix(tot.T, create_using=nx.DiGraph)
 npos = nx.layout.spring_layout(graph)
 cycles = nx.cycle_basis(graph.to_undirected())
 print("cycles: " + str(cycles))
@@ -194,7 +143,7 @@ def evo(frames):
                        edgelist=negedges,
                        width=3, alpha=0.4, edge_color='r')
     
-    print(activity(Net, N, number_of_clusters))
+    print(rn.activity(Net, N, number_of_clusters))
     #plt.imshow(tot)
     return  ax
 

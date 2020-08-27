@@ -3,6 +3,44 @@ import numpy as np
 import networkx as nx
 import  random_network  as rn
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #%%
 # n = 10
 
@@ -115,11 +153,3 @@ import  random_network  as rn
 #                         [neg2, gr[i].adj_matrix              ]])
 
 #%%
-import numpy as np
-import networkx as nx
-
-adj_matrix = np.loadtxt("network.txt", dtype='i', delimiter=' ')
-Net = rn.Network(adj_matrix)
-graph = nx.from_numpy_matrix(adj_matrix.T, create_using=nx.DiGraph)
-npos = nx.layout.spring_layout(graph)
-

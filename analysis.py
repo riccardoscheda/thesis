@@ -4,7 +4,7 @@ import networkx as nx
 import  random_network  as rn
 
 
-realizations = 10
+realizations = 100
 steps = 100
 N = 10
 graphs = [rn.Random_Network(N, 2) for i in range(realizations)]
@@ -12,9 +12,8 @@ graphs = [rn.Random_Network(N, 2) for i in range(realizations)]
 control_nodes = []
 for i in range(realizations):
     control_nodes.append(rn.find_control_nodes(graphs[i], N))
-
-for i in range(realizations):
     graphs[i].nodes[control_nodes[i]] = 1
+ 
 
 
 mean_activities = []
@@ -23,12 +22,17 @@ rn.activity(graphs[1],N)
 
 for i in range(steps):
     activities = []
+    graphs = [rn.Random_Network(N, 2) for i in range(realizations)]
+    for k in range(realizations):
+        control_nodes.append(rn.find_control_nodes(graphs[k], N))
+        graphs[k].nodes[control_nodes[k]] = 1
+ 
     for j in range(realizations):
-        rn.evolution(graphs[j],iterations=10,p=1)
+        rn.evolution(graphs[j],iterations=10,p=(0.01*i))
         activities.append(rn.activity(graphs[j], N))
     mean_activities.append(np.mean((np.array(activities))))
 
-probabilities = [i*0.1 for i in range(steps)]
+probabilities = [i*0.01 for i in range(steps)]
 
 plt.plot(probabilities,mean_activities)
 

@@ -98,14 +98,16 @@ def activity(graph,N,number_of_clusters=1):
     return activity
     
  
-def noise(graph, p = 1.):
+def noise(graph, p = 0.):
     ##### ATTENZIONE NOISE A ZERO #####
     for i in range(len(graph.nodes)):
-        if np.random.uniform(0,1)>p:
+        if np.random.uniform(0,1)<p:
             #print("ok")
+            
             graph.nodes[i] = 0
         else: 
-            pass
+           pass
+
     
 def evolution(graph,iterations = 10,p=1):
     """

@@ -9,14 +9,14 @@ steps = 100
 N = 10
 mean_activities = []
 
-
+######################### PARAMETRIC NOISE ######################
 for i in range(steps):
     activities = []
     graphs = [rn.Random_Network(N, 2) for i in range(realizations)]
 
     for j in range(realizations):
         rn.initial_conditions(graphs[j], N)
-        rn.evolution(graphs[j],iterations=20,p=(0.01*i))
+        rn.evolution(graphs[j],iterations=20,p=(0.01*i),p_noise=True)
         activities.append(rn.activity(graphs[j], N))
     mean_activities.append(np.mean((np.array(activities))))
 

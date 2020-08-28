@@ -147,7 +147,9 @@ def initial_conditions(graph,N):
     graph.nodes = np.zeros((N,1))
     graph.nodes[control_nodes] = 1
  
-def evolution(graph,iterations = 10,p=1,parametric_noise=False):
+    
+    
+def evolution(graph,iterations = 10,p=1,p_noise=False):
     """
     Dynamical evolution of the network.
     -------------------------------------------------

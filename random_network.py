@@ -111,10 +111,9 @@ def noise(graph, p = 0.):
         if np.random.uniform(0,1)<p:
             #print("ok")
             graph.nodes[i] = 0
-        else: 
-           pass
 
-def parametric_noise(graph, p=0):
+
+def parametric_noise(graph, p=1):
     """
     Gives a probability for a link to be turned off.
     -----------------------------------------------
@@ -126,7 +125,12 @@ def parametric_noise(graph, p=0):
         noisy_adj_matrix: numpy matrix with noise
         
     """
-    noisy_adj_matrix = graph.adj_matrix
+    noisy_adj_matrix = np.zeros((len(graph.nodes),len(graph.nodes)))
+    for i in range(len(graph.nodes)):
+        for j in range(len(graph.nodes)):
+            noisy_adj_matrix[i][j] = graph.adj_matrix[i][j]
+            
+            
     for i,j in zip(np.where(graph.adj_matrix==1)[0],np.where(graph.adj_matrix==1)[1]):
         if np.random.uniform(0,1)<p:
             noisy_adj_matrix[i][j] = 0 
@@ -145,6 +149,7 @@ def initial_conditions(graph,N):
     """
     control_nodes = find_control_nodes(graph, N)
     graph.nodes = np.zeros((N,1))
+    #graph.nodes = np.ones((N,1))
     graph.nodes[control_nodes] = 1
  
     
@@ -157,14 +162,16 @@ def evolution(graph,iterations = 10,p=1,p_noise=False):
     Parameters:
         graph: Random Network graph
         iterations: default = 10 int of iterations for which the evolution of the network
+        p: float, probability to turn off
+        p_noise: Bool, default False, to choose the type of noise
         
     """
-    if parametric_noise:
+    if p_noise:
         for i in range(iterations):
             noisy_adj_matrix = parametric_noise(graph,p)
             next_state = noisy_adj_matrix.dot(graph.nodes)
             graph.nodes = (next_state >0).astype(int)
-            noise(graph,p)    
+                
         
     else:
         for i in range(iterations):

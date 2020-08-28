@@ -7,25 +7,34 @@ import  random_network  as rn
 realizations = 100
 steps = 100
 N = 10
-mean_activities = []
+K = 2
 
-######################### PARAMETRIC NOISE ######################
-for i in range(steps):
-    activities = []
-    graphs = [rn.Random_Network(N, 2) for i in range(realizations)]
-
-    for j in range(realizations):
-        rn.initial_conditions(graphs[j], N)
-        rn.evolution(graphs[j],iterations=20,p=(0.01*i),p_noise=True)
-        activities.append(rn.activity(graphs[j], N))
-    mean_activities.append(np.mean((np.array(activities))))
-
-probabilities = [i*0.01 for i in range(steps)]
-
-plt.plot(probabilities,mean_activities)
-plt.xlabel("noise")
-plt.ylabel("mean activity")
-# plt.savefig("noise-activity.png")
+for s in [False,True]:
+    mean_activities = []
+    probabilities = [i*0.01 for i in range(steps)]
+    if s:
+        label = "noisy links"
+    else:
+        label = "noisy nodes"
+        
+        
+    for i in range(steps):
+        activities = []
+        graphs = [rn.Random_Network(N, K) for i in range(realizations)]
+    
+        for j in range(realizations):
+            #graphs = [rn.Random_Network(N, 2) for i in range(realizations)]
+            rn.initial_conditions(graphs[j], N)
+            rn.evolution(graphs[j],iterations=N*2,p=(0.01*i),p_noise=s)
+            activities.append(rn.activity(graphs[j], N))
+        mean_activities.append(np.mean((np.array(activities))))
+    
+    
+    plt.plot(probabilities,mean_activities,label=label)
+    plt.legend()
+    plt.xlabel("noise")
+    plt.ylabel("mean activity")
+    plt.savefig("noise-paramnoise-activity.png")
 
 
 

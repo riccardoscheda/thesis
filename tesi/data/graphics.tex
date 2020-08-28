@@ -15,15 +15,14 @@
 \centering
 \begin{tikzpicture}[scale=0.7]
 \centering
-\begin{axis} [xmin=0,xmax=50,xlabel=$x$,ylabel=$y$,
-ymin=0,ymax=1,grid=major,
+\begin{axis} [xmin=-0.1,xmax=100,xlabel=$Noise$ ,ylabel=$Mean$ $activity$,
+ymin=-0.01,ymax=1.1,grid=major,
 title={}]
 \addplot [thick,red]
-file {1incominglinks.dat};
+file {noisy_links.dat};
 \addplot [thick,blue]
-file {2incominglinks.dat};
+file {noisy_nodes.dat};
 \end{axis}
 \end{tikzpicture}
-
 
 \end{document}

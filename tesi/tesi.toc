@@ -19,4 +19,7 @@
 \contentsline {chapter}{\numberline {5}The model}{26}{chapter.5}
 \contentsline {section}{\numberline {5.1}The underlying philosophy of the model}{26}{section.5.1}
 \contentsline {section}{\numberline {5.2}The mathematical model and related problems}{27}{section.5.2}
-\contentsline {chapter}{Bibliography}{39}{chapter*.6}
+\contentsline {chapter}{\numberline {6}Analysis}{38}{chapter.6}
+\contentsline {section}{\numberline {6.1}Implementation}{38}{section.6.1}
+\contentsline {section}{\numberline {6.2}Noise}{40}{section.6.2}
+\contentsline {chapter}{Bibliography}{42}{chapter*.6}

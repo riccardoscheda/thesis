@@ -1,0 +1,51 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\begin{document}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+                    thick,main node/.style={circle,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) {};
+  \node[main node] (2) [below left of=1] {};
+  \node[main node] (3) [below right of=2] {};
+  \node[main node] (4) [below right of=1] {};
+  \node[main node] (5) [right of=4] {}; 
+  \node[main node] (6) [below right of=5] {};
+  \node[main node] (7) [above right of=6] {};
+  \node[main node] (8) [above left of=7] {};
+  \node[main node] (9) [below right of =3] {};
+  \node[main node] (10) [right of =9] {};
+  \node[main node] (11) [below of =10] {};
+  \node[main node] (12) [left of =11] {};
+
+
+\path[every node/.style={font=\sffamily\small}]
+    (1) edge node [left] {} (4)
+         
+    (2) edge node [right] {} (1)
+         edge node {} (4)   
+    (3) edge node [right] {} (2)
+    (4) edge node [left] {} (3)
+	edge node {} (5)
+    (8) edge node [left] {} (7)
+    (5) edge node [right] {} (8) 
+    (6) edge node [right] {} (5)
+        edge node {} (10)
+    (7) edge node [left] {} (6)
+            edge node {} (5)  
+	
+    (9) edge node [left] {} (10)
+    (10) edge node [left] {} (11)
+    (11) edge node [left] {} (12)
+    (12) edge node [left] {} (9)
+    (9) edge node [left] {} (3)	    
+
+
+
+\end{tikzpicture}
+\end{document}

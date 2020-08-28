@@ -1,0 +1,29 @@
+\documentclass{standalone}
+
+\usepackage[utf8x]{inputenc}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{standalone}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{graphicx}
+
+\begin{document}
+\centering
+\begin{tikzpicture}[scale=0.7]
+\centering
+\begin{axis} [xmin=0,xmax=50,xlabel=$x$,ylabel=$y$,
+ymin=0,ymax=1,grid=major,
+title={}]
+\addplot [thick,red]
+file {1incominglinks.dat};
+\addplot [thick,blue]
+file {2incominglinks.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+\end{document}

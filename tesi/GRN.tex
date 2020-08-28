@@ -1,0 +1,49 @@
+\chapter{Gene Regulatory Networks}\label{grn}
+\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
+
+
+\section{Definition}
+
+Gene regulation controls the expression of genes and, consequently, all cellular functions. Gene expression is a process that involves transcription of the gene into mRNA, followed by translation to a protein, which may be subject to post-translational modification. The transcription process is controlled by transcription factors (TFs) that can work as activators or inhibitors. TFs are themselves encoded by genes and subject to regulation, which altogether forms complex regulatory networks. 
+\begin{figure}
+\centering
+\includegraphics{GRN.png}
+\end{figure}
+Cells efficiently carry out molecular synthesis, energy transduction, and signal processing across a range of environmental conditions by networks of genes, which we define broadly as networks of interacting genes, proteins, and metabolites \cite{K37}. Formally speaking, a gene regulatory network or genetic regulatory network (GRN) is a collection of DNA segments in a cell which interact with each other (indirectly through their RNA and protein expression products) and with other substances in the cell, thereby governing the rates at which genes in the network are transcribed into mRNA. In general, each mRNA molecule goes on to make a specific protein (or set of proteins). In some cases this protein will be structural, and will accumulate at the cell-wall or within the cell to give it particular structural properties. 
+
+\section{Role within the cell}
+
+Gene Regulatory Networks (GRNs) control biological process of all organisms. The complex control systems underlying development have probably been evolving for more than a billion years. They regulare the expression of thousand of genes in any given biological process. They are essentially hardwired genomic regulatory codes, the role of which is to speicify the sets of genes that must be expressed in specific spatial and temporal patterns. In physical terms, these control system consist of many thousands of modular DNA sequences. Each module receives and integrates multiple inputs, in the form of regulatory proteins (activators and repressors) that recognize specific sequences within them. The end result is the precise transcriptional control of the associated genes. 
+Functional linkages between these particular genes, and their associated regulatory modules, define the core networks underlying development. They explain exactly how genomic sequence encodes the regulation of expression of the sets of genes that generate patterns and execute the construction of multiple states of differentiation.
+
+The regulatory genome is a logic processing system: every regulatory module contained in the genome receives multiple inputs and processes in ways that can be mathematically represented as combinations of logic functions. 
+
+Definitive regulatory functions emerge only from the architecture of intergenic linkages, and these functions are not visible at the level of any individual genes. So gene regulatory networks can be determined only by experimental molecular biology in which the functional meaning of given regulatory sequences is directly determined.
+
+GRNs have a complex structure: they are inhomogeneous compositions of different kinds of subnetworks, each performing a specific kind of function. Some subnetworks are used in many processes.
+\section{Bo}
+In recent years, single-cell-resolution measurements have revealed unprecedented levels of cell-to-cell heterogeneity within tissues. The discovery of this ever-present heterogeneity is driving a more nuanced view of cell phenotype, wherein cells exist along a continuum of cell-states, rather than conforming to discrete classifications. The comprehensive view of diverse cell states revealed by single cell measurements is also affording new opportunities to discover molecular regulators of cell phenotype and dynamics of lineage commitment (Trapnell et al., 2014; Olsson et al., 2016; Briggs et al., 2018). For example, single cell transcriptomics have revealed the widespread nature of multilineage priming (MLP), a phenomenon wherein individual, multipotent cells exhibit “promiscuous” coexpression of genes associated with distinct lineages prior to commitment (Nimmo et al., 2015). In principle, mathematical modeling of gene regulatory network dynamics can provide a theoretical foundation for understanding cell heterogeneity and gene expression dynamics, by quantitatively linking molecular-level regulatory mechanisms with observed cell states. However, due to the molecular complexity of gene regulatory mechanisms, it remains challenging to integrate such models with single-cell data.
+
+Mathematical models of gene regulatory network dynamics can account for (and at least partially reproduce) observed cellular heterogeneity in two primary ways. First, gene network models are multistable dynamical systems, meaning a given network has the potential to reach multiple stable states of gene expression. These states arise from the dynamic interplay of activation, inhibition, feedback, and nonlinearity (Kauffman, 1969; MacArthur et al., 2009; Huang, 2012). Second, some mathematical models inherently treat cellular noise. This noise, or stochasticity, is modeled in various ways depending on assumptions about the source (Peccoud and Ycart, 1995; Arkin et al., 1998; Kepler and Elston, 2001; Swain et al., 2002). Discrete, stochastic models of gene regulation, which track discrete molecular entities, regulatory-protein binding kinetics, and binding states of promoters controlling gene activity, have formed the basis of biophysical theories of gene expression noise due to so-called intrinsic molecular noise (Peccoud and Ycart, 1995; Thattai and van Oudenaarden, 2001; Kepler and Elston, 2001; Pedraza and Paulsson, 2008). Such stochastic gene-regulation mechanisms have also been incorporated into larger regulatory network models using the formalism of stochastic biochemical reaction networks, and have been utilized to explore how molecular fluctuations can cause heterogeneity within phenotype-states and promote stochastic transitions between phenotypes (Feng and Wang, 2012; Sasai et al., 2013; Zhang and Wolynes, 2014; Tse et al., 2015).
+
+The quantitative landscape of cellular states is another concept that is increasingly utilized to describe cellular heterogeneity. Broadly, the cellular potential landscape (first conceptualized by Waddington (Wang et al., 2011; Huang, 2012; Waddington, 2014) is a function in high-dimensional space (over many molecular observables, typically expression levels of different genes), that quantifies the stability of a given cell-state. In analogy to potential energy (gravitational, chemical, electric, etc.), cell states of higher potential are less stable than those of lower potential. The landscape concept inherently accounts for cellular heterogeneity, since it holds that a continuum of states is theoretically accessible to the cell, with low-potential states (in “valleys”) more likely to be observed than high-potential states. The landscape is a rigorously defined function derived from the dynamics of the underlying gene network model, according to some choice of mathematical formalism (Wang et al., 2011; Bhattacharya et al., 2011; Huang, 2012; Zhou et al., 2016). For stochastic gene network models that inherently treat noise, the landscape is directly obtained from the computed probability distribution over cell-states (Cao and Liang, 2008; Micheelsen et al., 2010; Feng and Wang, 2012; Tse et al., 2015).
+
+Stochastic modeling of gene network dynamics has been employed in various forms for analysis of single cell measurements. For example, application of noisy dynamical systems theory has shed light on cell-state transitions (Mojtahedi et al., 2016; Jin et al., 2018; Lin et al., 2018). Stochastic simulations of gene network dynamics have been used to develop and/or benchmark tools for network reconstruction (Schaffter et al., 2011; Dibaeinia and Sinha, 2019; Bonnaffoux et al., 2019) Stochastic model-aided analysis of single-cell measurements has been demonstrated to yield insights on gene regulatory mechanisms (Munsky et al., 2018). However, few existing analysis methods utilize discrete-molecule, stochastic models, which fully account for intrinsic gene expression noise and its impact on cell-state, to aid in the interpretation of noisy distributions recovered from single cell RNA sequencing data. There exists an opportunity to link such biophysical, stochastic models, which reproduce intrinsic noise and cell heterogeneity in silico, to single cell datasets that characterize cell heterogeneity in vivo. In particular, the landscape of heterogeneous cell-states computed from discrete stochastic models can be directly compared to single-cell measurements.
+
+
+\section{summary Kauffman}
+We know
+most of the genes, the coding regions, some of the cis
+regulatory sites and transcription factors, some of the
+protein components of cell signaling cascades that are
+driven by transcription and translation, and in turn
+feedback to regulate gene activities. Let me refer to this
+whole system as the genetic regulatory network.
+One of
+the outstanding problems of contemporary systems
+biology is to understand the structure, logic and
+dynamics of this network within and between cells.
+
+real gene networks are
+random after 3.8 billion years of selection. 
+

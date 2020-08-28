@@ -103,12 +103,22 @@ def noise(graph, p = 0.):
     for i in range(len(graph.nodes)):
         if np.random.uniform(0,1)<p:
             #print("ok")
-            
             graph.nodes[i] = 0
         else: 
            pass
 
-    
+def initial_conditions(graph,N):
+    """
+    Initialize the graph turning on the control node of the graph
+    -------------------------------------------------
+    Parameters:
+        graph: Random Network graph
+        N: int, number of nodes
+    """
+    control_nodes = find_control_nodes(graph, N)
+    graph.nodes = np.zeros((N,1))
+    graph.nodes[control_nodes] = 1
+ 
 def evolution(graph,iterations = 10,p=1):
     """
     Dynamical evolution of the network.

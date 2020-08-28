@@ -99,7 +99,14 @@ def activity(graph,N,number_of_clusters=1):
     
  
 def noise(graph, p = 0.):
-    ##### ATTENZIONE NOISE A ZERO #####
+    """
+    Gives a probability for a node to be turned off.
+    -----------------------------------------------
+    Parameters:
+        graph: Random Network graph
+        p: float, default 0, gives the probability for the node to be turned off.
+        
+    """
     for i in range(len(graph.nodes)):
         if np.random.uniform(0,1)<p:
             #print("ok")
@@ -107,9 +114,30 @@ def noise(graph, p = 0.):
         else: 
            pass
 
+def parametric_noise(graph, p=0):
+    """
+    Gives a probability for a link to be turned off.
+    -----------------------------------------------
+    Parameters:
+        graph: Random Network graph
+        p: float, default 0, gives the probability for the node to be turned off.
+    -----------------------------------------------    
+    Returns:
+        noisy_adj_matrix: numpy matrix with noise
+        
+    """
+    noisy_adj_matrix = graph.adj_matrix
+    for i,j in zip(np.where(graph.adj_matrix==1)[0],np.where(graph.adj_matrix==1)[1]):
+        if np.random.uniform(0,1)<p:
+            noisy_adj_matrix[i][j] = 0 
+       
+    return noisy_adj_matrix
+
+
+
 def initial_conditions(graph,N):
     """
-    Initialize the graph turning on the control node of the graph
+    Initialize the graph turning on the control node of the graph.
     -------------------------------------------------
     Parameters:
         graph: Random Network graph
@@ -119,7 +147,7 @@ def initial_conditions(graph,N):
     graph.nodes = np.zeros((N,1))
     graph.nodes[control_nodes] = 1
  
-def evolution(graph,iterations = 10,p=1):
+def evolution(graph,iterations = 10,p=1,parametric_noise=False):
     """
     Dynamical evolution of the network.
     -------------------------------------------------
@@ -129,7 +157,15 @@ def evolution(graph,iterations = 10,p=1):
         iterations: default = 10 int of iterations for which the evolution of the network
         
     """
-    for i in range(iterations):
-        next_state = graph.adj_matrix.dot(graph.nodes)
-        graph.nodes = (next_state >0).astype(int)
-        noise(graph,p)
+    if parametric_noise:
+        for i in range(iterations):
+            noisy_adj_matrix = parametric_noise(graph,p)
+            next_state = noisy_adj_matrix.dot(graph.nodes)
+            graph.nodes = (next_state >0).astype(int)
+            noise(graph,p)    
+        
+    else:
+        for i in range(iterations):
+            next_state = graph.adj_matrix.dot(graph.nodes)
+            graph.nodes = (next_state >0).astype(int)
+            noise(graph,p)

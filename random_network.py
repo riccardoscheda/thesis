@@ -57,7 +57,7 @@ def find_control_nodes(gr,N):
     npos = nx.layout.spring_layout(graph)
     cycles = nx.cycle_basis(graph.to_undirected())
    
-    driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
+    #driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
     
     final = []
     z = list(reduce(lambda x,y: x+y,cycles))
@@ -154,7 +154,7 @@ def initial_conditions(graph,N):
  
     
     
-def evolution(graph,iterations = 10,p=1,p_noise=False):
+def evolution(graph,iterations = 10,p=0,p_noise=False):
     """
     Dynamical evolution of the network.
     -------------------------------------------------
@@ -178,3 +178,7 @@ def evolution(graph,iterations = 10,p=1,p_noise=False):
             next_state = graph.adj_matrix.dot(graph.nodes)
             graph.nodes = (next_state >0).astype(int)
             noise(graph,p)
+            
+            
+            
+            

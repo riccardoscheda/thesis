@@ -3,9 +3,12 @@ import numpy as np
 import networkx as nx
 import  random_network  as rn
 
+PATH = "biblio/tesi/"
+#%%  ################################ MEAN ACTIVITY VERSUS NOISE #####################À
 
-realizations = 100
-steps = 100
+
+realizations = 10
+steps = 10
 N = 10
 K = 2
 
@@ -34,60 +37,32 @@ for s in [False,True]:
     plt.legend()
     plt.xlabel("noise")
     plt.ylabel("mean activity")
-    plt.savefig("noise-paramnoise-activity.png")
+    plt.savefig(PATH + "activity1.png")
 
 
+#%% ########################## MEAN ACTIVITY VERSUS K-INCOMING LINKS #############################
+import pandas as pd
+realizations = 200
 
-
-
-
-
-
-
-
-
-
-
-
-
-#%%
-# n = 10
-
-# for K in range(1,3):
-#     means = []
-#     totmeans = []
-#     for N in range(1,n):
+for K in range(1,3):
+    mean_activities = []
+    for N in range(2,50):
+        activity = []
+        graphs = [rn.Random_Network(N, K) for i in range(realizations)]
+        for i in range(realizations):
+            graphs[i].nodes = np.zeros((N,1))
+            graphs[i].nodes[np.random.randint(N)] = 1
         
-#         for i in range(30):
-#             g = rn.Random_Network(N, K)
-#             g.nodes[np.random.randint(N)] = 1
-            
-#             #evolution
-#             for t in range(N):
-#                 up = np.zeros((N,1))
-#                 #NOISE
-#                 # for i in range(N):
-#                 #  p = 1
-#                 #  if np.random.uniform(0,1)>p:
-#                 #      g.nodes[i] = 1
-             
-                
-#                 up = g.adj_matrix.dot(g.nodes)
-#                 g.nodes = (up >0).astype(int)
-                   
-#             means.append(np.mean(g.nodes.T))
-#             #g.nodes = np.zeros((N,1))
-#         totmeans.append(np.mean(means))
-       
+            rn.evolution(graphs[i],p=0)
+            activity.append(rn.activity(graphs[i],N))
+        mean_activities.append(np.mean(np.array(activity)))
     
-#     # plt.ylim(0,1.2)
-#     # plt.plot(totmeans, label = "mean of incoming links K = " + str(K) )
-#     # plt.ylabel("active links")
-#     # plt.xlabel("number of nodes N")
-#     # plt.legend()    
-#     # plt.savefig("active_links.png")
-# # print(g.nodes.T)
-# #plt.imshow(g.adj_matrix)
+    
+    #plt.ylim(0,1.1)
+    df = pd.DataFrame(np.array(mean_activities))
+    df.to_csv(PATH+"/data/"+str(K)+"incominglinks.dat",sep = " ")
+
+ #%%   
 # plt.figure()
 # graph = nx.from_numpy_matrix(g.adj_matrix.T,create_using = nx.DiGraph)
 # active_nodes = []

@@ -28,9 +28,6 @@ class Random_Network:
                     r = random.choice(numbers)
                     self.adj_matrix[i][r] = 1
                     
-        def activity(self):
-            return np.mean(self.nodes)
-                    
     
             
 class Network:

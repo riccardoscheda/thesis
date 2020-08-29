@@ -2,13 +2,14 @@ import pylab as plt
 import numpy as np
 import networkx as nx
 import  random_network  as rn
+import pandas as pd
 
-PATH = "biblio/tesi/"
+PATH = "tesi"
 #%%  ################################ MEAN ACTIVITY VERSUS NOISE #####################À
 
 
-realizations = 10
-steps = 10
+realizations = 100
+steps = 100
 N = 10
 K = 2
 
@@ -33,15 +34,17 @@ for s in [False,True]:
         mean_activities.append(np.mean((np.array(activities))))
     
     
-    plt.plot(probabilities,mean_activities,label=label)
-    plt.legend()
-    plt.xlabel("noise")
-    plt.ylabel("mean activity")
-    plt.savefig(PATH + "activity1.png")
+    # plt.plot(probabilities,mean_activities,label=label)
+    # plt.legend()
+    # plt.xlabel("noise")
+    # plt.ylabel("mean activity")
+    #plt.savefig(PATH + "activity1.png")
+    df = pd.DataFrame(np.array(mean_activities))
+    df.to_csv(PATH+"/data/"+label+".dat",sep = " ",decimal=".")
 
 
 #%% ########################## MEAN ACTIVITY VERSUS K-INCOMING LINKS #############################
-import pandas as pd
+
 realizations = 200
 
 for K in range(1,3):
@@ -60,9 +63,9 @@ for K in range(1,3):
     
     #plt.ylim(0,1.1)
     df = pd.DataFrame(np.array(mean_activities))
-    df.to_csv(PATH+"/data/"+str(K)+"incominglinks.dat",sep = " ")
+    df.to_csv(PATH+"/data/"+label+".dat",sep = " ")
 
- #%%   
+#%%   
 # plt.figure()
 # graph = nx.from_numpy_matrix(g.adj_matrix.T,create_using = nx.DiGraph)
 # active_nodes = []

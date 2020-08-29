@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  29 AUG 2020 11:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  29 AUG 2020 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -573,6 +573,9 @@ s
 (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/palatino.sty
+Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip56
@@ -675,9 +678,14 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 66.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
 \AtBeginShipoutBox=\box41
 Package hyperref Info: Link coloring OFF on input line 66.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -747,6 +755,13 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 3.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 15.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 21.
+
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
@@ -764,9 +779,15 @@ te ignored
 <to be read again> 
                    \relax 
 l.70 \facciatabianca
-                     [1] (./abstract.tex) [2
+                     [1] (./abstract.tex
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
+) [2
 
-] (./tesi.toc [3
+] (./tesi.toc
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
+ [3
 
 
 
@@ -790,10 +811,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
- [6
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+ [7
 
 ]) (./celldiff.tex
 
@@ -802,9 +830,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]
+[8]
 Chapter 1.
-[8
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 5.
+[9
 
 ]) (./GRN.tex
 
@@ -813,14 +843,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
+[10]
 Chapter 2.
-<GRN.png, id=243, 316.3017pt x 133.4586pt>
+<GRN.png, id=253, 316.3017pt x 133.4586pt>
 File: GRN.png Graphic file (type png)
 <use GRN.png>
 Package pdftex.def Info: GRN.png  used on input line 10.
 (pdftex.def)             Requested size: 316.30092pt x 133.45827pt.
-[10
+
+Overfull \hbox (3.01886pt too wide) in paragraph at lines 7--13
+\OT1/ppl/m/n/12 mRNA, fol-lowed by trans-la-tion to a pro-tein, which may be su
+b-ject to post-translational
+ []
+
+[11
 
  <./GRN.png>]
 
@@ -829,27 +865,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [12]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -857,31 +879,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]) (./RBN.tex
+[13]
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[14]) (./RBN.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
 Chapter 3.
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-[15
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+[16
 
 ]
-<figurenetworks.pdf, id=272, 264.03444pt x 145.55981pt>
+<figurenetworks.pdf, id=282, 264.03444pt x 145.55981pt>
 File: figurenetworks.pdf Graphic file (type pdf)
 <use figurenetworks.pdf>
 Package pdftex.def Info: figurenetworks.pdf  used on input line 65.
@@ -896,13 +932,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
+[17]
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -910,8 +946,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17 <./figurenetworks.pdf>]
-<figurenetworks2.pdf, id=298, 171.69144pt x 114.78584pt>
+[18 <./figurenetworks.pdf>]
+<figurenetworks2.pdf, id=310, 171.69144pt x 114.78584pt>
 File: figurenetworks2.pdf Graphic file (type pdf)
 <use figurenetworks2.pdf>
 Package pdftex.def Info: figurenetworks2.pdf  used on input line 121.
@@ -930,23 +966,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18 <./figurenetworks2.pdf>]
+[19 <./figurenetworks2.pdf>]
 File: figurenetworks2.pdf Graphic file (type pdf)
 <use figurenetworks2.pdf>
 Package pdftex.def Info: figurenetworks2.pdf  used on input line 166.
 (pdftex.def)             Requested size: 171.69101pt x 114.78555pt.
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
 Missing character: There is no ‚ in font cmr8!
 Missing character: There is no à in font cmr8!
 Missing character: There is no í in font cmr8!
@@ -960,7 +996,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[20]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no à in font cmr12!
 Missing character: There is no í in font cmr12!
@@ -986,23 +1022,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20]) (./model.tex
+[21]) (./model.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
+[22]
 Chapter 4.
-[22
+[23
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 57.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
 
 
@@ -1011,32 +1047,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
+[24]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]) (./outline_problem.tex
+[25]) (./outline_problem.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
+[26]
 Chapter 5.
-[26
+[27
 
 ]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[27]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1058,6 +1087,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [30]
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 129.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 129.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1092,7 +1129,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35]pdfTeX warning (ext4): destination with the same identifier (name{equation.
+[35]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36]pdfTeX warning (ext4): destination with the same identifier (name{equation.
 5.2.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1104,87 +1148,125 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36]) (./analysis.tex
+[37]) (./analysis.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37]
+[38]
 Chapter 6.
-<images/K.pdf, id=427, 172.23747pt x 139.51622pt>
+<images/K.pdf, id=437, 166.54521pt x 135.06761pt>
 File: images/K.pdf Graphic file (type pdf)
 <use images/K.pdf>
 Package pdftex.def Info: images/K.pdf  used on input line 16.
-(pdftex.def)             Requested size: 258.35555pt x 209.2738pt.
+(pdftex.def)             Requested size: 249.8172pt x 202.6009pt.
+<images/outgoing.pdf, id=439, 172.27663pt x 139.51523pt>
+File: images/outgoing.pdf Graphic file (type pdf)
+<use images/outgoing.pdf>
+Package pdftex.def Info: images/outgoing.pdf  used on input line 25.
+(pdftex.def)             Requested size: 258.41429pt x 209.27231pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[38
+[39
 
 ]
-<images/noise.pdf, id=434, 170.48694pt x 133.62924pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/loops.pdf, id=446, 172.27663pt x 139.51323pt>
+File: images/loops.pdf Graphic file (type pdf)
+<use images/loops.pdf>
+Package pdftex.def Info: images/loops.pdf  used on input line 47.
+(pdftex.def)             Requested size: 258.41429pt x 209.26932pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40 <./images/K.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/noise.pdf, id=459, 170.48694pt x 133.62924pt>
 File: images/noise.pdf Graphic file (type pdf)
 <use images/noise.pdf>
-Package pdftex.def Info: images/noise.pdf  used on input line 41.
+Package pdftex.def Info: images/noise.pdf  used on input line 60.
 (pdftex.def)             Requested size: 255.72977pt x 200.44333pt.
 ) (./conclusions.tex
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39 <./images/K.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40 <./images/noise.pdf>]) (./biblio.tex [41
+[41 <./images/outgoing.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42 <./images/loops.pdf> <./images/noise.pdf>]) (./biblio.tex [43
 
 ]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ì in font pplr7t!
 
-Underfull \hbox (badness 3884) in paragraph at lines 20--22
-[]\OT1/cmr/m/n/12 S. Huang, I. Ern-berg, S. Kauff-man,\OT1/cmr/m/it/12 Cancer a
+Underfull \hbox (badness 6380) in paragraph at lines 20--22
+[]\OT1/ppl/m/n/12 S. Huang, I. Ern-berg, S. Kauff-man,\OT1/ppl/m/it/12 Cancer a
 t-trac-tors: A sys-tems view
  []
 
 
-Underfull \hbox (badness 3861) in paragraph at lines 20--22
-\OT1/cmr/m/it/12 of tu-mors from a gene net-work dy-nam-ics and de-vel-op-men-t
-al per-spec-tive\OT1/cmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+\OT1/ppl/m/it/12 of tu-mors from a gene net-work dy-nam-ics and de-vel-op-men-t
+al per-spec-tive\OT1/ppl/m/n/12 ,
  []
 
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
-[42
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ì in font pplr7t!
+[44
 
 ]
-Underfull \hbox (badness 7397) in paragraph at lines 36--38
-[]\OT1/cmr/m/n/12 Jin Wang, Kun Zhang, Li Xu, and Erkang Wang ,\OT1/cmr/m/it/12
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+[]\OT1/ppl/m/n/12 Jin Wang, Kun Zhang, Li Xu, and Erkang Wang ,\OT1/ppl/m/it/12
  Quan-ti-fy-ing the
  []
 
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ® in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ® in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no † in font cmr12!
+
+Underfull \hbox (badness 2073) in paragraph at lines 36--38
+\OT1/ppl/m/it/12 Wadding-ton land-scape and bi-o-log-i-cal paths for de-vel-op-
+ment and dif-fer-en-ti-a-tion\OT1/ppl/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 45--46
+[]\OT1/ppl/m/n/12 J. Park and M. E. J. New-man,\OT1/ppl/m/it/12 The sta-tis-ti-
+cal me-chan-ics of net-works\OT1/ppl/m/n/12 , DOI:
+ []
+
+Missing character: There is no √ in font pplr7t!
+Missing character: There is no ® in font pplr7t!
+Missing character: There is no √ in font pplr7t!
+Missing character: There is no ® in font pplr7t!
+Missing character: There is no √ in font pplr7t!
+Missing character: There is no † in font pplr7t!
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43pdfTeX warning (ext4): destination with the same identifier (name{cite.K17})
+[45pdfTeX warning (ext4): destination with the same identifier (name{cite.K17})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1192,18 +1274,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 l.52 \bibitem{K23}
                    N. Masuda , M. A. Porter, R. Lambiotte ,\emph{Random walk...
 ]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no ‚ in font cmti12!
-Missing character: There is no Ä in font cmti12!
-Missing character: There is no ô in font cmti12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ì in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ì in font pplr7t!
+Missing character: There is no ‚ in font pplri7t!
+Missing character: There is no Ä in font pplri7t!
+Missing character: There is no ô in font pplri7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ì in font pplr7t!
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1211,11 +1293,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44]
-Missing character: There is no ƒ in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no Å in font cmr12!
+[46]
+Missing character: There is no ƒ in font pplr7t!
+Missing character: There is no ± in font pplr7t!
+Missing character: There is no Ã in font pplr7t!
+Missing character: There is no Å in font pplr7t!
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1223,14 +1305,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45])
+[47])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
  (./tesi.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 589F98FF6D9B628447DE82C16D96F7D8;1561.
+(rerunfilecheck)             Checksum: A09E13EC468A7E29DB93C8824AF88102;1571.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1238,34 +1320,33 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 98.
  ) 
 Here is how much of TeX's memory you used:
- 18634 strings out of 494847
- 342993 string characters out of 6179080
- 408207 words of memory out of 5000000
- 21420 multiletter control sequences out of 15000+600000
- 19664 words of font info for 74 fonts, out of 8000000 for 9000
+ 18766 strings out of 494847
+ 344983 string characters out of 6179080
+ 408753 words of memory out of 5000000
+ 21524 multiletter control sequences out of 15000+600000
+ 32881 words of font info for 92 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  55i,12n,54p,1587b,811s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesi.pdf (46 pages, 442585 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/u
+plr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on tesi.pdf (48 pages, 430329 bytes).
 PDF statistics:
- 591 PDF objects out of 1000 (max. 8388607)
- 511 compressed objects within 6 object streams
- 137 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 622 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

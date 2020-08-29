@@ -8,9 +8,9 @@ PATH = "tesi"
 #%%  ################################ MEAN ACTIVITY VERSUS NOISE #####################À
 
 
-realizations = 100
-steps = 100
-N = 10
+realizations = 50
+steps = 50
+N = 20
 K = 2
 
 for s in [False,True]:
@@ -34,18 +34,22 @@ for s in [False,True]:
         mean_activities.append(np.mean((np.array(activities))))
     
     
-    # plt.plot(probabilities,mean_activities,label=label)
-    # plt.legend()
-    # plt.xlabel("noise")
-    # plt.ylabel("mean activity")
-    #plt.savefig(PATH + "activity1.png")
-    df = pd.DataFrame(np.array(mean_activities))
-    df.to_csv(PATH+"/data/"+label+".dat",sep = " ",decimal=".")
-
+    plt.plot(probabilities,mean_activities,label=label)
+    plt.legend()
+    plt.xlabel("noise")
+    plt.ylabel("mean activity")
+    plt.savefig(PATH + "activity1.png")
+    # a = [i*0.01 for i in range(steps)]
+    # s = pd.Series(a)
+    # df = pd.DataFrame()
+    # df[0] = a
+    # df[1] = pd.DataFrame(np.array(mean_activities))
+    # df.to_csv(PATH+"/data/"+label+".dat",sep = " ",decimal=".",index=False,header=False)
+    
 
 #%% ########################## MEAN ACTIVITY VERSUS K-INCOMING LINKS #############################
 
-realizations = 200
+realizations = 100
 
 for K in range(1,3):
     mean_activities = []
@@ -54,16 +58,19 @@ for K in range(1,3):
         graphs = [rn.Random_Network(N, K) for i in range(realizations)]
         for i in range(realizations):
             graphs[i].nodes = np.zeros((N,1))
-            graphs[i].nodes[np.random.randint(N)] = 1
-        
+            try:
+                graphs[i].nodes[rn.find_control_nodes(graphs[i], N)] = 1
+            except:
+                graphs[i].nodes[np.random.randint(N)] = 1
             rn.evolution(graphs[i],p=0)
             activity.append(rn.activity(graphs[i],N))
         mean_activities.append(np.mean(np.array(activity)))
     
     
-    #plt.ylim(0,1.1)
-    df = pd.DataFrame(np.array(mean_activities))
-    df.to_csv(PATH+"/data/"+label+".dat",sep = " ")
+    plt.ylim(0,1.1)
+    plt.plot(np.array(mean_activities))
+    # df = pd.DataFrame(np.array(mean_activities))
+    # df.to_csv(PATH+"/data/"+label+".dat",sep = " ")
 
 #%%   
 # plt.figure()
@@ -83,29 +90,31 @@ for K in range(1,3):
 #                         node_color='y')
 # # plt.savefig("net.png")
 # #%%
-# K = 1
-# max_nodes = 100
-# iterations = 10
+K = 2
+max_nodes = 50
+iterations = 10
 
-# fig, ax = plt.subplots(1,2)
-# outgoing_links = []
-# number_of_loops = []
-# mean_number_of_loops = []
-# mean_outgoing_links = []
-# for i in range(2,max_nodes):
-#     for j in range(iterations): 
-#         g = rn.Random_Network(i, K)
-#         outgoing_links.append(np.mean(sum(g.adj_matrix)))
-#         graph = nx.from_numpy_matrix(g.adj_matrix.T, create_using=nx.DiGraph)
-#         cycles = nx.cycle_basis(graph.to_undirected())
-#         number_of_loops.append(len(cycles))
+outgoing_links = []
+number_of_loops = []
+mean_number_of_loops = []
+mean_outgoing_links = []
+for i in range(2,max_nodes):
+    for j in range(iterations): 
+        g = rn.Random_Network(i, K)
+        outgoing_links.append(np.mean(sum(g.adj_matrix)))
+        graph = nx.from_numpy_matrix(g.adj_matrix.T, create_using=nx.DiGraph)
+        cycles = nx.cycle_basis(graph.to_undirected())
+        number_of_loops.append(len(cycles))
         
-#     mean_outgoing_links.append(np.mean(outgoing_links))
-#     mean_number_of_loops.append(np.mean(number_of_loops))
+    mean_outgoing_links.append(np.mean(outgoing_links))
+    mean_number_of_loops.append(np.mean(number_of_loops))
 
 
-# x = np.linspace(0,max_nodes,num = max_nodes)
-# y = np.ones(max_nodes)*K
+df = pd.DataFrame()
+df[0] = mean_outgoing_links
+df.to_csv(PATH+"/data/mean-outgoing-links.dat",sep=" ",header=False)
+df[0] = mean_number_of_loops
+df.to_csv(PATH+"/data/mean-number-of-loops.dat",sep=" ",header=False)
 
 # plt.suptitle("incoming links K =" + str(K))
 # ax[0].plot(mean_outgoing_links)

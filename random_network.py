@@ -27,8 +27,8 @@ class Random_Network:
                     numbers = list(range(0,i)) + list(range(i+1,self.n))
                     r = random.choice(numbers)
                     self.adj_matrix[i][r] = 1
-                    
-    
+       
+        self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
             
 class Network:
     def __init__(self, matrix):

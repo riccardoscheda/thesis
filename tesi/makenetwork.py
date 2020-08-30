@@ -1,13 +1,19 @@
 
 import networkx as nx
+import random_network as rn
+N = 10 
+K = 1
+graph = rn.Random_Network(N, K)
 
-nodes = ['10','0','11','12','13','1','2','4','3','15','5','14','9','8','6','7']
-edges = [('10','0'), ('0','12'), ('12','11'),('11','0'),('13','11'),('1','12'),('2','4'),('4','15'),('15','3'),('3','4'),('14','3'),('5','15'),('9','8'),('8','8'),('6','7'),('7','7'),('12','14')]
-gender = ['w', 'g', 'g', 'g','w','w','w','g','g','g','w','w','w','g','w','g']
+nodes = [str(i) for i in range(N)]
+
+
+edges = [('0','2')]
+gender = ['w','w','w','w','w','w','w','w','w','w']
 colors = {'g': 'gray', 'w': 'white'}
 g = nx.DiGraph(edges)
 style = {}
-style["vertex_shape"] = "rectangle"
+style["vertex_shape"] = "circle"
 style['vertex_size'] = .4
 style["edge_width"] = 0.1
 style['node_label'] = ['10','0','12','11','13','1','2','4','15','3','14','5','9','8','6','7']

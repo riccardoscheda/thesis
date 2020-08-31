@@ -142,12 +142,12 @@ $$
 The entire state space is shown in Figure~\ref{fig:rb3}:
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{figurenetworks2.pdf}
-\caption{The state space of the network shown in Figure~\ref{fig:rb2}, if
+\includegraphics[scale=1]{fg3.pdf}
+\caption{\emph{The state space of the network shown in Figure~\ref{fig:rb2}, if
 the functions copy, copy, invert, invert are assigned to the four
 nodes. The numbers in the squares represent states, and ar-
 rows indicate the successor of each state. States on attractors
-are shaded.}
+are shaded.}}
 \label{fig:rb3}
 \end{figure}
 
@@ -157,107 +157,7 @@ attraction of the 4 attractors are 6,6,2,2. If the function
 of node 1 is a constant function, fixing the value of the
 node at 1, the state of this node fixes the rest of the
 network, and there is only one attractor, which is a fixed
-point. Its basin of attraction is of size 16. If the functions
-of the other nodes remain unchanged, the state space
-then looks as shown in Figure~\ref{fig:rb4}
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{figurenetworks2.pdf}
-\caption{The state space of the network shown in Figure~\ref{fig:rb2},
-if the functions 1, copy, invert, invert are assigned to the four
-nodes.}
-\label{fig:rb4}
-\end{figure}
-
-Before we continue, we have to make the definition of
-attractor more precise: as the name says, an attractor
-“attracts” states to itself. A periodic sequence of states
-(which we also call cycle) is an attractor if there are states
-outside the attractor that lead to it. However, some netaworks contain cycles that cannot be reached from any
-state that is not part of it. For instance, if we removed
-node 4 from the network shown in Figure 2.2, the state
-space would only contain the cycles shown in Figure 2 C,
-and not the 8 states leading to the cycles. In the follow-
-ing, we will use the word “cycle” whenever we cannot be
-confident that the cycle is an attractor.
+point.
 
 
-\section{Applications}
-
-Let us now make use of the definitions and concepts
-introduced in this section in order to derive some results
-concerning cycles in state space. First, we prove that in
-an ensemble of networks with update rule 1 (biased functions) or rule 2 (weighted classes), there is on an average
-exactly one fixed point per network. A fixed point is a
-cycle of length 1. The proof is slightly different for rule
-1 and rule 2. Let us first choose rule 2. We make use of
-the property that for every update function the inverted
-function has the same probability. The inverted function
-has all 1s in the output replaced with 0s, and vice versa.
-Let us choose a network state, and let us determine for
-which fraction of networks in the ensemble this state is a
-fixed point. We choose a network at random, prepare it
-in the chosen state, and perform one update step. The
-probability that node 1 remains in the same state after
-the update, is 1/2, because a network with the inverted
-function at node 1 occurs equally often. The same holds
-for all other nodes, so that the chosen state is a fixed
-point of a given network with probability $2^{−N}$ . This
-means that each of the 2 N states is a fixed point in the
-proportion $2^{−N}$ of all networks, and therefore the mean
-number of fixed points per network is 1. We will see
-later that fixed points may be highly clustered: a small
-proportion of all networks may have many fixed points,
-while the majority of networks have no fixed point.
-
-
-Next, we consider rule 1. We make now use of the
-property that for every update function a function with
-any permutation of the input states has the same probability. This means that networks in which state A leads
-to state B after one update, and networks in which another state C leads to state B after one update, occur
-equally often in the ensemble. Let us choose a network
-state with n 1s and $N − n$ 0s. The average number of
-states in a network leading to this state after one update
-is $2^N p^n (1 − p^{N −n}$ . Now, every state leads equally often
-to this state, and therefore this state is a fixed point in
-the proportion $p^n (1 − p)^{N−n}$ of all networks. Summation
-over all states gives the mean number of fixed points per
-network, which is 1.
-
-Finally, we derive a general expression for the mean
-number of cycles of length L in networks with $K = 2$
-inputs per node. The generalization to other values of $K$
-is straightforward. Let $\langle C_L\rangle_N$ denote the mean number
-of cycles in state space of length $L$, averaged over the
-ensemble of networks of size $N$ . On a cycle of length
-L, the state of each node goes through a sequence of
-1s and 0s of period L. Let us number the $2^L$ possible
-sequences of period L of the state of a node by the index
-j, ranging from 0 to $m = 2^L − 1$. Let $n_j$ denote the
-number of nodes that have the sequence $j$ on a cycle of
-length$ L$, and $(P_L )^j_{l,k}$ the probability that a node that
-has the input sequences $l$ and $k$ generates the output
-sequence $j$. This probability depends on the probability distribution of update functions.
-
-
-
-Then
-
-\begin{equation}
-\langle C_L\rangle_N = \frac{1}{L} \sum_{n_j} \frac{N!}{n_0! \dots n_m!} \prod_j \big(\sum_{l,k}\frac{n_ln_k}{N^2}(P_L)^j_{l,k}\big)^{n_j}
-\end{equation}
-
-The factor 1/L occurs because any of the L states on the
-cycle could be the starting point. The sum is P
-over all
-possibilities to choose the values {n j } such that j n j =
-N . The factor after the sum is the number of different
-ways in which the nodes can be divided into groups of the
-sizes n 0 , n 1 , n 2 , . . . , n m . The product is the probability
-that each node with a sequence j is connected to nodes
-with the sequences l and k and has an update function
-that yields the output sequence j for the input sequences
-l and k. This formula was first given in the beautiful
-paper by Samuelsson and Troein [10].
 

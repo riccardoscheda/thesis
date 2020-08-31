@@ -12,9 +12,14 @@
 \centering
 \begin{tikzpicture}[scale=0.7]
 \centering
-\begin{axis} [xmin=0,xmax=50,xlabel=$Number$ $of$  $nodes$ ,ylabel=$Average$ $outgoing$ $links$,ymin=0,ymax=3,grid=major, title={}]
+\begin{axis}[xmin=0,xmax=1,xlabel=$Noise$ ,ylabel=$Average$ $activity$,ymin=0,ymax=1.1,grid=major]
+
 \addplot [thick,blue]
-file {mean-outgoing-links.dat};
+file {noisy-nodes.dat};
+\addplot [thick,red]
+file {noisy-links.dat};
+
+\legend{\small{$noisy$ $nodes$},\small{$noisy$ $links$}}
 \end{axis}
 \end{tikzpicture}
 \end{document}

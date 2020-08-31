@@ -37,3 +37,4 @@ plot((g),PATH + 'prova.tex',layout= layout,**style)
 import os
 
 os.system('pdflatex -output-directory="tesi" tesi/prova.tex')
+

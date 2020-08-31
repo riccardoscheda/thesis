@@ -1,8 +1,9 @@
 import numpy as np
+import pandas as pd
 import random
 import networkx as nx
 from functools import reduce
-
+import os
 
 
 class Random_Network:
@@ -177,5 +178,38 @@ def evolution(graph,iterations = 10,p=0,p_noise=False):
             noise(graph,p)
             
             
-            
-            
+def to_latex(data,file ="data.dat",axis_factor=1., xmin=0,xmax=100,ymin=0,ymax=1,xlabel="N",ylabel="Activity",path="./"):
+    a = [i*axis_factor for i in range(len(data))]
+    df = pd.DataFrame()
+    df[0] = a
+    df[1] = pd.DataFrame(np.array(data))
+    df.to_csv(file,sep = " ",decimal=".",index=False,header=False)
+    latex = r"""\documentclass{standalone}
+\usepackage[utf8x]{inputenc}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{standalone}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\begin{document}
+\centering
+\begin{tikzpicture}[scale=0.7]
+\centering
+\begin{axis}\addplot[thick,blue]
+file {"""+file+"""};
+\end{axis}
+\end{tikzpicture}
+\end{document}
+"""
+
+    out_file = open("graph.tex","w+")
+    out_file.write(latex)
+    out_file.close()
+    
+    os.system('pdflatex -output-directory="tesi/images" graph.tex')
+
+    
+#[thick,blue,xmin="""+str(xmin)+""",xmax="""+str(xmax)+""",xlabel=$"""+str(xlabel)+"""$ ,ylabel=$"""+str(ylabel)+"""$,ymin="""+str(ymin)+""",ymax="""+str(ymax)+""",grid=major]

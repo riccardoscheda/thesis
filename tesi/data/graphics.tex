@@ -1,7 +1,5 @@
 \documentclass{standalone}
-
 \usepackage[utf8x]{inputenc}
-
 \usepackage{pgfplots}
 \usepackage{tikz}
 \usepackage{pdfpages}
@@ -10,17 +8,13 @@
 \usepackage{float}
 \usepackage{subfigure}
 \usepackage{graphicx}
-
 \begin{document}
 \centering
 \begin{tikzpicture}[scale=0.7]
 \centering
-\begin{axis} [xmin=0,xmax=50,xlabel=$Number$ $of$  $nodes$ ,ylabel=$Average$ $outgoing$ $links$,
-ymin=0,ymax=3,grid=major,
-title={}]
+\begin{axis} [xmin=0,xmax=50,xlabel=$Number$ $of$  $nodes$ ,ylabel=$Average$ $outgoing$ $links$,ymin=0,ymax=3,grid=major, title={}]
 \addplot [thick,blue]
 file {mean-outgoing-links.dat};
 \end{axis}
 \end{tikzpicture}
-
 \end{document}

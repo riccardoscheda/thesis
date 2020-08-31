@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  30 AUG 2020 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  31 AUG 2020 13:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -688,16 +688,16 @@ e
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (tesi/prova.aux) ) 
 Here is how much of TeX's memory you used:
- 16783 strings out of 494847
- 329430 string characters out of 6179080
+ 16790 strings out of 494847
+ 329569 string characters out of 6179080
  413282 words of memory out of 5000000
- 19769 multiletter control sequences out of 15000+600000
+ 19776 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  62i,10n,69p,874b,1094s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on tesi/prova.pdf (1 page, 10486 bytes).
+Output written on tesi/prova.pdf (1 page, 10506 bytes).
 PDF statistics:
  15 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream

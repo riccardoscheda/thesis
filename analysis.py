@@ -149,20 +149,11 @@ df.to_csv(PATH+"/data/mean-number-of-loops.dat",sep=" ",header=False)
 #                         [neg2, gr[i].adj_matrix              ]])
 
 #%%
-N = 100
-iterations = 10
+import  random_network  as rn
+a = [i**2 for i in range(100)]
+rn.to_latex(a)
 
-K = 10
-mean_outgoing_links = []
 
-for k in range(2,100):
-    
-    outgoing_links = []
 
-    for j in range(iterations): 
-        g = rn.Random_Network(k, K)
-        outgoing_links.append(np.mean(sum(g.adj_matrix)))
-    mean_outgoing_links.append(np.mean(outgoing_links))
-        
-plt.plot(mean_outgoing_links)
+
 #%%

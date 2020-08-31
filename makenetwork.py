@@ -6,11 +6,11 @@ from network2tikz import plot
 import network2tikz
 
 PATH = "tesi/"
-N = 10
+N = 4
 K = 1
 graph = rn.Random_Network(N, K)
 
-nodes = [str(i) for i in range(N)]
+nodes = [str(i+1) for i in range(N)]
 graph.edges
 edges = graph.edges
 gender = ['w' for i in range(N)]
@@ -19,7 +19,8 @@ g = nx.DiGraph(edges)
 style = {}
 style["vertex_shape"] = "circle"
 style['vertex_size'] = .4
-style["edge_width"] = 0.1
+style["edge_width"] = 0.8
+style["edge_label"] = ["+1","+1","+1","+1","+1"]
 style['node_label'] = nodes
 style['node_label_size'] = 6
 style['node_color'] = [colors[g] for g in gender]

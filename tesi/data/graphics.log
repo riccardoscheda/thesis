@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  31 AUG 2020 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  31 AUG 2020 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -715,32 +715,65 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
+
+! Package pgfkeys Error: I do not know the key '/tikz/Pinegreen' and I am going
+ to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 file {noisy-nodes.dat};
+                            
+? 
 PGFPlots: reading {noisy-nodes.dat}
 PGFPlots: reading {noisy-links.dat}
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 23.
+
+! Package pgfkeys Error: I do not know the key '/tikz/Pinegreen' and I am going
+ to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{axis}
+               
+? 
+
+! Package pgfkeys Error: I do not know the key '/tikz/Pinegreen' and I am going
+ to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{axis}
+               
+? 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 23.
- [1
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./graphics.aux) ) 
 Here is how much of TeX's memory you used:
- 24067 strings out of 494847
- 617261 string characters out of 6179080
- 783378 words of memory out of 5000000
- 26938 multiletter control sequences out of 15000+600000
+ 24069 strings out of 494847
+ 617295 string characters out of 6179080
+ 783431 words of memory out of 5000000
+ 26940 multiletter control sequences out of 15000+600000
  5463 words of font info for 20 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 62i,18n,100p,721b,2053s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,107p,721b,2053s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on graphics.pdf (1 page, 31159 bytes).
+Output written on graphics.pdf (1 page, 31164 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream

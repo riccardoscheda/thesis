@@ -14,9 +14,9 @@ import  random_network  as rn
 #iterations
 frames = 100
 
-N = 5
+N = 10
 K = 2
-number_of_clusters = 2
+number_of_clusters = 3
 
 ######################################
 fig, ax = plt.subplots(1,1)
@@ -56,10 +56,16 @@ print("outgoing links: " + str(sum(tot)))
 
 Net = rn.Network(tot)
 graph = nx.from_numpy_matrix(tot.T, create_using=nx.DiGraph)
-npos = nx.layout.spring_layout(graph)
+npos = nx.spring_layout(graph)
 cycles = nx.cycle_basis(graph.to_undirected())
 print("cycles: " + str(cycles))
 driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
+################## ONLY FOR VISUALIZATION #######################
+abs_tot = abs(tot)
+graph1 = nx.from_numpy_matrix(abs_tot.T, create_using=nx.DiGraph)
+npos = nx.kamada_kawai_layout(graph1)
+#################################################################
+
 
 final = []
 z = list(reduce(lambda x,y: x+y,cycles))
@@ -106,7 +112,7 @@ def evo(frames):
  
     up = Net.adj_matrix.dot(Net.nodes)
     Net.nodes = (up >0).astype(int)
-    rn.noise(Net,p=0.9)
+    rn.noise(Net,p=0.2)
 
         
     active_nodes = []
@@ -131,7 +137,7 @@ def evo(frames):
                        edgelist=negedges,
                        width=3, alpha=0.4, edge_color='r')
     
-    print(rn.activity(Net, N, number_of_clusters))
+    #print(rn.activity(Net, N, number_of_clusters))
     #plt.imshow(tot)
     return  ax
 

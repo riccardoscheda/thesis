@@ -60,6 +60,9 @@ npos = nx.spring_layout(graph)
 cycles = nx.cycle_basis(graph.to_undirected())
 print("cycles: " + str(cycles))
 driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
+
+
+
 ################## ONLY FOR VISUALIZATION #######################
 abs_tot = abs(tot)
 graph1 = nx.from_numpy_matrix(abs_tot.T, create_using=nx.DiGraph)

@@ -2,22 +2,27 @@
 \BOOKMARK [0][-]{chapter.1}{Cell Differentiation }{}% 2
 \BOOKMARK [1][-]{section.1.1}{Gene Regulatory Networks}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.2}{Cell Differentiation}{chapter.1}% 4
-\BOOKMARK [0][-]{chapter.2}{Gene Regulatory Networks}{}% 5
-\BOOKMARK [1][-]{section.2.1}{Definition}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Role within the cell}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.3}{Bo}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.4}{summary Kauffman}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Random Boolean Networks}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Random Boolean Networks}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{The model}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Topology}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.4}{Dynamics}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{The model}{}% 15
-\BOOKMARK [1][-]{section.4.1}{The underlying philosophy of the model}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{The mathematical model and related problems}{chapter.4}% 17
-\BOOKMARK [0][-]{chapter.5}{Analysis}{}% 18
-\BOOKMARK [1][-]{section.5.1}{Implementation}{chapter.5}% 19
-\BOOKMARK [1][-]{section.5.2}{Discrete evolution}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.3}{Loops and Control nodes}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.4}{Noise}{chapter.5}% 22
-\BOOKMARK [0][-]{chapter*.6}{Bibliography}{}% 23
+\BOOKMARK [0][-]{chapter.2}{T-Cells}{}% 5
+\BOOKMARK [1][-]{section.2.1}{T-Cells}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Life cycle of T lymphocytes}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Activation of T lymphocytes}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.4}{Immunotherapy}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Gene Regulatory Networks}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Definition}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Role within the cell}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Bo}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{summary Kauffman}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Random Boolean Networks}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Random Boolean Networks}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{The model}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.3}{Topology}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.4}{Dynamics}{chapter.4}% 19
+\BOOKMARK [0][-]{chapter.5}{The model}{}% 20
+\BOOKMARK [1][-]{section.5.1}{The underlying philosophy of the model}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.2}{The mathematical model and related problems}{chapter.5}% 22
+\BOOKMARK [0][-]{chapter.6}{Analysis}{}% 23
+\BOOKMARK [1][-]{section.6.1}{Implementation}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.2}{Discrete evolution}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.3}{Loops and Control nodes}{chapter.6}% 26
+\BOOKMARK [1][-]{section.6.4}{Noise}{chapter.6}% 27
+\BOOKMARK [0][-]{chapter*.6}{Bibliography}{}% 28

@@ -3,22 +3,27 @@
 \contentsline {chapter}{\numberline {1}Cell Differentiation }{9}{chapter.1}
 \contentsline {section}{\numberline {1.1}Gene Regulatory Networks}{9}{section.1.1}
 \contentsline {section}{\numberline {1.2}Cell Differentiation}{10}{section.1.2}
-\contentsline {chapter}{\numberline {2}Gene Regulatory Networks}{12}{chapter.2}
-\contentsline {section}{\numberline {2.1}Definition}{12}{section.2.1}
-\contentsline {section}{\numberline {2.2}Role within the cell}{13}{section.2.2}
-\contentsline {section}{\numberline {2.3}Bo}{14}{section.2.3}
-\contentsline {section}{\numberline {2.4}summary Kauffman}{16}{section.2.4}
-\contentsline {chapter}{\numberline {3}Random Boolean Networks}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Random Boolean Networks}{17}{section.3.1}
-\contentsline {section}{\numberline {3.2}The model}{18}{section.3.2}
-\contentsline {section}{\numberline {3.3}Topology}{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}Dynamics}{19}{section.3.4}
-\contentsline {chapter}{\numberline {4}The model}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}The underlying philosophy of the model}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}The mathematical model and related problems}{23}{section.4.2}
-\contentsline {chapter}{\numberline {5}Analysis}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Implementation}{34}{section.5.1}
-\contentsline {section}{\numberline {5.2}Discrete evolution}{35}{section.5.2}
-\contentsline {section}{\numberline {5.3}Loops and Control nodes}{36}{section.5.3}
-\contentsline {section}{\numberline {5.4}Noise}{36}{section.5.4}
-\contentsline {chapter}{Bibliography}{40}{chapter*.6}
+\contentsline {chapter}{\numberline {2}T-Cells}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}T-Cells}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Life cycle of T lymphocytes}{14}{section.2.2}
+\contentsline {section}{\numberline {2.3}Activation of T lymphocytes}{14}{section.2.3}
+\contentsline {section}{\numberline {2.4}Immunotherapy}{16}{section.2.4}
+\contentsline {chapter}{\numberline {3}Gene Regulatory Networks}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Definition}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2}Role within the cell}{20}{section.3.2}
+\contentsline {section}{\numberline {3.3}Bo}{21}{section.3.3}
+\contentsline {section}{\numberline {3.4}summary Kauffman}{23}{section.3.4}
+\contentsline {chapter}{\numberline {4}Random Boolean Networks}{24}{chapter.4}
+\contentsline {section}{\numberline {4.1}Random Boolean Networks}{24}{section.4.1}
+\contentsline {section}{\numberline {4.2}The model}{25}{section.4.2}
+\contentsline {section}{\numberline {4.3}Topology}{25}{section.4.3}
+\contentsline {section}{\numberline {4.4}Dynamics}{26}{section.4.4}
+\contentsline {chapter}{\numberline {5}The model}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}The underlying philosophy of the model}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}The mathematical model and related problems}{30}{section.5.2}
+\contentsline {chapter}{\numberline {6}Analysis}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Implementation}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Discrete evolution}{42}{section.6.2}
+\contentsline {section}{\numberline {6.3}Loops and Control nodes}{43}{section.6.3}
+\contentsline {section}{\numberline {6.4}Noise}{43}{section.6.4}
+\contentsline {chapter}{Bibliography}{47}{chapter*.6}

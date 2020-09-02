@@ -55,10 +55,11 @@ In RBNs with parameter $K=2$, we can see in Figure \ref{fig:loops} that the numb
 \section{Noise}
 The second thing to evaluate is the effect of the noise on the evolution of the network and the difference between noise and parametric noise, where parametric noise refers to the noise which infers in the links and not on the nodes.
 To add noise to the system, during the discrete evolution of the network, at each time step there is a probability $p$ for the node or for the link to be turned off.
-In Figure \ref{fig:noise} we can see the behavior of the average activity of the network depending on the amount of noise added.
+In Figure \ref{fig:noise} we can see the behavior of the average activity of the network depending on the amount of noise added. The plot is similar to a sigmoidal functions in both of the cases. In the case of noise added to the links the average activity results to be bigger than the case of noise added to the nodes. This is reasonable in the sense that since the number of links is less than the number of nodes so the effect of the noise among the links is less.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1.5]{images/noise.pdf}
 \caption{\emph{Plot of the effect of the noise on the average activity on the network. In blue the noise works on the nodes on the network, while in red the noise works on the links. Number of nodes for each network: 10; Number of realizations for each value of noise: 100; }}
 \label{fig:noise}
 \end{figure}
+

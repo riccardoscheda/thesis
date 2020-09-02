@@ -40,7 +40,7 @@ class Network:
     def activity(self):
             return np.mean(self.nodes)
                     
-    
+
 def find_control_nodes(gr,N):
     """
     Finds the nodes with max connectivity in a graph
@@ -71,7 +71,26 @@ def find_control_nodes(gr,N):
     
     return control_node
 
-
+def create_clusters(graphs,control_nodes, N,number_of_clusters=1):
+    # single_cluster_control_nodes = [find_control_nodes(graphs[i],N) for i in range(number_of_clusters)]
+    # control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
+    tot = np.zeros((N,N))
+    for i in range(N):
+        for j in range(N):
+            tot[i][j] = graphs[0].adj_matrix[i][j]
+    
+    if number_of_clusters>1:
+        for i in range(number_of_clusters-1):
+            neg1 = np.zeros((N*(i+1),N))
+            neg2 = np.zeros((N,N*(i+1)))
+            
+            tot = np.block([[tot,       neg1        ],
+                            [neg2, graphs[i].adj_matrix              ]])
+    
+    for j in range(number_of_clusters):
+         tot[control_nodes[-j]][control_nodes[-j-1]] = -1
+         
+    return tot
 
 def activity(graph,N,number_of_clusters=1):
     """

@@ -72,8 +72,20 @@ def find_control_nodes(gr,N):
     return control_node
 
 def create_clusters(graphs,control_nodes, N,number_of_clusters=1):
-    # single_cluster_control_nodes = [find_control_nodes(graphs[i],N) for i in range(number_of_clusters)]
-    # control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
+    """
+    Builds a network made of different clusters. These Clusters are linked with negative weights (-1).
+    The link are between the control nodes of each cluster.
+    -----------------------------------------------------
+    Parameters:
+        graphs: list of Random Network graphs.
+        control_nodes: list of indeces of the control nodes.
+        N: number of nodes for each cluster.
+        number_of_clusters: int, default 1, number of clusters of the network.
+    -------------------------------------------------------
+    Returns:
+        numpy matrix which is the connectivity matrix of the network.
+    """
+
     tot = np.zeros((N,N))
     for i in range(N):
         for j in range(N):
@@ -198,6 +210,10 @@ def evolution(graph,iterations = 10,p=0,p_noise=False):
             
             
 def to_latex(data,file ="data.dat",axis_factor=1., xmin=0,xmax=100,ymin=0,ymax=1,xlabel="N",ylabel="Activity",path="./"):
+    """
+    Makes directly the pdf of a plot of a list of data.
+    
+    """
     a = [i*axis_factor for i in range(len(data))]
     df = pd.DataFrame()
     df[0] = a

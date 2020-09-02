@@ -150,10 +150,28 @@ df.to_csv(PATH+"/data/mean-number-of-loops.dat",sep=" ",header=False)
 
 #%%
 import  random_network  as rn
-a = [i**2 for i in range(100)]
-rn.to_latex(a)
 
+steps = 5
+frames = 200
+number_of_clusters = 3
+N = 100
+K = 2
+graphs = [rn.Random_Network(N, 2) for i in range(number_of_clusters)]
+single_cluster_control_nodes = [rn.find_control_nodes(graphs[i],N) for i in range(number_of_clusters)]
+control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
+tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters)
+Net = rn.Network(tot)
+for i in range(number_of_clusters):
+    Net.nodes[control_nodes[i]] = 1
+    
+tot_activities = []
+for i in range(steps):
+    activities = []
+    for j in range(frames):
+        
+        rn.evolution(Net,iterations=1,p = 0.1 *(i+1))
+        activities.append(rn.activity(Net, N,number_of_clusters=number_of_clusters))
+    plt.plot(activities, c = str(0.1*i))
 
+plt.ylim(0,1.1)
 
-
-#%%

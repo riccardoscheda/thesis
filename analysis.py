@@ -9,9 +9,9 @@ PATH = "tesi"
 #%%  ################################ MEAN ACTIVITY VERSUS NOISE #####################À
 
 
-realizations = 50
+realizations = 20
 steps = 100
-N = 20
+N = 10
 K = 2
 for k in [False,True]:
     mean_activities = []
@@ -23,23 +23,31 @@ for k in [False,True]:
         graphs = [rn.Random_Network(N, K) for i in range(realizations)]
     
         for j in range(realizations):
-            for k in range(realizations):
-                #initial conditions
-                graphs[k].nodes[np.random.randint(N)] = 1
+            #initial conditions
+            for s in range(realizations):
+                graphs[s].nodes[np.random.randint(N)] = 1
             
             
             #rn.initial_conditions(graphs[j], N)
-            
-            rn.evolution(graphs[j],iterations=N+1,p=0.01*i)
+            if k:
+                rn.evolution(graphs[j],iterations=N+1,p=0.01*i)
+            else:
+                for m in range(N+1):
+                    graphs[j].nodes[graphs[j].control_node] = 0  
+                    rn.evolution(graphs[j],iterations=1,p=0.01*i)
+
             activities.append(rn.activity(graphs[j], N))
         mean_activities.append(np.mean((np.array(activities))))
     
-    
+    if k :
+        label = "with control nodes"
+    else:
+        label = "without control nodes"
     plt.plot(probabilities,mean_activities,label=label)
     plt.legend()
 plt.xlabel("noise")
 plt.ylabel("average activity")
-plt.savefig("activity.png")
+#plt.savefig("activity.png")
 # a = [i*0.01 for i in range(steps)]
 # s = pd.Series(a)
 # df = pd.DataFrame()
@@ -193,7 +201,7 @@ for k in [False,True]:
             
         rn.evolution(Net,iterations=1,p = 0.01*j)
     
-    
+        
         #UCCIDO UN LINK AD OGNI STEP ####################
         #a =  np.random.randint(N*number_of_clusters-N)
         #Net.adj_matrix[a + np.random.randint(-N,N)][a + np.random.randint(-N,N)] = 0    
@@ -206,3 +214,64 @@ for k in [False,True]:
     plt.ylim(0,2)
     #plt.savefig("3clusters.png")
     
+#%%%% MEAN ACTIVITY VERSUS CONTROL NODES
+    
+import  random_network  as rn
+
+import pylab as plt
+import numpy as np
+import networkx as nx
+
+import  random_network  as rn
+import pandas as pd
+
+realizations = 40
+steps = 100
+N = 15
+K = 2
+
+probabilities = [i*0.01 for i in range(steps)]
+#label = "N =" + str(N)
+
+for A in [False, True]:
+    label = str(A)
+    mean_activities = []
+    for i in range(steps):
+        activities = []
+        graphs = [rn.Random_Network(N, K) for i in range(realizations)]
+    
+        for j in range(realizations):
+            #initial conditions
+            for s in range(realizations):
+                graphs[s].nodes[np.random.randint(N)] = 1
+     
+            for m in range(N+1):
+                if A:
+                    graphs[j].nodes[graphs[j].control_node] = 0  
+                rn.evolution(graphs[j],iterations=1,p=0.01*i)
+    
+            activities.append(rn.activity(graphs[j], N))
+        mean_activities.append(np.mean((np.array(activities))))
+    
+    plt.plot(probabilities,mean_activities,label=label)
+plt.legend()
+plt.xlabel("noise")
+plt.ylabel("average activity")
+plt.savefig("doubleclustersactivity.png")
+# a = [i*0.01 for i in range(steps)]
+# s = pd.Series(a)
+# df = pd.DataFrame()
+# df[0] = a
+# df[1] = pd.DataFrame(np.array(mean_activities))
+# df.to_csv(PATH+"/data/"+label+".dat",sep = " ",decimal=".",index=False,header=False)
+
+#%%
+import random_network as rn
+import pylab as plt
+import networkx as nx
+N = 5
+g = rn.Random_Network(N, 2)
+gr = nx.from_numpy_matrix(g.adj_matrix,create_using=nx.DiGraph)
+nx.draw_networkx(gr, with_labels=True)
+print(rn.find_control_nodes(g,N))
+print(g.adj_matrix)

@@ -64,6 +64,7 @@ def find_control_nodes(gr,N):
     for i in range(N):
         final.append(z.count(i))
          
+    print(final)
     control_node = np.argmax(final)
      
     # print("cycles: " + str(cycles))

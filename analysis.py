@@ -9,28 +9,28 @@ PATH = "tesi"
 #%%  ################################ MEAN ACTIVITY VERSUS NOISE #####################À
 
 
-realizations = 1
+realizations = 50
 steps = 100
-
+N = 20
 K = 2
-for N in [10,100,1000]:
+for k in [False,True]:
     mean_activities = []
     probabilities = [i*0.01 for i in range(steps)]
-    # if s:
-    #     label = "noisy links"
-    # else:
-    #     label = "noisy nodes"
-    label = "N = " + str(N)
+    #label = "N =" + str(N)
         
     for i in range(steps):
         activities = []
         graphs = [rn.Random_Network(N, K) for i in range(realizations)]
     
         for j in range(realizations):
-            #graphs = [rn.Random_Network(N, 2) for i in range(realizations)]
-            rn.initial_conditions(graphs[j], N)
-
-            rn.evolution(graphs[j],iterations=N+1,p=(0.01*i))
+            for k in range(realizations):
+                #initial conditions
+                graphs[k].nodes[np.random.randint(N)] = 1
+            
+            
+            #rn.initial_conditions(graphs[j], N)
+            
+            rn.evolution(graphs[j],iterations=N+1,p=0.01*i)
             activities.append(rn.activity(graphs[j], N))
         mean_activities.append(np.mean((np.array(activities))))
     
@@ -38,8 +38,8 @@ for N in [10,100,1000]:
     plt.plot(probabilities,mean_activities,label=label)
     plt.legend()
 plt.xlabel("noise")
-plt.ylabel("mean activity")
-plt.savefig(PATH + "activity.png")
+plt.ylabel("average activity")
+plt.savefig("activity.png")
 # a = [i*0.01 for i in range(steps)]
 # s = pd.Series(a)
 # df = pd.DataFrame()
@@ -160,8 +160,8 @@ import  random_network  as rn
 import pandas as pd
 
 
-frames = 2000
-number_of_clusters = 3
+noise = 100
+number_of_clusters = 1
 N = 10
 K = 2
 graphs = [rn.Random_Network(N, 2) for i in range(number_of_clusters)]
@@ -171,7 +171,7 @@ tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters)
 Net = rn.Network(tot)
 ############# INITIAL CONDITIONS #####################
 for i in range(number_of_clusters):
-    N#et.nodes[control_nodes[i]] = 1
+    #Net.nodes[control_nodes[i]] = 1
     Net.nodes[np.random.randint(N*i,N*(i+1))] = 1
     
 #Net.nodes = np.ones((N*number_of_clusters,1))
@@ -183,23 +183,26 @@ for i in range(number_of_clusters):
 #####################################################
     
 activities = []
-for j in range(frames):
-    rn.evolution(Net,iterations=1,p = 0.2)
-    for i in control_nodes:
-        ##### PROBABILITÀ DI AZZERARE IL CONTROL NODE AD OGNI STEP
-        if np.random.uniform(0,1)<0.5:
-          Net.nodes[control_nodes] = 1
+for k in [False,True]:
+    for j in range(noise):
         
-
-    #UCCIDO UN LINK AD OGNI STEP ####################
-    a =  np.random.randint(N*number_of_clusters-N)
-    #Net.adj_matrix[a + np.random.randint(-N,N)][a + np.random.randint(-N,N)] = 0    
-        
-    activities.append(rn.activity(Net, N,number_of_clusters=number_of_clusters))
-plt.plot(activities,label="cluster")
-plt.legend()
-plt.xlabel("t")
-plt.ylabel("Average activity")
-plt.ylim(0,2)
-plt.savefig("3clusters.png")
-
+        if k:
+            for i in control_nodes:
+            ##### PROBABILITÀ DI AZZERARE IL CONTROL NODE AD OGNI STEP
+               Net.nodes[control_nodes] = 0
+            
+        rn.evolution(Net,iterations=1,p = 0.01*j)
+    
+    
+        #UCCIDO UN LINK AD OGNI STEP ####################
+        #a =  np.random.randint(N*number_of_clusters-N)
+        #Net.adj_matrix[a + np.random.randint(-N,N)][a + np.random.randint(-N,N)] = 0    
+            
+        activities.append(rn.activity(Net, N,number_of_clusters=number_of_clusters))
+    plt.plot(activities,label="cluster")
+    plt.legend()
+    plt.xlabel("t")
+    plt.ylabel("Average activity")
+    plt.ylim(0,2)
+    #plt.savefig("3clusters.png")
+    

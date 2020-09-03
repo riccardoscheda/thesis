@@ -152,10 +152,17 @@ df.to_csv(PATH+"/data/mean-number-of-loops.dat",sep=" ",header=False)
 #%%
 import  random_network  as rn
 
+import pylab as plt
+import numpy as np
+import networkx as nx
 
-frames = 500
+import  random_network  as rn
+import pandas as pd
+
+
+frames = 2000
 number_of_clusters = 3
-N = 30
+N = 10
 K = 2
 graphs = [rn.Random_Network(N, 2) for i in range(number_of_clusters)]
 single_cluster_control_nodes = [rn.find_control_nodes(graphs[i],N) for i in range(number_of_clusters)]
@@ -164,8 +171,8 @@ tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters)
 Net = rn.Network(tot)
 ############# INITIAL CONDITIONS #####################
 for i in range(number_of_clusters):
-    Net.nodes[control_nodes[i]] = 1
-    #Net.nodes[np.random.randint(N*i,N*(i+1))] = 1
+    N#et.nodes[control_nodes[i]] = 1
+    Net.nodes[np.random.randint(N*i,N*(i+1))] = 1
     
 #Net.nodes = np.ones((N*number_of_clusters,1))
 
@@ -179,16 +186,20 @@ activities = []
 for j in range(frames):
     rn.evolution(Net,iterations=1,p = 0.2)
     for i in control_nodes:
+        ##### PROBABILITÀ DI AZZERARE IL CONTROL NODE AD OGNI STEP
         if np.random.uniform(0,1)<0.5:
-         Net.nodes[control_nodes] = 0
-         a =  np.random.randint(N*number_of_clusters-N)
-    Net.adj_matrix[a + np.random.randint(-N,N)][a + np.random.randint(-N,N)] = 0    
+          Net.nodes[control_nodes] = 1
+        
+
+    #UCCIDO UN LINK AD OGNI STEP ####################
+    a =  np.random.randint(N*number_of_clusters-N)
+    #Net.adj_matrix[a + np.random.randint(-N,N)][a + np.random.randint(-N,N)] = 0    
         
     activities.append(rn.activity(Net, N,number_of_clusters=number_of_clusters))
 plt.plot(activities,label="cluster")
 plt.legend()
 plt.xlabel("t")
 plt.ylabel("Average activity")
-plt.ylim(0,1.1)
+plt.ylim(0,2)
 plt.savefig("3clusters.png")
 

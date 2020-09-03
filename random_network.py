@@ -101,6 +101,7 @@ def create_clusters(graphs,control_nodes, N,number_of_clusters=1):
     
     for j in range(number_of_clusters):
          tot[control_nodes[-j]][control_nodes[-j-1]] = -100
+         tot[control_nodes[-j-1]+np.random.randint(-1,2)][control_nodes[-j]+np.random.randint(-1,2)] = -100
          
     return tot
 

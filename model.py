@@ -50,6 +50,11 @@ def init():
     non_active_nodes = []
     for i in range(number_of_clusters):
         Net.nodes[control_nodes[i]] = 1
+    
+    for i in range(N):
+        Net.nodes[i] = 1
+        
+        
     for i in range(len(Net.nodes)):
         if Net.nodes[i] == 1 :
             active_nodes.append(i)

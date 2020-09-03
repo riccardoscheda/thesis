@@ -1,6 +1,7 @@
 import pylab as plt
 import numpy as np
 import networkx as nx
+
 import  random_network  as rn
 import pandas as pd
 
@@ -151,27 +152,43 @@ df.to_csv(PATH+"/data/mean-number-of-loops.dat",sep=" ",header=False)
 #%%
 import  random_network  as rn
 
-steps = 5
-frames = 200
+
+frames = 500
 number_of_clusters = 3
-N = 100
+N = 30
 K = 2
 graphs = [rn.Random_Network(N, 2) for i in range(number_of_clusters)]
 single_cluster_control_nodes = [rn.find_control_nodes(graphs[i],N) for i in range(number_of_clusters)]
 control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
 tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters)
 Net = rn.Network(tot)
+############# INITIAL CONDITIONS #####################
 for i in range(number_of_clusters):
     Net.nodes[control_nodes[i]] = 1
+    #Net.nodes[np.random.randint(N*i,N*(i+1))] = 1
     
-tot_activities = []
-for i in range(steps):
-    activities = []
-    for j in range(frames):
-        
-        rn.evolution(Net,iterations=1,p = 0.1 *(i+1))
-        activities.append(rn.activity(Net, N,number_of_clusters=number_of_clusters))
-    plt.plot(activities, c = str(0.1*i))
+#Net.nodes = np.ones((N*number_of_clusters,1))
 
+
+# Net.nodes[control_nodes[1]] = 1
+# for i in range(N):
+#     Net.nodes[i] = 1
+#####################################################
+    
+activities = []
+for j in range(frames):
+    rn.evolution(Net,iterations=1,p = 0.2)
+    for i in control_nodes:
+        if np.random.uniform(0,1)<0.5:
+         Net.nodes[control_nodes] = 0
+         a =  np.random.randint(N*number_of_clusters-N)
+    Net.adj_matrix[a + np.random.randint(-N,N)][a + np.random.randint(-N,N)] = 0    
+        
+    activities.append(rn.activity(Net, N,number_of_clusters=number_of_clusters))
+plt.plot(activities,label="cluster")
+plt.legend()
+plt.xlabel("t")
+plt.ylabel("Average activity")
 plt.ylim(0,1.1)
+plt.savefig("3clusters.png")
 

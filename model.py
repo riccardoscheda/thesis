@@ -14,9 +14,9 @@ import  random_network  as rn
 fig, ax = plt.subplots(1,1)
 
 #iterations
-frames = 100
+frames = 500
 
-N = 10
+N = 5
 K = 2
 number_of_clusters = 3
 
@@ -95,10 +95,11 @@ def evo(frames):
     ax = nx.draw_networkx_edges(graph, npos,
                        edgelist=negedges,
                        width=3, alpha=0.4, edge_color='r')
+    plt.title("frame " +str(frames))
     return  ax
 
 
-ani = FuncAnimation(fig, evo, frames = np.arange(0,100), interval = 200,init_func = init, blit = False)
+ani = FuncAnimation(fig, evo, frames = np.arange(0,500), interval = 200,init_func = init, blit = False)
 #ani.save('network.gif',dpi = 100,writer = "imagemagick")
 
 #print("outgoing links: " + str(sum(tot)))

@@ -102,8 +102,8 @@ def create_clusters(graphs,control_nodes, N,number_of_clusters=1):
                             [neg2, graphs[i].adj_matrix              ]])
     
     for j in range(number_of_clusters):
-         tot[control_nodes[-j]][control_nodes[-j-1]] = -100
-         tot[control_nodes[-j-1]][control_nodes[-j]] = -100
+         tot[control_nodes[-j]][control_nodes[-j-1]] = -2
+         tot[control_nodes[-j-1]][control_nodes[-j]] = -2
          
     return tot
 

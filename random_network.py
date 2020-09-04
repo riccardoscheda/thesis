@@ -30,8 +30,9 @@ class Random_Network:
                     self.adj_matrix[i][r] = 1
        
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        self.control_node = find_control_nodes(self, self.n)
-            
+        #self.control_node = find_control_nodes(self, self.n)
+        self.control_node = outgoing_links(self, self.n)
+        
 class Network:
     def __init__(self, matrix):
 
@@ -64,7 +65,7 @@ def find_control_nodes(gr,N):
     for i in range(N):
         final.append(z.count(i))
          
-    print(final)
+    #print(final)
     control_node = np.argmax(final)
      
     # print("cycles: " + str(cycles))
@@ -72,6 +73,27 @@ def find_control_nodes(gr,N):
     # print(control_node)
     
     return control_node
+def outgoing_links(gr,N):
+    """
+    
+    Finds the node with the max number of outgoing links.
+    Parameters
+    ----------
+    gr : Random Network graph
+        
+    N : int
+        number of nodes of the network
+
+    Returns
+    -------
+    the index of the node with max number of ougoing links.
+    """
+    outgoing_links = []
+    for i in range(N):
+        outgoing_links.append((sum(gr.adj_matrix.T)))
+        
+    return np.argmax(outgoing_links)
+
 
 def create_clusters(graphs,control_nodes, N,number_of_clusters=1):
     """
@@ -101,10 +123,10 @@ def create_clusters(graphs,control_nodes, N,number_of_clusters=1):
             tot = np.block([[tot,       neg1        ],
                             [neg2, graphs[i].adj_matrix              ]])
     
-    for j in range(number_of_clusters):
-         tot[control_nodes[-j]][control_nodes[-j-1]] = -2
-         tot[control_nodes[-j-1]][control_nodes[-j]] = -2
-         
+        for j in range(number_of_clusters):
+             tot[control_nodes[-j]][control_nodes[-j-1]] = -1
+             tot[control_nodes[-j-1]][control_nodes[-j]] = -1
+             
     return tot
 
 def activity(graph,N,number_of_clusters=1):

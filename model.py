@@ -16,16 +16,16 @@ fig, ax = plt.subplots(1,1)
 #iterations
 frames = 500
 
-N = 5
+N = 10
 K = 2
-number_of_clusters = 3
+number_of_clusters = 1
 
 ######################################
 
 #creation of the subnetworks
 gr = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
 
-single_cluster_control_nodes = [rn.find_control_nodes(gr[i],N) for i in range(number_of_clusters)]
+single_cluster_control_nodes = [rn.outgoing_links(gr[i],N) for i in range(number_of_clusters)]
 control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
 tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters)
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
@@ -98,7 +98,8 @@ def evo(frames):
     plt.title("frame " +str(frames))
     return  ax
 
-
+print(rn.outgoing_links(gr[0], N))
+print(rn.outgoing_links(Net, N))
 ani = FuncAnimation(fig, evo, frames = np.arange(0,500), interval = 200,init_func = init, blit = False)
 #ani.save('network.gif',dpi = 100,writer = "imagemagick")
 

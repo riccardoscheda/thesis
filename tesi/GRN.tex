@@ -4,12 +4,14 @@
 
 \section{Definition}
 
-Gene regulation controls the expression of genes and, consequently, all cellular functions. Gene expression is a process that involves transcription of the gene into mRNA, followed by translation to a protein, which may be subject to post-translational modification. The transcription process is controlled by transcription factors (TFs) that can work as activators or inhibitors. TFs are themselves encoded by genes and subject to regulation, which altogether forms complex regulatory networks. 
+Gene regulation controls the expression of genes and, consequently, all cellular functions. Gene expression is a process that involves transcription of the gene into mRNA, followed by translation to a protein, which may be subject to post-translational modification \cite{K40}. The transcription process is controlled by transcription factors (TFs) that can work as activators or inhibitors. TFs are themselves encoded by genes and subject to regulation, which altogether forms complex regulatory networks. 
 \begin{figure}
 \centering
 \includegraphics{GRN.png}
 \end{figure}
 Cells efficiently carry out molecular synthesis, energy transduction, and signal processing across a range of environmental conditions by networks of genes, which we define broadly as networks of interacting genes, proteins, and metabolites \cite{K37}. Formally speaking, a gene regulatory network or genetic regulatory network (GRN) is a collection of DNA segments in a cell which interact with each other (indirectly through their RNA and protein expression products) and with other substances in the cell, thereby governing the rates at which genes in the network are transcribed into mRNA. In general, each mRNA molecule goes on to make a specific protein (or set of proteins). In some cases this protein will be structural, and will accumulate at the cell-wall or within the cell to give it particular structural properties. 
+
+
 
 \section{Role within the cell}
 
@@ -31,19 +33,43 @@ The quantitative landscape of cellular states is another concept that is increas
 Stochastic modeling of gene network dynamics has been employed in various forms for analysis of single cell measurements. For example, application of noisy dynamical systems theory has shed light on cell-state transitions (Mojtahedi et al., 2016; Jin et al., 2018; Lin et al., 2018). Stochastic simulations of gene network dynamics have been used to develop and/or benchmark tools for network reconstruction (Schaffter et al., 2011; Dibaeinia and Sinha, 2019; Bonnaffoux et al., 2019) Stochastic model-aided analysis of single-cell measurements has been demonstrated to yield insights on gene regulatory mechanisms (Munsky et al., 2018). However, few existing analysis methods utilize discrete-molecule, stochastic models, which fully account for intrinsic gene expression noise and its impact on cell-state, to aid in the interpretation of noisy distributions recovered from single cell RNA sequencing data. There exists an opportunity to link such biophysical, stochastic models, which reproduce intrinsic noise and cell heterogeneity in silico, to single cell datasets that characterize cell heterogeneity in vivo. In particular, the landscape of heterogeneous cell-states computed from discrete stochastic models can be directly compared to single-cell measurements.
 
 
-\section{summary Kauffman}
-We know
-most of the genes, the coding regions, some of the cis
-regulatory sites and transcription factors, some of the
-protein components of cell signaling cascades that are
-driven by transcription and translation, and in turn
-feedback to regulate gene activities. Let me refer to this
-whole system as the genetic regulatory network.
-One of
-the outstanding problems of contemporary systems
-biology is to understand the structure, logic and
-dynamics of this network within and between cells.
+\section{GRN}
+The cells of living organisms di erentiate within the developing embryo into
+the various cell types that form tissues by a process that is regulated at the
+molecular level by DNA sequences, encoding genes that produce proteins that
+regulate other genes. All eukaryotic cells in an organism carry an identical set
+of genes, some of which are expressed others not. A cell type is de ned by the
+particular subset of genes that are expressed. The gene expression pattern of
+a cell needs to be stable but also adaptable \cite{K41}.
 
-real gene networks are
-random after 3.8 billion years of selection. 
 
+
+Genes regulate each other's activity by coding for transcription factors,
+which may enhance or repress the expression of other genes by binding (pos-
+sibly in combination) at particular sites. Though a particular gene directly
+regulates just a small set of other genes, those genes regulate other genes in
+turn, so a gene will indirectly in uence the activity of many genes downstream.
+Conversely, a particular gene is indirectly in uenced by many genes upstream.
+A gene may directly or indirectly contribute to regulating itself. The result is
+a genomic regulatory network, a complex feedback web of genes turning each
+other on and o . This may be interpreted as an idealized dynamical system of
+model genes with directional links (transcription factors), updating
+their state in parallel, according to the combinatorial logic of their
+inputs, Kauffman's Random Boolean Networks \cite{K1}{K7}.
+There is justified debate as to whether parallel (synchronous) updating,
+and the on-off characterization of genes, are valid idealizations when applied
+to real genomic networks, given that transcription is asynchronous and driven
+at different rates. However, gene activity at the molecular scale consists of
+discrete events occurring concurrently. Variable protein concentrations can be
+accounted for by genes being on for some fraction of a given time span. The
+RBN idealization is arguably a valid starting point for gaining insights into
+gene network dynamics.
+In a cell type's gene expression pattern over a span of time (i.e. its space-
+time pattern), a particular gene may, broadly speaking, be either on, off, or
+changing. If a large proportion of the genes are changing, chaotic dynamics, the cell will be unstable. On the other hand, dynamics that settles to
+a pattern where a large proportion of the genes are permanently on or o
+(frozen) may be too in exible for adaptive behavior. Cells constantly need to
+adapt their gene expression pattern in response to a variety of hormone and
+growth/di erentiation factors from nearby cells. The de nition of a cell type
+may be more correctly expressed as a set of closely related gene expression
+patterns, allowing an essential measure of exibility in behavior.

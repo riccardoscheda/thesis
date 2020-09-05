@@ -1,17 +1,18 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \emph {Schematic representation of cellular differentiation.}}}{10}{figure.1.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Set of all possible networks with $N=2$ and $K=1$.}}{27}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces A small network with $N=4$ and $K=1$.}}{28}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \emph {The state space of the network shown in Figure~\ref {fig:rb2}, if the functions copy, copy, invert, invert are assigned to the four nodes. The numbers in the squares represent states, and ar- rows indicate the successor of each state. States on attractors are shaded.}}}{29}{figure.4.3}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Set of all possible networks with $N=2$ and $K=1$.}}{26}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces A small network with $N=4$ and $K=1$.}}{27}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \emph {The state space of the network shown in Figure~\ref {fig:rb2}, if the functions copy, copy, invert, invert are assigned to the four nodes. The numbers in the squares represent states, and ar- rows indicate the successor of each state. States on attractors are shaded.}}}{28}{figure.4.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces \emph {Example of random boolean network.}}}{34}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Possible behavior for the condition (\ref {condave}); the units are arbitrary and scale with the network dimension.}}{36}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces \emph {Example of a network composed by two competitive subnetworks.}}}{39}{figure.5.3}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \emph {Example of random boolean network.}}}{33}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Possible behavior for the condition (\ref {condave}); the units are arbitrary and scale with the network dimension.}}{35}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \emph {Example of a network composed by two competitive subnetworks.}}}{38}{figure.5.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces \emph {Plot of the average activity of the nodes with network of increasing size. In the case of $K=1$ (i.e. the average number of incoming link for each network is one), the average activity decreases exponentially with the size of the network; in the case of $K=2$ instead, the average activity of the nodes remains stable with the network size.}}}{43}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces \emph {Plot of the number of the outgoing links depending on the network size. We can see that the average tends to the parameter $K$. }}}{44}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces \emph {Plot of the number of independet loops in the networks depending on the network size.}}}{45}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces \emph {Plot of the effect of the noise on the average activity on the network. In blue the noise works on the nodes on the network, while in red the noise works on the links. Number of nodes for each network: 10; Number of realizations for each value of noise: 100; }}}{46}{figure.6.4}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \emph {Plot of the average activity of the nodes with network of increasing size. In the case of $K=1$ (i.e. the average number of incoming link for each network is one), the average activity decreases exponentially with the size of the network; in the case of $K=2$ instead, the average activity of the nodes remains stable with the network size.}}}{42}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \emph {Plot of the number of the outgoing links depending on the network size. We can see that the average tends to the parameter $K$. }}}{43}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \emph {Plot of the number of independet loops in the networks depending on the network size.}}}{44}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \emph {Plot of the effect of the noise on the average activity on the network. In blue the noise works on the nodes on the network, while in red the noise works on the links. Number of nodes for each network: 10; Number of realizations for each value of noise: 100; }}}{45}{figure.6.4}

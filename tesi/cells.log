@@ -2,8 +2,8 @@ This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**tesi/prova.tex
-(./tesi/prova.tex
+**cells.tex
+(./cells.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.cls
@@ -56,10 +56,8 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 \sa@box=\box26
-)
-(tesi/tikz-network.sty
+) (./tikz-network.sty
 Package: tikz-network 2019/08/15 tikz-network v1.1
-
 (/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
 \et@xins=\count90
@@ -608,8 +606,8 @@ File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
 
 ))
 \c@LayerCounter=\count158
-) (tesi/prova.aux)
-\openout1 = `prova.aux'.
+) (./cells.aux)
+\openout1 = `cells.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -686,17 +684,17 @@ e
 ))
 [1
 
-] (tesi/prova.aux) ) 
+] (./cells.aux) ) 
 Here is how much of TeX's memory you used:
- 16808 strings out of 494847
- 329840 string characters out of 6179080
+ 16810 strings out of 494847
+ 329854 string characters out of 6179080
  413282 words of memory out of 5000000
- 19795 multiletter control sequences out of 15000+600000
+ 19798 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 62i,7n,69p,874b,945s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,7n,69p,869b,945s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tesi/prova.pdf (1 page, 2328 bytes).
+Output written on cells.pdf (1 page, 2317 bytes).
 PDF statistics:
  11 PDF objects out of 1000 (max. 8388607)
  7 compressed objects within 1 object stream

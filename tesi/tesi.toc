@@ -1,7 +1,7 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Introduction}{7}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Cell Differentiation }{9}{chapter.1}
-\contentsline {section}{\numberline {1.1}Gene Regulatory Networks}{9}{section.1.1}
+\contentsline {section}{\numberline {1.1}Cell Differentiation}{9}{section.1.1}
 \contentsline {section}{\numberline {1.2}Cell Differentiation}{10}{section.1.2}
 \contentsline {chapter}{\numberline {2}Immunosystem and T-Cells}{12}{chapter.2}
 \contentsline {section}{\numberline {2.1}T-Cells}{12}{section.2.1}
@@ -13,17 +13,18 @@
 \contentsline {section}{\numberline {3.2}Role within the cell}{19}{section.3.2}
 \contentsline {section}{\numberline {3.3}Bo}{20}{section.3.3}
 \contentsline {section}{\numberline {3.4}GRN}{22}{section.3.4}
-\contentsline {chapter}{\numberline {4}Random Boolean Networks}{24}{chapter.4}
-\contentsline {section}{\numberline {4.1}Random Boolean Networks}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}The model}{25}{section.4.2}
-\contentsline {section}{\numberline {4.3}Topology}{25}{section.4.3}
-\contentsline {section}{\numberline {4.4}Dynamics}{26}{section.4.4}
-\contentsline {chapter}{\numberline {5}The model}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}The underlying philosophy of the model}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}The mathematical model and related problems}{30}{section.5.2}
-\contentsline {chapter}{\numberline {6}Analysis}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}Implementation}{41}{section.6.1}
-\contentsline {section}{\numberline {6.2}Discrete evolution}{42}{section.6.2}
-\contentsline {section}{\numberline {6.3}Loops and Control nodes}{43}{section.6.3}
-\contentsline {section}{\numberline {6.4}Noise}{43}{section.6.4}
-\contentsline {chapter}{Bibliography}{47}{chapter*.6}
+\contentsline {section}{\numberline {3.5}Gene Regulatory Networks}{23}{section.3.5}
+\contentsline {chapter}{\numberline {4}Random Boolean Networks}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Random Boolean Networks}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}The model}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Topology}{26}{section.4.3}
+\contentsline {section}{\numberline {4.4}Dynamics}{27}{section.4.4}
+\contentsline {chapter}{\numberline {5}The model}{30}{chapter.5}
+\contentsline {section}{\numberline {5.1}The underlying philosophy of the model}{30}{section.5.1}
+\contentsline {section}{\numberline {5.2}The mathematical model and related problems}{31}{section.5.2}
+\contentsline {chapter}{\numberline {6}Analysis}{42}{chapter.6}
+\contentsline {section}{\numberline {6.1}Implementation}{42}{section.6.1}
+\contentsline {section}{\numberline {6.2}Discrete evolution}{43}{section.6.2}
+\contentsline {section}{\numberline {6.3}Loops and Control nodes}{44}{section.6.3}
+\contentsline {section}{\numberline {6.4}Noise}{44}{section.6.4}
+\contentsline {chapter}{Bibliography}{48}{chapter*.6}

@@ -3,26 +3,29 @@
 \contentsline {chapter}{\numberline {1}Cell Differentiation }{9}{chapter.1}
 \contentsline {section}{\numberline {1.1}Definition}{9}{section.1.1}
 \contentsline {section}{\numberline {1.2}The role of Gene expression in cellular differentiation}{11}{section.1.2}
-\contentsline {chapter}{\numberline {2}Immunosystem and T-Cells}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}T-Cells}{13}{section.2.1}
-\contentsline {section}{\numberline {2.2}Life cycle of T lymphocytes}{15}{section.2.2}
-\contentsline {section}{\numberline {2.3}Activation of T lymphocytes}{16}{section.2.3}
-\contentsline {section}{\numberline {2.4}Immunotherapy}{17}{section.2.4}
-\contentsline {chapter}{\numberline {3}Gene Regulatory Networks}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Definition}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}Modelling GRNs}{21}{section.3.2}
-\contentsline {section}{\numberline {3.3}Principle of the models}{22}{section.3.3}
-\contentsline {chapter}{\numberline {4}Random Boolean Networks}{24}{chapter.4}
-\contentsline {section}{\numberline {4.1}Random Boolean Networks}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}The model}{25}{section.4.2}
-\contentsline {section}{\numberline {4.3}Topology}{25}{section.4.3}
-\contentsline {section}{\numberline {4.4}Dynamics}{26}{section.4.4}
-\contentsline {chapter}{\numberline {5}The model}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}The underlying philosophy of the model}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}The mathematical model and related problems}{30}{section.5.2}
-\contentsline {chapter}{\numberline {6}Analysis}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}Implementation}{41}{section.6.1}
-\contentsline {section}{\numberline {6.2}Discrete evolution}{42}{section.6.2}
-\contentsline {section}{\numberline {6.3}Loops and Control nodes}{43}{section.6.3}
-\contentsline {section}{\numberline {6.4}Noise}{43}{section.6.4}
-\contentsline {chapter}{Bibliography}{47}{chapter*.6}
+\contentsline {section}{\numberline {1.3}Cell differentiation in Immune system}{12}{section.1.3}
+\contentsline {chapter}{\numberline {2}Immunosystem and T-Cells}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}T-Cells}{14}{section.2.1}
+\contentsline {section}{\numberline {2.2}Life cycle of T lymphocytes}{16}{section.2.2}
+\contentsline {section}{\numberline {2.3}Activation of T lymphocytes}{17}{section.2.3}
+\contentsline {section}{\numberline {2.4}Immunotherapy}{18}{section.2.4}
+\contentsline {chapter}{\numberline {3}Gene Regulatory Networks}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Definition}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Modelling GRNs}{22}{section.3.2}
+\contentsline {section}{\numberline {3.3}Principle of the models}{23}{section.3.3}
+\contentsline {chapter}{\numberline {4}Random Boolean Networks}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Random Boolean Networks}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}The model}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Topology}{26}{section.4.3}
+\contentsline {section}{\numberline {4.4}Dynamics}{27}{section.4.4}
+\contentsline {section}{\numberline {4.5}Phase transitions}{29}{section.4.5}
+\contentsline {section}{\numberline {4.6}Perturbations}{31}{section.4.6}
+\contentsline {chapter}{\numberline {5}The model}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}The underlying philosophy of the model}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}The mathematical model and related problems}{34}{section.5.2}
+\contentsline {chapter}{\numberline {6}Analysis}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Implementation}{45}{section.6.1}
+\contentsline {section}{\numberline {6.2}Discrete evolution}{46}{section.6.2}
+\contentsline {section}{\numberline {6.3}Loops and Control nodes}{47}{section.6.3}
+\contentsline {section}{\numberline {6.4}Noise}{47}{section.6.4}
+\contentsline {chapter}{Bibliography}{51}{chapter*.6}

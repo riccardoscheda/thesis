@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  5 SEP 2020 17:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  6 SEP 2020 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -785,15 +785,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] (./tesi.lof)
+[4] (./tesi.lof [5
+
+
+
+])
 \tf@lof=\write7
 \openout7 = `tesi.lof'.
 
- (./introduzione.tex [5
-
-
-
-]
+ (./introduzione.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -817,17 +817,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
-<images/cells.pdf, id=252, 170.7168pt x 170.7168pt>
+<images/cells.pdf, id=273, 170.7168pt x 170.7168pt>
 File: images/cells.pdf Graphic file (type pdf)
 <use images/cells.pdf>
-Package pdftex.def Info: images/cells.pdf  used on input line 14.
+Package pdftex.def Info: images/cells.pdf  used on input line 13.
 (pdftex.def)             Requested size: 170.71637pt x 170.71637pt.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 26.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 25.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
  [9
 
 ]
@@ -837,7 +837,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <./images/cells.pdf>]) (./Tcells.tex
+[10 <./images/cells.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -851,9 +851,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12]
+[12]) (./Tcells.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
 Chapter 2.
-[13
+[14
 
 ]
 Missing character: There is no ‚ in font pplr7t!
@@ -866,7 +873,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[15]
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ô in font pplr7t!
@@ -877,14 +884,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[16]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]
+[17]
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ú in font pplr7t!
@@ -906,16 +913,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]) (./GRN.tex
+[18]) (./GRN.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]
+[19]
 Chapter 3.
-<GRN.png, id=299, 316.3017pt x 133.4586pt>
+<GRN.png, id=326, 316.3017pt x 133.4586pt>
 File: GRN.png Graphic file (type png)
 <use GRN.png>
 Package pdftex.def Info: GRN.png  used on input line 10.
@@ -926,7 +933,7 @@ Overfull \hbox (3.01886pt too wide) in paragraph at lines 7--13
 b-ject to post-translational
  []
 
-[19
+[20
 
  <./GRN.png>]
 
@@ -935,7 +942,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20]
+[21]
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ú in font pplr7t!
@@ -949,21 +956,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
+[22]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22]) (./RBN.tex
+[23]) (./RBN.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
+[24]
 Chapter 4.
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
@@ -977,10 +984,10 @@ Missing character: There is no ú in font pplr7t!
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ù in font pplr7t!
-[24
+[25
 
 ]
-<figurenetworks.pdf, id=354, 264.03444pt x 145.55981pt>
+<figurenetworks.pdf, id=381, 264.03444pt x 145.55981pt>
 File: figurenetworks.pdf Graphic file (type pdf)
 <use figurenetworks.pdf>
 Package pdftex.def Info: figurenetworks.pdf  used on input line 65.
@@ -995,7 +1002,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
+[26]
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ú in font pplr7t!
@@ -1009,47 +1016,124 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26 <./figurenetworks.pdf>]
-<figurenetworks2.pdf, id=378, 171.69144pt x 114.78584pt>
+[27 <./figurenetworks.pdf>]
+<figurenetworks2.pdf, id=405, 171.69144pt x 114.78584pt>
 File: figurenetworks2.pdf Graphic file (type pdf)
 <use figurenetworks2.pdf>
-Package pdftex.def Info: figurenetworks2.pdf  used on input line 121.
+Package pdftex.def Info: figurenetworks2.pdf  used on input line 120.
 (pdftex.def)             Requested size: 171.69101pt x 114.78555pt.
-<fg3.pdf, id=380, 170.7168pt x 170.7168pt>
+<fg3.pdf, id=407, 170.7168pt x 170.7168pt>
 File: fg3.pdf Graphic file (type pdf)
 <use fg3.pdf>
-Package pdftex.def Info: fg3.pdf  used on input line 145.
+Package pdftex.def Info: fg3.pdf  used on input line 144.
 (pdftex.def)             Requested size: 170.71637pt x 170.71637pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28 <./figurenetworks2.pdf>]
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+<images/phase-transition.pdf, id=420, 242.58228pt x 196.67076pt>
+File: images/phase-transition.pdf Graphic file (type pdf)
+<use images/phase-transition.pdf>
+Package pdftex.def Info: images/phase-transition.pdf  used on input line 192.
+(pdftex.def)             Requested size: 242.58168pt x 196.67027pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29 <./fg3.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30 <./images/phase-transition.pdf>]
+<fg4.pdf, id=449, 170.7168pt x 170.7168pt>
+File: fg4.pdf Graphic file (type pdf)
+<use fg4.pdf>
+Package pdftex.def Info: fg4.pdf  used on input line 231.
+(pdftex.def)             Requested size: 136.57361pt x 136.57361pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (./outline_problem.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[27 <./figurenetworks2.pdf>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[28 <./fg3.pdf>]
-Chapter 5.
-[29
-
-]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[30]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1063,14 +1147,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32]
+[32 <./fg4.pdf>]
+Chapter 5.
+[33
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[33]
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1112,7 +1193,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39pdfTeX warning (ext4): destination with the same identifier (name{equation.5
+[39]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43pdfTeX warning (ext4): destination with the same identifier (name{equation.5
 .2.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1125,14 +1234,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40]
+[44]
 Chapter 6.
-<images/K.pdf, id=471, 172.23747pt x 139.51622pt>
+<images/K.pdf, id=533, 172.23747pt x 139.51622pt>
 File: images/K.pdf Graphic file (type pdf)
 <use images/K.pdf>
 Package pdftex.def Info: images/K.pdf  used on input line 16.
 (pdftex.def)             Requested size: 258.35555pt x 209.2738pt.
-<images/outgoing.pdf, id=473, 172.27663pt x 139.51523pt>
+<images/outgoing.pdf, id=535, 172.27663pt x 139.51523pt>
 File: images/outgoing.pdf Graphic file (type pdf)
 <use images/outgoing.pdf>
 Package pdftex.def Info: images/outgoing.pdf  used on input line 25.
@@ -1140,13 +1249,13 @@ Package pdftex.def Info: images/outgoing.pdf  used on input line 25.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[41
+[45
 
 ]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/loops.pdf, id=481, 172.27663pt x 139.51323pt>
+<images/loops.pdf, id=543, 172.27663pt x 139.51323pt>
 File: images/loops.pdf Graphic file (type pdf)
 <use images/loops.pdf>
 Package pdftex.def Info: images/loops.pdf  used on input line 48.
@@ -1157,11 +1266,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42 <./images/K.pdf>]
+[46 <./images/K.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/noise.pdf, id=505, 170.48694pt x 133.62823pt>
+<images/noise.pdf, id=567, 170.48694pt x 133.62823pt>
 File: images/noise.pdf Graphic file (type pdf)
 <use images/noise.pdf>
 Package pdftex.def Info: images/noise.pdf  used on input line 61.
@@ -1172,7 +1281,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43 <./images/outgoing.pdf>]
+[47 <./images/outgoing.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1183,41 +1292,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44 <./images/loops.pdf>]
+[48 <./images/loops.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45 <./images/noise.pdf>]) (./biblio.tex [46
+[49 <./images/noise.pdf>]) (./biblio.tex [50
 
 ]
-Underfull \hbox (badness 1024) in paragraph at lines 18--19
+Underfull \hbox (badness 1024) in paragraph at lines 20--21
 []\OT1/ppl/m/n/12 Peccoud, J. and Ycart, B., \OT1/ppl/m/it/12 Marko-vian Mod-el
 ling of Gene Prod-ucts Syn-the-sis.\OT1/ppl/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 []\OT1/ppl/m/n/12 Y. Sa-sai \OT1/ppl/m/it/12 Cy-tosys-tems dy-nam-ics in self-o
 rganization of tis-sue ar-chi-tec-ture\OT1/ppl/m/n/12 ,
  []
 
-[47
+[51
 
 ]
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ì in font pplr7t!
 
-Underfull \hbox (badness 6380) in paragraph at lines 31--33
+Underfull \hbox (badness 6380) in paragraph at lines 35--37
 []\OT1/ppl/m/n/12 S. Huang, I. Ern-berg, S. Kauff-man,\OT1/ppl/m/it/12 Cancer a
 t-trac-tors: A sys-tems view
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 \OT1/ppl/m/it/12 of tu-mors from a gene net-work dy-nam-ics and de-vel-op-men-t
 al per-spec-tive\OT1/ppl/m/n/12 ,
  []
@@ -1226,25 +1335,25 @@ Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ì in font pplr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--49
-[]\OT1/ppl/m/n/12 Jin Wang, Kun Zhang, Li Xu, and Erkang Wang ,\OT1/ppl/m/it/12
- Quan-ti-fy-ing the
- []
-
-
-Underfull \hbox (badness 2073) in paragraph at lines 47--49
-\OT1/ppl/m/it/12 Wadding-ton land-scape and bi-o-log-i-cal paths for de-vel-op-
-ment and dif-fer-en-ti-a-tion\OT1/ppl/m/n/12 ,
- []
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48]
-Underfull \hbox (badness 2478) in paragraph at lines 56--57
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+[]\OT1/ppl/m/n/12 Jin Wang, Kun Zhang, Li Xu, and Erkang Wang ,\OT1/ppl/m/it/12
+ Quan-ti-fy-ing the
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 51--53
+\OT1/ppl/m/it/12 Wadding-ton land-scape and bi-o-log-i-cal paths for de-vel-op-
+ment and dif-fer-en-ti-a-tion\OT1/ppl/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 60--61
 []\OT1/ppl/m/n/12 J. Park and M. E. J. New-man,\OT1/ppl/m/it/12 The sta-tis-ti-
 cal me-chan-ics of net-works\OT1/ppl/m/n/12 , DOI:
  []
@@ -1267,14 +1376,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49pdfTeX warning (ext4): destination with the same identifier (name{cite.K17})
+[53pdfTeX warning (ext4): destination with the same identifier (name{cite.K17})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.68 \bibitem{K27}
-                   M. Ali Al-Radhawi, Nithin S. Kumar, Eduardo D. Sontag, Do...
-]
+l.69 \bibitem{K25}
+                   Fan R. K. Chung,\emph{Spectral Graph Theory}, CBMS]
 Missing character: There is no ‚ in font pplri7t!
 Missing character: There is no Ä in font pplri7t!
 Missing character: There is no ô in font pplri7t!
@@ -1292,38 +1400,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50]
+[54]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51])
+[55])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
  (./tesi.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
+Package rerunfilecheck Info: File `tesi.out' has not changed.
+(rerunfilecheck)             Checksum: 12023D1024A9A93147A62C7D09BDA758;1890.
 
-
-Package rerunfilecheck Warning: File `tesi.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `tesi.out':
-(rerunfilecheck)             Before: ED5FE2E1B8E9F15B1E7A798B4643EEDB;1692
-(rerunfilecheck)             After:  ABB8AC6927BB01489C4C981C9E0F4A65;1682.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
  ) 
 Here is how much of TeX's memory you used:
- 18317 strings out of 494847
- 340062 string characters out of 6179080
- 401288 words of memory out of 5000000
- 21052 multiletter control sequences out of 15000+600000
+ 18343 strings out of 494847
+ 340464 string characters out of 6179080
+ 401630 words of memory out of 5000000
+ 21066 multiletter control sequences out of 15000+600000
  40735 words of font info for 118 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  55i,12n,54p,1313b,903s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1339,10 +1441,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on tesi.pdf (52 pages, 387441 bytes).
+Output written on tesi.pdf (56 pages, 408829 bytes).
 PDF statistics:
- 664 PDF objects out of 1000 (max. 8388607)
- 581 compressed objects within 6 object streams
- 153 named destinations out of 1000 (max. 500000)
- 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 728 PDF objects out of 1000 (max. 8388607)
+ 638 compressed objects within 7 object streams
+ 163 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 

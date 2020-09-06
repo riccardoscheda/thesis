@@ -10,16 +10,15 @@
 \usepackage{graphicx}
 \begin{document}
 \centering
-\begin{tikzpicture}[scale=0.7]
+\begin{tikzpicture}[scale=1]
 \centering
-\begin{axis}[xmin=0,xmax=1,xlabel=$Noise$ ,ylabel=$Average$ $activity$,ymin=0,ymax=1.1,grid=major]
+\begin{axis}[xmin=0,xmax=1,xlabel=$p$ ,ylabel=$K$,ymin=0,ymax=100]
 
-\addplot [thick,blue]
-file {noisy-nodes.dat};
-\addplot [thick,orange]
-file {noisy-links.dat};
 
-\legend{\small{$noisy$ $nodes$},\small{$noisy$ $links$}}
+\addplot [thick,red,fill=red!10]
+file {phase-transition.dat};
+
+\node at (50,50) {$Chaotic$ $region$};
 \end{axis}
 \end{tikzpicture}
 \end{document}

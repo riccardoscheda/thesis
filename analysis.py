@@ -311,3 +311,31 @@ plt.ylabel("Average activity")
 plt.ylim(0,2)
 plt.xlim(-2,time)
 #plt.savefig("3clusters.png")
+#%%%
+
+import random_network as rn
+import numpy as np
+import pylab as plt
+N = 20
+
+out = []
+for i in range(1000):
+    g = rn.Random_Network(N, 2)
+    out.append(np.sum(g.adj_matrix)/N)
+    
+plt.hist(out,density=True)
+plt.xlim(0,5)
+
+#%%
+import pylab as plt
+import pandas as pd
+import numpy as np
+
+p = np.linspace(0.001,0.999,num=1000)
+k = 1/(2*p*(1-p)) 
+
+a = [i*0.001 for i in range(len(k))]
+df = pd.DataFrame()
+df[0] = a
+df[1] = pd.DataFrame(np.array(k))
+df.to_csv("phase-transition.dat",sep = " ",decimal=".",index=False,header=False)

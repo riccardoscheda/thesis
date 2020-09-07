@@ -12,13 +12,15 @@
 \centering
 \begin{tikzpicture}[scale=1]
 \centering
-\begin{axis}[xmin=0,xmax=1,xlabel=$p$ ,ylabel=$K$,ymin=0,ymax=100]
+\begin{axis}[xmin=0,xmax=1,xlabel=$x$ ,ylabel=$V(x)$,ymin=0,ymax=30]
 
 
-\addplot [thick,red,fill=red!10]
-file {phase-transition.dat};
+\addplot [thick, orange]
+file {kramerwell.dat};
 
-\node at (50,50) {$Chaotic$ $region$};
+\node (d) [draw, circle] at (68,3.5){};
+\node (a) at (62,7){};
+\draw [-latex] (d) to  (a);
 \end{axis}
 \end{tikzpicture}
 \end{document}

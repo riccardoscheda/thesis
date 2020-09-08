@@ -15,7 +15,7 @@ frames = 500
 
 N = 10
 K = 2
-number_of_clusters = 1
+number_of_clusters = 2
 
 ######################################
 

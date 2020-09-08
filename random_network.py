@@ -30,8 +30,8 @@ class Random_Network:
                     self.adj_matrix[i][r] = 1
        
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        #self.control_node = find_control_nodes(self, self.n)
-        self.control_node = outgoing_links(self, self.n)
+        self.control_node = find_control_nodes(self, self.n)
+        #self.control_node = outgoing_links(self, self.n)
         
 class Network:
     def __init__(self, matrix):

@@ -21,7 +21,7 @@ style["edge_width"] = 0.8
 #style["edge_label"] = ["+1","+1","+1","+1","+1"]
 #style['node_label'] = nodes
 style['node_label_size'] = 6
-#style['node_color'] = [colors[g] for g in gender]
+style['node_color'] = ["white","cyan","yellow","red","orange","blue"]
 #style['node_opacity'] = .5
 style['edge_curved'] = .0
 
@@ -30,7 +30,7 @@ style['edge_curved'] = .0
 pos = nx.kamada_kawai_layout(g)
 layout = nx.layout.spring_layout(g,pos = pos,iterations = 2)
 
-plot((g),PATH + 'cells.tex',layout= layout,**style)
+plot((g),PATH + 'prova.tex',layout= layout,**style)
 
 import os
 

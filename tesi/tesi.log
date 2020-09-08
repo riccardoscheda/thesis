@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  8 SEP 2020 09:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  8 SEP 2020 11:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1158,7 +1158,7 @@ Missing character: There is no ú in font pplr7t!
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ù in font pplr7t!
-<images/phase-transition.pdf, id=437, 242.58228pt x 196.67076pt>
+<images/phase-transition.pdf, id=438, 242.58228pt x 196.67076pt>
 File: images/phase-transition.pdf Graphic file (type pdf)
 <use images/phase-transition.pdf>
 Package pdftex.def Info: images/phase-transition.pdf  used on input line 192.
@@ -1188,10 +1188,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [31 <./images/phase-transition.pdf>]
-<fg4.pdf, id=476, 170.7168pt x 170.7168pt>
+<fg4.pdf, id=480, 170.7168pt x 170.7168pt>
 File: fg4.pdf Graphic file (type pdf)
 <use fg4.pdf>
-Package pdftex.def Info: fg4.pdf  used on input line 231.
+Package pdftex.def Info: fg4.pdf  used on input line 233.
 (pdftex.def)             Requested size: 239.00186pt x 239.00186pt.
 ) (./kramer.tex
 
@@ -1202,7 +1202,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [32 <./fg4.pdf>]
 Chapter 5.
-<images/kramerwell.pdf, id=486, 244.1652pt x 194.72649pt>
+<images/kramerwell.pdf, id=490, 244.1652pt x 194.72649pt>
 File: images/kramerwell.pdf Graphic file (type pdf)
 <use images/kramerwell.pdf>
 Package pdftex.def Info: images/kramerwell.pdf  used on input line 13.
@@ -1352,12 +1352,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [50]
 Chapter 7.
-<images/K.pdf, id=598, 172.23747pt x 139.51622pt>
+<images/K.pdf, id=602, 172.23747pt x 139.51622pt>
 File: images/K.pdf Graphic file (type pdf)
 <use images/K.pdf>
 Package pdftex.def Info: images/K.pdf  used on input line 16.
 (pdftex.def)             Requested size: 258.35555pt x 209.2738pt.
-<images/outgoing.pdf, id=600, 172.27663pt x 139.51523pt>
+<images/outgoing.pdf, id=604, 172.27663pt x 139.51523pt>
 File: images/outgoing.pdf Graphic file (type pdf)
 <use images/outgoing.pdf>
 Package pdftex.def Info: images/outgoing.pdf  used on input line 25.
@@ -1371,7 +1371,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/loops.pdf, id=608, 172.27663pt x 139.51323pt>
+<images/loops.pdf, id=612, 172.27663pt x 139.51323pt>
 File: images/loops.pdf Graphic file (type pdf)
 <use images/loops.pdf>
 Package pdftex.def Info: images/loops.pdf  used on input line 48.
@@ -1386,7 +1386,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/noise.pdf, id=631, 170.48694pt x 133.62823pt>
+<images/noise.pdf, id=635, 170.48694pt x 133.62823pt>
 File: images/noise.pdf Graphic file (type pdf)
 <use images/noise.pdf>
 Package pdftex.def Info: images/noise.pdf  used on input line 61.
@@ -1559,10 +1559,10 @@ exlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /palatino/uplri8a.pfb>
-Output written on tesi.pdf (62 pages, 452284 bytes).
+Output written on tesi.pdf (62 pages, 452942 bytes).
 PDF statistics:
- 797 PDF objects out of 1000 (max. 8388607)
- 698 compressed objects within 7 object streams
+ 801 PDF objects out of 1000 (max. 8388607)
+ 701 compressed objects within 8 object streams
  179 named destinations out of 1000 (max. 500000)
  337 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  8 SEP 2020 11:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  9 SEP 2020 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1559,7 +1559,7 @@ exlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /palatino/uplri8a.pfb>
-Output written on tesi.pdf (62 pages, 452942 bytes).
+Output written on tesi.pdf (62 pages, 452895 bytes).
 PDF statistics:
  801 PDF objects out of 1000 (max. 8388607)
  701 compressed objects within 8 object streams

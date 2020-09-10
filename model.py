@@ -22,7 +22,7 @@ number_of_clusters = 2
 #creation of the subnetworks
 gr = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
 
-single_cluster_control_nodes = [rn.outgoing_links(gr[i],N) for i in range(number_of_clusters)]
+single_cluster_control_nodes = [rn.find_control_nodes(gr[i],N) for i in range(number_of_clusters)]
 control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
 tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters)
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
@@ -30,7 +30,7 @@ negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 Net = rn.Network(tot)
 graph = nx.from_numpy_matrix(tot.T, create_using=nx.DiGraph)
 npos = nx.spring_layout(graph)
-cycles = nx.cycle_basis(graph.to_undirected())
+#cycles = nx.cycle_basis(graph.to_undirected())
 
 ################## ONLY FOR VISUALIZATION #######################
 abs_tot = abs(tot)
@@ -94,9 +94,7 @@ def evo(frames):
                        width=3, alpha=0.4, edge_color='r')
     plt.title("frame " +str(frames))
     return  ax
-
-print(rn.outgoing_links(gr[0], N))
-print(rn.outgoing_links(Net, N))
+print(control_nodes)
 ani = FuncAnimation(fig, evo, frames = np.arange(0,500), interval = 200,init_func = init, blit = False)
 #ani.save('network.gif',dpi = 100,writer = "imagemagick")
 

@@ -39,7 +39,7 @@ class Network:
         self.adj_matrix = matrix
         self.nodes = np.zeros((len(self.adj_matrix),1))
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        self.control_node = find_control_nodes(self, self.n)
+        #self.control_node = find_control_nodes(self, len(self.adj_matrix))
         #self.control_node = outgoing_links(self, len(self.adj_matrix))
 
     def activity(self):
@@ -58,9 +58,9 @@ def find_control_nodes(gr,N):
     """
     graph = nx.from_numpy_matrix(gr.adj_matrix.T, create_using=nx.DiGraph)
     cycles = nx.simple_cycles(graph)
-   
+    #print("cycles: " + str(list(cycles)))
     #driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
-    
+    cycles = nx.simple_cycles(graph)
     final = []
     z = list(reduce(lambda x,y: x+y,cycles))
 
@@ -70,7 +70,7 @@ def find_control_nodes(gr,N):
     #print(final)
     control_node = np.argmax(final)
      
-    # print("cycles: " + str(cycles))
+
     # print("driver node: "+ str(driver_node))
     # print(control_node)
     
@@ -126,8 +126,8 @@ def create_clusters(graphs,control_nodes, N,number_of_clusters=1):
                             [neg2, graphs[i].adj_matrix              ]])
     
         for j in range(number_of_clusters):
-             tot[control_nodes[-j]][control_nodes[-j-1]] = -100
-             tot[control_nodes[-j-1]][control_nodes[-j]] = -100
+             tot[control_nodes[-j]][control_nodes[-j-1]] = -1
+             tot[control_nodes[-j-1]][control_nodes[-j]] = -1
              
     return tot
 

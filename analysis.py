@@ -316,17 +316,34 @@ plt.xlim(-2,time)
 import random_network as rn
 import numpy as np
 import pylab as plt
-N = 20
+N = 30
+number_of_clusters = 3
+graphs = [rn.Random_Network(N, 2) for i in range(number_of_clusters)]
+single_cluster_control_nodes = [rn.find_control_nodes(graphs[i],N) for i in range(number_of_clusters)]
+control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
+tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters)
+Net = rn.Network(tot)
 
 out = []
-for i in range(1000):
-    g = rn.Random_Network(N, 2)
-    out.append(np.sum(g.adj_matrix)/N)
-    
-plt.hist(out,density=True)
-plt.xlim(0,5)
 
-#%%
+for i in range(200):
+    graphs = [rn.Random_Network(N, 2) for i in range(number_of_clusters)]
+    single_cluster_control_nodes = [rn.find_control_nodes(graphs[i],N) for i in range(number_of_clusters)]
+    control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
+    tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters)
+    Net = rn.Network(tot)
+
+    Net.nodes = np.ones((N*number_of_clusters,1)) 
+
+    rn.evolution(Net,iterations = 50,p=0.2)
+    out.append(rn.activity(Net,N,number_of_clusters=number_of_clusters))
+   # print(rn.activity(Net,N))
+        
+    
+plt.hist(np.array(out))
+#plt.xlim(0,1)
+
+#%% ###########LATEX GRAPHSSSSSSSSSSSSSSSSS #################################S
 import pylab as plt
 import pandas as pd
 import numpy as np

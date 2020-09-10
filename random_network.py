@@ -30,14 +30,17 @@ class Random_Network:
                     self.adj_matrix[i][r] = 1
        
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        self.control_node = find_control_nodes(self, self.n)
-        #self.control_node = outgoing_links(self, self.n)
+        #self.control_node = find_control_nodes(self, self.n)
+        self.control_node = outgoing_links(self, self.n)
         
 class Network:
     def __init__(self, matrix):
 
         self.adj_matrix = matrix
         self.nodes = np.zeros((len(self.adj_matrix),1))
+        self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
+        #self.control_node = find_control_nodes(self, self.n)
+        self.control_node = outgoing_links(self, len(self.adj_matrix))
 
     def activity(self):
             return np.mean(self.nodes)
@@ -124,8 +127,8 @@ def create_clusters(graphs,control_nodes, N,number_of_clusters=1):
                             [neg2, graphs[i].adj_matrix              ]])
     
         for j in range(number_of_clusters):
-             tot[control_nodes[-j]][control_nodes[-j-1]] = -1
-             tot[control_nodes[-j-1]][control_nodes[-j]] = -1
+             tot[control_nodes[-j]][control_nodes[-j-1]] = -100
+             tot[control_nodes[-j-1]][control_nodes[-j]] = -100
              
     return tot
 

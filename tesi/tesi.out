@@ -20,14 +20,19 @@
 \BOOKMARK [1][-]{section.4.5}{Phase transitions}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.6}{Perturbations}{chapter.4}% 21
 \BOOKMARK [0][-]{chapter.5}{Kramer Rate Theory}{}% 22
-\BOOKMARK [1][-]{section.5.1}{Kramer Rate Theory}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.2}{First passage time and transition rate escaping from a barrier}{chapter.5}% 24
-\BOOKMARK [0][-]{chapter.6}{The model}{}% 25
-\BOOKMARK [1][-]{section.6.1}{The underlying philosophy of the model}{chapter.6}% 26
-\BOOKMARK [1][-]{section.6.2}{The mathematical model and related problems}{chapter.6}% 27
-\BOOKMARK [0][-]{chapter.7}{Analysis}{}% 28
-\BOOKMARK [1][-]{section.7.1}{Implementation}{chapter.7}% 29
-\BOOKMARK [1][-]{section.7.2}{Discrete evolution}{chapter.7}% 30
-\BOOKMARK [1][-]{section.7.3}{Loops and Control nodes}{chapter.7}% 31
-\BOOKMARK [1][-]{section.7.4}{Noise}{chapter.7}% 32
-\BOOKMARK [0][-]{chapter*.6}{Bibliography}{}% 33
+\BOOKMARK [1][-]{section.5.1}{Fokker-Planck equation}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.2}{Bistability and Escape Problems}{chapter.5}% 24
+\BOOKMARK [2][-]{subsection.5.2.1}{Diffusion in a Double-Well Potential in one dimension}{section.5.2}% 25
+\BOOKMARK [2][-]{subsection.5.2.2}{Behaviour for D=0}{section.5.2}% 26
+\BOOKMARK [2][-]{subsection.5.2.3}{Behaviour if D is small}{section.5.2}% 27
+\BOOKMARK [1][-]{section.5.3}{Kramer Rate Theory}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.4}{First passage time and transition rate escaping from a barrier}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{The model}{}% 30
+\BOOKMARK [1][-]{section.6.1}{The underlying philosophy of the model}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.2}{The mathematical model and related problems}{chapter.6}% 32
+\BOOKMARK [0][-]{chapter.7}{Analysis}{}% 33
+\BOOKMARK [1][-]{section.7.1}{Implementation}{chapter.7}% 34
+\BOOKMARK [1][-]{section.7.2}{Discrete evolution}{chapter.7}% 35
+\BOOKMARK [1][-]{section.7.3}{Loops and Control nodes}{chapter.7}% 36
+\BOOKMARK [1][-]{section.7.4}{Noise}{chapter.7}% 37
+\BOOKMARK [0][-]{chapter*.6}{Bibliography}{}% 38

@@ -2,6 +2,122 @@
 \chapter{Kramer Rate Theory}\label{kramer}
 \lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
 In this Chapter we make a briefly introduction in stochastic process and in Kramer Rate Theory.
+\section{Fokker-Planck equation}
+Fokker-Planck equation is a second order parabolic partial differential equation, and it's born during the investigation of the Brownian motion in a radiation field by Fokker and Planck \cite{K50}. This equation describe the time evolution of a probability distribution $\rho(x,t)$ in a stochastic process.
+In one dimension, the Fokker-Planck equation (FPE) takes the simple form:
+\begin{equation}
+\frac{\partial \rho(x,t)}{\partial t} = -\frac{\partial}{\partial x} \biggl(A(x,t) \rho(x,t)\biggr) + \frac{1}{2} \frac{\partial ^2}{\partial x^2} \biggl(B(x,t) \rho(x,t) \biggr)
+\label{eq:FP}
+\end{equation}
+with the initial condition:
+\begin{equation}
+\rho(x,t_0|x_0,t_0) = \delta(x-x_0)
+\end{equation}
+The first term in the equation ~\ref{eq:FP} is the drift equation, while the last term is the diffusion equation.
+Every stochastic process described by a conditional probability satisfying the FPE is equavalent to the Ito stochastic differential equation (SDE)
+\begin{equation}
+dx(t) = A(x(t),t)dt + \sqrt{B(x(t),t)} dw_t
+\end{equation}
+and the two descriptions are complementary to each other.
+
+
+\section{Bistability and Escape Problems}
+In Nature exist some systems which have at least two possible stable states. This kind of systems are known as \emph{bistable systems} \cite{K50}. For such systems there are some problems of interest:
+\begin{itemize}
+\item How stable are the various states relative to each other?
+\item How long does it take for a system to switch spontaneously from one state to onother?
+\item How is the path in the relevant state space?
+\item How does a system relax from an unstable state?
+\end{itemize}
+These questions can all be answered reasily for one-dimensional diffusion processes.
+\subsection{Diffusion in a Double-Well Potential in one dimension}
+We consider the system in which we have the probability density $\rho(x,t)$ of a prarticle, which obeys the Fokker-Planck equation:
+\begin{equation}
+\frac{\partial \rho}{\partial t } = \frac{\partial}{\partial x} U'(x)\rho + D \frac{\partial ^2 }{\partial x^2} \rho
+\end{equation}
+The shape of $U(x)$ is shown in Figure \ref{fig:kr}.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.2]{images/kramerwell.pdf}
+\caption{\emph{Example of double-well potential.}}
+\label{fig:kr}
+\end{figure}
+
+There are two minima at $a$ and $c$ and in between, a local maximum $b$. The stationary distribution is
+\begin{equation}
+\rho_s(x) = \mathcal{N} e^{-\frac{U(x)}{D}}
+\end{equation}
+where $\mathcal{N}$ is the normalization constant.This distribution explains the bistability of the system, since, we have two local maxima of the potential in $a$ and $c$. (see Figure \ref{fig:kramerpot}).
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.2]{images/kramerpot.pdf}
+\caption{\emph{The distribution (dashed) explains the bistability of the system, since, we have two local maxima of the potential in $a$ and $c$..}}
+\label{fig:kramerpot}
+\end{figure}
+
+\subsection{Behaviour for $D=0$}
+In this case, $x(t)$ obeys the differential equation
+\begin{equation}
+\frac{dx}{dt} = - U'(x)
+\end{equation}
+with initial condition $x(0) = x_0$.
+Now, since
+$$
+\frac{dU(x)}{dt} = U'(x)\frac{dx}{dt} = - (u'(x))^2 < 0 
+$$
+
+$x(t)$ always moves in such a way as to minimise $U(x)$, and stops only when $U'(x)$ is zero. Thus, depending on whether $x_0$ is grater than or less than $b$, the particle ends up at $c$ or $a$, respectively. Once the particle is at $a$ or $c$, it stays there. If it starts exactly at $b$, it also stay there, thoug the slightest perturbation drives it to $a$ or $c$. Thus, $b$ in an \emph{unstable} stationart point and $a$ and $c$ are stable.
+\subsection{Behaviour if $D$ is small}
+With the addition of noise, the situation changes. The stationary state can be approximated asymptotically as folows. Assuming $U(x)$ is everywhere sufficiently smooth, we can write
+\begin{equation}
+\begin{split}
+U(x) & \simeq U(a) + \frac{1}{2} U''(a)(x-a)^2 \\
+& \simeq U(c) + \frac{1}{2} U''(c)(x-c)^2 
+\end{split}
+\end{equation}
+for $|x-a|$ and $|x-c|$ small, respectively.
+If $D$ is very small, then we may approximate
+\begin{equation}
+\begin{split}
+\rho_s(x)  &\simeq \mathcal{N} \exp\biggl(-\frac{U(a)}{D} - \frac{1}{2} U''(a)\frac{(x-a)^2}{D}\biggr) \\
+&\simeq \mathcal{N} \exp\biggl(-\frac{U(c)}{D} - \frac{1}{2} U''(c)\frac{(x-c)^2}{D}\biggr) 
+\end{split}
+\label{eq:r}
+\end{equation}
+And zero elsewhere.
+So that:
+\begin{equation}
+\mathcal{N}^{-1}  \simeq e^{-\frac{U(a)}{D}} \sqrt{\frac{ 2 \pi D }{U''(a)}} + e^{-\frac{U(c)}{D}} \sqrt{\frac{ 2 \pi D }{U''(c)}}
+\end{equation}
+Now suppose as in drawn in Figure \ref{fig:kramerpot} 
+$$
+U(a)>U(c)
+$$
+Then for small enough $D$, the second term is larger than the first and $\mathcal{N}^{-1}$ can be approximated by it alone. So, substituing into ~\ref{eq:r} we find
+\begin{equation}
+\rho_s(x) = \sqrt{\frac{U''(c)}{2 \pi D}} \exp\biggl(-\frac{1}{2}U''(c)\frac{(x-c)^2}{D}\biggr)
+\end{equation}
+for 
+$$
+|x-c| \sim \sqrt{D}
+$$
+and zero otherwise.
+This means that in the limit of very small $D$, the deterministic stationary state at which $U(x)$ has an absolute minimum is the more stable state in the sense that in the stochastic stationary state, $\rho_s(x)$ is very small everywhere except in its immediate vicinity. This means, differently from the previous results, that due to the noise the  equilibrium points $a$ and $c$ are no longer equally stable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Kramer Rate Theory}
 We consider the Smoluchowski equation:
 \begin{equation}
@@ -13,9 +129,9 @@ dx = -V'(x)dt + \sqrt{2T} dw_t
 \includegraphics[scale=1.2]{images/kramerwell.pdf}
 \caption{\emph{Example of double-well potential.}}
 \label{fig:kr}
-
-
 \end{figure}
+
+
 where $V(x)$ is a double well potential with $x_a$ and $x_c$ local minima separated by a saddle point $x_b$: To compute the transition probability from the left well to the right well we consider the stationary solution of the Fokker-Planck equation:
 \begin{equation}
 \frac{\partial \rho}{\partial t } = \frac{\partial}{\partial x} U'(x)\rho + T \frac{\partial ^2 }{\partial x^2} \rho

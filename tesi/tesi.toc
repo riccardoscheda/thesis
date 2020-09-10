@@ -21,14 +21,19 @@
 \contentsline {section}{\numberline {4.5}Phase transitions}{29}{section.4.5}
 \contentsline {section}{\numberline {4.6}Perturbations}{31}{section.4.6}
 \contentsline {chapter}{\numberline {5}Kramer Rate Theory}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Kramer Rate Theory}{33}{section.5.1}
-\contentsline {section}{\numberline {5.2}First passage time and transition rate escaping from a barrier}{35}{section.5.2}
-\contentsline {chapter}{\numberline {6}The model}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}The underlying philosophy of the model}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}The mathematical model and related problems}{40}{section.6.2}
-\contentsline {chapter}{\numberline {7}Analysis}{51}{chapter.7}
-\contentsline {section}{\numberline {7.1}Implementation}{51}{section.7.1}
-\contentsline {section}{\numberline {7.2}Discrete evolution}{52}{section.7.2}
-\contentsline {section}{\numberline {7.3}Loops and Control nodes}{53}{section.7.3}
-\contentsline {section}{\numberline {7.4}Noise}{53}{section.7.4}
-\contentsline {chapter}{Bibliography}{57}{chapter*.6}
+\contentsline {section}{\numberline {5.1}Fokker-Planck equation}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}Bistability and Escape Problems}{34}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Diffusion in a Double-Well Potential in one dimension}{34}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Behaviour for $D=0$}{34}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Behaviour if $D$ is small}{35}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Kramer Rate Theory}{37}{section.5.3}
+\contentsline {section}{\numberline {5.4}First passage time and transition rate escaping from a barrier}{39}{section.5.4}
+\contentsline {chapter}{\numberline {6}The model}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}The underlying philosophy of the model}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}The mathematical model and related problems}{44}{section.6.2}
+\contentsline {chapter}{\numberline {7}Analysis}{55}{chapter.7}
+\contentsline {section}{\numberline {7.1}Implementation}{55}{section.7.1}
+\contentsline {section}{\numberline {7.2}Discrete evolution}{56}{section.7.2}
+\contentsline {section}{\numberline {7.3}Loops and Control nodes}{57}{section.7.3}
+\contentsline {section}{\numberline {7.4}Noise}{57}{section.7.4}
+\contentsline {chapter}{Bibliography}{61}{chapter*.6}

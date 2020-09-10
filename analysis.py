@@ -334,13 +334,13 @@ import numpy as np
 p = np.linspace(-5,5,num=1000)
 a = 2.6
 b = 1.1
-
-k = 10+ p**4 + b*p**3 - a*p**3 - a*b*p**2
-
+D = 2
+V = 2 + p**4 + b*p**3 - a*p**3 - a*b*p**2
+k = np.exp(-V/D)
 a = [i*0.001 for i in range(len(k))]
 df = pd.DataFrame()
 df[0] = a
 df[1] = pd.DataFrame(np.array(k))
-df.to_csv("kramerwell.dat",sep = " ",decimal=".",index=False,header=False)
-plt.ylim(0,40)
+df.to_csv("pot.dat",sep = " ",decimal=".",index=False,header=False)
+#plt.ylim(0,40)
 plt.plot(p,k)

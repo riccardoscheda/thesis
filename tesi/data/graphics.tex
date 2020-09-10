@@ -12,12 +12,14 @@
 \centering
 \begin{tikzpicture}[scale=1]
 \centering
-\begin{axis}[xmin=0,xmax=1,xlabel=$x$ ,ylabel=$V(x)$,ymin=0,ymax=30]
+\begin{axis}[xmin=0,xmax=1,xlabel=$x$ ,ymin=0,ymax=30,yticklabels={,,}]
 
 
 \addplot [thick, orange]
 file {kramerwell.dat};
-
+\addplot [dashed, black]
+file {pot.dat};
+\legend{$V(x)$,$\rho(x)$}
 \node (d) [draw, circle] at (68,3.5){};
 \node (a) at (62,7){};
 \draw [-latex] (d) to  (a);

@@ -30,8 +30,8 @@ class Random_Network:
                     self.adj_matrix[i][r] = 1
        
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        #self.control_node = find_control_nodes(self, self.n)
-        self.control_node = outgoing_links(self, self.n)
+        self.control_node = find_control_nodes(self, self.n)
+        #self.control_node = outgoing_links(self, self.n)
         
 class Network:
     def __init__(self, matrix):
@@ -39,8 +39,8 @@ class Network:
         self.adj_matrix = matrix
         self.nodes = np.zeros((len(self.adj_matrix),1))
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        #self.control_node = find_control_nodes(self, self.n)
-        self.control_node = outgoing_links(self, len(self.adj_matrix))
+        self.control_node = find_control_nodes(self, self.n)
+        #self.control_node = outgoing_links(self, len(self.adj_matrix))
 
     def activity(self):
             return np.mean(self.nodes)
@@ -57,8 +57,7 @@ def find_control_nodes(gr,N):
         control_node: int which is the index of the control node
     """
     graph = nx.from_numpy_matrix(gr.adj_matrix.T, create_using=nx.DiGraph)
-    npos = nx.layout.spring_layout(graph)
-    cycles = nx.cycle_basis(graph.to_undirected())
+    cycles = nx.simple_cycles(graph)
    
     #driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
     

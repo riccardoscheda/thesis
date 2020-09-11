@@ -168,42 +168,49 @@ import  random_network  as rn
 import pandas as pd
 
 
-noise = 100
-number_of_clusters = 3
-N = 10
+
+time = 300
+noise = 5
+number_of_clusters = 1
+N = 30
 K = 2
 graphs = [rn.Random_Network(N, 2) for i in range(number_of_clusters)]
 single_cluster_control_nodes = [rn.find_control_nodes(graphs[i],N) for i in range(number_of_clusters)]
 control_nodes = [single_cluster_control_nodes[i] + i*N for i in range(number_of_clusters)]
 tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters)
 Net = rn.Network(tot)
-############# INITIAL CONDITIONS #####################
-for i in range(number_of_clusters):
-    #Net.nodes[control_nodes[i]] = 1
-    Net.nodes[np.random.randint(N*i,N*(i+1))] = 1
+############# INITIAL CONDITIONS ########################
+# for i in range(number_of_clusters):
+#     Net.nodes[control_nodes[i]] = 1
+#     Net.nodes[np.random.randint(N*i,N*(i+1))] = 1
     
+Net.nodes = np.ones((N*number_of_clusters,1))
+
+for i in range(noise):
     activities = []
-    for j in range(noise):
+    Net = rn.Random_Network(N,K)
+    Net.nodes = np.ones((N*number_of_clusters,1))
+    for j in range(time):
         
-    
-        for i in control_nodes:
+        #for i in control_nodes:
         ##### PROBABILITÀ DI AZZERARE IL CONTROL NODE AD OGNI STEP
-           Net.nodes[control_nodes] = 0
+            #Net.nodes[np.random.choice(control_nodes)] = 1
         
-        rn.evolution(Net,iterations=1,p = 0.1)
+        rn.evolution(Net,iterations=1,p = i*0.1)
         activities.append(rn.activity(Net, N,number_of_clusters=number_of_clusters))
     
-    #UCCIDO UN LINK AD OGNI STEP ####################
-    #a =  np.random.randint(N*number_of_clusters-N)
-    #Net.adj_matrix[a + np.random.randint(-N,N)][a + np.random.randint(-N,N)] = 0    
+        #UCCIDO UN LINK AD OGNI STEP ####################
+        #a =  np.random.randint(N*number_of_clusters-N)
+        #Net.adj_matrix[a + np.random.randint(-N,N)][a + np.random.randint(-N,N)] = 0    
+            
         
-    
-plt.plot(activities,label="cluster")
+    plt.plot(activities,label=" noise = " + str(i*0.1))
 plt.legend()
 plt.xlabel("t")
+plt.title("1 cluster, N = 30 ")
 plt.ylabel("Average activity")
 plt.ylim(0,2)
-#plt.savefig("3clusters.png")
+plt.savefig("1cluster-tempevolution.png")
 
 #%%%% MEAN ACTIVITY VERSUS CONTROL NODES
     
@@ -217,38 +224,43 @@ import  random_network  as rn
 import pandas as pd
 
 realizations = 40
-steps = 100
-N = 15
+time = 200
+noise = 2
+N = 30
 K = 2
-
+number_of_clusters = 1
 probabilities = [i*0.01 for i in range(steps)]
 #label = "N =" + str(N)
-
-for A in [False, True]:
-    label = str(A)
-    mean_activities = []
-    for i in range(steps):
-        activities = []
-        graphs = [rn.Random_Network(N, K) for i in range(realizations)]
-    
-        for j in range(realizations):
-            #initial conditions
-            for s in range(realizations):
-                graphs[s].nodes[np.random.randint(N)] = 1
-     
-            for m in range(N+1):
-                if A:
-                    graphs[j].nodes[graphs[j].control_node] = 0  
-                rn.evolution(graphs[j],iterations=1,p=0.01*i)
-    
-            activities.append(rn.activity(graphs[j], N))
-        mean_activities.append(np.mean((np.array(activities))))
-    
-    plt.plot(probabilities,mean_activities,label=label)
+for j in range(noise):
+    for A in [False, True]:
+        if A:
+            label = "With control node, noise = " +str(j*0.1)
+        else:
+            label = "Without control node, noise = " +str(j*0.1)
+        activity = []
+        Net = rn.Random_Network(N, K)
+        ####### INITIAL CONDITIONS ###########
+        Net.nodes = np.ones((N*number_of_clusters,1))
+        #Net.nodes[np.random.randint(N)] = 1
+        ########################################
+       
+        for i in range(time):
+            
+            rn.evolution(Net,iterations=1, p = 0.1*j)
+            if not A:
+                Net.nodes[Net.control_node] = 0
+            activity.append(rn.activity(Net, N,number_of_clusters=number_of_clusters))
+        
+        if A:
+            plt.plot(activity,label=label,c=(1-j*0.3,0,j*0.3))
+        else:
+            plt.plot(activity,linestyle = "--",label=label,c=(1-j*0.3,0,j*0.3))
 plt.legend()
-plt.xlabel("noise")
+plt.xlabel("t")
+plt.title("Average activity with/without control nodes. 1 cluster")
 plt.ylabel("average activity")
-plt.savefig("doubleclustersactivity.png")
+plt.ylim(0,2)
+plt.savefig("1clustervscontrolnodes.png")
 # a = [i*0.01 for i in range(steps)]
 # s = pd.Series(a)
 # df = pd.DataFrame()
@@ -260,15 +272,31 @@ plt.savefig("doubleclustersactivity.png")
 import random_network as rn
 import pylab as plt
 import networkx as nx
-N = 5
+N = 30
 K = 2
 number_of_clusters = 3
+time = 200
 graphs = [rn.Random_Network(N, K) for i in range(number_of_clusters)]
 control_nodes = [graphs[i].control_node for i in range(number_of_clusters) ]
-tot = rn.create_clusters(graphs, control_nodes, N)
+tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters=number_of_clusters)
 Net = rn.Network(tot)
-gr = nx.from_numpy_matrix(Net.adj_matrix,create_using=nx.DiGraph)
-nx.draw_networkx(gr, with_labels=True)
+######### INITIAL CONDITIONS ################
+#Net.nodes = np.ones((N*number_of_clusters,1))
+nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
+Net.nodes[nod] = 1
+#############################################
+
+activity = []
+for i in range(time):
+    rn.evolution(Net,iterations=1,p=0.1)
+    activity.append(rn.activity(Net,N,number_of_clusters=3))
+plt.plot(np.array(activity))
+
+plt.xlabel("t")
+plt.ylabel("average activity")
+plt.ylim(0,2)
+plt.title("3 clusters temporal evolution")
+plt.savefig("3clusters.png")
 #%%
 import pylab as plt
 import numpy as np

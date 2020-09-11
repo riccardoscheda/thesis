@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  10 SEP 2020 12:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  11 SEP 2020 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -982,11 +982,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19]
 Chapter 3.
-<GRN.png, id=375, 316.3017pt x 133.4586pt>
-File: GRN.png Graphic file (type png)
-<use GRN.png>
-Package pdftex.def Info: GRN.png  used on input line 10.
-(pdftex.def)             Requested size: 316.30092pt x 133.45827pt.
+<images/grnn.pdf, id=375, 895.4845pt x 882.88849pt>
+File: images/grnn.pdf Graphic file (type pdf)
+<use images/grnn.pdf>
+Package pdftex.def Info: images/grnn.pdf  used on input line 10.
+(pdftex.def)             Requested size: 358.18745pt x 353.14914pt.
 
 Overfull \hbox (3.01886pt too wide) in paragraph at lines 7--14
 \OT1/ppl/m/n/12 mRNA, fol-lowed by trans-la-tion to a pro-tein, which may be su
@@ -995,21 +995,14 @@ b-ject to post-translational
 
 [20
 
- <./GRN.png>]
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
-Missing character: There is no ‚ in font pplr7t!
-Missing character: There is no Ä in font pplr7t!
-Missing character: There is no ú in font pplr7t!
-Missing character: There is no ‚ in font pplr7t!
-Missing character: There is no Ä in font pplr7t!
-Missing character: There is no ù in font pplr7t!
-
+[21 <./images/grnn.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1017,6 +1010,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1047,7 +1047,7 @@ Missing character: There is no ù in font pplr7t!
 [25
 
 ]
-<figurenetworks.pdf, id=430, 264.03444pt x 145.55981pt>
+<figurenetworks.pdf, id=436, 264.03444pt x 145.55981pt>
 File: figurenetworks.pdf Graphic file (type pdf)
 <use figurenetworks.pdf>
 Package pdftex.def Info: figurenetworks.pdf  used on input line 65.
@@ -1077,12 +1077,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27 <./figurenetworks.pdf>]
-<figurenetworks2.pdf, id=455, 171.69144pt x 114.78584pt>
+<figurenetworks2.pdf, id=461, 171.69144pt x 114.78584pt>
 File: figurenetworks2.pdf Graphic file (type pdf)
 <use figurenetworks2.pdf>
 Package pdftex.def Info: figurenetworks2.pdf  used on input line 120.
 (pdftex.def)             Requested size: 240.36636pt x 160.69907pt.
-<fg3.pdf, id=457, 170.7168pt x 170.7168pt>
+<fg3.pdf, id=463, 170.7168pt x 170.7168pt>
 File: fg3.pdf Graphic file (type pdf)
 <use fg3.pdf>
 Package pdftex.def Info: fg3.pdf  used on input line 144.
@@ -1161,7 +1161,7 @@ Missing character: There is no ú in font pplr7t!
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ù in font pplr7t!
-<images/phase-transition.pdf, id=471, 242.58228pt x 196.67076pt>
+<images/phase-transition.pdf, id=477, 242.58228pt x 196.67076pt>
 File: images/phase-transition.pdf Graphic file (type pdf)
 <use images/phase-transition.pdf>
 Package pdftex.def Info: images/phase-transition.pdf  used on input line 192.
@@ -1191,7 +1191,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [31 <./images/phase-transition.pdf>]
-<fg4.pdf, id=512, 170.7168pt x 170.7168pt>
+<fg4.pdf, id=518, 170.7168pt x 170.7168pt>
 File: fg4.pdf Graphic file (type pdf)
 <use fg4.pdf>
 Package pdftex.def Info: fg4.pdf  used on input line 233.
@@ -1205,13 +1205,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [32 <./fg4.pdf>]
 Chapter 5.
-
-LaTeX Warning: Reference `eq:FP' on page 33 undefined on input line 16.
-
 [33
 
 ]
-<images/kramerwell.pdf, id=534, 244.1652pt x 194.72649pt>
+<images/kramerwell.pdf, id=541, 244.1652pt x 194.72649pt>
 File: images/kramerwell.pdf Graphic file (type pdf)
 <use images/kramerwell.pdf>
 Package pdftex.def Info: images/kramerwell.pdf  used on input line 41.
@@ -1220,7 +1217,7 @@ Package pdftex.def Info: images/kramerwell.pdf  used on input line 41.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kramerpot.pdf, id=536, 207.69896pt x 191.50446pt>
+<images/kramerpot.pdf, id=543, 207.69896pt x 191.50446pt>
 File: images/kramerpot.pdf Graphic file (type pdf)
 <use images/kramerpot.pdf>
 Package pdftex.def Info: images/kramerpot.pdf  used on input line 54.
@@ -1426,12 +1423,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [54]
 Chapter 7.
-<images/K.pdf, id=676, 172.23747pt x 139.51622pt>
+<images/K.pdf, id=684, 172.23747pt x 139.51622pt>
 File: images/K.pdf Graphic file (type pdf)
 <use images/K.pdf>
 Package pdftex.def Info: images/K.pdf  used on input line 16.
 (pdftex.def)             Requested size: 258.35555pt x 209.2738pt.
-<images/outgoing.pdf, id=678, 172.27663pt x 139.51523pt>
+<images/outgoing.pdf, id=686, 172.27663pt x 139.51523pt>
 File: images/outgoing.pdf Graphic file (type pdf)
 <use images/outgoing.pdf>
 Package pdftex.def Info: images/outgoing.pdf  used on input line 25.
@@ -1445,7 +1442,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/loops.pdf, id=687, 172.27663pt x 139.51323pt>
+<images/loops.pdf, id=694, 172.27663pt x 139.51323pt>
 File: images/loops.pdf Graphic file (type pdf)
 <use images/loops.pdf>
 Package pdftex.def Info: images/loops.pdf  used on input line 48.
@@ -1460,7 +1457,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/noise.pdf, id=710, 170.48694pt x 133.62823pt>
+<images/noise.pdf, id=717, 170.48694pt x 133.62823pt>
 File: images/noise.pdf Graphic file (type pdf)
 <use images/noise.pdf>
 Package pdftex.def Info: images/noise.pdf  used on input line 61.
@@ -1607,39 +1604,37 @@ Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 96F78CA727BA716638395B7F25A2BA8D;2520.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  ) 
 Here is how much of TeX's memory you used:
  19000 strings out of 494847
- 348250 string characters out of 6179080
- 412485 words of memory out of 5000000
+ 348306 string characters out of 6179080
+ 412538 words of memory out of 5000000
  21648 multiletter control sequences out of 15000+600000
  50112 words of font info for 149 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  55i,19n,54p,1313b,907s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/palatino/uplri8a.pfb>
-Output written on tesi.pdf (66 pages, 481822 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
+ino/uplri8a.pfb>
+Output written on tesi.pdf (66 pages, 363036 bytes).
 PDF statistics:
- 879 PDF objects out of 1000 (max. 8388607)
- 774 compressed objects within 8 object streams
+ 887 PDF objects out of 1000 (max. 8388607)
+ 781 compressed objects within 8 object streams
  202 named destinations out of 1000 (max. 500000)
  382 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,7 +12,7 @@
 \contentsline {chapter}{\numberline {3}Gene Regulatory Networks}{20}{chapter.3}
 \contentsline {section}{\numberline {3.1}Definition}{20}{section.3.1}
 \contentsline {section}{\numberline {3.2}Modelling GRNs}{22}{section.3.2}
-\contentsline {section}{\numberline {3.3}Principle of the models}{23}{section.3.3}
+\contentsline {section}{\numberline {3.3}Principle of the models}{24}{section.3.3}
 \contentsline {chapter}{\numberline {4}Random Boolean Networks}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Random Boolean Networks}{25}{section.4.1}
 \contentsline {section}{\numberline {4.2}The model}{26}{section.4.2}

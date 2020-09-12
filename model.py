@@ -15,7 +15,7 @@ frames = 500
 
 N = 10
 K = 2
-number_of_clusters = 3
+number_of_clusters = 2
 
 ######################################
 
@@ -26,7 +26,7 @@ control_nodes = [gr[i].control_node+i*N for i in range(number_of_clusters)]
 
 tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters)
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
-print(negedges)
+#print(negedges)
 Net = rn.Network(tot,number_of_clusters)
 graph = nx.from_numpy_matrix(tot.T, create_using=nx.DiGraph)
 npos = nx.spring_layout(graph)
@@ -44,10 +44,10 @@ def init():
     active_nodes = []
     non_active_nodes = []
     for i in range(number_of_clusters):
-        Net.nodes[control_nodes[i]] = 1
+        Net.nodes[np.random.randint(N*i, N*(i+1))] = 1
     
-    for i in range(N):
-        Net.nodes[i] = 1
+    # for i in range(N):
+    #     Net.nodes[i] = 1
         
         
     for i in range(len(Net.nodes)):
@@ -93,7 +93,7 @@ def evo(frames):
     plt.title("frame " +str(frames))
     return  ax
 
-print(control_nodes)
+#print(control_nodes)
 ani = FuncAnimation(fig, evo, frames = np.arange(0,500), interval = 200,init_func = init, blit = False)
 #ani.save('network.gif',dpi = 100,writer = "imagemagick")
 

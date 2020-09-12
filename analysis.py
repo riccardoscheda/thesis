@@ -268,27 +268,32 @@ plt.savefig("1clustervscontrolnodes.png")
 # df[1] = pd.DataFrame(np.array(mean_activities))
 # df.to_csv(PATH+"/data/"+label+".dat",sep = " ",decimal=".",index=False,header=False)
 
-#%%
+#%%  ################################### 3 CLUSTERS ################################
 import random_network as rn
 import pylab as plt
 import networkx as nx
-N = 30
+N = 20
 K = 2
 number_of_clusters = 3
 time = 200
 graphs = [rn.Random_Network(N, K) for i in range(number_of_clusters)]
 control_nodes = [graphs[i].control_node for i in range(number_of_clusters) ]
 tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters=number_of_clusters)
-Net = rn.Network(tot)
+Net = rn.Network(tot,number_of_clusters)
 ######### INITIAL CONDITIONS ################
 #Net.nodes = np.ones((N*number_of_clusters,1))
-nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
-Net.nodes[nod] = 1
+
+##### INITIAL ACTIVE NODES PER CLUSTER###############
+# for i in range(2):
+#     nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
+#     Net.nodes[nod] = 1
+for i in range(N*(number_of_clusters-2)):
+    Net.nodes[i] = 1
 #############################################
 
 activity = []
 for i in range(time):
-    rn.evolution(Net,iterations=1,p=0.1)
+    rn.evolution(Net,iterations=1,p=0.05)
     activity.append(rn.activity(Net,N,number_of_clusters=3))
 plt.plot(np.array(activity))
 
@@ -296,7 +301,8 @@ plt.xlabel("t")
 plt.ylabel("average activity")
 plt.ylim(0,2)
 plt.title("3 clusters temporal evolution")
-plt.savefig("3clusters.png")
+#plt.savefig("3clusters.png")
+################################################# 3 CLUSTERS ##############################################
 #%%
 import pylab as plt
 import numpy as np
@@ -389,3 +395,77 @@ df[1] = pd.DataFrame(np.array(k))
 df.to_csv("pot.dat",sep = " ",decimal=".",index=False,header=False)
 #plt.ylim(0,40)
 plt.plot(p,k)
+
+
+#%%  ################################### 3 CLUSTERS ################################
+import random_network as rn
+import pylab as plt
+import networkx as nx
+N = 30
+K = 2
+number_of_clusters = 2
+time = 200
+graphs = [rn.Random_Network(N, K) for i in range(number_of_clusters)]
+control_nodes = [graphs[i].control_node for i in range(number_of_clusters) ]
+tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters=number_of_clusters)
+Net = rn.Network(tot,number_of_clusters)
+######### INITIAL CONDITIONS ################
+#Net.nodes = np.ones((N*number_of_clusters,1))
+
+##### INITIAL ACTIVE NODES PER CLUSTER###############
+# for i in range(2):
+#     nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
+#     Net.nodes[nod] = 1
+for i in range(N*(number_of_clusters-1)):
+    Net.nodes[i] = 1
+#############################################
+
+activity = []
+for i in range(time):
+    rn.evolution(Net,iterations=1,p=0.2)
+    activity.append(rn.activity(Net,N,number_of_clusters=number_of_clusters))
+plt.plot(np.array(activity))
+
+plt.xlabel("t")
+plt.ylabel("average activity")
+plt.ylim(0,2)
+plt.title("3 clusters temporal evolution")
+#plt.savefig("3clusters.png")
+################################################# 3 CLUSTERS ##############################################
+
+#%%  ################################### 3 CLUSTERS ################################
+import random_network as rn
+import pylab as plt
+import networkx as nx
+N = 30
+M = 5
+K = 2
+number_of_clusters = 2
+time = 200
+graphs = [rn.Random_Network(N, K) , rn.Random_Network(M,K)]
+control_nodes = [graphs[i].control_node for i in range(number_of_clusters) ]
+tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters=number_of_clusters)
+Net = rn.Network(tot,number_of_clusters)
+######### INITIAL CONDITIONS ################
+#Net.nodes = np.ones((N*number_of_clusters,1))
+
+##### INITIAL ACTIVE NODES PER CLUSTER###############
+# for i in range(2):
+#     nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
+#     Net.nodes[nod] = 1
+for i in range(N*(number_of_clusters-1)):
+    Net.nodes[i] = 1
+#############################################
+
+activity = []
+for i in range(time):
+    rn.evolution(Net,iterations=1,p=0.2)
+    activity.append(rn.activity(Net,N,number_of_clusters=number_of_clusters))
+plt.plot(np.array(activity))
+
+plt.xlabel("t")
+plt.ylabel("average activity")
+plt.ylim(0,2)
+plt.title("3 clusters temporal evolution")
+#plt.savefig("3clusters.png")
+################################################# 3 CLUSTERS ##############################################

@@ -13,7 +13,7 @@ fig, ax = plt.subplots(1,1)
 #iterations
 frames = 500
 
-N = 10
+N = 5
 K = 2
 number_of_clusters = 2
 
@@ -24,7 +24,7 @@ gr = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
 
 control_nodes = [gr[i].control_node+i*N for i in range(number_of_clusters)]
 
-tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters)
+tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters,visual=False)
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 #print(negedges)
 Net = rn.Network(tot,number_of_clusters)
@@ -33,7 +33,8 @@ npos = nx.spring_layout(graph)
 #cycles = nx.cycle_basis(graph.to_undirected())
 
 ################## ONLY FOR VISUALIZATION #######################
-abs_tot = abs(tot)
+tot1 = rn.create_clusters(gr, control_nodes, N,number_of_clusters,visual=True)
+abs_tot = abs(tot1)
 graph1 = nx.from_numpy_matrix(abs_tot.T, create_using=nx.DiGraph)
 npos = nx.kamada_kawai_layout(graph1)
 #################################################################

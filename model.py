@@ -71,7 +71,7 @@ def evo(frames):
     
     up = Net.adj_matrix.dot(Net.nodes)
     Net.nodes = (up >0).astype(int)
-    rn.noise(Net,p=0.2)
+    rn.noise(Net,p=0.1)
     active_nodes = []
     non_active_nodes = []
     

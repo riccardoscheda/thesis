@@ -31,18 +31,20 @@ class Random_Network:
        
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
         self.control_node = find_control_nodes(self, self.n)
-        for i in range(self.n):
-            if self.adj_matrix[i][self.control_node] == 1:
-                self.adj_matrix[i][self.control_node] = -1 
+        # for i in range(self.n):
+        #     if self.adj_matrix[i][self.control_node] == 1:
+        #         self.adj_matrix[i][self.control_node] = -100 
+        #print(self.control_node)
         #self.control_node = outgoing_links(self, self.n)
         
 class Network:
-    def __init__(self, matrix):
+    def __init__(self, matrix,number_of_clusters):
 
         self.adj_matrix = matrix
         self.nodes = np.zeros((len(self.adj_matrix),1))
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        #self.control_node = find_control_nodes(self, len(self.adj_matrix))
+        
+
         #self.control_node = outgoing_links(self, len(self.adj_matrix))
 
     def activity(self):
@@ -75,6 +77,8 @@ def find_control_nodes(gr,N):
     # print("driver node: "+ str(driver_node))
     # print(control_node)
     return control_node
+
+
 def outgoing_links(gr,N):
     """
     
@@ -113,21 +117,35 @@ def create_clusters(graphs,control_nodes, N,number_of_clusters=1):
     """
 
     tot = np.zeros((N,N))
+    mat = np.zeros((N,N))
     for i in range(N):
         for j in range(N):
             tot[i][j] = graphs[0].adj_matrix[i][j]
     
     if number_of_clusters>1:
+
         for i in range(number_of_clusters-1):
+            for j in range(N):
+                for k in range(N):
+                    mat[j][k] = graphs[i].adj_matrix[j][k]
+                    
             neg1 = np.zeros((N*(i+1),N))
             neg2 = np.zeros((N,N*(i+1)))
             
             tot = np.block([[tot,       neg1        ],
-                            [neg2, graphs[i].adj_matrix              ]])
+                            [neg2, mat]])
+    
+       ################## NEGATIVE EDGES FROM CONTROL NODES TO NODES OF THE SAME CLUSTER ###################
+        for j in range(number_of_clusters):
+            for k in range(N*number_of_clusters):
+                 if tot[k][control_nodes[j]] == 1:
+                     tot[k][control_nodes[j]] = -1
+    ###############################################################################################    
     
         for j in range(number_of_clusters):
              tot[control_nodes[-j]][control_nodes[-j-1]] = +1
              tot[control_nodes[-j-1]][control_nodes[-j]] = +1
+             
              
     return tot
 

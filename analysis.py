@@ -395,16 +395,52 @@ df[1] = pd.DataFrame(np.array(k))
 df.to_csv("pot.dat",sep = " ",decimal=".",index=False,header=False)
 #plt.ylim(0,40)
 plt.plot(p,k)
+#%%
+import random_network as rn
+import pylab as plt
+import networkx as nx
+N = 5
+K = 2
+number_of_clusters = 2
 
+######################################
 
+#creation of the subnetworks
+gr = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
+
+control_nodes = [gr[i].control_node+i*N for i in range(number_of_clusters)]
+
+tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters,visual=False)
+negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
+#print(negedges)
+Net = rn.Network(tot,number_of_clusters)
+graph = nx.from_numpy_matrix(tot.T, create_using=nx.DiGraph)
+npos = nx.spring_layout(graph)
+#cycles = nx.cycle_basis(graph.to_undirected())
+
+################## ONLY FOR VISUALIZATION #######################
+tot1 = rn.create_clusters(gr, control_nodes, N,number_of_clusters,visual=True)
+abs_tot = abs(tot1)
+graph1 = nx.from_numpy_matrix(abs_tot.T, create_using=nx.DiGraph)
+npos = nx.kamada_kawai_layout(graph1)
+#################################################################
+
+nx.draw_networkx(graph,npos, with_labels= True)
+nx.draw_networkx_nodes(graph,npos,
+                    nodelist=control_nodes,
+                    node_size=800,node_color="green")
+nx.draw_networkx_edges(graph, npos,
+                   edgelist=negedges,
+                   width=3, alpha=0.4, edge_color='r')
+plt.savefig("network.png")
 #%%  ################################### 3 CLUSTERS ################################
 import random_network as rn
 import pylab as plt
 import networkx as nx
 N = 30
 K = 2
-number_of_clusters = 2
-time = 200
+number_of_clusters = 3
+time = 150
 graphs = [rn.Random_Network(N, K) for i in range(number_of_clusters)]
 control_nodes = [graphs[i].control_node for i in range(number_of_clusters) ]
 tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters=number_of_clusters)
@@ -416,19 +452,27 @@ Net = rn.Network(tot,number_of_clusters)
 # for i in range(2):
 #     nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
 #     Net.nodes[nod] = 1
-for i in range(N*(number_of_clusters-1)):
+for i in range(N*(number_of_clusters-2)):
     Net.nodes[i] = 1
 #############################################
-
-activity = []
-for i in range(time):
-    rn.evolution(Net,iterations=1,p=0.2)
-    activity.append(rn.activity(Net,N,number_of_clusters=number_of_clusters))
-plt.plot(np.array(activity))
-
-plt.xlabel("t")
-plt.ylabel("average activity")
-plt.ylim(0,2)
-plt.title("3 clusters temporal evolution")
-#plt.savefig("3clusters.png")
+mean_activities = []
+realizations = 1
+noise = 0.2
+for i in range(realizations):
+    
+    activity = []
+    
+    for i in range(time):
+        rn.evolution(Net,iterations=1,p=noise)
+        activity.append(rn.activity(Net,N,number_of_clusters=number_of_clusters))
+    mean_activities.append(np.mean(activity))
+    
+    plt.plot(np.array(activity))
+    plt.xlabel("t")
+    plt.ylabel("average activity")
+    plt.ylim(0,2)
+    plt.title(str(number_of_clusters) +" clusters -noise"+str(noise))
+    plt.savefig(str(number_of_clusters) +" clusters -"+str(noise)+".png")
+    
+#plt.hist(mean_activities,range=(0,1))
 ################################################# 3 CLUSTERS ##############################################

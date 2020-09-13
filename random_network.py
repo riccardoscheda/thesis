@@ -155,7 +155,7 @@ def create_clusters(graphs,control_nodes, N,number_of_clusters=1,visual= False):
                 for j in range(number_of_clusters):
                     for k in range(N*number_of_clusters):
                          if tot[k][control_nodes[j]] == 1:
-                             tot[k][control_nodes[j]] = -1
+                             tot[k][control_nodes[j]] = -10
             ###############################################################################################    
           
     return tot

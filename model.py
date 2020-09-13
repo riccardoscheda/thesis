@@ -97,7 +97,7 @@ def evo(frames):
 #print(control_nodes)
 ani = FuncAnimation(fig, evo, frames = np.arange(0,500), interval = 200,init_func = init, blit = False)
 #ani.save('network.gif',dpi = 100,writer = "imagemagick")
-
+plt.savefig("network.png")
 
 # #%% 
 # import numpy as np

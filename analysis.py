@@ -382,19 +382,22 @@ import pylab as plt
 import pandas as pd
 import numpy as np
 
-p = np.linspace(-5,5,num=1000)
-a = 2.6
-b = 1.1
-D = 2
-V = 2 + p**4 + b*p**3 - a*p**3 - a*b*p**2
-k = np.exp(-V/D)
+p = np.linspace(0,1,num=1000)
+eps = 1.6
+T = 0.29
+
+#V = 2 + p**4 + b*p**3 - a*p**3 - a*b*p**2
+
+k = 0.5*(1+np.tanh(p/T-eps)) -0.05
+plt.plot(p,k)
+plt.plot(p,p)
 a = [i*0.001 for i in range(len(k))]
 df = pd.DataFrame()
 df[0] = a
 df[1] = pd.DataFrame(np.array(k))
-df.to_csv("pot.dat",sep = " ",decimal=".",index=False,header=False)
+df.to_csv("tesi/data/theta.dat",sep = " ",decimal=".",index=False,header=False)
 #plt.ylim(0,40)
-plt.plot(p,k)
+#np.linspace(0,100,num=1000)
 #%%
 import random_network as rn
 import pylab as plt

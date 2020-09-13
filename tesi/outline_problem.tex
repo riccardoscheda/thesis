@@ -22,7 +22,7 @@ Models of boolean networks proposed by Kauffmann are limited and can't represent
 In this Chapter we present the theoretical model of GRNs based on RBNs.
 
 \section{The underlying philosophy of the model}
-The dynamical model is a schematic representation of the activity of genetic network. We have to discuss the assumptions the define the model from a biological 
+The dynamical model is a schematic representation of the activity of gene regulatory networks introduced in Chapter \ref{grn}. We have to discuss the assumptions the define the model from a biological 
 point of view: the main criticism to a model is that its assumptions cannot be justified by the biological mechanisms. 
 Our goal is to model the genetic activity related to a differentiation process of a cell: i.e. this activity is a stable long term activity whose stability
 is probably controlled by biochemical mechanisms (i.e. methylation processes), but for cancer cells the control dynamics is not so efficient allowing
@@ -50,8 +50,8 @@ Here we studied the model dynamics in different situations using mathematical me
 out the universal properties that are robust and could explain the experimental data. The biological meaning of control parameters is a fundamental task
 to apply the model to predict the results of new experiments.\par\noindent 
 We consider a physical system that can be described by an weighted interaction network among nodes that can assume different
-dynamical states (in the case of a gene network the states $\sigma\in [0,1]$ and we have models similar to spin models).
-The interaction structure is defined by signed adjacency matrix $A_{ij}\in[-1,0,1]$ where the sign refers to a cooperative or antagonist interaction between the connected nodes. 
+dynamical states (in the case of a gene network the states $\sigma\in \{0,1\}$ and we have models similar to spin models).
+The interaction structure is defined by signed adjacency matrix $A_{ij}\in\{-1,0,1\}$ where the sign refers to a cooperative or antagonist interaction between the connected nodes. 
 In the simplest case, we introduce a stochastic dynamics using the probability $p_i(\sigma, t)$ that the node $i$ is in the state 
 $\sigma$ (we assume $\sigma>0$) at time $t$: in a deterministic approach $p_i(\sigma, t)=\delta(\sigma-\sigma(t))$
 to denote that the node assume the state $\sigma=1$ with probability one. The evolution of a deterministic model
@@ -198,8 +198,8 @@ the equilibrium solution $\sigma_i=1$ is attractive, on the contrary we have a a
 The situation is illustrated in the fig. \label{fig:crit}
 \begin{figure}[h]
 \label{fig:crit} 
-%\centering{\includegraphics[scale=1.3]{theta.png}}
-\caption{Possible behavior for the condition (\ref{condave}); the units are arbitrary and scale with the network dimension.}
+\centering{\includegraphics[scale=1.3]{images/theta.pdf}}
+\caption{\emph{Possible behavior for the condition (\ref{condave}); the units are arbitrary and scale with the network dimension.}}
 \end{figure}
 Remark: the mean field approximation apply when the $\Theta_T(x)$ can be approximated by a linear function locally: i.e. the fluctuations are small
 enough to approximate the function by a linear function in the whole fluctuation range. This is certainly not true when we have fat tail fluctuations.

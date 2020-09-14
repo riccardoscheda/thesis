@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  13 SEP 2020 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  14 SEP 2020 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,13 +860,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6] [7
-
-]
+[6]
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-) (./celldiff.tex
+ [7
+
+]) (./celldiff.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1191,7 +1191,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [31 <./images/phase-transition.pdf>]
-<fg4.pdf, id=518, 170.7168pt x 170.7168pt>
+<fg4.pdf, id=522, 170.7168pt x 170.7168pt>
 File: fg4.pdf Graphic file (type pdf)
 <use fg4.pdf>
 Package pdftex.def Info: fg4.pdf  used on input line 233.
@@ -1208,7 +1208,7 @@ Chapter 5.
 [33
 
 ]
-<images/kramerwell.pdf, id=541, 244.1652pt x 194.72649pt>
+<images/kramerwell.pdf, id=545, 244.1652pt x 194.72649pt>
 File: images/kramerwell.pdf Graphic file (type pdf)
 <use images/kramerwell.pdf>
 Package pdftex.def Info: images/kramerwell.pdf  used on input line 41.
@@ -1217,7 +1217,7 @@ Package pdftex.def Info: images/kramerwell.pdf  used on input line 41.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kramerpot.pdf, id=543, 207.69896pt x 191.50446pt>
+<images/kramerpot.pdf, id=547, 207.69896pt x 191.50446pt>
 File: images/kramerpot.pdf Graphic file (type pdf)
 <use images/kramerpot.pdf>
 Package pdftex.def Info: images/kramerpot.pdf  used on input line 54.
@@ -1374,7 +1374,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [48]
-<images/theta.pdf, id=645, 244.1652pt x 194.72649pt>
+<images/theta.pdf, id=649, 244.1652pt x 194.72649pt>
 File: images/theta.pdf Graphic file (type pdf)
 <use images/theta.pdf>
 Package pdftex.def Info: images/theta.pdf  used on input line 201.
@@ -1435,12 +1435,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [55]
 Chapter 7.
-<images/K.pdf, id=703, 172.23747pt x 139.51622pt>
+<images/K.pdf, id=707, 172.23747pt x 139.51622pt>
 File: images/K.pdf Graphic file (type pdf)
 <use images/K.pdf>
 Package pdftex.def Info: images/K.pdf  used on input line 16.
 (pdftex.def)             Requested size: 258.35555pt x 209.2738pt.
-<images/outgoing.pdf, id=705, 172.27663pt x 139.51523pt>
+<images/outgoing.pdf, id=709, 172.27663pt x 139.51523pt>
 File: images/outgoing.pdf Graphic file (type pdf)
 <use images/outgoing.pdf>
 Package pdftex.def Info: images/outgoing.pdf  used on input line 25.
@@ -1454,7 +1454,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/loops.pdf, id=713, 172.27663pt x 139.51323pt>
+<images/loops.pdf, id=717, 172.27663pt x 139.51323pt>
 File: images/loops.pdf Graphic file (type pdf)
 <use images/loops.pdf>
 Package pdftex.def Info: images/loops.pdf  used on input line 48.
@@ -1469,7 +1469,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/noise.pdf, id=736, 170.48694pt x 133.62823pt>
+<images/noise.pdf, id=740, 170.48694pt x 133.62823pt>
 File: images/noise.pdf Graphic file (type pdf)
 <use images/noise.pdf>
 Package pdftex.def Info: images/noise.pdf  used on input line 61.
@@ -1501,31 +1501,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [60 <./images/noise.pdf>]) (./biblio.tex [61
 
 ]
-Underfull \hbox (badness 1024) in paragraph at lines 20--21
-[]\OT1/ppl/m/n/12 Peccoud, J. and Ycart, B., \OT1/ppl/m/it/12 Marko-vian Mod-el
-ling of Gene Prod-ucts Syn-the-sis.\OT1/ppl/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+[]\OT1/ppl/m/n/12 Jin Wang, Kun Zhang, Li Xu, and Erkang Wang ,\OT1/ppl/m/it/12
+ Quan-ti-fy-ing the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-[]\OT1/ppl/m/n/12 Y. Sa-sai \OT1/ppl/m/it/12 Cy-tosys-tems dy-nam-ics in self-o
-rganization of tis-sue ar-chi-tec-ture\OT1/ppl/m/n/12 ,
+Underfull \hbox (badness 2073) in paragraph at lines 21--23
+\OT1/ppl/m/it/12 Wadding-ton land-scape and bi-o-log-i-cal paths for de-vel-op-
+ment and dif-fer-en-ti-a-tion\OT1/ppl/m/n/12 ,
  []
 
-[62
 
-]
-Missing character: There is no â in font pplr7t!
-Missing character: There is no € in font pplr7t!
-Missing character: There is no “ in font pplr7t!
-
-Underfull \hbox (badness 6380) in paragraph at lines 35--37
+Underfull \hbox (badness 6380) in paragraph at lines 24--26
 []\OT1/ppl/m/n/12 S. Huang, I. Ern-berg, S. Kauff-man,\OT1/ppl/m/it/12 Cancer a
 t-trac-tors: A sys-tems view
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
 \OT1/ppl/m/it/12 of tu-mors from a gene net-work dy-nam-ics and de-vel-op-men-t
 al per-spec-tive\OT1/ppl/m/n/12 ,
  []
@@ -1533,6 +1527,20 @@ al per-spec-tive\OT1/ppl/m/n/12 ,
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no “ in font pplr7t!
+[62
+
+]
+Underfull \hbox (badness 1024) in paragraph at lines 37--38
+[]\OT1/ppl/m/n/12 Peccoud, J. and Ycart, B., \OT1/ppl/m/it/12 Marko-vian Mod-el
+ling of Gene Prod-ucts Syn-the-sis.\OT1/ppl/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+[]\OT1/ppl/m/n/12 Y. Sa-sai \OT1/ppl/m/it/12 Cy-tosys-tems dy-nam-ics in self-o
+rganization of tis-sue ar-chi-tec-ture\OT1/ppl/m/n/12 ,
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1540,19 +1548,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [63]
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
-[]\OT1/ppl/m/n/12 Jin Wang, Kun Zhang, Li Xu, and Erkang Wang ,\OT1/ppl/m/it/12
- Quan-ti-fy-ing the
- []
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no “ in font pplr7t!
 
-
-Underfull \hbox (badness 2073) in paragraph at lines 51--53
-\OT1/ppl/m/it/12 Wadding-ton land-scape and bi-o-log-i-cal paths for de-vel-op-
-ment and dif-fer-en-ti-a-tion\OT1/ppl/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 2478) in paragraph at lines 60--61
+Underfull \hbox (badness 2478) in paragraph at lines 69--70
 []\OT1/ppl/m/n/12 J. Park and M. E. J. New-man,\OT1/ppl/m/it/12 The sta-tis-ti-
 cal me-chan-ics of net-works\OT1/ppl/m/n/12 , DOI:
  []
@@ -1563,12 +1563,6 @@ Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ¨ in font pplr7t!
 Missing character: There is no Ã in font pplr7t!
 Missing character: There is no   in font pplr7t!
-Missing character: There is no â in font pplr7t!
-Missing character: There is no € in font pplr7t!
-Missing character: There is no “ in font pplr7t!
-Missing character: There is no â in font pplr7t!
-Missing character: There is no € in font pplr7t!
-Missing character: There is no “ in font pplr7t!
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1580,11 +1574,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.69 \bibitem{K25}
-                   Fan R. K. Chung,\emph{Spectral Graph Theory}, CBMS]
-Missing character: There is no â in font pplri7t!
-Missing character: There is no € in font pplri7t!
-Missing character: There is no ™ in font pplri7t!
+l.76 \bibitem{K23}
+                   N. Masuda , M. A. Porter, R. Lambiotte ,\emph{Random walk...
+]
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no “ in font pplr7t!
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no “ in font pplr7t!
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no “ in font pplr7t!
@@ -1599,14 +1597,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[66])
+[65])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (./tesi.aux)
@@ -1621,10 +1612,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  ) 
 Here is how much of TeX's memory you used:
- 19005 strings out of 494847
- 348424 string characters out of 6179080
- 410538 words of memory out of 5000000
- 21652 multiletter control sequences out of 15000+600000
+ 19000 strings out of 494847
+ 348388 string characters out of 6179080
+ 411512 words of memory out of 5000000
+ 21651 multiletter control sequences out of 15000+600000
  50112 words of font info for 149 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  55i,19n,54p,1313b,907s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1644,10 +1635,10 @@ live/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf
 ts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on tesi.pdf (67 pages, 393614 bytes).
+Output written on tesi.pdf (66 pages, 392731 bytes).
 PDF statistics:
- 908 PDF objects out of 1000 (max. 8388607)
- 799 compressed objects within 8 object streams
- 203 named destinations out of 1000 (max. 500000)
+ 902 PDF objects out of 1000 (max. 8388607)
+ 794 compressed objects within 8 object streams
+ 199 named destinations out of 1000 (max. 500000)
  387 words of extra memory for PDF output out of 10000 (max. 10000000)
 

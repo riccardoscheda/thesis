@@ -12,15 +12,15 @@
 \centering
 \begin{tikzpicture}[scale=1]
 \centering
-\begin{axis}[xmin=0,xmax=1,xlabel=$x$,ylabel=$\Theta(x)$ ,ymin=0,ymax=1]
+\begin{axis}[xmin=0,xmax=1,xlabel=$x$,ylabel=$\Theta(x)$ ,ymin=0,ymax=20]
 
 \addplot [thick, dashed]
-file {line.dat};
-\addplot [thick, blue]
-file {theta.dat};
+file {histo.dat};
+\addplot [thick, orange]
+file {kramerwell.dat};
 
 
-\node (a) at (67,47){\emph{Critical point}};
+%\node (a) at (67,47){\emph{Critical point}};
 
 \end{axis}
 \end{tikzpicture}

@@ -382,20 +382,19 @@ import pylab as plt
 import pandas as pd
 import numpy as np
 
-p = np.linspace(0,1,num=1000)
-eps = 1.6
-T = 0.29
+p = np.linspace(-5,5,num=1000)
+a = 1.6
+b = 0.29
+deltap = 0.1
+V = 2 + (p-deltap)**4 + b*(p-deltap)**3 - a*(p-deltap)**3 - a*b*(p-deltap)**2
 
-#V = 2 + p**4 + b*p**3 - a*p**3 - a*b*p**2
-
-k = 0.5*(1+np.tanh(p/T-eps)) -0.05
+k = np.exp(-V)*100
 plt.plot(p,k)
-plt.plot(p,p)
 a = [i*0.001 for i in range(len(k))]
 df = pd.DataFrame()
 df[0] = a
 df[1] = pd.DataFrame(np.array(k))
-df.to_csv("tesi/data/theta.dat",sep = " ",decimal=".",index=False,header=False)
+df.to_csv("tesi/data/histo.dat",sep = " ",decimal=".",index=False,header=False)
 #plt.ylim(0,40)
 #np.linspace(0,100,num=1000)
 #%%
@@ -412,7 +411,7 @@ number_of_clusters = 2
 gr = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
 
 control_nodes = [gr[i].control_node+i*N for i in range(number_of_clusters)]
-
+print(control_nodes)
 tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters,visual=False)
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 #print(negedges)
@@ -435,7 +434,11 @@ nx.draw_networkx_nodes(graph,npos,
 nx.draw_networkx_edges(graph, npos,
                    edgelist=negedges,
                    width=3, alpha=0.4, edge_color='r')
-plt.savefig("network.png")
+control_nodes = [graphs[i].control_node+i*N for i in range(number_of_clusters)]
+negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
+print(negedges)
+print(control_nodes)
+#plt.savefig("network.png")
 #%%  ################################### 3 CLUSTERS ################################
 import random_network as rn
 import pylab as plt
@@ -455,7 +458,7 @@ Net = rn.Network(tot,number_of_clusters)
 # for i in range(2):
 #     nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
 #     Net.nodes[nod] = 1
-for i in range(N*(number_of_clusters-2)):
+for i in range(N*(number_of_clusters-1)):
     Net.nodes[i] = 1
 #############################################
 mean_activities = []
@@ -470,6 +473,10 @@ for i in range(realizations):
         activity.append(rn.activity(Net,N,number_of_clusters=number_of_clusters))
     mean_activities.append(np.mean(activity))
     
+    control_nodes = [graphs[i].control_node+i*N for i in range(number_of_clusters)]
+    negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
+    print(negedges)
+    print(control_nodes)
     plt.plot(np.array(activity))
     plt.xlabel("t")
     plt.ylabel("average activity")

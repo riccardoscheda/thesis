@@ -62,7 +62,7 @@ def find_control_nodes(gr,N):
         control_node: int which is the index of the control node
     """
     graph = nx.from_numpy_matrix(gr.adj_matrix.T, create_using=nx.DiGraph)
-    cycles = nx.simple_cycles(graph)
+    #cycles = nx.simple_cycles(graph)
     #print("cycles: " + str(list(cycles)))
     #driver_node = list(reduce(lambda x,y: set(x)&set(y),cycles))
     cycles = nx.simple_cycles(graph)
@@ -73,6 +73,8 @@ def find_control_nodes(gr,N):
         final.append(z.count(i))
          
     #print(final)
+    print(final)
+    print(np.argsort(final)[-2:][::-1])
     control_node = np.argmax(final)
     # print("driver node: "+ str(driver_node))
     # print(control_node)

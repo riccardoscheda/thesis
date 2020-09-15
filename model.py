@@ -13,7 +13,7 @@ fig, ax = plt.subplots(1,1)
 #iterations
 frames = 500
 
-N = 5
+N = 10
 K = 2
 number_of_clusters = 2
 

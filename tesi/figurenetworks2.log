@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  11 SEP 2020 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  15 SEP 2020 10:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **figurenetworks2.tex
 (./figurenetworks2.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 8 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.cls
 Document Class: standalone 2015/07/15 v1.2 Class to compile TeX sub-files stand
 alone
@@ -622,16 +622,16 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./figurenetworks2.aux) ) 
 Here is how much of TeX's memory you used:
- 22480 strings out of 494847
- 584539 string characters out of 6179080
- 753522 words of memory out of 5000000
- 25427 multiletter control sequences out of 15000+600000
+ 22478 strings out of 494839
+ 584491 string characters out of 6178684
+ 754554 words of memory out of 5000000
+ 25426 multiletter control sequences out of 15000+600000
  4246 words of font info for 16 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  62i,7n,96p,728b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 <
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-Output written on figurenetworks2.pdf (1 page, 13632 bytes).
+Output written on figurenetworks2.pdf (1 page, 14007 bytes).
 PDF statistics:
  15 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream

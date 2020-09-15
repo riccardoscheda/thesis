@@ -25,12 +25,14 @@ class Random_Network:
         
             for i in range(self.n):
                 for j in range(self.k):
-                    numbers = list(range(0,i)) + list(range(i+1,self.n))
-                    r = random.choice(numbers)
-                    self.adj_matrix[i][r] = 1
+                    self.adj_matrix[i][np.random.randint(self.n)] = 1
+                    
+            for i in range(self.n):
+                self.adj_matrix[i][i] = 0
+
        
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        self.control_nodes = find_control_nodes(self, self.n)
+        self.control_nodes, self.loops = find_control_nodes(self, self.n)
         # for i in range(self.n):
         #     if self.adj_matrix[i][self.control_node] == 1:
         #         self.adj_matrix[i][self.control_node] = -100 
@@ -78,7 +80,7 @@ def find_control_nodes(gr,N):
     #control_node = np.argmax(final)
     # print("driver node: "+ str(driver_node))
     # print(control_node)
-    return control_nodes
+    return control_nodes, sorted(final)
 
 
 def outgoing_links(gr,N):
@@ -103,7 +105,7 @@ def outgoing_links(gr,N):
     return np.argmax(outgoing_links)
 
 
-def create_clusters(graphs,control_nodes, N,number_of_clusters=1,visual= False):
+def create_clusters(graphs,control_nodes,env_control_nodes, N,number_of_clusters=1,visual= True):
     """
     Builds a network made of different clusters. These Clusters are linked with negative weights (-1).
     The link are between the control nodes of each cluster.
@@ -141,8 +143,11 @@ def create_clusters(graphs,control_nodes, N,number_of_clusters=1,visual= False):
         if visual:
             #######################  NEGATIVE EDGE FROM CONTROL NODE TO CONTROL NODE ####################
                 for j in range(number_of_clusters):
+                      tot[control_nodes[-j]][env_control_nodes[-j-1]] = -10
+                      tot[control_nodes[-j-1]][env_control_nodes[-j]] = -10
+                for j in range(number_of_clusters):
                       tot[control_nodes[-j]][control_nodes[-j-1]] = -10
-                      tot[control_nodes[-j-1]][control_nodes[-j]] = -10
+                      tot[control_nodes[-j-1]][control_nodes[-j]] = -10                      
             ################################################################################
             ####################### POSITIVE EDGE FROM CONTROL NODE TO A RANDOM  NODE ####################
                 # for j in range(number_of_clusters):
@@ -235,11 +240,17 @@ def initial_conditions(graph,N):
         graph: Random Network graph
         N: int, number of nodes
     """
-    control_nodes = find_control_nodes(graph, N)
+    control_nodes, loops = find_control_nodes(graph, N)
     graph.nodes = np.zeros((N,1))
     #graph.nodes = np.ones((N,1))
     graph.nodes[control_nodes] = 1
  
+def env(graph, control_nodes,p=0):
+    """ Environmental noise which activates nodes
+
+    """
+    if np.random.uniform(0,1)<p:
+        graph.nodes[random.choice(control_nodes)] = 1 
     
     
 def evolution(graph,iterations = 10,p=0,p_noise=False):

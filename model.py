@@ -17,14 +17,14 @@ N = 10
 K = 2
 number_of_clusters = 2
 
-######################################
+#################################################################
 
 #creation of the subnetworks
 gr = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
 
 control_nodes = [gr[i].control_nodes[0]+i*N for i in range(number_of_clusters)]
-
-tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters,visual=True)
+env_control_nodes = [gr[i].control_nodes[1]+i*N for i in range(number_of_clusters)]
+tot = rn.create_clusters(gr, control_nodes,env_control_nodes, N,number_of_clusters,visual=True)
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 #print(negedges)
 Net = rn.Network(tot,number_of_clusters)
@@ -33,7 +33,7 @@ npos = nx.spring_layout(graph)
 #cycles = nx.cycle_basis(graph.to_undirected())
 
 ################## ONLY FOR VISUALIZATION #######################
-tot1 = rn.create_clusters(gr, control_nodes, N,number_of_clusters,visual=True)
+tot1 = rn.create_clusters(gr, control_nodes,env_control_nodes, N,number_of_clusters,visual=True)
 abs_tot = abs(tot1)
 graph1 = nx.from_numpy_matrix(abs_tot.T, create_using=nx.DiGraph)
 npos = nx.kamada_kawai_layout(graph1)
@@ -70,7 +70,9 @@ def evo(frames):
     
     up = Net.adj_matrix.dot(Net.nodes)
     Net.nodes = (up >0).astype(int)
-    rn.noise(Net,p=0.1)
+    rn.env(Net,env_control_nodes,p=0.1)
+    rn.env(Net,control_nodes,p=0.1)
+    rn.noise(Net,p=0.2)
     active_nodes = []
     non_active_nodes = []
     

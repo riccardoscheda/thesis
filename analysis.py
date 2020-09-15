@@ -68,7 +68,7 @@ for K in range(1,3):
         for i in range(realizations):
             graphs[i].nodes = np.zeros((N,1))
             try:
-                graphs[i].nodes[rn.find_control_nodes(graphs[i], N)] = 1
+                graphs[i].nodes[rn.find_control_nodes(graphs[i], N)[0]] = 1
             except:
                 graphs[i].nodes[np.random.randint(N)] = 1
             rn.evolution(graphs[i],p=0)
@@ -443,37 +443,47 @@ print(control_nodes)
 import random_network as rn
 import pylab as plt
 import networkx as nx
-N = 30
+N = 15
 K = 2
-number_of_clusters = 3
-time = 150
+number_of_clusters = 2
+time = 500
 graphs = [rn.Random_Network(N, K) for i in range(number_of_clusters)]
-control_nodes = [graphs[i].control_node for i in range(number_of_clusters) ]
-tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters=number_of_clusters)
+control_nodes = [graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters) ]
+env_control_nodes = [graphs[i].control_nodes[1]+i*N for i in range(number_of_clusters)]
+loops = [graphs[i].loops for i in range(number_of_clusters)]
+tot = rn.create_clusters(graphs, control_nodes,env_control_nodes, N,number_of_clusters=number_of_clusters)
+#print(tot)
 Net = rn.Network(tot,number_of_clusters)
 ######### INITIAL CONDITIONS ################
 #Net.nodes = np.ones((N*number_of_clusters,1))
 
-##### INITIAL ACTIVE NODES PER CLUSTER###############
+##### INITIAL ACTIVE NODES PER CLUSTER################################
 # for i in range(2):
 #     nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
 #     Net.nodes[nod] = 1
 for i in range(N*(number_of_clusters-1)):
     Net.nodes[i] = 1
-#############################################
+########################################################################à
 mean_activities = []
 realizations = 1
-noise = 0.2
+noise = 0.1
 for i in range(realizations):
     
     activity = []
     
     for i in range(time):
+        if i==200:
+            Net.nodes[env_control_nodes[1]] = 1
+            Net.nodes[control_nodes[1]] = 1
         rn.evolution(Net,iterations=1,p=noise)
+
+        #rn.env(Net,env_control_nodes,p=0.05)        
+       # rn.env(Net,control_nodes,p=0.1)
+        
         activity.append(rn.activity(Net,N,number_of_clusters=number_of_clusters))
     mean_activities.append(np.mean(activity))
     
-    control_nodes = [graphs[i].control_node+i*N for i in range(number_of_clusters)]
+    control_nodes = [graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters)]
     negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
     print(negedges)
     print(control_nodes)
@@ -483,6 +493,6 @@ for i in range(realizations):
     plt.ylim(0,2)
     plt.title(str(number_of_clusters) +" clusters -noise"+str(noise))
     plt.savefig(str(number_of_clusters) +" clusters -"+str(noise)+".png")
-    
+print(loops)
 #plt.hist(mean_activities,range=(0,1))
 ################################################# 3 CLUSTERS ##############################################

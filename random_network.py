@@ -30,7 +30,7 @@ class Random_Network:
                     self.adj_matrix[i][r] = 1
        
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        self.control_node = find_control_nodes(self, self.n)
+        self.control_nodes = find_control_nodes(self, self.n)
         # for i in range(self.n):
         #     if self.adj_matrix[i][self.control_node] == 1:
         #         self.adj_matrix[i][self.control_node] = -100 
@@ -73,12 +73,12 @@ def find_control_nodes(gr,N):
         final.append(z.count(i))
          
     #print(final)
-    print(final)
-    print(np.argsort(final)[-2:][::-1])
-    control_node = np.argmax(final)
+    
+    control_nodes = np.argsort(final)[-2:][::-1]
+    #control_node = np.argmax(final)
     # print("driver node: "+ str(driver_node))
     # print(control_node)
-    return control_node
+    return control_nodes
 
 
 def outgoing_links(gr,N):
@@ -141,8 +141,8 @@ def create_clusters(graphs,control_nodes, N,number_of_clusters=1,visual= False):
         if visual:
             #######################  NEGATIVE EDGE FROM CONTROL NODE TO CONTROL NODE ####################
                 for j in range(number_of_clusters):
-                      tot[control_nodes[-j]][control_nodes[-j-1]] = -1
-                      tot[control_nodes[-j-1]][control_nodes[-j]] = -1
+                      tot[control_nodes[-j]][control_nodes[-j-1]] = -10
+                      tot[control_nodes[-j-1]][control_nodes[-j]] = -10
             ################################################################################
             ####################### POSITIVE EDGE FROM CONTROL NODE TO A RANDOM  NODE ####################
                 # for j in range(number_of_clusters):

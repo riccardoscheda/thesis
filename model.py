@@ -22,9 +22,9 @@ number_of_clusters = 2
 #creation of the subnetworks
 gr = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
 
-control_nodes = [gr[i].control_node+i*N for i in range(number_of_clusters)]
+control_nodes = [gr[i].control_nodes[0]+i*N for i in range(number_of_clusters)]
 
-tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters,visual=False)
+tot = rn.create_clusters(gr, control_nodes, N,number_of_clusters,visual=True)
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 #print(negedges)
 Net = rn.Network(tot,number_of_clusters)

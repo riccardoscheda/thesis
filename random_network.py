@@ -167,7 +167,43 @@ def create_clusters(graphs,control_nodes,env_control_nodes, N,number_of_clusters
           
     return tot
 
-def activity(graph,N,number_of_clusters=1):
+def create_net(graphs,control_nodes,env_control_nodes, N,M):
+    """
+    Builds a network made of different clusters. These Clusters are linked with negative weights (-1).
+    The link are between the control nodes of each cluster.
+    -----------------------------------------------------
+    Parameters:
+        graphs: list of Random Network graphs.
+        control_nodes: list of indeces of the control nodes.
+        N: number of nodes for each cluster.
+        number_of_clusters: int, number of clusters of the network.
+        
+    -------------------------------------------------------
+    Returns:
+        numpy matrix which is the connectivity matrix of the network.
+    """
+    tot = np.zeros((N,N))
+    tot = graphs[0].adj_matrix.copy()
+    number_of_clusters = 2
+
+    neg1 = np.zeros((N,M))
+    neg2 = np.zeros((M,N))
+    
+    tot = np.block([[tot,       neg1        ],
+                        [neg2, graphs[1].adj_matrix]])
+                
+    #######################  NEGATIVE EDGE FROM CONTROL NODE TO CONTROL NODE ####################
+    for j in range(number_of_clusters):
+          tot[control_nodes[-j]][env_control_nodes[-j-1]] = -10
+          tot[control_nodes[-j-1]][env_control_nodes[-j]] = -10
+    for j in range(number_of_clusters):
+          tot[control_nodes[-j]][control_nodes[-j-1]] = -10
+          tot[control_nodes[-j-1]][control_nodes[-j]] = -10
+          
+    return tot
+
+
+def activity(graph,N,M,number_of_clusters=1):
     """
     Measures the activity of each cluster in the network
     
@@ -182,9 +218,14 @@ def activity(graph,N,number_of_clusters=1):
     """
     activity = []
 
-    
-    for j in range(number_of_clusters):
-        cluster = [graph.nodes[k] for k in range(N*j,N*(j+1)) ]
+    if M == 0 :
+        for j in range(number_of_clusters):
+            cluster = [graph.nodes[k] for k in range(N*j,N*(j+1)) ]
+            activity.append(np.mean(cluster))
+    else:
+        cluster = [graph.nodes[k] for k in range(N)]
+        activity.append(np.mean(cluster))
+        cluster = [graph.nodes[k] for k in range(N,N+M)]
         activity.append(np.mean(cluster))
         
     return activity

@@ -443,10 +443,6 @@ print(control_nodes)
 import random_network as rn
 import pylab as plt
 import networkx as nx
-N = 15
-K = 2
-number_of_clusters = 2
-time = 1000
 
 ######### INITIAL CONDITIONS ################
 #Net.nodes = np.ones((N*number_of_clusters,1))
@@ -458,15 +454,22 @@ time = 1000
 
 ########################################################################à
 
-realizations = 1000
+realizations = 1
 noise = 0.1
+N = 15
+M=10
+K = 2
+number_of_clusters = 2
+time = 1000
+
 times = []
 for j in range(realizations):
-    graphs = [rn.Random_Network(N, K) for i in range(number_of_clusters)]
+    graphs = [rn.Random_Network(N, K)]
+    graphs.append(rn.Random_Network(M,K))
     control_nodes = [graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters) ]
     env_control_nodes = [graphs[i].control_nodes[1]+i*N for i in range(number_of_clusters)]
     #loops = [graphs[i].loops for i in range(number_of_clusters)]
-    tot = rn.create_clusters(graphs, control_nodes,env_control_nodes, N,number_of_clusters=number_of_clusters)
+    tot = rn.create_net(graphs, control_nodes,env_control_nodes, N,M)
     #print(tot)
     Net = rn.Network(tot,number_of_clusters)
     activity = []
@@ -478,7 +481,7 @@ for j in range(realizations):
     for i in range(1,time):
         rn.evolution(Net,iterations=1,p=noise)
         rn.env(Net,env_control_nodes,p=0.1)    
-        act = rn.activity(Net,N,number_of_clusters=number_of_clusters)
+        act = rn.activity(Net,N,M,number_of_clusters=number_of_clusters)
         if act[0]<act[1]:
             #print(np.log(i))
             times.append(np.log(i))
@@ -487,19 +490,19 @@ for j in range(realizations):
         activity.append(act)
     mean_activities.append(np.mean(activity))
     
-    # control_nodes = [graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters)]
-    # negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
-    # print(negedges)
-    # print(control_nodes)
-    # plt.plot(np.array(activity))
-    # plt.xlabel("t")
-    # plt.ylabel("average activity")
-    # plt.ylim(0,2)
-    # plt.title(str(number_of_clusters) +" clusters -noise"+str(noise))
+    control_nodes = [graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters)]
+    negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
+    print(negedges)
+    print(control_nodes)
+    plt.plot(np.array(activity))
+    plt.xlabel("t")
+    plt.ylabel("average activity")
+    plt.ylim(0,2)
+    plt.title(str(number_of_clusters) +" clusters -noise"+str(noise))
     # plt.savefig(str(number_of_clusters) +" clusters -"+str(noise)+".png")
 #print(act)
-plt.hist(times,bins=25)
-plt.title("distribution of log of time transitions")
-plt.savefig("Distributiontimes1.png")
+# plt.hist(times,bins=25)
+# plt.title("distribution of log of time transitions")
+# plt.savefig("Distributiontimes1.png")
 ################################################# 3 CLUSTERS ##############################################
 

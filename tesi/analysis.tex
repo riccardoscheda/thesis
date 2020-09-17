@@ -5,10 +5,10 @@ In this Chapter we explain the starting implementation and analysis of the model
 
 \section{Implementation}
 
-The theoretical model has benn analyzed making simulations using Python.
+The theoretical model has been analyzed making simulations using Python.
 The first thing was to create a class \emph{Random Network} to have a random boolean graph as an object, with its nodes and links, represented by a boolean adjacency matrix.
 
-Every random network is a directed graph and is built to avoid self-loops, this averages to create a random, boolean, and non-symmetric adjacency matrix with null trace.
+Every random network is a directed graph and is built to avoid self-loops, this means to create a random, boolean, and non-symmetric adjacency matrix with null trace.
 
 The first thing to evaluate was to choose the average number of incoming links for each RBN. In Figure \ref{fig:K} we can see that the average discrete evolution of $100$ different realizations of RBNs, with increasing size.
 \begin{figure}[h]
@@ -18,7 +18,7 @@ The first thing to evaluate was to choose the average number of incoming links f
 In the case of $K=1$ (i.e. the average number of incoming link for each network is one), the average activity decreases exponentially with the size of the network; in the case of $K=2$ instead, the average activity of the nodes remains stable with the network size.}}
 \label{fig:K}
 \end{figure}
-In the case of $K=1$, i.e. the average number of incoming links for each network is one, the average activity decreases exponentially with the size of the network; in the case of $K=2$ instead, the average activity of the nodes remains stable with networks of increasing size. For this reason, the network considered for this model will take the parameter K constant: $K=2$.
+In the case of $K=1$, i.e. the average number of incoming links for each network is one, the average activity decreases exponentially with the size of the network; in the case of $K=2$ instead, the average activity of the nodes remains stable with networks of increasing size. Moreover, network with only one incoming link means that the network is composed by only one big loop, which is unstable against envinromental noise. Instead, we look for networks which are stable in their state but also can be perturbed by noise. For this reason, the network considered for this model will take the parameter K constant: $K=2$.
 Moreover, we can analyze the average number of outgoing links depending on the network size: In Figure \ref{fig:outgoing}, we can see that the average number of outgoing links tends to the parameter $K$.
 \begin{figure}[h]
 \centering
@@ -26,13 +26,17 @@ Moreover, we can analyze the average number of outgoing links depending on the n
 \caption{\emph{Plot of the number of the outgoing links depending on the network size. We can see that the average tends to the parameter $K$. }}
 \label{fig:outgoing}
 \end{figure}
+
+
+
+
 \section{Discrete evolution}
 As shown in Chapter \ref{model}, the discrete time evolution of the network is given by the equation:
 $$
 \mathnormal{\sigma_i(t+1)=\Theta\biggl(\sum_jA_{ij}\sigma_j(t)\biggr)}
 $$
-where A is the connectivity matrix of the network.
-So this averages that each node which has at least one incoming link with a node which is active, in the next step this node will be active.
+where $A$ is the connectivity matrix of the network.
+So this means that each node which has at least one incoming link with a node which is active, in the next step this node will be active.
 At each time step we can measure the average activity of the network, which is the average number of nodes with the value:
 $$
 \sigma_i(t) = 1

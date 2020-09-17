@@ -116,7 +116,7 @@ from $\gamma$ to the remaining nodes of the network then $\sigma_i=1$ for any $i
 If the loop is simple (each node has a one input link and one output link) the equilibrium is neutral since any change
 $\sigma_i=1\to\sigma_i=0$ creates a periodic orbit (the total activity is constant). But if we we add a link to the loop
 then we get a stable solution since a single node can trigger the activity of two nodes and the equilibrium is an attractive
-stationary state (see figure \label{fig:onecluster}). If a node is accidentally set to zero this anomaly propagates in the loop, 
+stationary state (see Figure \ref{fig:onecluster}). If a node is accidentally set to zero this anomaly propagates in the loop, 
 until it reaches the node $4$ where it is annihilated by the activity of the node $(2)$. The average lifetime of a single perturbation
 is the average path length to propagate to the node $(4)$ from the initial node (therefore it depends from the loop length or in case
 of presence of many loops, the average path length is computed considering independent loops). 
@@ -179,7 +179,7 @@ The logistic function is a generic sigmoidal function we do not expect that the 
 Remark: since the values of $x$ are
 quantized to integer in any case, if $\epsilon>T^{-1}$ the idle state is statistically attractive so $\epsilon$ could define a critical temperature
 for the network activation. We recover the deterministic dynamics for $T\to 0$. As a stochastic process we have a Markov process (since
-the realization of the variable $\sigma_i(t+1)$ depends only on the present state $\sigma_j(t)$ of the network. The dynamics (\ref{stocdyn})
+the realization of the variable $\sigma_i(t+1)$ depends only on the present state $\sigma_j(t)$ of the network \cite{K52}. The dynamics (\ref{stocdyn})
 is a Markov field: the realization of the variable $\sigma_i$ depends only from the present state of the network (and not from past states) and
 only from the states of the connected nodes $A_{ij}\ne 0$. The last condition (Markov field) means that the realizations of $\sigma_i(t)$
 and $\sigma_j(t-1)$ are independent if the nodes are not connected. The transition probabilities depend from the state of the network

@@ -2,32 +2,31 @@
 \BOOKMARK [0][-]{chapter.1}{Cell Differentiation }{}% 2
 \BOOKMARK [1][-]{section.1.1}{Definition}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.2}{The role of Gene expression in cellular differentiation}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.3}{Cell differentiation in Immune system}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{Gene Regulatory Networks}{}% 6
-\BOOKMARK [1][-]{section.2.1}{Definition}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Modelling GRNs}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.3}{Principle of the models}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Random Boolean Networks}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Random Boolean Networks}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{The model}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Topology}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.4}{Dynamics}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.5}{Phase transitions}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.6}{Attractor jumps}{chapter.3}% 16
-\BOOKMARK [0][-]{chapter.4}{Kramer Rate Theory}{}% 17
-\BOOKMARK [1][-]{section.4.1}{Fokker-Planck equation}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.2}{Bistability and Escape Problems}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.2.1}{Diffusion in a Double-Well Potential in one dimension}{section.4.2}% 20
-\BOOKMARK [2][-]{subsection.4.2.2}{Behaviour for D=0}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.3}{Behaviour if D is small}{section.4.2}% 22
-\BOOKMARK [1][-]{section.4.3}{Kramer Rate Theory}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.4}{First passage time and transition rate escaping from a barrier}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{The model}{}% 25
-\BOOKMARK [1][-]{section.5.1}{The underlying philosophy of the model}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{The mathematical model and related problems}{chapter.5}% 27
-\BOOKMARK [0][-]{chapter.6}{Analysis}{}% 28
-\BOOKMARK [1][-]{section.6.1}{Implementation}{chapter.6}% 29
-\BOOKMARK [1][-]{section.6.2}{Discrete evolution}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.3}{Loops and Control nodes}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.4}{Noise}{chapter.6}% 32
-\BOOKMARK [0][-]{chapter*.7}{Bibliography}{}% 33
+\BOOKMARK [0][-]{chapter.2}{Gene Regulatory Networks}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Definition}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Modelling GRNs}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Principle of the models}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{Random Boolean Networks}{}% 9
+\BOOKMARK [1][-]{section.3.1}{Random Boolean Networks}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.2}{The model}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.3}{Topology}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.4}{Dynamics}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.5}{Phase transitions}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.6}{Attractor jumps}{chapter.3}% 15
+\BOOKMARK [0][-]{chapter.4}{Kramer Rate Theory}{}% 16
+\BOOKMARK [1][-]{section.4.1}{Fokker-Planck equation}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.2}{Bistability and Escape Problems}{chapter.4}% 18
+\BOOKMARK [2][-]{subsection.4.2.1}{Diffusion in a Double-Well Potential in one dimension}{section.4.2}% 19
+\BOOKMARK [2][-]{subsection.4.2.2}{Behaviour for D=0}{section.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.2.3}{Behaviour if D is small}{section.4.2}% 21
+\BOOKMARK [1][-]{section.4.3}{Kramer Rate Theory}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.4}{First passage time and transition rate escaping from a barrier}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{The model}{}% 24
+\BOOKMARK [1][-]{section.5.1}{The underlying philosophy of the model}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{The mathematical model and related problems}{chapter.5}% 26
+\BOOKMARK [0][-]{chapter.6}{Analysis}{}% 27
+\BOOKMARK [1][-]{section.6.1}{Implementation}{chapter.6}% 28
+\BOOKMARK [1][-]{section.6.2}{Discrete evolution}{chapter.6}% 29
+\BOOKMARK [1][-]{section.6.3}{Loops and Control nodes}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.4}{Noise}{chapter.6}% 31
+\BOOKMARK [0][-]{chapter*.7}{Bibliography}{}% 32

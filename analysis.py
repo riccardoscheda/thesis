@@ -443,6 +443,7 @@ print(control_nodes)
 import random_network as rn
 import pylab as plt
 import networkx as nx
+import pandas as pd
 
 ######### INITIAL CONDITIONS ################
 #Net.nodes = np.ones((N*number_of_clusters,1))
@@ -453,8 +454,7 @@ import networkx as nx
 #     Net.nodes[nod] = 1
 
 ########################################################################à
-
-realizations = 1
+realizations = 100
 noise = 0.1
 N = 10
 M=30
@@ -484,9 +484,9 @@ for j in range(realizations):
         rn.evolution(Net,iterations=1,p=noise)
         rn.env(Net,env_control_nodes,p=0.05)    
         act = rn.activity(Net,N,M,number_of_clusters=number_of_clusters)
-        # if act[0]<act[1]:
-        #     times.append(np.log(i))
-        #     break
+        if act[0]<act[1]:
+            times.append(np.log(i))
+            break
         
         activity.append(act)
     mean_activities.append(np.mean(activity))
@@ -494,15 +494,21 @@ for j in range(realizations):
     # negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
     # print(negedges)
     # print(control_nodes)
-    plt.plot(np.array(activity))
-    plt.xlabel("t")
-    plt.ylabel("average activity")
-    plt.ylim(0,2)
-    plt.title("N="+str(N)+" M="+str(M))
-    plt.savefig("N="+str(N)+" M="+str(M)+".png")
+    # plt.plot(np.array(activity))
+    # plt.xlabel("t")
+    # plt.ylabel("average activity")
+    # plt.ylim(0,2)
+    # plt.title("N="+str(N)+" M="+str(M))
+    # plt.savefig("N="+str(N)+" M="+str(M)+".png")
 #print(act)
 # plt.hist(times,bins=30)
 # plt.title("distribution of log of time transitions-N="+str(N)+" M="+str(M))
 # plt.savefig("histo-N="+str(N)+" M="+str(M)+".png")
-################################################# 3 CLUSTERS ##############################################
+#################################### TIMES HISTOGRAM ##########################################
+df = pd.DataFrame()
+df[0] = np.histogram(times)[1][1:]
+df[1] = np.histogram(times)[0]
+df.to_csv("tesi/data/times.dat",sep = " ",decimal=".",index=False,header=False)
+###############################################################################################
+
 

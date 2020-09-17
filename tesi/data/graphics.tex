@@ -10,18 +10,24 @@
 \usepackage{graphicx}
 \begin{document}
 \centering
+
+%PER FARE L'ISTOGRAMMA %%%%%%%%%%%%5
+\begin{tikzpicture}
+\begin{axis}
+\addplot[ybar,fill] table [x, y] {times.dat};
+\end{axis}
+\end{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+
+%%%%%%%%%%%% PER FARE I PLOT %%%%%%%%%%%%%%%%%%%
 \begin{tikzpicture}[scale=1]
 \centering
 \begin{axis}[xmin=0,xmax=1,xlabel=$x$,ylabel=$\Theta(x)$ ,ymin=0,ymax=20]
-
-\addplot [thick, dashed]
-file {histo.dat};
 \addplot [thick, orange]
-file {kramerwell.dat};
-
-
-%\node (a) at (67,47){\emph{Critical point}};
-
+file {times.dat};
 \end{axis}
 \end{tikzpicture}
-\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

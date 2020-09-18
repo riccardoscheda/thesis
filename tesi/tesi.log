@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  18 SEP 2020 11:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  18 SEP 2020 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1212,7 +1212,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
-<images/cells.pdf, id=306, 170.7168pt x 170.7168pt>
+<images/cells.pdf, id=307, 170.7168pt x 170.7168pt>
 File: images/cells.pdf Graphic file (type pdf)
 <use images/cells.pdf>
 Package pdftex.def Info: images/cells.pdf  used on input line 13.
@@ -1248,7 +1248,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 Chapter 2.
-<images/grnn.pdf, id=328, 896.70708pt x 882.88849pt>
+<images/grnn.pdf, id=329, 896.70708pt x 882.88849pt>
 File: images/grnn.pdf Graphic file (type pdf)
 <use images/grnn.pdf>
 Package pdftex.def Info: images/grnn.pdf  used on input line 10.
@@ -1294,7 +1294,7 @@ Chapter 3.
 [19
 
 ]
-<figurenetworks.pdf, id=389, 264.03444pt x 145.55981pt>
+<figurenetworks.pdf, id=390, 264.03444pt x 145.55981pt>
 File: figurenetworks.pdf Graphic file (type pdf)
 <use figurenetworks.pdf>
 Package pdftex.def Info: figurenetworks.pdf  used on input line 65.
@@ -1317,12 +1317,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21 <./figurenetworks.pdf>]
-<figurenetworks2.pdf, id=413, 171.69144pt x 114.78584pt>
+<figurenetworks2.pdf, id=414, 171.69144pt x 114.78584pt>
 File: figurenetworks2.pdf Graphic file (type pdf)
 <use figurenetworks2.pdf>
 Package pdftex.def Info: figurenetworks2.pdf  used on input line 120.
 (pdftex.def)             Requested size: 240.36636pt x 160.69907pt.
-<fg3.pdf, id=415, 170.7168pt x 170.7168pt>
+<fg3.pdf, id=416, 170.7168pt x 170.7168pt>
 File: fg3.pdf Graphic file (type pdf)
 <use fg3.pdf>
 Package pdftex.def Info: fg3.pdf  used on input line 144.
@@ -1335,7 +1335,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22 <./figurenetworks2.pdf>]
-<images/phase-transition.pdf, id=430, 242.58228pt x 196.67076pt>
+<images/phase-transition.pdf, id=431, 242.58228pt x 196.67076pt>
 File: images/phase-transition.pdf Graphic file (type pdf)
 <use images/phase-transition.pdf>
 Package pdftex.def Info: images/phase-transition.pdf  used on input line 192.
@@ -1365,7 +1365,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [25 <./images/phase-transition.pdf>]
-<fg4.pdf, id=477, 170.7168pt x 170.7168pt>
+<fg4.pdf, id=478, 170.7168pt x 170.7168pt>
 File: fg4.pdf Graphic file (type pdf)
 <use fg4.pdf>
 Package pdftex.def Info: fg4.pdf  used on input line 233.
@@ -1382,7 +1382,7 @@ Chapter 4.
 [27
 
 ]
-<images/kramerwell.pdf, id=503, 244.1652pt x 194.72649pt>
+<images/kramerwell.pdf, id=504, 244.1652pt x 194.72649pt>
 File: images/kramerwell.pdf Graphic file (type pdf)
 <use images/kramerwell.pdf>
 Package pdftex.def Info: images/kramerwell.pdf  used on input line 41.
@@ -1391,7 +1391,7 @@ Package pdftex.def Info: images/kramerwell.pdf  used on input line 41.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kramerpot.pdf, id=505, 207.69896pt x 191.50446pt>
+<images/kramerpot.pdf, id=506, 207.69896pt x 191.50446pt>
 File: images/kramerpot.pdf Graphic file (type pdf)
 <use images/kramerpot.pdf>
 Package pdftex.def Info: images/kramerpot.pdf  used on input line 54.
@@ -1548,7 +1548,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-<images/theta.pdf, id=610, 244.1652pt x 194.72649pt>
+<images/theta.pdf, id=611, 244.1652pt x 194.72649pt>
 File: images/theta.pdf Graphic file (type pdf)
 <use images/theta.pdf>
 Package pdftex.def Info: images/theta.pdf  used on input line 201.
@@ -1609,7 +1609,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [49]
 Chapter 6.
-<images/network.png, id=667, 462.528pt x 346.896pt>
+<images/network.png, id=668, 462.528pt x 346.896pt>
 File: images/network.png Graphic file (type png)
 <use images/network.png>
 Package pdftex.def Info: images/network.png  used on input line 15.
@@ -1617,12 +1617,12 @@ Package pdftex.def Info: images/network.png  used on input line 15.
 [50
 
 ]
-<images/K.pdf, id=676, 172.23747pt x 139.51622pt>
+<images/K.pdf, id=677, 172.23747pt x 139.51622pt>
 File: images/K.pdf Graphic file (type pdf)
 <use images/K.pdf>
 Package pdftex.def Info: images/K.pdf  used on input line 49.
 (pdftex.def)             Requested size: 258.35555pt x 209.2738pt.
-<images/outgoing.pdf, id=678, 172.27663pt x 139.51523pt>
+<images/outgoing.pdf, id=679, 172.27663pt x 139.51523pt>
 File: images/outgoing.pdf Graphic file (type pdf)
 <use images/outgoing.pdf>
 Package pdftex.def Info: images/outgoing.pdf  used on input line 58.
@@ -1638,7 +1638,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/loops.pdf, id=687, 172.27663pt x 139.51323pt>
+<images/loops.pdf, id=688, 172.27663pt x 139.51323pt>
 File: images/loops.pdf Graphic file (type pdf)
 <use images/loops.pdf>
 Package pdftex.def Info: images/loops.pdf  used on input line 71.
@@ -1653,7 +1653,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/noise.pdf, id=710, 170.48694pt x 133.62823pt>
+<images/noise.pdf, id=711, 170.48694pt x 133.62823pt>
 File: images/noise.pdf Graphic file (type pdf)
 <use images/noise.pdf>
 Package pdftex.def Info: images/noise.pdf  used on input line 87.
@@ -1668,7 +1668,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/doublecluster.pdf, id=725, 170.7168pt x 170.7168pt>
+<images/doublecluster.pdf, id=726, 170.7168pt x 170.7168pt>
 File: images/doublecluster.pdf Graphic file (type pdf)
 <use images/doublecluster.pdf>
 Package pdftex.def Info: images/doublecluster.pdf  used on input line 98.
@@ -1774,7 +1774,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  19688 strings out of 494839
  355592 string characters out of 6178684
- 424468 words of memory out of 5000000
+ 424534 words of memory out of 5000000
  22320 multiletter control sequences out of 15000+600000
  50112 words of font info for 149 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -1795,10 +1795,10 @@ live/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf
 ts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on tesi.pdf (61 pages, 403375 bytes).
+Output written on tesi.pdf (61 pages, 404574 bytes).
 PDF statistics:
- 875 PDF objects out of 1000 (max. 8388607)
- 769 compressed objects within 8 object streams
+ 876 PDF objects out of 1000 (max. 8388607)
+ 770 compressed objects within 8 object streams
  193 named destinations out of 1000 (max. 500000)
  357 words of extra memory for PDF output out of 10000 (max. 10000000)
 

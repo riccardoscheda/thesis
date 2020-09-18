@@ -2,15 +2,48 @@
 \lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
 
 In this Chapter we explain the starting implementation and analysis of the model following biological considerations.
+We will start with some numerical analysis of the model for a single cluster
+The theoretical model has been analyzed making computer simulations using Python, using the well known libraries for Data Science: \emph{Numpy, Pandas} and  \emph{NetworkX}, the most famous library for network analysis. The repository is available on \href{https://github.com/riccardoscheda/thesis}{GitHub}.
 
-\section{Implementation}
+\section{Single Cluster - Implementation}
 
-The theoretical model has been analyzed making simulations using Python.
-The first thing was to create a class \emph{Random Network} to have a random boolean graph as an object, with its nodes and links, represented by a boolean adjacency matrix.
+For this work, we decided to create a class \emph{Random Network} to have a random boolean graph as an object, with its nodes and links, represented by a numpy array and a numpy matrix, respectively.
 
 Every random network is a directed graph and is built to avoid self-loops, this means to create a random, boolean, and non-symmetric adjacency matrix with null trace.
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{images/network.png}
+\caption{\emph{Example of a simple random network constructed by our Python code.}}
+\label{fig:ne}
+\end{figure}
 
-The first thing to evaluate was to choose the average number of incoming links for each RBN. In Figure \ref{fig:K} we can see that the average discrete evolution of $100$ different realizations of RBNs, with increasing size.
+For example, let's consider the network in Figure \ref{fig:ne}: the adjacency matrix $A$ of this network will be constructed as follows:
+$$
+A = \left (
+\begin{array}{ccccc}
+
+0 & 0 & 0 & 0 & 0  \\
+1 & 0 & 0 & 0 & 0  \\
+0 & 1 & 0 & 0 & 1  \\
+0 & 0 & 1 & 0 & 0  \\
+0 & 0 & 0 & 1 & 0  \\
+
+\end{array}
+\right )
+$$
+Now, we have to decide how many links per node and how many nodes have to be used for this type of network. 
+As shown in Chapter \ref{model}, the discrete time evolution of the network is given by the equation:
+$$
+\mathnormal{\sigma_i(t+1)=\Theta\biggl(\sum_jA_{ij}\sigma_j(t)\biggr)}
+$$
+where $A$ is the connectivity matrix of the network.
+
+
+So this means that each node which has at least one incoming link with a node which is active, in the next step this node will be active.
+At each time step we can measure the average activity of the network, which is the average number of nodes with the value $\sigma_i = 1$.
+
+\subsection{Number of links}
+To choose the number of links, we considered the average activity of the network, after many iterations of the discrete evolution. In Figure \ref{fig:K} we can see that the average discrete evolution of $100$ different realizations of RBNs, with increasing size.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1.5]{images/K.pdf}
@@ -29,21 +62,7 @@ Moreover, we can analyze the average number of outgoing links depending on the n
 
 
 
-
-\section{Discrete evolution}
-As shown in Chapter \ref{model}, the discrete time evolution of the network is given by the equation:
-$$
-\mathnormal{\sigma_i(t+1)=\Theta\biggl(\sum_jA_{ij}\sigma_j(t)\biggr)}
-$$
-where $A$ is the connectivity matrix of the network.
-So this means that each node which has at least one incoming link with a node which is active, in the next step this node will be active.
-At each time step we can measure the average activity of the network, which is the average number of nodes with the value:
-$$
-\sigma_i(t) = 1
-$$
-
-
-\section{Loops and Control nodes}
+\subsection{Control nodes}
 In simple random networks one can always find the number of independent loops.
 Independent loops determine the complexity of the networks\cite{K38}, and are important for the construction of the model. In fact from the independent loops one can find the \emph{control nodes} of the network, which are the nodes that theirstate are able to force the state of the whole network, and are the nodes with maximum connectivity. Control nodes determine the whole activity and stability of the network. 
 In RBNs with parameter $K=2$, we can see in Figure \ref{fig:loops} that the number of independent loops is linear with the network size.
@@ -53,6 +72,9 @@ In RBNs with parameter $K=2$, we can see in Figure \ref{fig:loops} that the numb
 \caption{\emph{Plot of the number of independet loops in the networks depending on the network size.}}
 \label{fig:loops}
 \end{figure}
+
+
+
 
 
 
@@ -67,3 +89,13 @@ In Figure \ref{fig:noise} we can see the behavior of the average activity of the
 \label{fig:noise}
 \end{figure}
 
+\section{Double Cluster Network}
+Now we are ready to analyse the dynamics of a network composed by two different clusters. As explained in Chapter \ref{model}, two clusters will be connected by negative links with value $-1$, so we will have two clusters which hinibit the activity of the opposite cluster.
+The construction of this double-cluster network is made simply by the construction of two different random networks which have each control node which connected negatively to the control node of the other cluster. In Figure \ref{fig:doublecluster} we can see an example of this type of networks.
+
+\begin{figure}
+\centering
+\includegraphics[scale=1.4]{images/doublecluster.pdf}
+\caption{\emph{Example of double-cluster random network. Control nodes of the two clusters are connected negatively (red).}}
+\label{fig:doublecluster}
+\end{figure}

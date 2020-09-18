@@ -156,13 +156,13 @@ def create_clusters(graphs,control_nodes,env_control_nodes, N,number_of_clusters
         else:
             ####################### POSITIVE EDGE FROM CONTROL NODE TO A RANDOM  NODE ####################
                 for j in range(number_of_clusters):
-                      tot[np.random.randint(N*j,N*(j+1))][control_nodes[-j-1]] = +1
+                      tot[np.random.randint(N*j,N*(j+1))][control_nodes[-j-1]] = -100
             ################################################################################ 
             ################## NEGATIVE EDGES FROM CONTROL NODES TO NODES OF THE SAME CLUSTER ###################
                 for j in range(number_of_clusters):
                     for k in range(N*number_of_clusters):
                          if tot[k][env_control_nodes[j]] == 1:
-                             tot[k][env_control_nodes[j]] = -10
+                             tot[k][env_control_nodes[j]] = -100
             ###############################################################################################    
           
     return tot

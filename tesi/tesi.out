@@ -25,8 +25,9 @@
 \BOOKMARK [1][-]{section.5.1}{The underlying philosophy of the model}{chapter.5}% 25
 \BOOKMARK [1][-]{section.5.2}{The mathematical model and related problems}{chapter.5}% 26
 \BOOKMARK [0][-]{chapter.6}{Analysis}{}% 27
-\BOOKMARK [1][-]{section.6.1}{Implementation}{chapter.6}% 28
-\BOOKMARK [1][-]{section.6.2}{Discrete evolution}{chapter.6}% 29
-\BOOKMARK [1][-]{section.6.3}{Loops and Control nodes}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.4}{Noise}{chapter.6}% 31
-\BOOKMARK [0][-]{chapter*.7}{Bibliography}{}% 32
+\BOOKMARK [1][-]{section.6.1}{Single Cluster - Implementation}{chapter.6}% 28
+\BOOKMARK [2][-]{subsection.6.1.1}{Number of links}{section.6.1}% 29
+\BOOKMARK [2][-]{subsection.6.1.2}{Control nodes}{section.6.1}% 30
+\BOOKMARK [1][-]{section.6.2}{Noise}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.3}{Double Cluster Network}{chapter.6}% 32
+\BOOKMARK [0][-]{chapter*.7}{Bibliography}{}% 33

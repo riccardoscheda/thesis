@@ -510,5 +510,27 @@ df[0] = np.histogram(times)[1][1:]
 df[1] = np.histogram(times)[0]
 df.to_csv("tesi/data/times.dat",sep = " ",decimal=".",index=False,header=False)
 ###############################################################################################
+#%% ############################### NUMBER OF LOOPS ##########################################
 
+import numpy as np
+import networkx as nx
+import random_network as rn
+import pylab as plt
 
+mean_loops = []
+
+for N in range(5,50):
+    loops = []
+    for i in range(10):
+        g = rn.Random_Network(N,2)
+        graph = nx.from_numpy_matrix(g.adj_matrix, create_using=nx.DiGraph)
+        cycles = nx.simple_cycles(graph)
+        #nx.draw_networkx(graph,with_labels=True)
+        loops.append(len(list(cycles)))
+    mean_loops.append(np.mean(np.array(loops)))
+plt.plot(mean_loops)
+a = [i for i in range(len(mean_loops))]
+df = pd.DataFrame()
+df[0] = a
+df[1] = pd.DataFrame(np.array(mean_loops))
+df.to_csv("tesi/data/loops.dat",sep = " ",decimal=".",index=False,header=False)

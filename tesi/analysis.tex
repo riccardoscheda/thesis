@@ -64,7 +64,7 @@ Moreover, we can analyze the average number of outgoing links depending on the n
 
 \subsection{Control nodes}
 In simple random networks one can always find the number of independent loops.
-Independent loops determine the complexity of the networks\cite{K38}, and are important for the construction of the model. In fact from the independent loops one can find the \emph{control nodes} of the network, which are the nodes that theirstate are able to force the state of the whole network, and are the nodes with maximum connectivity. Control nodes determine the whole activity and stability of the network. 
+Independent loops determine the complexity of the networks\cite{K38}, and are important for the construction of the model. In fact from the independent loops one can find the \emph{control nodes} of the network, which are the nodes that their state are able to force the state of the whole network, and are the nodes with maximum connectivity. Control nodes determine the whole activity and stability of the network. 
 In RBNs with parameter $K=2$, we can see in Figure \ref{fig:loops} that the number of independent loops is linear with the network size.
 \begin{figure}[h]
 \centering
@@ -73,7 +73,7 @@ In RBNs with parameter $K=2$, we can see in Figure \ref{fig:loops} that the numb
 \label{fig:loops}
 \end{figure}
 
-
+Indeed, the number of control nodes grows with the number of nodes in the network, so for a big network there will be multiple control nodes. The aim is to find the right number of control nodes which are able to control the entire network activity.
 
 
 
@@ -99,3 +99,7 @@ The construction of this double-cluster network is made simply by the constructi
 \caption{\emph{Example of double-cluster random network. Control nodes of the two clusters are connected negatively (red).}}
 \label{fig:doublecluster}
 \end{figure}
+
+From double-cluster networks, what we want to find is a dynamics similar to Kramer's theory explained in Chapter \ref{kramer}. We expect to see that the activity of one cluster hinibits the activity of the other and viceversa: Adding noise to the system there will be a bistable dynamics.
+The number of nodes, and the number of links of the cluster are the parameters which determine the robustness of the network. If the number of nodes of one cluster is much higher than the number of nodes of the second cluster, it will be difficult for the second cluster to hinibit the first one.
+In this sense, we will have that the first cluster will remain stable even if it's disturbed by noise and by the other cluster.

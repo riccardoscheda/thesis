@@ -39,8 +39,8 @@ change the state of control nodes;
 of metabolic cycles in the cell that define the cell behavior;
 \item each node of a subnetwork may represent the state of a gene that is connected and regulates the activation of other genes;
 \item in the cell differentiation mechanism is defined by the competition of different subnetworks that interact in a inhibitory way;
-\item the mutation mechanism change the connectivity of the network: we may distinguish between permanent changes and dynamical change (i.e. a connection
-may exist or non exist during time).
+%\item the mutation mechanism change the connectivity of the network: we may distinguish %between permanent changes and dynamical change (i.e. a connection
+%may exist or non exist during time).
 \end{itemize}
 The complexity of the model is not a fundamental issue since we want to point out universal behaviors:  first of all the existence of bistability or bifurcation 
 phenomena for simple model and the definition of control parameters.
@@ -214,44 +214,7 @@ values. In presence of fluctuations and of two dynamical regimes (active and non
 to another with a characteristic time scale (Kramer transition rate Theory, see Chapter \ref{kramer}). The transition may be triggered by large fluctuations that are both consequence
 of rare events (in such a case the probability should be exponentially small with respect the activity) but also depend on the network structure (the presence of
 hub nodes that can change the activity of many nodes amplifies the effect of small fluctuations (i.e. the change of the hub node state) and may introduce
-fat tail statistic in the fluctuation distribution). A second stochastic effect is related to the fluctuations of the connectivity due to environmental causes: 
-the matrix $A_ij(t)$ is a stochastic process (so that its entries change their value according to a probability distribution). The simplest model can be formulated as
-follows: we assume that the nonzero entries $A_{ij}(t)$ assume value $1$ with a given probability $p$ (independent from the network state)
- each time step $\Delta t$ (i.e. we are not simulating
-a parametric white noise, but a correlated random noise with a define correlation time scale $\Delta t$). $\Delta t$ is the shortest evolution time scale
-for the system (we need a physical interpretation) and we set $\Delta t=1$. The effect of a parametric noise is substantially different from the environmental noise
-and the evolution equation (\ref{evolnet}) reads
-\begin{equation}
-\sigma_i(t+1)=\Theta\left (\sum_j A_{ij}(t)\sigma_j(t)\right )
-\label{evolnetstoc}
-\end{equation}
-In such a case the average dynamics is not useful and the problem can be studied by the representative dynamics
-$$
-\zeta_i(t+1)=\sum_j A_{ij}(t)\zeta_j(t)\qquad \Rightarrow \qquad \zeta(t)=\prod_{k=1}^t A(k)\zeta(0)
-$$
-where the solution is the product of random matrices (there are results on the spectral properties). From a biological point of view means
-that the interaction of genes depends also by external factors. \par\noindent  
-One could say that the network is active if a certain condition is satisfied (for example the average
-total activity should overcome a given threshold) so that fluctuation may introduce the existence of non active states.
-Problems for a single network: starting from a loops with a fixed dimension adds randomly links to stabilize the
-equilibrium solutions (existence of sub-loops)  and study the robustness of the solution and the recovery times in relation with
-the connectivity matrix; adding the temperature, study the existence of critical value for the appearance of the equilibrium solution; the thermodynamic limit. The effect of the environmental noise has to be justified from a biological point of view by relating it
-to the individual variability of the cell phenotypes in an homogeneous population.\par\noindent
-In the stochastic models one should also consider the problem that the connectivity matrix is not fixed (for example we have
-a ensemble of admissible matrices or the existence of the links is a random event). In such a case we have a stochastic
-dynamics
-\begin{equation}
-\sigma_i(t+1)=\Theta\left (\sum_j A_{ij}(t)\sigma_j(t)\right )
-\label{stocdyn2}
-\end{equation}
-where $A_{ij}(t)$ is a random process with value $\in\{0,1\}$ maintaining some average properties of the connectivity;
-this is an alternative to the environmental noise (parametric noise). This model simulates the fact that the activation of a link
-may depends on random events (i.e. not only from the existence of the link) so that a genetic network is indeed a stochastic
-network. In principle any realization of the connectivity matrix $A_{ij}$ has an equilibrium $\sigma_i=1$ but the robustness
-of equilibrium can be influenced by the fluctuations. Problem: if the robustness of the equilibrium with respect to the external
-perturbations (i.e. an external signal on a node) depends on the spectral properties of the connectivity matrix then
-it is possible to study the spectral properties of random connectivity matrices and develop a control theory
-for the network. 
+fat tail statistic in the fluctuation distribution).
 \par\noindent
 Let us consider the existence of competitive networks (see Figure \ref{fig:comp}) that are linked by inhibitory links: if the first network is
 in an exited state the second network should be completely switched off for a stable equilibrium.
@@ -360,11 +323,5 @@ the residence times in the different basins that can be associated to metastable
 \par\noindent
 We introduce the stochasticity in the system assuming that the adjacency matrix is not known: i.e. $A_{ij}$ is a extracted from an ensemble of random matrices.
 As the result of an experimental one could assume that each entry $A_{ij}$ is a dichotomous random variable with probability $p_{ij}$ to get the value $\pm 1$ (i.e. the
-link is active). The value $p_{ij}=0$ is admitted so that the corresponding link it always inactive. The problems are:
-\begin{enumerate}
-    	\item Classifying the equilibrium states in relation to their robustness with respect the changes in the adjacency matrix;
-     \item Understanding the representativity of the average dynamics: i.e. substituting the adjacency matrix with an average matrix one highlights the dynamical properties 
-     that are correctly described by the average system
-     \item Pointing out the existence of bifurcation phenomena so that it is possible to divide the ensemble in different communities with similar dynamical behaviors.
-\end{enumerate}
-
+link is active). The value $p_{ij}=0$ is admitted so that the corresponding link it always inactive. The problem is pointing out the existence of bifurcation phenomena so that it is possible to divide the ensemble in different communities with similar dynamical behaviors.
+In the next Chapter we will focus on the implemantation of this model in order to do some analytical considerations and to analyse the dynamical process of networks made by two clusters.

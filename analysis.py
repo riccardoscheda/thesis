@@ -439,77 +439,6 @@ negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 print(negedges)
 print(control_nodes)
 #plt.savefig("network.png")
-#%%  ################################### 3 CLUSTERS ################################
-import random_network as rn
-import pylab as plt
-import networkx as nx
-import pandas as pd
-
-######### INITIAL CONDITIONS ################
-#Net.nodes = np.ones((N*number_of_clusters,1))
-
-##### INITIAL ACTIVE NODES PER CLUSTER################################
-# for i in range(2):
-#     nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
-#     Net.nodes[nod] = 1
-
-########################################################################à
-realizations = 100
-noise = 0.1
-N = 10
-M=30
-K = 2
-number_of_clusters = 2
-time = 1000
-
-times = []
-for j in range(realizations):
-    graphs = [rn.Random_Network(N, K)]
-    graphs.append(rn.Random_Network(M,K))
-    #graphs = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
-    control_nodes = [graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters) ]
-    env_control_nodes = [graphs[i].control_nodes[1]+i*N for i in range(number_of_clusters)]
-    
-    tot = rn.create_net(graphs, control_nodes,env_control_nodes, N,M)
-    #tot = rn.create_clusters(graphs,control_nodes,env_control_nodes, N,number_of_clusters,visual=True)
-    #print(tot)
-    Net = rn.Network(tot,number_of_clusters)
-    activity = []
-    mean_activities = []
-    for i in range(N*(number_of_clusters-1)):
-        Net.nodes[i] = 1
-        
-        
-    for i in range(1,time):
-        rn.evolution(Net,iterations=1,p=noise)
-        rn.env(Net,env_control_nodes,p=0.05)    
-        act = rn.activity(Net,N,M,number_of_clusters=number_of_clusters)
-        if act[0]<act[1]:
-            times.append(np.log(i))
-            break
-        
-        activity.append(act)
-    mean_activities.append(np.mean(activity))
-    
-    # negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
-    # print(negedges)
-    # print(control_nodes)
-    # plt.plot(np.array(activity))
-    # plt.xlabel("t")
-    # plt.ylabel("average activity")
-    # plt.ylim(0,2)
-    # plt.title("N="+str(N)+" M="+str(M))
-    # plt.savefig("N="+str(N)+" M="+str(M)+".png")
-#print(act)
-# plt.hist(times,bins=30)
-# plt.title("distribution of log of time transitions-N="+str(N)+" M="+str(M))
-# plt.savefig("histo-N="+str(N)+" M="+str(M)+".png")
-#################################### TIMES HISTOGRAM ##########################################
-df = pd.DataFrame()
-df[0] = np.histogram(times)[1][1:]
-df[1] = np.histogram(times)[0]
-df.to_csv("tesi/data/times.dat",sep = " ",decimal=".",index=False,header=False)
-###############################################################################################
 #%% ############################### NUMBER OF LOOPS ##########################################
 
 import numpy as np
@@ -534,3 +463,106 @@ df = pd.DataFrame()
 df[0] = a
 df[1] = pd.DataFrame(np.array(mean_loops))
 df.to_csv("tesi/data/loops.dat",sep = " ",decimal=".",index=False,header=False)
+#%%  ################################### 3 CLUSTERS ################################
+import random_network as rn
+import pylab as plt
+import networkx as nx
+import pandas as pd
+
+######### INITIAL CONDITIONS ################
+#Net.nodes = np.ones((N*number_of_clusters,1))
+
+##### INITIAL ACTIVE NODES PER CLUSTER################################
+# for i in range(2):
+#     nod = [np.random.randint(N*i,N*(i+1))  for i in range(number_of_clusters)]
+#     Net.nodes[nod] = 1
+
+########################################################################à
+realizations = 100
+noise = 0.1
+N = 15
+M=30
+K = 2
+number_of_clusters = 2
+time = 1000
+
+
+for k in range(2):
+    
+    mean_times = []
+    graphs = [rn.Random_Network(N, K)]
+    graphs.append(rn.Random_Network(M,K))
+    #graphs = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
+    control_nodes = [graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters) ]
+    env_control_nodes = [graphs[i].control_nodes[1]+i*N for i in range(number_of_clusters)]
+    
+    tot = rn.create_net(graphs, control_nodes,env_control_nodes, N,M)
+    #tot = rn.create_clusters(graphs,control_nodes,env_control_nodes, N,number_of_clusters,visual=True)
+    #print(tot)
+    Net = rn.Network(tot,number_of_clusters)
+    for j in range(realizations):
+        times = []
+
+        activity = []
+        mean_activities = []
+        # for i in range(N*(number_of_clusters-1)):
+        #     Net.nodes[i] = 1
+            
+            
+        for i in range(1,time):
+            rn.evolution(Net,iterations=1,p=j*0.01)
+            rn.env(Net,env_control_nodes,p=j*0.01)    
+            act = rn.activity(Net,N,M,number_of_clusters=number_of_clusters)
+            if act[0]<act[1]:
+                times.append(np.log(i))
+                break
+            
+            activity.append(act)
+        mean_activities.append(np.mean(activity))
+        mean_times.append(np.mean(np.array(times)))
+    # negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
+    # print(negedges)
+    # print(control_nodes)
+    # plt.plot(np.array(activity))
+    # plt.xlabel("t")
+    # plt.ylabel("average activity")
+    # plt.ylim(0,2)
+    # plt.title("N="+str(N)+" M="+str(M))
+    # plt.savefig("N="+str(N)+" M="+str(M)+".png")
+#print(act)
+plt.plot(mean_times)
+plt.title("distribution of log of time transitions-N="+str(N)+" M="+str(M))
+plt.savefig("histo-N="+str(N)+" M="+str(M)+".png")
+#################################### TIMES HISTOGRAM ##########################################
+df = pd.DataFrame()
+df[0] = np.histogram(times)[1][1:]
+df[1] = np.histogram(times)[0]
+df.to_csv("tesi/data/times.dat",sep = " ",decimal=".",index=False,header=False)
+###############################################################################################
+#%%
+
+import numpy as np
+import networkx as nx
+import random_network as rn
+import pylab as plt
+import pandas as pd
+
+#N = 10
+K = 2
+mean_loops = []
+for N in range(5,35):
+    loops = []
+    for i in range(30):
+        g = rn.Random_Network(N,K)
+        loops.append(g.loops)
+    mean_loops.append(np.mean(np.array(loops)))
+    
+plt.plot(mean_loops)
+plt.title("Number of loops per number of nodes")
+plt.savefig("Number of loops per number of nodes.png")
+
+a = [i for i in range(len(mean_loops))]
+df = pd.DataFrame()
+df[0] = a
+df[1] = pd.DataFrame(np.array(mean_loops))
+df.to_csv("tesi/data/numberofloops.dat",sep = " ",decimal=".",index=False,header=False)

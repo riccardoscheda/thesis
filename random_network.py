@@ -53,7 +53,7 @@ class Network:
             return np.mean(self.nodes)
                     
 
-def find_control_nodes(gr,N):
+def find_control_nodes(gr,N,number_of_control_nodes=3):
     """
     Finds the nodes with max connectivity in a graph
     ---------------------------
@@ -76,11 +76,11 @@ def find_control_nodes(gr,N):
          
     #print(final)
     
-    control_nodes = np.argsort(final)[-2:][::-1]
+    control_nodes = np.argsort(final)[-number_of_control_nodes:][::-1]
     #control_node = np.argmax(final)
     # print("driver node: "+ str(driver_node))
     # print(control_node)
-    return control_nodes, sorted(final)
+    return control_nodes, len(list(nx.simple_cycles(graph)))
 
 
 def outgoing_links(gr,N):

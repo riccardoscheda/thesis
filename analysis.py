@@ -550,7 +550,7 @@ import pandas as pd
 #N = 10
 K = 2
 mean_loops = []
-for N in range(5,35):
+for N in range(6,35):
     loops = []
     for i in range(30):
         g = rn.Random_Network(N,K)
@@ -559,10 +559,40 @@ for N in range(5,35):
     
 plt.plot(mean_loops)
 plt.title("Number of loops per number of nodes")
-plt.savefig("Number of loops per number of nodes.png")
+plt.savefig(".png")
 
 a = [i for i in range(len(mean_loops))]
 df = pd.DataFrame()
 df[0] = a
 df[1] = pd.DataFrame(np.array(mean_loops))
 df.to_csv("tesi/data/numberofloops.dat",sep = " ",decimal=".",index=False,header=False)
+#%%
+
+import numpy as np
+import networkx as nx
+import random_network as rn
+import pylab as plt
+import pandas as pd
+
+
+K = 2
+mean_percentage = []
+for N in range(10,40):
+    percentage = []
+    for i in range(50):
+        g = rn.Random_Network(N,K)
+        loopspercn = np.array(g.loops_per_cn)
+        frequency = loopspercn/g.loops
+        percentage.append(frequency[g.control_nodes])  
+    mean_percentage.append(np.mean(np.array(percentage)))
+#nx.draw_networkx(nx.from_numpy_matrix(g.adj_matrix.T,create_using=nx.DiGraph), with_labels=True)
+plt.plot(range(10,40),mean_percentage)
+plt.ylim(0,1)
+plt.title("frequency of loops per control nodes")
+plt.savefig("frequency of loops per control nodes.png")
+
+a = [i for i in range(len(mean_loops))]
+df = pd.DataFrame()
+df[0] = a
+df[1] = pd.DataFrame(np.array(mean_loops))
+df.to_csv("tesi/data/loopspercn.dat",sep = " ",decimal=".",index=False,header=False)

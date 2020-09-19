@@ -32,7 +32,7 @@ class Random_Network:
 
        
         self.edges = [(str(a),str(b)) for a,b in zip(np.where(self.adj_matrix == 1)[0],np.where(self.adj_matrix == 1)[1])]
-        self.control_nodes, self.loops = find_control_nodes(self, self.n)
+        self.control_nodes, self.loops_per_cn,self.loops = find_control_nodes(self, self.n)
         # for i in range(self.n):
         #     if self.adj_matrix[i][self.control_node] == 1:
         #         self.adj_matrix[i][self.control_node] = -100 
@@ -53,7 +53,7 @@ class Network:
             return np.mean(self.nodes)
                     
 
-def find_control_nodes(gr,N,number_of_control_nodes=3):
+def find_control_nodes(gr,N,number_of_control_nodes=1):
     """
     Finds the nodes with max connectivity in a graph
     ---------------------------
@@ -80,7 +80,7 @@ def find_control_nodes(gr,N,number_of_control_nodes=3):
     #control_node = np.argmax(final)
     # print("driver node: "+ str(driver_node))
     # print(control_node)
-    return control_nodes, len(list(nx.simple_cycles(graph)))
+    return control_nodes, final, len(list(nx.simple_cycles(graph)))
 
 
 def outgoing_links(gr,N):

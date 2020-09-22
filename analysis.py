@@ -539,7 +539,7 @@ df[0] = np.histogram(times)[1][1:]
 df[1] = np.histogram(times)[0]
 df.to_csv("tesi/data/times.dat",sep = " ",decimal=".",index=False,header=False)
 ###############################################################################################
-#%%
+#%%  ######################## NUMBER OF LOOPS PER NUMBER OF NODES ###################################################
 
 import numpy as np
 import networkx as nx
@@ -566,7 +566,7 @@ df = pd.DataFrame()
 df[0] = a
 df[1] = pd.DataFrame(np.array(mean_loops))
 df.to_csv("tesi/data/numberofloops.dat",sep = " ",decimal=".",index=False,header=False)
-#%%
+#%% ########################  FREQUENCY OF LOOPS FOR THE SINGLE CONTROL NODE ############################
 
 import numpy as np
 import networkx as nx
@@ -596,3 +596,52 @@ df = pd.DataFrame()
 df[0] = a
 df[1] = pd.DataFrame(np.array(mean_loops))
 df.to_csv("tesi/data/loopspercn.dat",sep = " ",decimal=".",index=False,header=False)
+#%% ################### MEAN ACTIVITY WITH AND WITHOUT CONTROL NODE #####################################À
+
+import numpy as np
+import networkx as nx
+import random_network as rn
+import pylab as plt
+import pandas as pd
+
+
+K = 2
+N = 20
+steps = 300
+realizations = 50
+activities = []
+mean_activities0 = []
+mean_activities1 = []
+
+g = [rn.Random_Network(N,K) for i in range(realizations)]
+for i in range(realizations):
+    g[i].nodes = np.ones((N,1))
+    
+    
+for i in range(steps):
+    for j in range(realizations):
+        activities.append(rn.activity(g[j],N))
+        rn.evolution(g[j],iterations= 1, p=0.3)
+    mean_activities0.append(np.mean(np.array(activities)))
+        
+  
+g = [rn.Random_Network(N,K) for i in range(realizations)]
+activities = []
+for i in range(realizations):
+    g[i].nodes = np.ones((N,1))
+    g[i].nodes[g[i].control_nodes[0]] = 0
+    
+for i in range(steps):
+    for j in range(realizations):
+        activities.append(rn.activity(g[j],N))
+        g[j].nodes[g[j].control_nodes[0]] = 0 
+        
+        rn.evolution(g[j],iterations= 1, p=0.3)
+    mean_activities1.append(np.mean(np.array(activities)))
+    
+    
+plt.plot(mean_activities0)
+plt.plot(mean_activities1)
+plt.ylim(0,1)
+plt.xlim(0,steps)
+plt.savefig("averageactivitywithandwithoutcontrolnodes1.png")

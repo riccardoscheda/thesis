@@ -203,7 +203,7 @@ def create_net(graphs,control_nodes,env_control_nodes, N,M):
     return tot
 
 
-def activity(graph,N,M,number_of_clusters=1):
+def activity(graph,N,M=0,number_of_clusters=1):
     """
     Measures the activity of each cluster in the network
     

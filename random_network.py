@@ -53,7 +53,7 @@ class Network:
             return np.mean(self.nodes)
                     
 
-def find_control_nodes(gr,N,number_of_control_nodes=1):
+def find_control_nodes(gr,N,number_of_control_nodes=2):
     """
     Finds the nodes with max connectivity in a graph
     ---------------------------

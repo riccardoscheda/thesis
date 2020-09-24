@@ -193,9 +193,9 @@ def create_net(graphs,control_nodes,env_control_nodes, N,M):
                         [neg2, graphs[1].adj_matrix]])
                 
     #######################  NEGATIVE EDGE FROM CONTROL NODE TO CONTROL NODE ####################
-    for j in range(number_of_clusters):
-          tot[env_control_nodes[-j]][control_nodes[-j-1]] = -100
-          tot[env_control_nodes[-j-1]][control_nodes[-j]] = -100
+    # for j in range(number_of_clusters):
+    #       tot[env_control_nodes[-j]][control_nodes[-j-1]] = -100
+    #       tot[env_control_nodes[-j-1]][control_nodes[-j]] = -100
     for j in range(number_of_clusters):
           tot[control_nodes[-j]][control_nodes[-j-1]] = -100
           tot[control_nodes[-j-1]][control_nodes[-j]] = -100

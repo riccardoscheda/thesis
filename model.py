@@ -13,7 +13,7 @@ fig, ax = plt.subplots(1,1)
 #iterations
 frames = 500
 
-N = 10
+N = 5
 K = 2
 number_of_clusters = 2
 
@@ -24,7 +24,7 @@ gr = [rn.Random_Network(N,K) for i in range(number_of_clusters)]
 
 control_nodes = [gr[i].control_nodes[0]+i*N for i in range(number_of_clusters)]
 env_control_nodes = [gr[i].control_nodes[1]+i*N for i in range(number_of_clusters)]
-tot = rn.create_clusters(gr, control_nodes,env_control_nodes, N,number_of_clusters,visual=True)
+tot = rn.create_net(gr, control_nodes,env_control_nodes, N,N)
 negedges = list(zip(list(np.where(tot.T<0)[0]),list(np.where(tot.T<0)[1])))
 #print(negedges)
 Net = rn.Network(tot,number_of_clusters)
@@ -71,7 +71,7 @@ def evo(frames):
     up = Net.adj_matrix.dot(Net.nodes)
     Net.nodes = (up >0).astype(int)
     rn.env(Net,env_control_nodes,p=0.1)
-    rn.env(Net,control_nodes,p=0.1)
+    #rn.env(Net,control_nodes,p=0.1)
     rn.noise(Net,p=0.2)
     active_nodes = []
     non_active_nodes = []

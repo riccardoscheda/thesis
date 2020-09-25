@@ -1303,12 +1303,12 @@ import networkx as nx
 import pandas as pd
 
 realizations = 10
-noise = 0.3
+noise = 0.25
 N = 10
 M = 10
 K = 2
 number_of_clusters = 2
-time = 5000
+time = 4000
 
 mean_times = []
 mean_times1 = []
@@ -1331,6 +1331,7 @@ for k in range(100):
         pass
     
     for j in range(realizations):
+        t = 0
         times = []
         times1 = []
         activity = []
@@ -1347,17 +1348,17 @@ for k in range(100):
             act = rn.activity(Net,N,M,number_of_clusters=number_of_clusters)
             activity.append(act)
             if act[0]>0.8 and act[1] < 0.2:
-                times.append(np.log(i))
-                break
+                times.append(np.log(i-t))
+                t = i
             if act[1]> 0.8 and act[0] <0.2:
-                times1.append(np.log(i))
-                break
+                times.append(np.log(i-t))
+                t = i
             
         #mean_activities.append(np.mean(activity))
         mean_times.append(np.mean(np.array(times)))
-        mean_times1.append(np.mean(np.array(times1)))
+        #mean_times1.append(np.mean(np.array(times1)))
 plt.hist(mean_times,bins=25)
-plt.hist(mean_times1,bins=25,alpha=0.5)
+#plt.hist(mean_times1,bins=25,alpha=0.5)
 plt.title("sdistribution of log of time transitions-N="+str(N)+" M="+str(M)+"-noise="+str(noise))
 plt.savefig("sshisto-N="+str(N)+" M="+str(M)+"-noise="+str(noise)+".png")
    # plt.figure()
@@ -1380,3 +1381,103 @@ plt.savefig("sshisto-N="+str(N)+" M="+str(M)+"-noise="+str(noise)+".png")
 # df[1] = np.histogram(times)[0]
 # df.to_csv("tesi/data/times.dat",sep = " ",decimal=".",index=False,header=False)
 ###############################################################################################
+#%% ##############  BETWEENNESS CENTRALITY ####################################################
+
+import random_network as rn
+import networkx as nx
+import numpy as np
+import pylab as plt
+from functools import reduce
+
+
+K = 2
+realizations = 100
+mean_bc0 = []
+mean_bc1 = []
+mean_max = []
+#mean_percentage = []
+for N in range(10,30):
+    bc0 = []
+    bc1 = []
+    maxx = []
+    #percentage = []
+    for j in range(realizations):
+        g = rn.Random_Network(N,K)
+        net = nx.from_numpy_matrix(g.adj_matrix,create_using=nx.DiGraph)
+        #nx.draw_networkx(net,with_labels=True)
+        if np.argmax(list(nx.betweenness_centrality(net))) == g.control_nodes[0]:
+            bc0.append(1)
+        
+        if np.argmax(list(nx.betweenness_centrality(net))) == g.control_nodes[1]:
+            bc1.append(1)
+    
+        #maxx.append(max([nx.betweenness_centrality(net)[i] for i in range(N)]))
+        # loopspercn = np.array(g.loops_per_cn)
+        # frequency = loopspercn/g.loops
+        # percentage.append(frequency[g.control_nodes[0]])
+    mean_bc0.append((len(bc1)+len(bc0))/realizations)
+
+    #mean_max.append(np.mean(np.array(maxx)))
+    #mean_percentage.append(np.mean(np.array(percentage)))
+
+plt.step(range(10,30),mean_bc0)
+
+#plt.ylim(0,1)
+plt.title("histogram of control_nodes")
+plt.savefig("histogram-betweenness centrality-control_node.png")
+#%%  ######################### PERIFERICAL NODES ################################################
+
+import random_network as rn
+import networkx as nx
+import numpy as np
+import pylab as plt
+from functools import reduce
+
+
+K = 2
+realizations = 20
+mean_bc0 = []
+mean_bc1 = []
+mean_max = []
+periferical = []
+A = 5
+B = 50
+for N in range(A,B):
+    bc0 = []
+    bc1 = []
+    maxx = []
+    periferical_nodes = []
+
+    for j in range(realizations):
+        g = rn.Random_Network(N,K)
+        net = nx.from_numpy_matrix(g.adj_matrix,create_using=nx.DiGraph)
+        
+        cycles = nx.simple_cycles(net)
+        final = []
+        z = list(reduce(lambda x,y: x+y,cycles))
+        
+        for i in range(N):
+            final.append(z.count(i))
+             
+
+        periferical_nodes.append((len(np.where(np.array(final) == 0)[0])/N))
+        
+    periferical.append(np.mean(np.array(periferical_nodes)))
+    
+
+plt.plot(range(A,B),periferical)
+plt.ylim(0,1)
+plt.title("PERIFERICAL NODES ")
+plt.savefig("periferical nodes.png")
+
+#%% SWITCHING TIMES ##################################
+
+
+import random_network as rn
+import networkx as nx
+import numpy as np
+import pylab as plt
+from functools import reduce
+
+
+

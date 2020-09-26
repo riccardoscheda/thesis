@@ -1434,14 +1434,14 @@ import pylab as plt
 from functools import reduce
 
 
-K = 2
-realizations = 20
+K = 3
+realizations = 30
 mean_bc0 = []
 mean_bc1 = []
 mean_max = []
 periferical = []
 A = 5
-B = 50
+B = 20
 for N in range(A,B):
     bc0 = []
     bc1 = []

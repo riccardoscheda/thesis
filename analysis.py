@@ -1480,4 +1480,38 @@ import pylab as plt
 from functools import reduce
 
 
+steps = 4000
+N = 10
+M = 20 
+K = 2
+realizations = 100
+number_of_clusters = 2
 
+mean_switch = []
+mean_no_switch = []
+for i in range(realizations):
+        graphs = [rn.Random_Network(N, K)]
+        graphs.append(rn.Random_Network(M,K))
+        control_nodes = [graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters) ]
+        env_control_nodes = [graphs[i].control_nodes[1]+i*N for i in range(number_of_clusters)]
+        tot = rn.create_net(graphs, control_nodes,env_control_nodes, N,M)
+        net = rn.Network(tot,number_of_clusters)
+        
+        net.nodes[np.random.randint(N+M)] = 1
+        switch = 0
+        no_switch = 0
+        for i in range(1,steps):
+            rn.evolution(net,iterations=1,p=0.2)
+            rn.env(net,env_control_nodes,p=0.1)
+            act = rn.activity(net,N,M,2)
+            
+            if (act[0] > 0.8 and act[1] < 0.2) or (act[1] > 0.8 and act[0] < 0.2):
+                switch += 1
+            elif (act[0] < 0.2 and act[1]< 0.2) or (act[0]>0.8 and act[1]> 0.8):
+                no_switch +=1
+            
+        mean_switch.append(switch)
+        mean_no_switch.append(no_switch)
+ 
+plt.plot(mean_switch)
+plt.plot(mean_no_switch)

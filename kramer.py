@@ -22,13 +22,13 @@ frames = 100
 
 ##############################################################
 qx = []
-K = 1
+K = 2
 K1 = 2
-N = 20
+N = 10
 M = 10
-noise = 0.1
+noise = 0.2
 env_noise = 0.1
-realizations = 1000
+realizations = 2000
 env_control_nodes = []
 control_nodes = []
 number_of_clusters = 2
@@ -51,11 +51,11 @@ for i in range(realizations):
 ######################### INITIAL CONDITIONS ################################
 for i in range(realizations):
     #qx[i].nodes[np.random.randint(N+M)] = 1
-    for j in range(N):
+    for j in range(N,N+M):
         qx[i].nodes[j] = 1
 #############################################################################    
 act = np.zeros(realizations)
-t = np.zeros(N)
+t = np.zeros(realizations)
 rhox, binx = np.histogram(act,density = 1,bins=30)
 #rhop, binp = np.histogram(qx,density = 1,bins=50)
 
@@ -98,7 +98,7 @@ def init():
   ax[0,1].set_title("Distribution of positions")
 
   ax[1,0].set_xlim(-0.1, 10)
-  ax[1,0].set_ylim(-0.001, 0.04)
+  ax[1,0].set_ylim(-0.001, 0.2)
   ax[1,0].set_xlabel("time (log)")
   ax[1,0].set_ylabel("frequency")
   ax[1,0].set_title("Distribution of transition times")
@@ -112,6 +112,7 @@ def init():
   return particle,
 
 times = []
+times.append(0)
 def evo(frames):
     for i in range(realizations):
       prima = rn.activity(qx[i],N,M,number_of_clusters=2)
@@ -121,9 +122,9 @@ def evo(frames):
       dopo = rn.activity(qx[i],N,M,number_of_clusters=2)
       dopo[0] = -dopo[0]
       act[i] = dopo[0] + dopo[1]
-      # if  prima*dopo<0:
-      #     times.append(np.log(frames-t[i]))
-      #     t[i] = frames
+      if  frames>2 and (prima[0]+prima[1])*act[i]<0:
+        times.append(np.log(frames-t[i]))
+        t[i] = frames
           
     bins = np.arange(np.floor(act.min()),np.ceil(act.max()))
     
@@ -165,7 +166,7 @@ def evo(frames):
     #maxwellpdf = 2*np.sqrt(m/(2*np.pi*KT))*np.exp(-x**2*m/(2*KT))/50
 
     
-    #maxwelldist.set_data(hist[1][1:],hist[0]/50)
+    maxwelldist.set_data(hist[1][1:],hist[0]/50)
 
 #    maxwellfit.set_data(x, maxwellpdf)
    # entr.set_data(np.arange(0,len(entropy)),entropy)
@@ -176,7 +177,7 @@ def evo(frames):
     
    # shan.set_data(x,y)
     
-    return particle, trajectory, phasespace,# maxwelldist,  entr, shan
+    return particle, trajectory, phasespace, maxwelldist,  #entr, shan
 
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,10000), interval = 50,init_func = init, blit = True)

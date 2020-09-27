@@ -11,6 +11,22 @@
 \begin{document}
 \centering
 
+%%%%%%%%%%%% PER FARE I PLOT %%%%%%%%%%%%%%%%%%%
+\begin{tikzpicture}[scale=1]
+\centering
+\begin{axis}[xmin=0,xmax=500,xlabel=$t$,ylabel=\emph{Average activity} ,ymin=0,ymax=1]
+\addplot [thick, blue]
+file {meanactivity00.1.dat};
+\addplot [thick, red]
+file {meanactivity10.1.dat};
+
+\legend{\emph{original},\emph{without control node}}
+\end{axis}
+\end{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
+
 %PER FARE L'ISTOGRAMMA %%%%%%%%%%%%5
 \begin{tikzpicture}
 \begin{axis}
@@ -19,15 +35,3 @@
 \end{tikzpicture}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\end{document}
-
-%%%%%%%%%%%% PER FARE I PLOT %%%%%%%%%%%%%%%%%%%
-\begin{tikzpicture}[scale=1]
-\centering
-\begin{axis}[xmin=0,xmax=1,xlabel=$x$,ylabel=$\Theta(x)$ ,ymin=0,ymax=20]
-\addplot [thick, orange]
-file {times.dat};
-\end{axis}
-\end{tikzpicture}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

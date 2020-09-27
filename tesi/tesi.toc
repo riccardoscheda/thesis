@@ -31,4 +31,4 @@
 \contentsline {subsection}{\numberline {6.1.2}Control nodes}{51}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Noise}{52}{section.6.2}
 \contentsline {section}{\numberline {6.3}Double Cluster Network}{52}{section.6.3}
-\contentsline {chapter}{Bibliography}{56}{chapter*.7}
+\contentsline {chapter}{Bibliography}{57}{chapter*.7}

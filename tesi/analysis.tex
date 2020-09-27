@@ -2,7 +2,7 @@
 \lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
 
 In this Chapter we explain the starting implementation and analysis of the model following biological considerations.
-We will start with some numerical analysis of the model for a single cluster
+We will start with some numerical analysis of the model for a single cluster, and then we will analyse the evolution of an ensemble of networks made by two clusters, which hinibit each others.
 The theoretical model has been analyzed making computer simulations using Python, using the well known libraries for Data Science: \emph{Numpy, Pandas} and  \emph{NetworkX}, the most famous library for network analysis. The repository is available on \href{https://github.com/riccardoscheda/thesis}{GitHub}.
 
 \section{Single Cluster - Implementation}
@@ -12,7 +12,7 @@ For this work, we decided to create a class \emph{Random Network} to have a rand
 Every random network is a directed graph and is built to avoid self-loops, this means to create a random, boolean, and non-symmetric adjacency matrix with null trace.
 \begin{figure}
 \centering
-\includegraphics[scale=0.5]{images/network.png}
+\includegraphics[scale=1]{images/singlecluster}
 \caption{\emph{Example of a simple random network constructed by our Python code.}}
 \label{fig:ne}
 \end{figure}
@@ -87,6 +87,14 @@ In Figure \ref{fig:noise} we can see the behavior of the average activity of the
 \includegraphics[scale=1.5]{images/noise.pdf}
 \caption{\emph{Plot of the effect of the noise on the average activity on the network. In blue the noise works on the nodes on the network, while in red the noise works on the links. Number of nodes for each network: 10; Number of realizations for each value of noise: 100; }}
 \label{fig:noise}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.]{images/noise01.pdf}
+\includegraphics[scale=1.]{images/noise03.pdf}
+\caption{\emph{Plot of the effect of the noise on the average activity on the network with and without control nodes. }}
+\label{fig:noises}
 \end{figure}
 
 \section{Double Cluster Network}

@@ -20,25 +20,24 @@ import random_network as rn
 frames = 100
 #particles
 
-#time step
-dt = 0.1
-
 ##############################################################
 qx = []
-K = 2
-N = 8
-M = 30
-number_of_clusters = 2
-realizations = 200
+K = 1
+K1 = 2
+N = 20
+M = 10
+noise = 0.1
+env_noise = 0.1
+realizations = 1000
 env_control_nodes = []
 control_nodes = []
-
+number_of_clusters = 2
 for i in range(realizations):
     a = True
     while a:
         try:
             graphs = [rn.Random_Network(N, K)]
-            graphs.append(rn.Random_Network(M,K))
+            graphs.append(rn.Random_Network(M,K1))
             control_nodes.append([graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters) ])
             env_control_nodes.append([graphs[i].control_nodes[1]+i*N for i in range(number_of_clusters)])
             tot = rn.create_net(graphs, control_nodes[i],env_control_nodes[i], N,M)
@@ -117,8 +116,8 @@ def evo(frames):
     for i in range(realizations):
       prima = rn.activity(qx[i],N,M,number_of_clusters=2)
       prima[0] = - prima[0]
-      rn.evolution(qx[i],iterations=1,p=0.2)
-      rn.env(qx[i],env_control_nodes[i], p=0.1)
+      rn.evolution(qx[i],iterations=1,p=noise)
+      rn.env(qx[i],env_control_nodes[i], p=env_noise)
       dopo = rn.activity(qx[i],N,M,number_of_clusters=2)
       dopo[0] = -dopo[0]
       act[i] = dopo[0] + dopo[1]
@@ -147,7 +146,7 @@ def evo(frames):
    # maxwellpdf = np.sqrt(m/(2*np.pi*KT))*np.exp(-x**2*m/(2*KT))/50
     #trajectory.set_data(x, maxwellpdf)
     #particle.set_data(binp[1:], rhop/50)
-    phasespace.set_data(binx[1:],rhox/20)
+    phasespace.set_data(binx[1:],rhox/30)
 
     ####################################################
     #space = np.array(qx)

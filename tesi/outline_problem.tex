@@ -325,3 +325,20 @@ We introduce the stochasticity in the system assuming that the adjacency matrix 
 As the result of an experimental one could assume that each entry $A_{ij}$ is a dichotomous random variable with probability $p_{ij}$ to get the value $\pm 1$ (i.e. the
 link is active). The value $p_{ij}=0$ is admitted so that the corresponding link it always inactive. The problem is pointing out the existence of bifurcation phenomena so that it is possible to divide the ensemble in different communities with similar dynamical behaviors.
 In the next Chapter we will focus on the implemantation of this model in order to do some analytical considerations and to analyse the dynamical process of networks made by two clusters.
+
+\section{The model related to Kramer Theory}
+Given a network made by two hinibitory clusters, the system will undergo bistable phenomena. As explained in Chapter \ref{kramer}, a bistable system can be represented by a stochastic process in which the stationary probability distributrion satisfies the Fokker Plank equation
+\begin{equation}
+\frac{\partial \rho}{\partial t } = \frac{\partial}{\partial x} V'(x)\rho + T \frac{\partial ^2 }{\partial x^2} \rho
+\end{equation}
+
+where we assume that the temperature $T$ is much les of the potential barrier $V_b - V_a$ and we look for a solution that reduces to the form:
+$$
+e^{-\frac{V(x)}{T}}
+$$
+
+We expect that the potential of the system should depend on the size of the clusters (the number of nodes of the clusters $N$) and on the average number of links in the clusters $K$:
+$$
+V = V(N,K)
+$$
+To estimate the potential we can measure the transition rates of the activity of the two clusters, using an ensemble of these networks. The probability distribution $\rho(\nu)$ can be constructed with the hisogram of the activities of the ensemble of double-clusters networks. 

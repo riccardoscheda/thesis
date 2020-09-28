@@ -111,13 +111,6 @@ This means that in the limit of very small $D$, the deterministic stationary sta
 
 
 
-
-
-
-
-
-
-
 \section{Kramer Rate Theory}
 We consider the Smoluchowski equation:
 \begin{equation}
@@ -194,117 +187,6 @@ $$
 k_{a\to c} = \frac{J}{n_a} \simeq \frac{\omega_a \omega_b}{2 \pi} e^{\frac{V_b-V_a}{T}}
 $$
 
-\section{First passage time and transition rate escaping from a barrier}
-We first consider the generic diffusion problem 
-$$
-\frac{\partial \rho}{\partial t} (x,t) = \mathbb{L}_{FP} \rho(x,t)
-$$
-where $\mathbb{L}_{FP}$ is a generic Fokker-Planck operator and we assume that $x \in \Omega$ and $\partial \Omega$ is an absorbing boundary condition: $\rho(x,t) =0 $ for $x\in \partial \Omega$ $\forall t$. By definition the probability to be in $\Omega$ at time $t$ for an initial condition $\delta(x-a)$ is:
-$$
-P_{\Omega} = \int_{\Omega} \rho(x,t|a)dx 
-$$
-
-Let $t_a$ the first passage time at $\partial \Omega$ for a realiation starting from $a$ at $t=0$ and let $p(t|a)$ be the probability distribution, we have by definition 
-$$
-\int_t^{\infty} p(s|a)ds = P_\Omega(t|a)
-$$
-since $\partial \Omega$ is an absorbing boundary condition. Then
-$$
-p(t|a) = \int_{\Omega} \frac{\partial}{\partial t} \rho (x,t|a)dx = \int_{\Omega} \mathbb{L}_{FP} \rho(x,t|a)dx
-$$
-To get an equation for the average first passage time $\tau(a)$
-$$
-\tau(a) = \int_{0}^{\infty} t p(t|a) dt = \int_{\Omega}\int_{0}^{\infty} t \frac{\partial}{\partial t} \rho(x,t|a)dt dx = - \int_{0}^{\infty} \int_\Omega \rho(x,t|a)dx dt
-$$
-
-we use the adjoint operator $\mathbb{L}_{FP}^{\dagger}$ and taking into account the boundary conditions 
-$$
-\mathbb{L}_{FP}^{\dagger} \tau(a) = -\int_{0}^{\infty}\int_{\Omega} \mathbb{L}_{FP}^{\dagger} \rho(x,t|a)dx dt
-$$
-Remark: $\mathbb{L}_{FP}^{\dagger}$ acts on the initial state $a$. From the Kolmogorov relation for Markov processes we get 
-$$
-\frac{\partial}{\partial s} \int_{\Omega} dt \rho(x,t|x_0,s)\rho(x_0,s|a,0)dx_0 = 0
-$$
-
-so that 
-\begin{equation}
-\begin{split}
-& \int_{\Omega} dx_0 \rho(x_0,s|a,0)\frac{\partial}{\partial s} \rho(x,t|x_0,s) + 
-\rho(x,t|x_0,s) \frac{\partial}{\partial s} \rho(x_0,s|a,0)
-  = \\ 
-& \int_{\Omega} dx_0 \rho(x_0,s|a,0)  \frac{\partial}{\partial s} \rho(x,t|x_0,s) + 
- \rho(x,t|x_0,s) \mathbb{L}_{FP} \rho(x_0,s|a,0)
-\end{split}
-\end{equation}
-Then:
-$$
-\int_{\Omega} dx_0 \biggl[ \frac{\partial}{\partial s} \rho(x,t|x_0,s) + \mathbb{L}_{FP}^{\dagger} \rho (x,t|x_0,s) \biggr] \rho(x_0,s|a,0) 
-$$
-and since we consider a stationary process 
-$$
-\frac{\partial}{\partial s} \rho(x,t|x_0,s) = \frac{\partial}{\partial s} \rho (x,t -s|x_0,0) = - \frac{\partial}{\partial t} \rho(x,t-s|x_0,0)
-$$
-Letting $s \to 0$, one gets the adjoint equation
-$$
-\frac{\partial}{\partial t } \rho(x,t|a,0) = - \mathbb{L}_{FP}^{\dagger} \rho(x,t|a,0)
-$$
-
-Accoring to the previous result, the average first passage time reads
-$$
-\mathbb{L}_{FP}^{\dagger} \tau(a) = - \int_{0}^{\infty} \int_{\Omega} \mathbb{L}_{FP}^{\dagger} \rho(x,t|a)dx dt = \int_{\Omega}\int_{0}^{\infty} \frac{\partial}{\partial t} \rho(x,t|a,0)dt dx = - \int _{\Omega} \delta (x-a ) dx = -1
-$$
- since $\lim_{t \to \infty} \rho(x,t|a) = 0 $ due to the presence of the absorbing boundary condition.
-In an explicit form we have the equation 
-
-\begin{equation}
-\mathbb{L}_{FP}^{\dagger} \tau(a) = -1
-\end{equation}
-
-We remark that the computation of the average first passage time requires the knowloedge of the evolution at all times, however this result can be related to the escape probability rate. Let us apply the first passage time to the computation of the Kramer probability escape from a potential well.
-We start from the Fokker-Planck equation 
-$$
-\frac{\partial}{\partial x} \frac{\partial V}{\partial x} \rho + D \frac{\partial ^2 \
-\rho }{\partial x^2} = \frac{\partial 
-\rho }{ \partial t}
-$$
-where the potential $V(x)$ has a minimum at $x = x_0$ and a saddle point at $x = x_1$.
-The average firste time $\tau(x)$ is written:
-$$
--\frac{\partial V}{\partial x}\frac{\partial \tau}{\partial x} + D \frac{\partial ^2 \tau}{\partial x^2} = -1
-$$
-and we get 
-$$
-\frac{\partial}{\partial x} \exp \biggl(-\frac{V(x)}{D}\biggr) \frac{\partial \tau}{\partial x} = - \frac{1}{D} \exp \biggl( - \frac{v(x)}{D}\biggr)
-$$
-
-The previous equation can be integrated
-$$
-\frac{d\tau}{dx} = - \frac{1}{D} \exp \biggl(\frac{V(x)}{D}\biggr) \int_{-\infty}^x dz \exp \biggl(-\frac{V(z)}{D}\biggr)
-$$
-where we assume $\lim_{x\to - \infty} V(x) = \infty$. The final result is 
-\begin{equation}
-\tau(x) = \frac{1}{D} \int_x^{x_a} \exp \biggl(\frac{V(y)}{D}\biggr) \int _{-\infty}^y \exp\biggl(-\frac{V(z)}{D}\biggr) dzdy
-\end{equation}
-
-Then the Kramer's estimate follows by approximating the integral at the critical points of the potential ($x_a$ is not se near the local maximum $x_1$) so that the result is independent from $x$. The transition rate is defined:
-$$
-k_c = \frac{1}{\tau}
-$$
-
-The fact that $k_c$ does not depend on $x$ is due to the fast relaxation scale time inside the potential well with respect to the escape time scale from the potential well and to the quasi-stationary distribution that concentrates the particles near the local minimal point where the effect of the potential can be approximated by a parabolic potential: then we estimate $\tau \simeq \tau(x)$ where $x \simeq x_0$.
-In a analogous way one considers the stationary solution in presence of a local source at $x_s \le x_0 $ and the absorbing barrier at $x_1 \le x_a$. The stationary solution obeys to the differential equation 
-$$
-\frac{\partial}{\partial x}\frac{\partial V}{\partial x} \rho(x) + D \frac{\partial^2 \rho}{\partial x^2} = -J \delta(x-x_s)
-$$ 
-that can be integrated 
-$$
-\rho(x) = \frac{J}{d} \exp \biggl(\frac{-V(x)}{D}\biggr)\int_x^{x_a} \exp \biggl(\frac{V(y)}{D}\biggr) \Theta(y-x_s) dy
-$$
-
-The parameter $J$ defines the current at the absorbing barrier and the transition rate can be computed as the ratio between $J$ and the number of particles in the potential well, $k_x = J/N$ where:
-\begin{equation}
-N = \frac{J}{D} \int_{-\infty}^{x_1} \exp \biggl(\frac{-V(x)}{D} \biggr) \int_x^{x_a} \exp \biggl(\frac{V(y)}{D} \biggr) \Theta (y-x_s) dydx
-\label{eq:kr}
-\end{equation}
-and the Kramer's estimate follows by approximating the integral ~\ref{eq:kr}. Assuming that $V(x)$ has a local minimum $A$ and a local maximum $B$ $x_s < x_a <x_b $. 
-
+The fact that $k_c$ does not depend on $x$ is due to the fast relaxation scale time inside the potential well with respect to the escape time scale from the potential well and to the quasi-stationary distribution that concentrates the particles near the local minimal point where the effect of the potential can be approximated by a parabolic potential.
+In this systems the transition probability $k_c$ can be used to estimate the potential.
+In Chapter \ref{analysis} we try to estimate $k_c$ for Boolean Networks.

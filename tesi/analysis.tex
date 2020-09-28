@@ -84,24 +84,26 @@ To add noise to the system, during the discrete evolution of the network, at eac
 In Figure \ref{fig:noise} we can see the behavior of the average activity of the network depending on the amount of noise added. The plot is similar to a sigmoidal functions in both of the cases. In the case of noise added to the links the average activity results to be bigger than the case of noise added to the nodes. This is reasonable in the sense that since the number of links is less than the number of nodes so the effect of the noise among the links is less.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1.5]{images/noise.pdf}
+\includegraphics[scale=1.]{images/noise.pdf}
 \caption{\emph{Plot of the effect of the noise on the average activity on the network. In blue the noise works on the nodes on the network, while in red the noise works on the links. Number of nodes for each network: 10; Number of realizations for each value of noise: 100; }}
 \label{fig:noise}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1.]{images/noise01.pdf}
-\includegraphics[scale=1.]{images/noise03.pdf}
-\caption{\emph{Plot of the effect of the noise on the average activity on the network with and without control nodes. }}
+\includegraphics[scale=0.8]{images/noise01.pdf}
+\includegraphics[scale=0.8]{images/noise03.pdf}
+\caption{\emph{Plot of the effect of the noise on the average activity on the network with and without control nodes. In the first plot(top) the noise is set to $0.1$. In the last plot (bottom) the noise is set to $0.3$. We can see that in both cases, the average activity of the network decreases exponentially if we set to zero all the links of the control nodes: The average activity depends on the activity of the control node}}
 \label{fig:noises}
 \end{figure}
+In \ref{fig:noises} we can see the evolution of single-cluster networks subjected to noise. The noise on the network is much more effective on the activity if we set to zero the links belonging to the contro nodes.
 
+\newpage
 \section{Double Cluster Network}
 Now we are ready to analyse the dynamics of a network composed by two different clusters. As explained in Chapter \ref{model}, two clusters will be connected by negative links with value $-1$, so we will have two clusters which hinibit the activity of the opposite cluster.
 The construction of this double-cluster network is made simply by the construction of two different random networks which have each control node which connected negatively to the control node of the other cluster. In Figure \ref{fig:doublecluster} we can see an example of this type of networks.
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=1.4]{images/doublecluster.pdf}
 \caption{\emph{Example of double-cluster random network. Control nodes of the two clusters are connected negatively (red).}}
@@ -111,3 +113,7 @@ The construction of this double-cluster network is made simply by the constructi
 From double-cluster networks, what we want to find is a dynamics similar to Kramer's theory explained in Chapter \ref{kramer}. We expect to see that the activity of one cluster hinibits the activity of the other and viceversa: Adding noise to the system there will be a bistable dynamics.
 The number of nodes, and the number of links of the cluster are the parameters which determine the robustness of the network. If the number of nodes of one cluster is much higher than the number of nodes of the second cluster, it will be difficult for the second cluster to hinibit the first one.
 In this sense, we will have that the first cluster will remain stable even if it's disturbed by noise and by the other cluster.
+In this system we add an other type of noise, what we called \emph{envinromental noise}.
+envinromental noise represent the probability for a node to be turned "on" at a certain $t$. In this way, during the evolution of the system a cluster which is completely off can be actived by the envinromental noise.
+The nodes subjected by envinromental noise are the second control nodes of the clusters, i.e., the second node of the cluster which belongs to the maximum number of loops.
+

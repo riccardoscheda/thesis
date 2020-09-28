@@ -26,7 +26,7 @@ Let's consider a network of $N$ nodes. The state of each node at a time $t$ is g
 The $N$ nodes of the network can therefore together assume $2^N$ different states.
 The number of incoming links to each node $i$ is denoted by $k_i$ and is drawn
 randomly independently from the distribution $P(k_i)$.
-The dynamical state of each $\sigma_i(t)$ is updated synchronously by a Boolean function $\Lambda_i$:
+The dynamical state of each $\sigma_i(t)$ is updated synchronously by a Boolean function $\Lambda_i$ \cite{K17}:
 $$
 \Lambda_i:\{0,1\}^{k_i} \to \{0,1\}
 $$ 
@@ -208,7 +208,7 @@ The phase transitions can be statistically or analytically
 obtained. Derrida and Pomeau were the first to determine
 analytically that the critical phase (edge of chaos) was found
 when $K = 2$ \cite{K8}\cite{K17}\cite{K21}.
-following the model of Kauffman, RBN which most represent biological GRNs are those wich has $K=2$ \cite{K6}, because in the frozen phase (where $K=1$) networks are too simple to represent real regulatory networks; while in the caothic phase (where $K=3$) the time scales of the networks cycles grow exponentially, which is not biologically pheasible.
+following the model of Kauffman, RBN which most represent biological GRNs are those wich has $K=2$ \cite{K6}, because in the frozen phase (where $K=1$) networks are too simple to represent real regulatory networks; while in the caothic phase (where $K=3$) the time scales of the networks cycles grow exponentially, which is not biologically pheasible\cite{K15}.
 In Chapter \ref{analysis} we will see the differences in $K=1$ networks and $K=2$ networks.
 
 \section{Attractor jumps}

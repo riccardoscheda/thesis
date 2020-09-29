@@ -17,7 +17,7 @@ import random_network as rn
 
 
 #iterations
-frames = 100000
+frames = 1000
 #particles
 
 ##############################################################
@@ -25,10 +25,10 @@ qx = []
 K = 2
 K1 = 2
 N = 10
-M = 20
+M = 30
 noise = 0.2
 env_noise = 0.1
-realizations = 800
+realizations = 500
 env_control_nodes = []
 control_nodes = []
 number_of_clusters = 2
@@ -56,7 +56,7 @@ for i in range(realizations):
 #############################################################################    
 act = np.zeros(realizations)
 t = np.zeros(realizations)
-rhox, binx = np.histogram(act,density = 1,bins=30)
+rhox, binx = np.histogram(act,density = 1,bins=20)
 #rhop, binp = np.histogram(qx,density = 1,bins=50)
 
 ########################################################
@@ -122,17 +122,17 @@ def evo(frames):
       dopo = rn.activity(qx[i],N,M,number_of_clusters=2)
       dopo[0] = -dopo[0]
       act[i] = dopo[0] + dopo[1]
-      if  frames>2 and (prima[0]+prima[1])*act[i]<0:
-          times.append(np.log(frames-t[i]))
-          t[i] = frames
+      # if  frames>2 and (prima[0]+prima[1])*act[i]<0:
+      #     times.append(np.log(frames-t[i]))
+      #     t[i] = frames
           
     bins = np.arange(np.floor(act.min()),np.ceil(act.max()))
     
 
-    rhox, binx = np.histogram(act,density = 1, bins = 25)
+    rhox, binx = np.histogram(act,density = 1, bins = 20)
 
 
-    hist = np.histogram(times,density = 1, bins=25)
+    #hist = np.histogram(times,density = 1, bins=20)
 
 
 
@@ -143,11 +143,11 @@ def evo(frames):
     #rhop += 1e-35
     #entropy.append(-np.sum(rhox*rhop*np.log(rhox*rhop)*np.diff(binx)*np.diff(binp)))
 
-    x = np.linspace(-10, 10, num = 1000)
+    #x = np.linspace(-10, 10, num = 1000)
    # maxwellpdf = np.sqrt(m/(2*np.pi*KT))*np.exp(-x**2*m/(2*KT))/50
     #trajectory.set_data(x, maxwellpdf)
     #particle.set_data(binp[1:], rhop/50)
-    phasespace.set_data(binx[1:],rhox/25)
+    phasespace.set_data(binx[1:],rhox/20)
 
     ####################################################
     #space = np.array(qx)
@@ -166,7 +166,7 @@ def evo(frames):
     #maxwellpdf = 2*np.sqrt(m/(2*np.pi*KT))*np.exp(-x**2*m/(2*KT))/50
 
     
-    maxwelldist.set_data(hist[1][1:],hist[0]/25)
+    #maxwelldist.set_data(hist[1][1:],hist[0]/25)
 
 #    maxwellfit.set_data(x, maxwellpdf)
    # entr.set_data(np.arange(0,len(entropy)),entropy)
@@ -177,7 +177,7 @@ def evo(frames):
     
    # shan.set_data(x,y)
     
-    return phasespace, maxwelldist,  #entr, shan
+    return phasespace, #maxwelldist,  #entr, shan
 
 
 ani = FuncAnimation(fig, evo, frames = np.arange(0,1000), interval = 50,init_func = init, blit = False)

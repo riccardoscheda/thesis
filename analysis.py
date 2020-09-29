@@ -923,10 +923,10 @@ import pylab as plt
 import networkx as nx
 N = 20
 K = 2
-number_of_clusters = 3
+number_of_clusters = 2
 time = 200
 graphs = [rn.Random_Network(N, K) for i in range(number_of_clusters)]
-control_nodes = [graphs[i].control_node for i in range(number_of_clusters) ]
+control_nodes = [graphs[i].control_nodes[0] for i in range(number_of_clusters) ]
 tot = rn.create_clusters(graphs, control_nodes, N,number_of_clusters=number_of_clusters)
 Net = rn.Network(tot,number_of_clusters)
 ######### INITIAL CONDITIONS ################
@@ -1477,3 +1477,50 @@ for i in range(realizations):
  
 plt.plot(mean_switch)
 plt.plot(mean_no_switch)
+#%% ##################### TEMPORAL EVOLUTION ##################
+import random_network as rn
+import networkx as nx
+import numpy as np
+import pylab as plt
+from functools import reduce
+import pandas as pd
+
+steps = 500
+N = 20
+M = 40 
+K = 2
+realizations = 100
+number_of_clusters = 2
+
+mean_switch = []
+mean_no_switch = []
+
+graphs = [rn.Random_Network(N, K)]
+graphs.append(rn.Random_Network(M,K))
+control_nodes = [graphs[i].control_nodes[0]+i*N for i in range(number_of_clusters) ]
+env_control_nodes = [graphs[i].control_nodes[1]+i*N for i in range(number_of_clusters)]
+tot = rn.create_net(graphs, control_nodes,env_control_nodes, N,M)
+Net = rn.Network(tot,number_of_clusters)
+
+Net.nodes[np.random.randint(N)] = 1
+    
+activity = []
+for i in range(1,steps):
+    rn.evolution(Net,iterations=1,p=0.2)
+    rn.env(Net,env_control_nodes,p=0.1)    
+    act = rn.activity(Net,N,M,number_of_clusters=number_of_clusters)
+    activity.append(act)
+
+plt.plot(activity)
+plt.ylim(0,2)
+
+a = [i for i in range(steps)]
+df = pd.DataFrame()
+df[0] = a
+df[1] = pd.DataFrame([activity[i][0] for i in range(steps-1)])
+#df.to_csv("tesi/data/temps.dat",sep = " ",decimal=".",index=False,header=False)
+df = pd.DataFrame()
+df[0] = a
+df[1] = pd.DataFrame([activity[i][1] for i in range(steps-1)])
+#df.to_csv("tesi/data/temps2.dat",sep = " ",decimal=".",index=False,header=False)
+

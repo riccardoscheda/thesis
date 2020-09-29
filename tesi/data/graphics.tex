@@ -14,13 +14,13 @@
 %%%%%%%%%%%% PER FARE I PLOT %%%%%%%%%%%%%%%%%%%
 \begin{tikzpicture}[scale=1]
 \centering
-\begin{axis}[xmin=0,xmax=500,xlabel=$t$,ylabel=\emph{Average activity} ,ymin=0,ymax=1]
+\begin{axis}[xmin=0,xmax=480,xlabel=$t$,ylabel=\emph{Average activity} ,ymin=0,ymax=2]
 \addplot [thick, blue]
-file {meanactivity00.1.dat};
-\addplot [thick, red]
-file {meanactivity10.1.dat};
+file {temps.dat};
+\addplot [thick, orange]
+file {temps2.dat};
 
-\legend{\emph{original},\emph{without control node}}
+\legend{cluster 1,cluster 2}
 \end{axis}
 \end{tikzpicture}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

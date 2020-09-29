@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  27 SEP 2020 23:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  29 SEP 2020 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -715,8 +715,8 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-PGFPlots: reading {meanactivity00.1.dat}
-PGFPlots: reading {meanactivity10.1.dat}
+PGFPlots: reading {temps.dat}
+PGFPlots: reading {temps2.dat}
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -725,10 +725,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./graphics.aux) ) 
 Here is how much of TeX's memory you used:
- 24058 strings out of 494839
- 617207 string characters out of 6178684
- 947115 words of memory out of 5000000
- 26935 multiletter control sequences out of 15000+600000
+ 24054 strings out of 494839
+ 617082 string characters out of 6178684
+ 884674 words of memory out of 5000000
+ 26931 multiletter control sequences out of 15000+600000
  3986 words of font info for 15 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  62i,18n,100p,721b,2043s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -736,7 +736,7 @@ Here is how much of TeX's memory you used:
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on graphics.pdf (1 page, 38138 bytes).
+Output written on graphics.pdf (1 page, 35756 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream

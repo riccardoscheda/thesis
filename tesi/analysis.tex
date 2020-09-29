@@ -116,4 +116,32 @@ In this sense, we will have that the first cluster will remain stable even if it
 In this system we add an other type of noise, what we called \emph{envinromental noise}.
 envinromental noise represent the probability for a node to be turned "on" at a certain $t$. In this way, during the evolution of the system a cluster which is completely off can be actived by the envinromental noise.
 The nodes subjected by envinromental noise are the second control nodes of the clusters, i.e., the second node of the cluster which belongs to the maximum number of loops.
+\section{Discrete evolution}
+The discrete time evolution of the system for a double-cluster network is the same of the single-cluster network evlution, with the difference that the two clusters hinibit each other through the negative links of the control nodes.
+So the system dynamics follows equation ~\eqref{evolnet}, but we recall equation ~\eqref{metastoc} in which we consider the average activity of the network $\nu_k(t)$ given by the equation for the metadynamics:
+$$
+\nu_k(t+\Delta t)-\nu_k(t)=\phi(\nu_k(t))-\gamma\left (H_{kj}\nu_j(t)\right )
+$$
+
+In figure \ref{fig:metad} we can see an example of the metadynamics of the system of a double-cluster network. We can see the transition of the activity from one cluster to the other during the time evolution.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.4]{images/metad.pdf}
+\caption{\emph{Example of evolution of the activity of a double-cluster network. We can see the transition of the activity due to noise and envinromental noise.}}
+\label{fig:metad}
+\end{figure}
+
+
+\section{Transition Rates}
+To estimate the form of the potential, we can measure the transition rates of the system, in which during the evolution of the system the network activity can move from a cluster to the other.
+We made a MonteCarlo simulation of 1000 double-cluster networks. Each network undergo a discrete evolution subject to noise and envinromental noise.
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.4]{images/doublecluster.pdf}
+\caption{\emph{Histogram of transition rates of activity from a cluster to one other. We can see the shape of the histogram which can estimate the form of the potential.}}
+\label{fig:times}
+\end{figure}
 

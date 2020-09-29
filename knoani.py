@@ -8,7 +8,7 @@ import random_network as rn
 from scipy.stats import expon
 from scipy.optimize import curve_fit
 
-frames = 2000
+frames = 1000
 qx = []
 K = 2
 K1 = 2
@@ -16,7 +16,7 @@ N = 10
 M = 20
 noise = 0.2
 env_noise = 0.1
-realizations = 500
+realizations = 1000
 env_control_nodes = []
 control_nodes = []
 number_of_clusters = 2
@@ -92,5 +92,12 @@ ax[0].set_xlim(-2,2)
 ax[0].set_ylim(0,0.2)
 
 plt.savefig("noise"+str(noise)+"N="+str(N)+"M="+str(M)+"K="+str(K)+"K1="+str(K1)+".png")
+
+
+df = pd.DataFrame()
+df[0] = bin1[1:]
+df[1] = data/sum(data)
+df.to_csv("tesi/data/histotimes.dat",sep = " ",decimal=".",index=False,header=False)
+
 
 

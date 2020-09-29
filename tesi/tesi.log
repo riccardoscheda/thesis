@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  29 SEP 2020 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  29 SEP 2020 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -961,17 +961,25 @@ s
 (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count142
+\float@exts=\toks39
+\float@box=\box41
+\@float@everytoks=\toks40
+\@floatcapt=\box42
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks39
-\thm@bodyfont=\toks40
-\thm@headfont=\toks41
-\thm@notefont=\toks42
-\thm@headpunct=\toks43
+\thm@style=\toks41
+\thm@bodyfont=\toks42
+\thm@headfont=\toks43
+\thm@notefont=\toks44
+\thm@headpunct=\toks45
 \thm@preskip=\skip59
 \thm@postskip=\skip60
 \thm@headsep=\skip61
-\dth@everypar=\toks44
+\dth@everypar=\toks46
 )
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/palatino.sty
 Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR) 
@@ -986,10 +994,10 @@ Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS)
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-\c@teo=\count142
-\c@defin=\count143
-\c@ese=\count144
-\c@oss=\count145
+\c@teo=\count143
+\c@defin=\count144
+\c@ese=\count145
+\c@oss=\count146
  (./tesi.aux
 
 LaTeX Warning: Label `fig:kr' multiply defined.
@@ -1032,7 +1040,7 @@ italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
 italian.ldf    on input line 71.
 
-\AtBeginShipoutBox=\box41
+\AtBeginShipoutBox=\box43
 Package hyperref Info: Link coloring OFF on input line 71.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1040,7 +1048,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count146
+\c@section@level=\count147
 )
 LaTeX Info: Redefining \ref on input line 71.
 LaTeX Info: Redefining \pageref on input line 71.
@@ -1053,17 +1061,17 @@ LaTeX Info: Redefining \nameref on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count147
+\scratchcounter=\count148
 \scratchdimen=\dimen170
-\scratchbox=\box42
-\nofMPsegments=\count148
-\nofMParguments=\count149
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count150
+\scratchbox=\box44
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count151
 \MPscratchDim=\dimen171
-\MPnumerator=\count151
-\makeMPintoPDFobject=\count152
-\everyMPtoPDFconversion=\toks46
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks48
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1212,7 +1220,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
-<images/cells.pdf, id=332, 170.7168pt x 170.7168pt>
+<images/cells.pdf, id=334, 170.7168pt x 170.7168pt>
 File: images/cells.pdf Graphic file (type pdf)
 <use images/cells.pdf>
 Package pdftex.def Info: images/cells.pdf  used on input line 13.
@@ -1232,7 +1240,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./images/cells.pdf>]
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.49 
+      <./images/cells.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1248,7 +1262,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 Chapter 2.
-<images/grnn.pdf, id=353, 896.70708pt x 882.88849pt>
+<images/grnn.pdf, id=355, 896.70708pt x 882.88849pt>
 File: images/grnn.pdf Graphic file (type pdf)
 <use images/grnn.pdf>
 Package pdftex.def Info: images/grnn.pdf  used on input line 10.
@@ -1268,7 +1282,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15 <./images/grnn.pdf>]
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.17 
+      <./images/grnn.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1294,7 +1314,7 @@ Chapter 3.
 [19
 
 ]
-<figurenetworks.pdf, id=415, 264.03444pt x 145.55981pt>
+<figurenetworks.pdf, id=417, 264.03444pt x 145.55981pt>
 File: figurenetworks.pdf Graphic file (type pdf)
 <use figurenetworks.pdf>
 Package pdftex.def Info: figurenetworks.pdf  used on input line 65.
@@ -1316,13 +1336,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21 <./figurenetworks.pdf>]
-<figurenetworks2.pdf, id=440, 171.69144pt x 114.78584pt>
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.112 
+       <./figurenetworks.pdf>]
+<figurenetworks2.pdf, id=442, 171.69144pt x 114.78584pt>
 File: figurenetworks2.pdf Graphic file (type pdf)
 <use figurenetworks2.pdf>
 Package pdftex.def Info: figurenetworks2.pdf  used on input line 120.
 (pdftex.def)             Requested size: 240.36636pt x 160.69907pt.
-<fg3.pdf, id=442, 170.7168pt x 170.7168pt>
+<fg3.pdf, id=444, 170.7168pt x 170.7168pt>
 File: fg3.pdf Graphic file (type pdf)
 <use fg3.pdf>
 Package pdftex.def Info: fg3.pdf  used on input line 144.
@@ -1334,8 +1360,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22 <./figurenetworks2.pdf>]
-<images/phase-transition.pdf, id=458, 242.58228pt x 196.67076pt>
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.151 
+       <./figurenetworks2.pdf>]
+<images/phase-transition.pdf, id=460, 242.58228pt x 196.67076pt>
 File: images/phase-transition.pdf Graphic file (type pdf)
 <use images/phase-transition.pdf>
 Package pdftex.def Info: images/phase-transition.pdf  used on input line 192.
@@ -1347,7 +1379,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23 <./fg3.pdf>]
+[23pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.198 
+       <./fg3.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1364,8 +1402,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <./images/phase-transition.pdf>]
-<fg4.pdf, id=505, 170.7168pt x 170.7168pt>
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.225 $$
+         <./images/phase-transition.pdf>]
+<fg4.pdf, id=507, 170.7168pt x 170.7168pt>
 File: fg4.pdf Graphic file (type pdf)
 <use fg4.pdf>
 Package pdftex.def Info: fg4.pdf  used on input line 233.
@@ -1377,12 +1421,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26 <./fg4.pdf>]
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.2 \chapter
+            {Kramer Rate Theory}\label{kramer} <./fg4.pdf>]
 Chapter 4.
 [27
 
 ]
-<images/kramerwell.pdf, id=531, 244.1652pt x 194.72649pt>
+<images/kramerwell.pdf, id=533, 244.1652pt x 194.72649pt>
 File: images/kramerwell.pdf Graphic file (type pdf)
 <use images/kramerwell.pdf>
 Package pdftex.def Info: images/kramerwell.pdf  used on input line 41.
@@ -1391,7 +1441,7 @@ Package pdftex.def Info: images/kramerwell.pdf  used on input line 41.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kramerpot.pdf, id=533, 207.69896pt x 191.50446pt>
+<images/kramerpot.pdf, id=535, 207.69896pt x 191.50446pt>
 File: images/kramerpot.pdf Graphic file (type pdf)
 <use images/kramerpot.pdf>
 Package pdftex.def Info: images/kramerpot.pdf  used on input line 54.
@@ -1436,14 +1486,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <./images/kramerwell.pdf>]
+[29pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.87 \end{equation}
+                    <./images/kramerwell.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <./images/kramerpot.pdf>]
+[30pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.104 $$
+         <./images/kramerpot.pdf>]
 File: images/kramerwell.pdf Graphic file (type pdf)
 <use images/kramerwell.pdf>
 Package pdftex.def Info: images/kramerwell.pdf  used on input line 122.
@@ -1455,7 +1517,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31]
+[31pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.131 \end{equation}
+                    ]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1501,7 +1569,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]
+[38pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.157 $$
+        ]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1509,10 +1583,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [39]
-<images/theta.pdf, id=620, 244.1652pt x 194.72649pt>
+<images/theta.pdf, id=622, 244.1652pt x 194.72649pt>
 File: images/theta.pdf Graphic file (type pdf)
 <use images/theta.pdf>
-Package pdftex.def Info: images/theta.pdf  used on input line 201.
+Package pdftex.def Info: images/theta.pdf  used on input line 200.
 (pdftex.def)             Requested size: 317.41472pt x 253.14441pt.
 
 
@@ -1521,14 +1595,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40 <./images/theta.pdf>]
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.217 \par
+          \noindent <./images/theta.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41]
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.256 ...external forcing breaks the symmetry.\par
+                                                  \noindent]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1547,7 +1633,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.318 $$
+l.317 $$
         ]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1564,7 +1650,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [45]
 Chapter 6.
-<images/singlecluster.pdf, id=669, 170.7168pt x 170.7168pt>
+<images/singlecluster.pdf, id=671, 170.7168pt x 170.7168pt>
 File: images/singlecluster.pdf Graphic file (type pdf)
 <use images/singlecluster.pdf>
 Package pdftex.def Info: images/singlecluster.pdf  used on input line 15.
@@ -1572,12 +1658,12 @@ Package pdftex.def Info: images/singlecluster.pdf  used on input line 15.
 [46
 
 ]
-<images/K.pdf, id=677, 172.23747pt x 139.51622pt>
+<images/K.pdf, id=679, 172.23747pt x 139.51622pt>
 File: images/K.pdf Graphic file (type pdf)
 <use images/K.pdf>
 Package pdftex.def Info: images/K.pdf  used on input line 49.
 (pdftex.def)             Requested size: 258.35555pt x 209.2738pt.
-<images/outgoing.pdf, id=679, 172.27663pt x 139.51523pt>
+<images/outgoing.pdf, id=681, 172.27663pt x 139.51523pt>
 File: images/outgoing.pdf Graphic file (type pdf)
 <use images/outgoing.pdf>
 Package pdftex.def Info: images/outgoing.pdf  used on input line 58.
@@ -1589,14 +1675,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47 <./images/singlecluster.pdf>]
+[47pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.62 
+      <./images/singlecluster.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: Citation `K38' on page 48 undefined on input line 67.
 
-<images/loops.pdf, id=690, 172.27663pt x 139.51323pt>
+<images/loops.pdf, id=692, 172.27663pt x 139.51323pt>
 File: images/loops.pdf Graphic file (type pdf)
 <use images/loops.pdf>
 Package pdftex.def Info: images/loops.pdf  used on input line 71.
@@ -1607,37 +1699,87 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48 <./images/K.pdf>]
+[48pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.75 
+      <./images/K.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/noise.pdf, id=714, 170.48694pt x 133.62823pt>
+<images/controlnodes.pdf, id=715, 246.10846pt x 199.30861pt>
+File: images/controlnodes.pdf Graphic file (type pdf)
+<use images/controlnodes.pdf>
+Package pdftex.def Info: images/controlnodes.pdf  used on input line 79.
+(pdftex.def)             Requested size: 369.16177pt x 298.96216pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/noise.pdf, id=717, 170.48694pt x 133.62823pt>
 File: images/noise.pdf Graphic file (type pdf)
 <use images/noise.pdf>
-Package pdftex.def Info: images/noise.pdf  used on input line 87.
-(pdftex.def)             Requested size: 170.48651pt x 133.6279pt.
+Package pdftex.def Info: images/noise.pdf  used on input line 92.
+(pdftex.def)             Requested size: 238.68007pt x 187.07823pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49 <./images/outgoing.pdf>]
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3
+}) has been already used, duplicate ignored
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.95 \end{figure}
+                  <./images/outgoing.pdf>]
 
-<images/noise01.pdf, id=726, 248.55461pt x 196.5714pt>
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50pdfTeX warning (ext4): destination with the same identifier (name{figure.6.4
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.96 
+      <./images/loops.pdf>]
+Overfull \vbox (12.13632pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51pdfTeX warning (ext4): destination with the same identifier (name{figure.6.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.96 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.6
+.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.96 
+      <./images/controlnodes.pdf> <./images/noise.pdf>]
+<images/noise01.pdf, id=765, 248.55461pt x 196.57039pt>
 File: images/noise01.pdf Graphic file (type pdf)
 <use images/noise01.pdf>
-Package pdftex.def Info: images/noise01.pdf  used on input line 94.
-(pdftex.def)             Requested size: 198.84395pt x 157.25732pt.
-<images/noise03.pdf, id=727, 248.55461pt x 196.5714pt>
+Package pdftex.def Info: images/noise01.pdf  used on input line 101.
+(pdftex.def)             Requested size: 323.12096pt x 255.54146pt.
+<images/noise03.pdf, id=766, 248.55461pt x 196.57039pt>
 File: images/noise03.pdf Graphic file (type pdf)
 <use images/noise03.pdf>
-Package pdftex.def Info: images/noise03.pdf  used on input line 95.
-(pdftex.def)             Requested size: 198.84395pt x 157.25732pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package pdftex.def Info: images/noise03.pdf  used on input line 102.
+(pdftex.def)             Requested size: 323.12096pt x 255.54146pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1645,31 +1787,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50 <./images/loops.pdf>]
-<images/doublecluster.pdf, id=742, 170.7168pt x 170.7168pt>
+[52]
+Overfull \vbox (27.64496pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[53pdfTeX warning (ext4): destination with the same identifier (name{figure.6.7
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.106 
+       <./images/noise01.pdf> <./images/noise03.pdf>]
+<images/doublecluster.pdf, id=798, 170.7168pt x 170.7168pt>
 File: images/doublecluster.pdf Graphic file (type pdf)
 <use images/doublecluster.pdf>
-Package pdftex.def Info: images/doublecluster.pdf  used on input line 108.
+Package pdftex.def Info: images/doublecluster.pdf  used on input line 114.
 (pdftex.def)             Requested size: 239.00186pt x 239.00186pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51 <./images/noise.pdf>]
-<images/metad.pdf, id=761, 237.92188pt x 196.5714pt>
+[54pdfTeX warning (ext4): destination with the same identifier (name{figure.6.8
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.125 \section
+              {Discrete evolution} <./images/doublecluster.pdf>]
+<images/metad.pdf, id=809, 237.92188pt x 196.5714pt>
 File: images/metad.pdf Graphic file (type pdf)
 <use images/metad.pdf>
-Package pdftex.def Info: images/metad.pdf  used on input line 129.
-(pdftex.def)             Requested size: 333.08835pt x 275.19806pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package pdftex.def Info: images/metad.pdf  used on input line 135.
+(pdftex.def)             Requested size: 285.50482pt x 235.88448pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1677,10 +1835,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52 <./images/noise01.pdf> <./images/noise03.pdf>]
+[55]
 File: images/doublecluster.pdf Graphic file (type pdf)
 <use images/doublecluster.pdf>
-Package pdftex.def Info: images/doublecluster.pdf  used on input line 143.
+Package pdftex.def Info: images/doublecluster.pdf  used on input line 149.
 (pdftex.def)             Requested size: 239.00186pt x 239.00186pt.
 
 
@@ -1693,21 +1851,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53 <./images/doublecluster.pdf>]
+[56pdfTeX warning (ext4): destination with the same identifier (name{figure.6.9
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            *{Conclusions} <./images/metad.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54 <./images/metad.pdf>]
+[57pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1
+0}) has been already used, duplicate ignored
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[55]) (./biblio.tex [56
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            *{Conclusions}]) (./biblio.tex [58
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
@@ -1733,7 +1896,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--26
 al per-spec-tive\OT1/ppl/m/n/12 ,
  []
 
-[57
+[59
 
 ]
 Underfull \hbox (badness 1024) in paragraph at lines 37--38
@@ -1753,7 +1916,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58]
+[60]
 Underfull \hbox (badness 2478) in paragraph at lines 78--79
 []\OT1/ppl/m/n/12 J. Park and M. E. J. New-man,\OT1/ppl/m/it/12 The sta-tis-ti-
 cal me-chan-ics of net-works\OT1/ppl/m/n/12 , DOI:
@@ -1765,7 +1928,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59pdfTeX warning (ext4): destination with the same identifier (name{cite.K17})
+[61pdfTeX warning (ext4): destination with the same identifier (name{cite.K17})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1779,14 +1942,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60])
+[62])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
  (./tesi.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: BD9587C792847E8483611A3685F41A19;2303.
+(rerunfilecheck)             Checksum: 7DBB65FF627BB8DDA938D3EE1CC6B423;2268.
 
 
 LaTeX Warning: There were undefined references.
@@ -1796,13 +1959,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19676 strings out of 494839
- 355700 string characters out of 6178684
- 425887 words of memory out of 5000000
- 22321 multiletter control sequences out of 15000+600000
+ 19741 strings out of 494839
+ 356630 string characters out of 6178684
+ 427068 words of memory out of 5000000
+ 22378 multiletter control sequences out of 15000+600000
  49761 words of font info for 146 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 55i,19n,54p,1313b,907s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,19n,54p,1313b,911s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
@@ -1818,10 +1981,10 @@ ive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplri8a.pfb>
-Output written on tesi.pdf (61 pages, 414520 bytes).
+Output written on tesi.pdf (63 pages, 431506 bytes).
 PDF statistics:
- 920 PDF objects out of 1000 (max. 8388607)
- 812 compressed objects within 9 object streams
- 182 named destinations out of 1000 (max. 500000)
- 388 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 941 PDF objects out of 1000 (max. 8388607)
+ 830 compressed objects within 9 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 393 words of extra memory for PDF output out of 10000 (max. 10000000)
 

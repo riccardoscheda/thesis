@@ -549,26 +549,28 @@ import pandas as pd
 
 
 K = 2
+a = 10
+b = 40
 mean_percentage = []
-for N in range(10,80):
+for N in range(a,b):
     percentage = []
-    for i in range(20):
+    for i in range(40):
         g = rn.Random_Network(N,K)
         loopspercn = np.array(g.loops_per_cn)
         frequency = loopspercn/g.loops
         percentage.append(frequency[g.control_nodes[0]])  
     mean_percentage.append(np.mean(np.array(percentage)))
 #nx.draw_networkx(nx.from_numpy_matrix(g.adj_matrix.T,create_using=nx.DiGraph), with_labels=True)
-plt.plot(range(10,80),mean_percentage)
+plt.plot(range(a,b),mean_percentage)
 plt.ylim(0,1)
 plt.title("frequency of loops per control nodes")
 #plt.savefig("frequency of loops per control nodes.png")
 
-# a = [i for i in range(len(mean_loops))]
-# df = pd.DataFrame()
-# df[0] = a
-# df[1] = pd.DataFrame(np.array(mean_loops))
-# df.to_csv("tesi/data/loopspercn.dat",sep = " ",decimal=".",index=False,header=False)
+a = [i for i in range(a,b)]
+df = pd.DataFrame()
+df[0] = a
+df[1] = pd.DataFrame(np.array(mean_percentage))
+df.to_csv("tesi/data/loopspercn.dat",sep = " ",decimal=".",index=False,header=False)
 
 
 #%%  ###################################  3 CLUSTERS HISTOGRAM TIMES ################################

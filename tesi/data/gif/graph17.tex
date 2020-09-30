@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage[utf8x]{inputenc}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{standalone}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\begin{document}
+\begin{tikzpicture}
+\centering
+\begin{axis}[xlabel=$Activity$,xmin=-2,xmax=2,ylabel=\emph{Distribution} ,ymin=0,ymax=0.8]
+\addplot[ybar,fill,orange] table [x, y] {tesi/data/gif/dist17.dat};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}

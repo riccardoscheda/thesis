@@ -1526,3 +1526,33 @@ df[0] = a
 df[1] = pd.DataFrame([activity[i][1] for i in range(steps-1)])
 #df.to_csv("tesi/data/temps2.dat",sep = " ",decimal=".",index=False,header=False)
 
+#%%
+import random_network as rn
+import networkx as nx
+import numpy as np
+import pylab as plt
+from functools import reduce
+import pandas as pd
+
+steps = 200
+N = 20
+
+K = 2
+
+activity = []
+g = rn.Random_Network(N,K)
+
+g.nodes[g.control_nodes[1]] = 1
+
+for i in range(steps):
+    rn.evolution(g,iterations=1,p=0)
+    activity.append(rn.activity(g,N))
+    
+
+plt.plot(activity)
+
+a = [i for i in range(steps)]
+df = pd.DataFrame()
+df[0] = a
+df[1] = np.array(activity)
+df.to_csv("tesi/data/det.dat",sep = " ",decimal=".",index=False,header=False)

@@ -325,11 +325,7 @@ def to_latex(data,file ="data.dat",axis_factor=1., xmin=0,xmax=100,ymin=0,ymax=1
     Makes directly the pdf of a plot of a list of data.
     
     """
-    a = [i*axis_factor for i in range(len(data))]
-    df = pd.DataFrame()
-    df[0] = a
-    df[1] = pd.DataFrame(np.array(data))
-    df.to_csv(file,sep = " ",decimal=".",index=False,header=False)
+
     latex = r"""\documentclass{standalone}
 \usepackage[utf8x]{inputenc}
 \usepackage{pgfplots}
@@ -355,7 +351,7 @@ file {"""+file+"""};
     out_file.write(latex)
     out_file.close()
     
-    os.system('pdflatex -output-directory="tesi/images" graph.tex')
+    os.system('pdflatex -output-directory="tesi/data/gif" graph.tex')
 
     
 #[thick,blue,xmin="""+str(xmin)+""",xmax="""+str(xmax)+""",xlabel=$"""+str(xlabel)+"""$ ,ylabel=$"""+str(ylabel)+"""$,ymin="""+str(ymin)+""",ymax="""+str(ymax)+""",grid=major]

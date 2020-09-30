@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  3 JUL 2020 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  30 SEP 2020 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **presentazione.tex
 (./presentazione.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 8 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2018/02/20 v3.50 A class for typesetting presentations
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
@@ -638,6 +638,222 @@ Package: amsthm 2017/10/31 v2.20.4
 \beamer@dimb=\dimen189
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2018/02/28 PDF animations from files and inline graphics
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks43
+\XKV@tempa@toks=\toks44
+)
+\XKV@depth=\count154
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count155
+\calc@Bcount=\count156
+\calc@Adimen=\dimen190
+\calc@Bdimen=\dimen191
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count157
+\calc@Cskip=\skip59
+)
+(/usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2018/02/21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2018/02/21 L3 programming layer (code)
+\c_max_int=\count158
+\l_tmpa_int=\count159
+\l_tmpb_int=\count160
+\g_tmpa_int=\count161
+\g_tmpb_int=\count162
+\g__intarray_font_int=\count163
+\g__prg_map_int=\count164
+\c_log_iow=\count165
+\l_iow_line_count_int=\count166
+\l__iow_line_target_int=\count167
+\l__iow_one_indent_int=\count168
+\l__iow_indent_int=\count169
+\c_zero_dim=\dimen192
+\c_max_dim=\dimen193
+\l_tmpa_dim=\dimen194
+\l_tmpb_dim=\dimen195
+\g_tmpa_dim=\dimen196
+\g_tmpb_dim=\dimen197
+\c_zero_skip=\skip60
+\c_max_skip=\skip61
+\l_tmpa_skip=\skip62
+\l_tmpb_skip=\skip63
+\g_tmpa_skip=\skip64
+\g_tmpb_skip=\skip65
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count170
+\c__fp_leading_shift_int=\count171
+\c__fp_middle_shift_int=\count172
+\c__fp_trailing_shift_int=\count173
+\c__fp_big_leading_shift_int=\count174
+\c__fp_big_middle_shift_int=\count175
+\c__fp_big_trailing_shift_int=\count176
+\c__fp_Bigg_leading_shift_int=\count177
+\c__fp_Bigg_middle_shift_int=\count178
+\c__fp_Bigg_trailing_shift_int=\count179
+\c__fp_rand_size_int=\count180
+\c__fp_rand_four_int=\count181
+\c__fp_rand_eight_int=\count182
+\l__sort_length_int=\count183
+\l__sort_min_int=\count184
+\l__sort_top_int=\count185
+\l__sort_max_int=\count186
+\l__sort_true_max_int=\count187
+\l__sort_block_int=\count188
+\l__sort_begin_int=\count189
+\l__sort_end_int=\count190
+\l__sort_A_int=\count191
+\l__sort_B_int=\count192
+\l__sort_C_int=\count193
+\l__tl_build_start_index_int=\count194
+\l__tl_build_index_int=\count195
+\l__tl_analysis_normal_int=\count196
+\l__tl_analysis_index_int=\count197
+\l__tl_analysis_nesting_int=\count198
+\l__tl_analysis_type_int=\count199
+\l__regex_internal_a_int=\count266
+\l__regex_internal_b_int=\count267
+\l__regex_internal_c_int=\count268
+\l__regex_balance_int=\count269
+\l__regex_group_level_int=\count270
+\l__regex_mode_int=\count271
+\c__regex_cs_in_class_mode_int=\count272
+\c__regex_cs_mode_int=\count273
+\l__regex_catcodes_int=\count274
+\l__regex_default_catcodes_int=\count275
+\c__regex_catcode_D_int=\count276
+\c__regex_catcode_S_int=\count277
+\c__regex_catcode_L_int=\count278
+\c__regex_catcode_O_int=\count279
+\c__regex_catcode_A_int=\count280
+\c__regex_all_catcodes_int=\count281
+\l__regex_show_lines_int=\count282
+\l__regex_min_state_int=\count283
+\l__regex_max_state_int=\count284
+\l__regex_left_state_int=\count285
+\l__regex_right_state_int=\count286
+\l__regex_capturing_group_int=\count287
+\l__regex_min_pos_int=\count288
+\l__regex_max_pos_int=\count289
+\l__regex_curr_pos_int=\count290
+\l__regex_start_pos_int=\count291
+\l__regex_success_pos_int=\count292
+\l__regex_curr_char_int=\count293
+\l__regex_curr_catcode_int=\count294
+\l__regex_last_char_int=\count295
+\l__regex_case_changed_char_int=\count296
+\l__regex_curr_state_int=\count297
+\l__regex_step_int=\count298
+\l__regex_min_active_int=\count299
+\l__regex_max_active_int=\count300
+\l__regex_replacement_csnames_int=\count301
+\l__regex_match_count_int=\count302
+\l__regex_min_submatch_int=\count303
+\l__regex_submatch_int=\count304
+\l__regex_zeroth_submatch_int=\count305
+\g__regex_trace_regex_int=\count306
+\c_empty_box=\box53
+\l_tmpa_box=\box54
+\l_tmpb_box=\box55
+\g_tmpa_box=\box56
+\g_tmpb_box=\box57
+\l__box_top_dim=\dimen198
+\l__box_bottom_dim=\dimen199
+\l__box_left_dim=\dimen256
+\l__box_right_dim=\dimen257
+\l__box_top_new_dim=\dimen258
+\l__box_bottom_new_dim=\dimen259
+\l__box_left_new_dim=\dimen260
+\l__box_right_new_dim=\dimen261
+\l__box_internal_box=\box58
+\l__coffin_internal_box=\box59
+\l__coffin_internal_dim=\dimen262
+\l__coffin_offset_x_dim=\dimen263
+\l__coffin_offset_y_dim=\dimen264
+\l__coffin_x_dim=\dimen265
+\l__coffin_y_dim=\dimen266
+\l__coffin_x_prime_dim=\dimen267
+\l__coffin_y_prime_dim=\dimen268
+\c_empty_coffin=\box60
+\l__coffin_aligned_coffin=\box61
+\l__coffin_aligned_internal_coffin=\box62
+\l_tmpa_coffin=\box63
+\l_tmpb_coffin=\box64
+\l__coffin_display_coffin=\box65
+\l__coffin_display_coord_coffin=\box66
+\l__coffin_display_pole_coffin=\box67
+\l__coffin_display_offset_dim=\dimen269
+\l__coffin_display_x_dim=\dimen270
+\l__coffin_display_y_dim=\dimen271
+\l__coffin_bounding_shift_dim=\dimen272
+\l__coffin_left_corner_dim=\dimen273
+\l__coffin_right_corner_dim=\dimen274
+\l__coffin_bottom_corner_dim=\dimen275
+\l__coffin_top_corner_dim=\dimen276
+\l__coffin_scaled_total_height_dim=\dimen277
+\l__coffin_scaled_width_dim=\dimen278
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count307
+\l__driver_tmp_box=\box68
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2018/02/21 LaTeX2e option processing using LaTeX3 keys
+)
+Package: pdfbase 2018/02/28 v0.21 driver independent access to low-level PDF fe
+atures
+\g_pbs_page_int=\count308
+\g_pbs_oc_int=\count309
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2017/09/29 v0.12 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count310
+)
+\@anim@box=\box69
+\@anim@measbox=\box70
+\@anim@tmpdima=\dimen279
+\@anim@tmpdimb=\dimen280
+\@anim@num=\count311
+\@anim@curframe=\count312
+\@anim@curframe@zb=\count313
+\@anim@resizeflags=\count314
+\@anim@skipfram=\count315
+\@anim@mulframecnt=\count316
+\@anim@@tmlnfile=\read2
+\@anim@tmpcnt=\count317
+\c@@anim@ltxcnt=\count318
+\@anim@curlayer=\count319
+\@anim@lineno=\count320
+\@anim@curfield=\count321
+\@anim@@resizeflags=\count322
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
@@ -647,8 +863,8 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks43
-\inpenc@posthook=\toks44
+\inpenc@prehook=\toks45
+\inpenc@posthook=\toks46
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
@@ -967,177 +1183,25 @@ Now handling font encoding PD1 ...
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemeRochester.sty
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemesidebar.sty
-\beamer@sidebarwidth=\dimen190
-\beamer@headheight=\dimen191
+\beamer@sidebarwidth=\dimen281
+\beamer@headheight=\dimen282
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemerectangles.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty))
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/diffcoeff/diffcoeff.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2018/02/21 L3 programming layer (loader) 
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2018/02/21 L3 programming layer (code)
-\c_max_int=\count154
-\l_tmpa_int=\count155
-\l_tmpb_int=\count156
-\g_tmpa_int=\count157
-\g_tmpb_int=\count158
-\g__intarray_font_int=\count159
-\g__prg_map_int=\count160
-\c_log_iow=\count161
-\l_iow_line_count_int=\count162
-\l__iow_line_target_int=\count163
-\l__iow_one_indent_int=\count164
-\l__iow_indent_int=\count165
-\c_zero_dim=\dimen192
-\c_max_dim=\dimen193
-\l_tmpa_dim=\dimen194
-\l_tmpb_dim=\dimen195
-\g_tmpa_dim=\dimen196
-\g_tmpb_dim=\dimen197
-\c_zero_skip=\skip57
-\c_max_skip=\skip58
-\l_tmpa_skip=\skip59
-\l_tmpb_skip=\skip60
-\g_tmpa_skip=\skip61
-\g_tmpb_skip=\skip62
-\c_zero_muskip=\muskip12
-\c_max_muskip=\muskip13
-\l_tmpa_muskip=\muskip14
-\l_tmpb_muskip=\muskip15
-\g_tmpa_muskip=\muskip16
-\g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count166
-\c__fp_leading_shift_int=\count167
-\c__fp_middle_shift_int=\count168
-\c__fp_trailing_shift_int=\count169
-\c__fp_big_leading_shift_int=\count170
-\c__fp_big_middle_shift_int=\count171
-\c__fp_big_trailing_shift_int=\count172
-\c__fp_Bigg_leading_shift_int=\count173
-\c__fp_Bigg_middle_shift_int=\count174
-\c__fp_Bigg_trailing_shift_int=\count175
-\c__fp_rand_size_int=\count176
-\c__fp_rand_four_int=\count177
-\c__fp_rand_eight_int=\count178
-\l__sort_length_int=\count179
-\l__sort_min_int=\count180
-\l__sort_top_int=\count181
-\l__sort_max_int=\count182
-\l__sort_true_max_int=\count183
-\l__sort_block_int=\count184
-\l__sort_begin_int=\count185
-\l__sort_end_int=\count186
-\l__sort_A_int=\count187
-\l__sort_B_int=\count188
-\l__sort_C_int=\count189
-\l__tl_build_start_index_int=\count190
-\l__tl_build_index_int=\count191
-\l__tl_analysis_normal_int=\count192
-\l__tl_analysis_index_int=\count193
-\l__tl_analysis_nesting_int=\count194
-\l__tl_analysis_type_int=\count195
-\l__regex_internal_a_int=\count196
-\l__regex_internal_b_int=\count197
-\l__regex_internal_c_int=\count198
-\l__regex_balance_int=\count199
-\l__regex_group_level_int=\count266
-\l__regex_mode_int=\count267
-\c__regex_cs_in_class_mode_int=\count268
-\c__regex_cs_mode_int=\count269
-\l__regex_catcodes_int=\count270
-\l__regex_default_catcodes_int=\count271
-\c__regex_catcode_D_int=\count272
-\c__regex_catcode_S_int=\count273
-\c__regex_catcode_L_int=\count274
-\c__regex_catcode_O_int=\count275
-\c__regex_catcode_A_int=\count276
-\c__regex_all_catcodes_int=\count277
-\l__regex_show_lines_int=\count278
-\l__regex_min_state_int=\count279
-\l__regex_max_state_int=\count280
-\l__regex_left_state_int=\count281
-\l__regex_right_state_int=\count282
-\l__regex_capturing_group_int=\count283
-\l__regex_min_pos_int=\count284
-\l__regex_max_pos_int=\count285
-\l__regex_curr_pos_int=\count286
-\l__regex_start_pos_int=\count287
-\l__regex_success_pos_int=\count288
-\l__regex_curr_char_int=\count289
-\l__regex_curr_catcode_int=\count290
-\l__regex_last_char_int=\count291
-\l__regex_case_changed_char_int=\count292
-\l__regex_curr_state_int=\count293
-\l__regex_step_int=\count294
-\l__regex_min_active_int=\count295
-\l__regex_max_active_int=\count296
-\l__regex_replacement_csnames_int=\count297
-\l__regex_match_count_int=\count298
-\l__regex_min_submatch_int=\count299
-\l__regex_submatch_int=\count300
-\l__regex_zeroth_submatch_int=\count301
-\g__regex_trace_regex_int=\count302
-\c_empty_box=\box53
-\l_tmpa_box=\box54
-\l_tmpb_box=\box55
-\g_tmpa_box=\box56
-\g_tmpb_box=\box57
-\l__box_top_dim=\dimen198
-\l__box_bottom_dim=\dimen199
-\l__box_left_dim=\dimen256
-\l__box_right_dim=\dimen257
-\l__box_top_new_dim=\dimen258
-\l__box_bottom_new_dim=\dimen259
-\l__box_left_new_dim=\dimen260
-\l__box_right_new_dim=\dimen261
-\l__box_internal_box=\box58
-\l__coffin_internal_box=\box59
-\l__coffin_internal_dim=\dimen262
-\l__coffin_offset_x_dim=\dimen263
-\l__coffin_offset_y_dim=\dimen264
-\l__coffin_x_dim=\dimen265
-\l__coffin_y_dim=\dimen266
-\l__coffin_x_prime_dim=\dimen267
-\l__coffin_y_prime_dim=\dimen268
-\c_empty_coffin=\box60
-\l__coffin_aligned_coffin=\box61
-\l__coffin_aligned_internal_coffin=\box62
-\l_tmpa_coffin=\box63
-\l_tmpb_coffin=\box64
-\l__coffin_display_coffin=\box65
-\l__coffin_display_coord_coffin=\box66
-\l__coffin_display_pole_coffin=\box67
-\l__coffin_display_offset_dim=\dimen269
-\l__coffin_display_x_dim=\dimen270
-\l__coffin_display_y_dim=\dimen271
-\l__coffin_bounding_shift_dim=\dimen272
-\l__coffin_left_corner_dim=\dimen273
-\l__coffin_right_corner_dim=\dimen274
-\l__coffin_bottom_corner_dim=\dimen275
-\l__coffin_top_corner_dim=\dimen276
-\l__coffin_scaled_total_height_dim=\dimen277
-\l__coffin_scaled_width_dim=\dimen278
-)
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count303
-\l__driver_tmp_box=\box68
-))
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2018/02/21 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count304
-\g__xparse_grabber_int=\count305
-\l__xparse_m_args_int=\count306
-\l__xparse_mandatory_args_int=\count307
-\l__xparse_v_nesting_int=\count308
+\l__xparse_current_arg_int=\count323
+\g__xparse_grabber_int=\count324
+\l__xparse_m_args_int=\count325
+\l__xparse_mandatory_args_int=\count326
+\l__xparse_v_nesting_int=\count327
 )
 Package: diffcoeff 2016/06/27 v1.0 Write differential coefficients easily.
-\l__diffco_curr_tok_int=\count309
-\l__diffco_curr_state_int=\count310
+\l__diffco_curr_tok_int=\count328
+\l__diffco_curr_state_int=\count329
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1183,45 +1247,43 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen279
-\WF@size=\dimen280
-\c@WF@wrappedlines=\count311
-\WF@box=\box69
-\WF@everypar=\toks45
+\wrapoverhang=\dimen283
+\WF@size=\dimen284
+\c@WF@wrappedlines=\count330
+\WF@box=\box71
+\WF@everypar=\toks47
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amscd.sty
 Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
-\athelp@=\toks46
-\minaw@=\dimen281
-\bigaw@=\dimen282
-\minCDarrowwidth=\dimen283
+\athelp@=\toks48
+\minaw@=\dimen285
+\bigaw@=\dimen286
+\minCDarrowwidth=\dimen287
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count312
-\mult@box=\box70
-\multicol@leftmargin=\dimen284
-\c@unbalance=\count313
-\c@collectmore=\count314
-\doublecol@number=\count315
-\multicoltolerance=\count316
-\multicolpretolerance=\count317
-\full@width=\dimen285
-\page@free=\dimen286
-\premulticols=\dimen287
-\postmulticols=\dimen288
-\multicolsep=\skip63
-\multicolbaselineskip=\skip64
-\partial@page=\box71
-\last@line=\box72
-\maxbalancingoverflow=\dimen289
-\mult@rightbox=\box73
-\mult@grightbox=\box74
-\mult@gfirstbox=\box75
-\mult@firstbox=\box76
-\@tempa=\box77
-\@tempa=\box78
+\c@tracingmulticols=\count331
+\mult@box=\box72
+\multicol@leftmargin=\dimen288
+\c@unbalance=\count332
+\c@collectmore=\count333
+\doublecol@number=\count334
+\multicoltolerance=\count335
+\multicolpretolerance=\count336
+\full@width=\dimen289
+\page@free=\dimen290
+\premulticols=\dimen291
+\postmulticols=\dimen292
+\multicolsep=\skip66
+\multicolbaselineskip=\skip67
+\partial@page=\box73
+\last@line=\box74
+\maxbalancingoverflow=\dimen293
+\mult@rightbox=\box75
+\mult@grightbox=\box76
+\mult@gfirstbox=\box77
+\mult@firstbox=\box78
 \@tempa=\box79
 \@tempa=\box80
 \@tempa=\box81
@@ -1237,14 +1299,16 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \@tempa=\box91
 \@tempa=\box92
 \@tempa=\box93
-\c@columnbadness=\count318
-\c@finalcolumnbadness=\count319
-\last@try=\dimen290
-\multicolovershoot=\dimen291
-\multicolundershoot=\dimen292
-\mult@nat@firstbox=\box94
-\colbreak@box=\box95
-\mc@col@check@num=\count320
+\@tempa=\box94
+\@tempa=\box95
+\c@columnbadness=\count337
+\c@finalcolumnbadness=\count338
+\last@try=\dimen294
+\multicolovershoot=\dimen295
+\multicolundershoot=\dimen296
+\mult@nat@firstbox=\box96
+\colbreak@box=\box97
+\mc@col@check@num=\count339
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
@@ -1252,15 +1316,15 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box96
+\pgfnodeparttextbox=\box98
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen293
-\pgf@nodesepend=\dimen294
+\pgf@nodesepstart=\dimen297
+\pgf@nodesepend=\dimen298
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1274,10 +1338,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen295
-\pgffor@skip=\dimen296
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
+\pgffor@iter=\dimen299
+\pgffor@skip=\dimen300
+\pgffor@stack=\toks49
+\pgffor@toks=\toks50
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
@@ -1285,31 +1349,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count321
-\pgfplotmarksize=\dimen297
+\pgf@plot@mark@count=\count340
+\pgfplotmarksize=\dimen301
 )
-\tikz@lastx=\dimen298
-\tikz@lasty=\dimen299
-\tikz@lastxsaved=\dimen300
-\tikz@lastysaved=\dimen301
-\tikzleveldistance=\dimen302
-\tikzsiblingdistance=\dimen303
-\tikz@figbox=\box97
-\tikz@figbox@bg=\box98
-\tikz@tempbox=\box99
-\tikz@tempbox@bg=\box100
-\tikztreelevel=\count322
-\tikznumberofchildren=\count323
-\tikznumberofcurrentchild=\count324
-\tikz@fig@count=\count325
+\tikz@lastx=\dimen302
+\tikz@lasty=\dimen303
+\tikz@lastxsaved=\dimen304
+\tikz@lastysaved=\dimen305
+\tikzleveldistance=\dimen306
+\tikzsiblingdistance=\dimen307
+\tikz@figbox=\box99
+\tikz@figbox@bg=\box100
+\tikz@tempbox=\box101
+\tikz@tempbox@bg=\box102
+\tikztreelevel=\count341
+\tikznumberofchildren=\count342
+\tikznumberofcurrentchild=\count343
+\tikz@fig@count=\count344
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count326
-\pgfmatrixcurrentcolumn=\count327
-\pgf@matrix@numberofcolumns=\count328
+\pgfmatrixcurrentrow=\count345
+\pgfmatrixcurrentcolumn=\count346
+\pgf@matrix@numberofcolumns=\count347
 )
-\tikz@expandcount=\count329
+\tikz@expandcount=\count348
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1317,20 +1381,20 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 ))) (./presentazione.aux)
 \openout1 = `presentazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1368,17 +1432,17 @@ LaTeX Font Info:    ... okay on input line 31.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count330
-\scratchdimen=\dimen304
-\scratchbox=\box101
-\nofMPsegments=\count331
-\nofMParguments=\count332
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count333
-\MPscratchDim=\dimen305
-\MPnumerator=\count334
-\makeMPintoPDFobject=\count335
-\everyMPtoPDFconversion=\toks50
+\scratchcounter=\count349
+\scratchdimen=\dimen308
+\scratchbox=\box103
+\nofMPsegments=\count350
+\nofMParguments=\count351
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count352
+\MPscratchDim=\dimen309
+\MPnumerator=\count353
+\makeMPintoPDFobject=\count354
+\everyMPtoPDFconversion=\toks52
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1397,8 +1461,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box102
-Package hyperref Info: Link coloring OFF on input line 31.
+\AtBeginShipoutBox=\box104
+Package hyperref Info: Link coloring OFF on input line 33.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1406,11 +1470,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count336
+\c@section@level=\count355
 )
-LaTeX Info: Redefining \ref on input line 31.
-LaTeX Info: Redefining \pageref on input line 31.
-LaTeX Info: Redefining \nameref on input line 31.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
 
 (./presentazione.out) (./presentazione.out)
 \@outlinefile=\write5
@@ -1443,60 +1507,734 @@ Dictionary: translator-theorem-dictionary, Language: English
 ) (./presentazione.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<landscape.jpg, id=44, 308.352pt x 215.3646pt>
+File: landscape.jpg Graphic file (type jpg)
+<use landscape.jpg>
+Package pdftex.def Info: landscape.jpg  used on input line 47.
+(pdftex.def)             Requested size: 308.35124pt x 215.36406pt.
 
-LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 52.
+Overfull \hbox (1.06137pt too wide) in paragraph at lines 47--47
+ [] 
+ []
 
-<GRN.png, id=44, 316.3017pt x 133.4586pt>
-File: GRN.png Graphic file (type png)
-<use GRN.png>
-Package pdftex.def Info: GRN.png  used on input line 52.
-(pdftex.def)             Requested size: 158.15045pt x 66.72913pt.
+
+Overfull \vbox (20.53745pt too high) detected at line 47
+ []
+
 [2
 
- <./GRN.png>]
-<bigdata.jpg, id=71, 334.06807pt x 361.35pt>
-File: bigdata.jpg Graphic file (type jpg)
-<use bigdata.jpg>
-Package pdftex.def Info: bigdata.jpg  used on input line 68.
-(pdftex.def)             Requested size: 133.62485pt x 144.53743pt.
+ <./landscape.jpg>]
+<images/grnn.pdf, id=70, 896.70708pt x 882.88849pt>
+File: images/grnn.pdf Graphic file (type pdf)
+<use images/grnn.pdf>
+Package pdftex.def Info: images/grnn.pdf  used on input line 59.
+(pdftex.def)             Requested size: 179.33823pt x 176.57457pt.
  [3
 
- <./bigdata.jpg>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+ <./images/grnn.pdf>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 74.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+LaTeX Font Info:    Try loading font information for U+msb on input line 74.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [4
 
-] [5
-
-] [6
-
 ]
-<grn1.pdf, id=178, 337.01608pt x 276.6586pt>
-File: grn1.pdf Graphic file (type pdf)
-<use grn1.pdf>
-Package pdftex.def Info: grn1.pdf  used on input line 109.
-(pdftex.def)             Requested size: 168.50763pt x 138.32895pt.
+<images/singlecluster.pdf, id=133, 170.7168pt x 170.7168pt>
+File: images/singlecluster.pdf Graphic file (type pdf)
+<use images/singlecluster.pdf>
+Package pdftex.def Info: images/singlecluster.pdf  used on input line 96.
+(pdftex.def)             Requested size: 85.35818pt x 85.35818pt.
+ [5
+
+ <./images/singlecluster.pdf>]
+<images/det.pdf, id=165, 237.92188pt x 196.57039pt>
+File: images/det.pdf Graphic file (type pdf)
+<use images/det.pdf>
+Package pdftex.def Info: images/det.pdf  used on input line 105.
+(pdftex.def)             Requested size: 190.33775pt x 157.25652pt.
+ [6
+
+ <./images/det.pdf>]
+<images/n.pdf, id=207, 248.55461pt x 196.57039pt>
+File: images/n.pdf Graphic file (type pdf)
+<use images/n.pdf>
+Package pdftex.def Info: images/n.pdf  used on input line 119.
+(pdftex.def)             Requested size: 149.13391pt x 117.94313pt.
  [7
 
- <./grn1.pdf>]
-<grn.pdf, id=206, 239.14143pt x 149.8388pt>
-File: grn.pdf Graphic file (type pdf)
-<use grn.pdf>
-Package pdftex.def Info: grn.pdf  used on input line 122.
-(pdftex.def)             Requested size: 239.14084pt x 149.83842pt.
- [8
+ <./images/n.pdf>]
+<grn1.pdf, id=244, 337.01608pt x 276.6586pt>
+File: grn1.pdf Graphic file (type pdf)
+<use grn1.pdf>
+Package pdftex.def Info: grn1.pdf  used on input line 128.
+(pdftex.def)             Requested size: 235.90964pt x 193.65968pt.
 
- <./grn.pdf>] [9
+Overfull \vbox (0.9617pt too high) detected at line 128
+ []
+
+[8
+
+ <./grn1.pdf>]
+<prova.pdf, id=272, 170.7168pt x 170.7168pt>
+File: prova.pdf Graphic file (type pdf)
+<use prova.pdf>
+Package pdftex.def Info: prova.pdf  used on input line 141.
+(pdftex.def)             Requested size: 136.57361pt x 136.57361pt.
+ [9
+
+ <./prova.pdf>]
+<images/metad.pdf, id=299, 237.92188pt x 196.5714pt>
+File: images/metad.pdf Graphic file (type pdf)
+<use images/metad.pdf>
+Package pdftex.def Info: images/metad.pdf  used on input line 154.
+(pdftex.def)             Requested size: 190.33775pt x 157.25732pt.
+
+Overfull \vbox (2.97018pt too high) detected at line 154
+ []
+
+[10
+
+ <./images/metad.pdf>]
+<images/kramerwell.pdf, id=335, 244.1652pt x 194.72649pt>
+File: images/kramerwell.pdf Graphic file (type pdf)
+<use images/kramerwell.pdf>
+Package pdftex.def Info: images/kramerwell.pdf  used on input line 172.
+(pdftex.def)             Requested size: 122.08229pt x 97.363pt.
+<images/kramerpot.pdf, id=336, 207.69896pt x 191.50446pt>
+File: images/kramerpot.pdf Graphic file (type pdf)
+<use images/kramerpot.pdf>
+Package pdftex.def Info: images/kramerpot.pdf  used on input line 172.
+(pdftex.def)             Requested size: 103.84921pt x 95.75198pt.
+ [11
+
+ <./images/kramerwell.pdf> <./images/kramerpot.pdf>] [12
+
+] [13
 
 ]
+<images/gif/graph0.png, id=432, 242.8272pt x 199.4652pt>
+File: images/gif/graph0.png Graphic file (type png)
+<use images/gif/graph0.png>
+Package pdftex.def Info: images/gif/graph0.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph0.png (PNG copy)> <a0,fr0>
+<images/gif/graph1.png, id=440, 242.8272pt x 199.4652pt>
+File: images/gif/graph1.png Graphic file (type png)
+<use images/gif/graph1.png>
+Package pdftex.def Info: images/gif/graph1.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph1.png (PNG copy)> <a0,fr1>
+<images/gif/graph2.png, id=448, 242.8272pt x 199.4652pt>
+File: images/gif/graph2.png Graphic file (type png)
+<use images/gif/graph2.png>
+Package pdftex.def Info: images/gif/graph2.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph2.png (PNG copy)> <a0,fr2>
+<images/gif/graph3.png, id=456, 242.8272pt x 199.4652pt>
+File: images/gif/graph3.png Graphic file (type png)
+<use images/gif/graph3.png>
+Package pdftex.def Info: images/gif/graph3.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph3.png (PNG copy)> <a0,fr3>
+<images/gif/graph4.png, id=464, 242.8272pt x 199.4652pt>
+File: images/gif/graph4.png Graphic file (type png)
+<use images/gif/graph4.png>
+Package pdftex.def Info: images/gif/graph4.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph4.png (PNG copy)>
+<a0,fr4>
+<images/gif/graph5.png, id=472, 242.8272pt x 199.4652pt>
+File: images/gif/graph5.png Graphic file (type png)
+<use images/gif/graph5.png>
+Package pdftex.def Info: images/gif/graph5.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph5.png (PNG copy)> <a0,fr5>
+<images/gif/graph6.png, id=480, 242.8272pt x 199.4652pt>
+File: images/gif/graph6.png Graphic file (type png)
+<use images/gif/graph6.png>
+Package pdftex.def Info: images/gif/graph6.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph6.png (PNG copy)> <a0,fr6>
+<images/gif/graph7.png, id=488, 242.8272pt x 199.4652pt>
+File: images/gif/graph7.png Graphic file (type png)
+<use images/gif/graph7.png>
+Package pdftex.def Info: images/gif/graph7.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph7.png (PNG copy)> <a0,fr7>
+<images/gif/graph8.png, id=496, 242.8272pt x 199.4652pt>
+File: images/gif/graph8.png Graphic file (type png)
+<use images/gif/graph8.png>
+Package pdftex.def Info: images/gif/graph8.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph8.png (PNG copy)> <a0,fr8>
+<images/gif/graph9.png, id=504, 242.8272pt x 199.4652pt>
+File: images/gif/graph9.png Graphic file (type png)
+<use images/gif/graph9.png>
+Package pdftex.def Info: images/gif/graph9.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph9.png (PNG copy)>
+<a0,fr9>
+<images/gif/graph10.png, id=512, 242.8272pt x 199.4652pt>
+File: images/gif/graph10.png Graphic file (type png)
+<use images/gif/graph10.png>
+Package pdftex.def Info: images/gif/graph10.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph10.png (PNG copy)> <a0,fr10>
+<images/gif/graph11.png, id=521, 242.8272pt x 199.4652pt>
+File: images/gif/graph11.png Graphic file (type png)
+<use images/gif/graph11.png>
+Package pdftex.def Info: images/gif/graph11.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph11.png (PNG copy)> <a0,fr11>
+<images/gif/graph12.png, id=529, 242.8272pt x 199.4652pt>
+File: images/gif/graph12.png Graphic file (type png)
+<use images/gif/graph12.png>
+Package pdftex.def Info: images/gif/graph12.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph12.png (PNG copy)> <a0,fr12>
+<images/gif/graph13.png, id=537, 242.8272pt x 199.4652pt>
+File: images/gif/graph13.png Graphic file (type png)
+<use images/gif/graph13.png>
+Package pdftex.def Info: images/gif/graph13.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph13.png (PNG copy)> <a0,fr13>
+<images/gif/graph14.png, id=545, 242.8272pt x 199.4652pt>
+File: images/gif/graph14.png Graphic file (type png)
+<use images/gif/graph14.png>
+Package pdftex.def Info: images/gif/graph14.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph14.png (PNG copy)> <a0,fr14>
+<images/gif/graph15.png, id=553, 242.8272pt x 199.4652pt>
+File: images/gif/graph15.png Graphic file (type png)
+<use images/gif/graph15.png>
+Package pdftex.def Info: images/gif/graph15.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph15.png (PNG copy)> <a0,fr15>
+<images/gif/graph16.png, id=561, 242.8272pt x 199.4652pt>
+File: images/gif/graph16.png Graphic file (type png)
+<use images/gif/graph16.png>
+Package pdftex.def Info: images/gif/graph16.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph16.png (PNG copy)> <a0,fr16>
+<images/gif/graph17.png, id=569, 242.8272pt x 199.4652pt>
+File: images/gif/graph17.png Graphic file (type png)
+<use images/gif/graph17.png>
+Package pdftex.def Info: images/gif/graph17.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph17.png (PNG copy)> <a0,fr17>
+<images/gif/graph18.png, id=577, 242.8272pt x 199.4652pt>
+File: images/gif/graph18.png Graphic file (type png)
+<use images/gif/graph18.png>
+Package pdftex.def Info: images/gif/graph18.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph18.png (PNG copy)> <a0,fr18>
+<images/gif/graph19.png, id=585, 242.8272pt x 199.4652pt>
+File: images/gif/graph19.png Graphic file (type png)
+<use images/gif/graph19.png>
+Package pdftex.def Info: images/gif/graph19.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph19.png (PNG copy)> <a0,fr19>
+<images/gif/graph20.png, id=593, 242.8272pt x 199.4652pt>
+File: images/gif/graph20.png Graphic file (type png)
+<use images/gif/graph20.png>
+Package pdftex.def Info: images/gif/graph20.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph20.png (PNG copy)> <a0,fr20>
+<images/gif/graph21.png, id=601, 242.8272pt x 199.4652pt>
+File: images/gif/graph21.png Graphic file (type png)
+<use images/gif/graph21.png>
+Package pdftex.def Info: images/gif/graph21.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph21.png (PNG copy)> <a0,fr21>
+<images/gif/graph22.png, id=609, 242.8272pt x 199.4652pt>
+File: images/gif/graph22.png Graphic file (type png)
+<use images/gif/graph22.png>
+Package pdftex.def Info: images/gif/graph22.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph22.png (PNG copy)>
+<a0,fr22>
+<images/gif/graph23.png, id=617, 242.8272pt x 199.4652pt>
+File: images/gif/graph23.png Graphic file (type png)
+<use images/gif/graph23.png>
+Package pdftex.def Info: images/gif/graph23.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph23.png (PNG copy)> <a0,fr23>
+<images/gif/graph24.png, id=625, 242.8272pt x 199.4652pt>
+File: images/gif/graph24.png Graphic file (type png)
+<use images/gif/graph24.png>
+Package pdftex.def Info: images/gif/graph24.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph24.png (PNG copy)> <a0,fr24>
+<images/gif/graph25.png, id=633, 242.8272pt x 199.4652pt>
+File: images/gif/graph25.png Graphic file (type png)
+<use images/gif/graph25.png>
+Package pdftex.def Info: images/gif/graph25.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph25.png (PNG copy)> <a0,fr25>
+<images/gif/graph26.png, id=641, 242.8272pt x 199.4652pt>
+File: images/gif/graph26.png Graphic file (type png)
+<use images/gif/graph26.png>
+Package pdftex.def Info: images/gif/graph26.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph26.png (PNG copy)> <a0,fr26>
+<images/gif/graph27.png, id=649, 242.8272pt x 199.4652pt>
+File: images/gif/graph27.png Graphic file (type png)
+<use images/gif/graph27.png>
+Package pdftex.def Info: images/gif/graph27.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph27.png (PNG copy)> <a0,fr27>
+<images/gif/graph28.png, id=657, 242.8272pt x 199.4652pt>
+File: images/gif/graph28.png Graphic file (type png)
+<use images/gif/graph28.png>
+Package pdftex.def Info: images/gif/graph28.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph28.png (PNG copy)> <a0,fr28>
+<images/gif/graph29.png, id=665, 242.8272pt x 199.4652pt>
+File: images/gif/graph29.png Graphic file (type png)
+<use images/gif/graph29.png>
+Package pdftex.def Info: images/gif/graph29.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph29.png (PNG copy)> <a0,fr29>
+<images/gif/graph30.png, id=673, 242.8272pt x 199.4652pt>
+File: images/gif/graph30.png Graphic file (type png)
+<use images/gif/graph30.png>
+Package pdftex.def Info: images/gif/graph30.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph30.png (PNG copy)> <a0,fr30>
+<images/gif/graph31.png, id=681, 242.8272pt x 199.4652pt>
+File: images/gif/graph31.png Graphic file (type png)
+<use images/gif/graph31.png>
+Package pdftex.def Info: images/gif/graph31.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph31.png (PNG copy)> <a0,fr31>
+<images/gif/graph32.png, id=689, 242.8272pt x 199.4652pt>
+File: images/gif/graph32.png Graphic file (type png)
+<use images/gif/graph32.png>
+Package pdftex.def Info: images/gif/graph32.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph32.png (PNG copy)> <a0,fr32>
+<images/gif/graph33.png, id=697, 242.8272pt x 199.4652pt>
+File: images/gif/graph33.png Graphic file (type png)
+<use images/gif/graph33.png>
+Package pdftex.def Info: images/gif/graph33.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph33.png (PNG copy)> <a0,fr33>
+<images/gif/graph34.png, id=705, 242.8272pt x 199.4652pt>
+File: images/gif/graph34.png Graphic file (type png)
+<use images/gif/graph34.png>
+Package pdftex.def Info: images/gif/graph34.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph34.png (PNG copy)> <a0,fr34>
+<images/gif/graph35.png, id=713, 242.8272pt x 199.4652pt>
+File: images/gif/graph35.png Graphic file (type png)
+<use images/gif/graph35.png>
+Package pdftex.def Info: images/gif/graph35.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph35.png (PNG copy)>
+<a0,fr35>
+<images/gif/graph36.png, id=721, 242.8272pt x 199.4652pt>
+File: images/gif/graph36.png Graphic file (type png)
+<use images/gif/graph36.png>
+Package pdftex.def Info: images/gif/graph36.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph36.png (PNG copy)> <a0,fr36>
+<images/gif/graph37.png, id=729, 242.8272pt x 199.4652pt>
+File: images/gif/graph37.png Graphic file (type png)
+<use images/gif/graph37.png>
+Package pdftex.def Info: images/gif/graph37.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph37.png (PNG copy)> <a0,fr37>
+<images/gif/graph38.png, id=737, 242.8272pt x 199.4652pt>
+File: images/gif/graph38.png Graphic file (type png)
+<use images/gif/graph38.png>
+Package pdftex.def Info: images/gif/graph38.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph38.png (PNG copy)> <a0,fr38>
+<images/gif/graph39.png, id=745, 242.8272pt x 199.4652pt>
+File: images/gif/graph39.png Graphic file (type png)
+<use images/gif/graph39.png>
+Package pdftex.def Info: images/gif/graph39.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph39.png (PNG copy)> <a0,fr39>
+<images/gif/graph40.png, id=753, 242.8272pt x 199.4652pt>
+File: images/gif/graph40.png Graphic file (type png)
+<use images/gif/graph40.png>
+Package pdftex.def Info: images/gif/graph40.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph40.png (PNG copy)> <a0,fr40>
+<images/gif/graph41.png, id=761, 242.8272pt x 199.4652pt>
+File: images/gif/graph41.png Graphic file (type png)
+<use images/gif/graph41.png>
+Package pdftex.def Info: images/gif/graph41.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph41.png (PNG copy)> <a0,fr41>
+<images/gif/graph42.png, id=769, 242.8272pt x 199.4652pt>
+File: images/gif/graph42.png Graphic file (type png)
+<use images/gif/graph42.png>
+Package pdftex.def Info: images/gif/graph42.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph42.png (PNG copy)> <a0,fr42>
+<images/gif/graph43.png, id=777, 242.8272pt x 199.4652pt>
+File: images/gif/graph43.png Graphic file (type png)
+<use images/gif/graph43.png>
+Package pdftex.def Info: images/gif/graph43.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph43.png (PNG copy)> <a0,fr43>
+<images/gif/graph44.png, id=785, 242.8272pt x 199.4652pt>
+File: images/gif/graph44.png Graphic file (type png)
+<use images/gif/graph44.png>
+Package pdftex.def Info: images/gif/graph44.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph44.png (PNG copy)> <a0,fr44>
+<images/gif/graph45.png, id=794, 242.8272pt x 199.4652pt>
+File: images/gif/graph45.png Graphic file (type png)
+<use images/gif/graph45.png>
+Package pdftex.def Info: images/gif/graph45.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph45.png (PNG copy)> <a0,fr45>
+<images/gif/graph46.png, id=802, 242.8272pt x 199.4652pt>
+File: images/gif/graph46.png Graphic file (type png)
+<use images/gif/graph46.png>
+Package pdftex.def Info: images/gif/graph46.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph46.png (PNG copy)> <a0,fr46>
+<images/gif/graph47.png, id=810, 242.8272pt x 199.4652pt>
+File: images/gif/graph47.png Graphic file (type png)
+<use images/gif/graph47.png>
+Package pdftex.def Info: images/gif/graph47.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph47.png (PNG copy)> <a0,fr47>
+<images/gif/graph48.png, id=818, 242.8272pt x 199.4652pt>
+File: images/gif/graph48.png Graphic file (type png)
+<use images/gif/graph48.png>
+Package pdftex.def Info: images/gif/graph48.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph48.png (PNG copy)>
+<a0,fr48>
+<images/gif/graph49.png, id=826, 242.8272pt x 199.4652pt>
+File: images/gif/graph49.png Graphic file (type png)
+<use images/gif/graph49.png>
+Package pdftex.def Info: images/gif/graph49.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph49.png (PNG copy)> <a0,fr49>
+<images/gif/graph50.png, id=834, 242.8272pt x 199.4652pt>
+File: images/gif/graph50.png Graphic file (type png)
+<use images/gif/graph50.png>
+Package pdftex.def Info: images/gif/graph50.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph50.png (PNG copy)> <a0,fr50>
+<images/gif/graph51.png, id=842, 242.8272pt x 199.4652pt>
+File: images/gif/graph51.png Graphic file (type png)
+<use images/gif/graph51.png>
+Package pdftex.def Info: images/gif/graph51.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph51.png (PNG copy)> <a0,fr51>
+<images/gif/graph52.png, id=850, 242.8272pt x 199.4652pt>
+File: images/gif/graph52.png Graphic file (type png)
+<use images/gif/graph52.png>
+Package pdftex.def Info: images/gif/graph52.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph52.png (PNG copy)> <a0,fr52>
+<images/gif/graph53.png, id=858, 242.8272pt x 199.4652pt>
+File: images/gif/graph53.png Graphic file (type png)
+<use images/gif/graph53.png>
+Package pdftex.def Info: images/gif/graph53.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph53.png (PNG copy)> <a0,fr53>
+<images/gif/graph54.png, id=866, 242.8272pt x 199.4652pt>
+File: images/gif/graph54.png Graphic file (type png)
+<use images/gif/graph54.png>
+Package pdftex.def Info: images/gif/graph54.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph54.png (PNG copy)> <a0,fr54>
+<images/gif/graph55.png, id=874, 242.8272pt x 199.4652pt>
+File: images/gif/graph55.png Graphic file (type png)
+<use images/gif/graph55.png>
+Package pdftex.def Info: images/gif/graph55.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph55.png (PNG copy)> <a0,fr55>
+<images/gif/graph56.png, id=882, 242.8272pt x 199.4652pt>
+File: images/gif/graph56.png Graphic file (type png)
+<use images/gif/graph56.png>
+Package pdftex.def Info: images/gif/graph56.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph56.png (PNG copy)> <a0,fr56>
+<images/gif/graph57.png, id=890, 242.8272pt x 199.4652pt>
+File: images/gif/graph57.png Graphic file (type png)
+<use images/gif/graph57.png>
+Package pdftex.def Info: images/gif/graph57.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph57.png (PNG copy)> <a0,fr57>
+<images/gif/graph58.png, id=898, 242.8272pt x 199.4652pt>
+File: images/gif/graph58.png Graphic file (type png)
+<use images/gif/graph58.png>
+Package pdftex.def Info: images/gif/graph58.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph58.png (PNG copy)> <a0,fr58>
+<images/gif/graph59.png, id=906, 242.8272pt x 199.4652pt>
+File: images/gif/graph59.png Graphic file (type png)
+<use images/gif/graph59.png>
+Package pdftex.def Info: images/gif/graph59.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph59.png (PNG copy)> <a0,fr59>
+<images/gif/graph60.png, id=914, 242.8272pt x 199.4652pt>
+File: images/gif/graph60.png Graphic file (type png)
+<use images/gif/graph60.png>
+Package pdftex.def Info: images/gif/graph60.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph60.png (PNG copy)> <a0,fr60>
+<images/gif/graph61.png, id=922, 242.8272pt x 199.4652pt>
+File: images/gif/graph61.png Graphic file (type png)
+<use images/gif/graph61.png>
+Package pdftex.def Info: images/gif/graph61.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph61.png (PNG copy)>
+<a0,fr61>
+<images/gif/graph62.png, id=930, 242.8272pt x 199.4652pt>
+File: images/gif/graph62.png Graphic file (type png)
+<use images/gif/graph62.png>
+Package pdftex.def Info: images/gif/graph62.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph62.png (PNG copy)> <a0,fr62>
+<images/gif/graph63.png, id=938, 242.8272pt x 199.4652pt>
+File: images/gif/graph63.png Graphic file (type png)
+<use images/gif/graph63.png>
+Package pdftex.def Info: images/gif/graph63.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph63.png (PNG copy)> <a0,fr63>
+<images/gif/graph64.png, id=946, 242.8272pt x 199.4652pt>
+File: images/gif/graph64.png Graphic file (type png)
+<use images/gif/graph64.png>
+Package pdftex.def Info: images/gif/graph64.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph64.png (PNG copy)> <a0,fr64>
+<images/gif/graph65.png, id=954, 242.8272pt x 199.4652pt>
+File: images/gif/graph65.png Graphic file (type png)
+<use images/gif/graph65.png>
+Package pdftex.def Info: images/gif/graph65.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph65.png (PNG copy)> <a0,fr65>
+<images/gif/graph66.png, id=962, 242.8272pt x 199.4652pt>
+File: images/gif/graph66.png Graphic file (type png)
+<use images/gif/graph66.png>
+Package pdftex.def Info: images/gif/graph66.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph66.png (PNG copy)> <a0,fr66>
+<images/gif/graph67.png, id=970, 242.8272pt x 199.4652pt>
+File: images/gif/graph67.png Graphic file (type png)
+<use images/gif/graph67.png>
+Package pdftex.def Info: images/gif/graph67.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph67.png (PNG copy)> <a0,fr67>
+<images/gif/graph68.png, id=978, 242.8272pt x 199.4652pt>
+File: images/gif/graph68.png Graphic file (type png)
+<use images/gif/graph68.png>
+Package pdftex.def Info: images/gif/graph68.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph68.png (PNG copy)> <a0,fr68>
+<images/gif/graph69.png, id=986, 242.8272pt x 199.4652pt>
+File: images/gif/graph69.png Graphic file (type png)
+<use images/gif/graph69.png>
+Package pdftex.def Info: images/gif/graph69.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph69.png (PNG copy)> <a0,fr69>
+<images/gif/graph70.png, id=994, 242.8272pt x 199.4652pt>
+File: images/gif/graph70.png Graphic file (type png)
+<use images/gif/graph70.png>
+Package pdftex.def Info: images/gif/graph70.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph70.png (PNG copy)> <a0,fr70>
+<images/gif/graph71.png, id=1002, 242.8272pt x 199.4652pt>
+File: images/gif/graph71.png Graphic file (type png)
+<use images/gif/graph71.png>
+Package pdftex.def Info: images/gif/graph71.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph71.png (PNG copy)> <a0,fr71>
+<images/gif/graph72.png, id=1010, 242.8272pt x 199.4652pt>
+File: images/gif/graph72.png Graphic file (type png)
+<use images/gif/graph72.png>
+Package pdftex.def Info: images/gif/graph72.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph72.png (PNG copy)> <a0,fr72>
+<images/gif/graph73.png, id=1018, 242.8272pt x 199.4652pt>
+File: images/gif/graph73.png Graphic file (type png)
+<use images/gif/graph73.png>
+Package pdftex.def Info: images/gif/graph73.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph73.png (PNG copy)> <a0,fr73>
+<images/gif/graph74.png, id=1026, 242.8272pt x 199.4652pt>
+File: images/gif/graph74.png Graphic file (type png)
+<use images/gif/graph74.png>
+Package pdftex.def Info: images/gif/graph74.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph74.png (PNG copy)>
+<a0,fr74>
+<images/gif/graph75.png, id=1034, 242.8272pt x 199.4652pt>
+File: images/gif/graph75.png Graphic file (type png)
+<use images/gif/graph75.png>
+Package pdftex.def Info: images/gif/graph75.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph75.png (PNG copy)> <a0,fr75>
+<images/gif/graph76.png, id=1042, 242.8272pt x 199.4652pt>
+File: images/gif/graph76.png Graphic file (type png)
+<use images/gif/graph76.png>
+Package pdftex.def Info: images/gif/graph76.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph76.png (PNG copy)> <a0,fr76>
+<images/gif/graph77.png, id=1050, 242.8272pt x 199.4652pt>
+File: images/gif/graph77.png Graphic file (type png)
+<use images/gif/graph77.png>
+Package pdftex.def Info: images/gif/graph77.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph77.png (PNG copy)> <a0,fr77>
+<images/gif/graph78.png, id=1059, 242.8272pt x 199.4652pt>
+File: images/gif/graph78.png Graphic file (type png)
+<use images/gif/graph78.png>
+Package pdftex.def Info: images/gif/graph78.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph78.png (PNG copy)> <a0,fr78>
+<images/gif/graph79.png, id=1067, 242.8272pt x 199.4652pt>
+File: images/gif/graph79.png Graphic file (type png)
+<use images/gif/graph79.png>
+Package pdftex.def Info: images/gif/graph79.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph79.png (PNG copy)> <a0,fr79>
+<images/gif/graph80.png, id=1075, 242.8272pt x 199.4652pt>
+File: images/gif/graph80.png Graphic file (type png)
+<use images/gif/graph80.png>
+Package pdftex.def Info: images/gif/graph80.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph80.png (PNG copy)> <a0,fr80>
+<images/gif/graph81.png, id=1083, 242.8272pt x 199.4652pt>
+File: images/gif/graph81.png Graphic file (type png)
+<use images/gif/graph81.png>
+Package pdftex.def Info: images/gif/graph81.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph81.png (PNG copy)> <a0,fr81>
+<images/gif/graph82.png, id=1091, 242.8272pt x 199.4652pt>
+File: images/gif/graph82.png Graphic file (type png)
+<use images/gif/graph82.png>
+Package pdftex.def Info: images/gif/graph82.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph82.png (PNG copy)> <a0,fr82>
+<images/gif/graph83.png, id=1099, 242.8272pt x 199.4652pt>
+File: images/gif/graph83.png Graphic file (type png)
+<use images/gif/graph83.png>
+Package pdftex.def Info: images/gif/graph83.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph83.png (PNG copy)> <a0,fr83>
+<images/gif/graph84.png, id=1107, 242.8272pt x 199.4652pt>
+File: images/gif/graph84.png Graphic file (type png)
+<use images/gif/graph84.png>
+Package pdftex.def Info: images/gif/graph84.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph84.png (PNG copy)> <a0,fr84>
+<images/gif/graph85.png, id=1115, 242.8272pt x 199.4652pt>
+File: images/gif/graph85.png Graphic file (type png)
+<use images/gif/graph85.png>
+Package pdftex.def Info: images/gif/graph85.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph85.png (PNG copy)> <a0,fr85>
+<images/gif/graph86.png, id=1123, 242.8272pt x 199.4652pt>
+File: images/gif/graph86.png Graphic file (type png)
+<use images/gif/graph86.png>
+Package pdftex.def Info: images/gif/graph86.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph86.png (PNG copy)> <a0,fr86>
+<images/gif/graph87.png, id=1131, 242.8272pt x 199.4652pt>
+File: images/gif/graph87.png Graphic file (type png)
+<use images/gif/graph87.png>
+Package pdftex.def Info: images/gif/graph87.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph87.png (PNG copy)>
+<a0,fr87>
+<images/gif/graph88.png, id=1139, 242.8272pt x 199.4652pt>
+File: images/gif/graph88.png Graphic file (type png)
+<use images/gif/graph88.png>
+Package pdftex.def Info: images/gif/graph88.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph88.png (PNG copy)> <a0,fr88>
+<images/gif/graph89.png, id=1147, 242.8272pt x 199.4652pt>
+File: images/gif/graph89.png Graphic file (type png)
+<use images/gif/graph89.png>
+Package pdftex.def Info: images/gif/graph89.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph89.png (PNG copy)> <a0,fr89>
+<images/gif/graph90.png, id=1155, 242.8272pt x 199.4652pt>
+File: images/gif/graph90.png Graphic file (type png)
+<use images/gif/graph90.png>
+Package pdftex.def Info: images/gif/graph90.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph90.png (PNG copy)> <a0,fr90>
+<images/gif/graph91.png, id=1163, 242.8272pt x 199.4652pt>
+File: images/gif/graph91.png Graphic file (type png)
+<use images/gif/graph91.png>
+Package pdftex.def Info: images/gif/graph91.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph91.png (PNG copy)> <a0,fr91>
+<images/gif/graph92.png, id=1171, 242.8272pt x 199.4652pt>
+File: images/gif/graph92.png Graphic file (type png)
+<use images/gif/graph92.png>
+Package pdftex.def Info: images/gif/graph92.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph92.png (PNG copy)> <a0,fr92>
+<images/gif/graph93.png, id=1179, 242.8272pt x 199.4652pt>
+File: images/gif/graph93.png Graphic file (type png)
+<use images/gif/graph93.png>
+Package pdftex.def Info: images/gif/graph93.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph93.png (PNG copy)> <a0,fr93>
+<images/gif/graph94.png, id=1187, 242.8272pt x 199.4652pt>
+File: images/gif/graph94.png Graphic file (type png)
+<use images/gif/graph94.png>
+Package pdftex.def Info: images/gif/graph94.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph94.png (PNG copy)> <a0,fr94>
+<images/gif/graph95.png, id=1195, 242.8272pt x 199.4652pt>
+File: images/gif/graph95.png Graphic file (type png)
+<use images/gif/graph95.png>
+Package pdftex.def Info: images/gif/graph95.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph95.png (PNG copy)> <a0,fr95>
+<images/gif/graph96.png, id=1203, 242.8272pt x 199.4652pt>
+File: images/gif/graph96.png Graphic file (type png)
+<use images/gif/graph96.png>
+Package pdftex.def Info: images/gif/graph96.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph96.png (PNG copy)> <a0,fr96>
+<images/gif/graph97.png, id=1211, 242.8272pt x 199.4652pt>
+File: images/gif/graph97.png Graphic file (type png)
+<use images/gif/graph97.png>
+Package pdftex.def Info: images/gif/graph97.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph97.png (PNG copy)> <a0,fr97>
+<images/gif/graph98.png, id=1219, 242.8272pt x 199.4652pt>
+File: images/gif/graph98.png Graphic file (type png)
+<use images/gif/graph98.png>
+Package pdftex.def Info: images/gif/graph98.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph98.png (PNG copy)> <a0,fr98>
+<images/gif/graph99.png, id=1227, 242.8272pt x 199.4652pt>
+File: images/gif/graph99.png Graphic file (type png)
+<use images/gif/graph99.png>
+Package pdftex.def Info: images/gif/graph99.png  used on input line 204.
+(pdftex.def)             Requested size: 242.8266pt x 199.4647pt.
+ <./images/gif/graph99.png (PNG copy)> <a0,fr99> [14
+
+]
+<images/fittimes.pdf, id=1265, 237.92389pt x 200.41876pt>
+File: images/fittimes.pdf Graphic file (type pdf)
+<use images/fittimes.pdf>
+Package pdftex.def Info: images/fittimes.pdf  used on input line 214.
+(pdftex.def)             Requested size: 190.33936pt x 160.3352pt.
+ [15
+
+ <./images/fittimes.pdf>]
 \tf@nav=\write6
 \openout6 = `presentazione.nav'.
 
@@ -1506,37 +2244,51 @@ Package pdftex.def Info: grn.pdf  used on input line 122.
 \tf@snm=\write8
 \openout8 = `presentazione.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
- (./presentazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
+
+(./presentazione.aux
+*************************************************
+* pdfbase warning: "rerun"
+* 
+* Rerun to get internal references right!
+*************************************************
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
 Package rerunfilecheck Info: File `presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28999 strings out of 494847
- 574224 string characters out of 6179080
- 618348 words of memory out of 5000000
- 31783 multiletter control sequences out of 15000+600000
- 552760 words of font info for 92 fonts, out of 8000000 for 9000
+ 30877 strings out of 494839
+ 610548 string characters out of 6178684
+ 678080 words of memory out of 5000000
+ 33524 multiletter control sequences out of 15000+600000
+ 542612 words of font info for 56 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 48i,14n,54p,10374b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.
-600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0
-600.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-css1000.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecss1095.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ecss0800.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecss1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on presentazione.pdf (9 pages, 1082438 bytes).
+ 48i,14n,66p,10396b,561s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Navigation16} has been referenced but does not ex
+ist, replaced by a fixed one
+
+ </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1095.60
+0pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss080
+0.600pk> </home/riccardo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecs
+s1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti10.pfb>
+Output written on presentazione.pdf (15 pages, 1607659 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 19 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1453 PDF objects out of 1728 (max. 8388607)
+ 895 compressed objects within 9 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 2406 words of extra memory for PDF output out of 10000 (max. 10000000)
 

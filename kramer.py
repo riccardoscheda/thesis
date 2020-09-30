@@ -24,8 +24,8 @@ frames = 1000
 qx = []
 K = 2
 K1 = 2
-N = 10
-M = 30
+N = 30
+M = 10
 noise = 0.2
 env_noise = 0.1
 realizations = 500
@@ -51,7 +51,7 @@ for i in range(realizations):
 ######################### INITIAL CONDITIONS ################################
 for i in range(realizations):
     #qx[i].nodes[np.random.randint(N+M)] = 1
-    for j in range(N//2):
+    for j in range(N, N+M):
         qx[i].nodes[j] = 1
 #############################################################################    
 act = np.zeros(realizations)
@@ -60,19 +60,20 @@ rhox, binx = np.histogram(act,density = 1,bins=20)
 #rhop, binp = np.histogram(qx,density = 1,bins=50)
 
 ########################################################
-fig, ax = plt.subplots(2,2)
+fig, ax = plt.subplots(1)
 
-particle, = ax[0,0].step([],[], label = "rho_p")
-trajectory, = ax[0,0].step([],[], label = "fit")
-maxwelldist, = ax[1,0].step([],[],label = 'distribution')
+#particle, = ax[0,0].step([],[], label = "rho_p")
+#trajectory, = ax[0,0].step([],[], label = "fit")
+#maxwelldist, = ax[1,0].step([],[],label = 'distribution')
 #maxwellfit, = ax[1,0].plot([],[],label = "fit")
 
-ax[0,0].legend()
-ax[1,0].legend()
-phasespace, = ax[0,1].step([],[])
-potential, = ax[0,1].plot([],[],label = "x")
-entr, = ax[1,1].plot([],[], label = "S")
-shan, = ax[1,1].plot([],[], linestyle = "--", label = "S_infty")
+#ax[0,0].legend()
+#ax[1,0].legend()
+phasespace, = ax.step([],[])
+
+#potential, = ax[0,1].plot([],[],label = "x")
+#entr, = ax[1,1].plot([],[], label = "S")
+#shan, = ax[1,1].plot([],[], linestyle = "--", label = "S_infty")
 #ax[1,1].legend()
 
 
@@ -82,26 +83,25 @@ entropy = []
 shannon = []
 
 
-
 def init():
 
-  ax[0,0].set_xlim(-2,2)
-  ax[0,0].set_ylim(0,0.05)
-  ax[0,0].set_title("Distribution of momenta")
-  ax[0,0].set_xlabel("p")
-  ax[0,0].set_ylabel("rho_p")
+  # ax[0,0].set_xlim(-2,2)
+  # ax[0,0].set_ylim(0,0.05)
+  # ax[0,0].set_title("Distribution of momenta")
+  # ax[0,0].set_xlabel("p")
+  # ax[0,0].set_ylabel("rho_p")
 
-  ax[0,1].set_xlim(-2,2)
-  ax[0,1].set_ylim(0,0.2)
-  ax[0,1].set_xlabel("x")
-  ax[0,1].set_ylabel("rho_x")
-  ax[0,1].set_title("Distribution of activities")
+  ax.set_xlim(-2,2)
+  ax.set_ylim(0,0.2)
+  ax.set_xlabel("x")
+  ax.set_ylabel("rho_x")
+  ax.set_title("Distribution of activities")
 
-  ax[1,0].set_xlim(-0.1, 10)
-  ax[1,0].set_ylim(-0.001, 0.05)
-  ax[1,0].set_xlabel("time (log)")
-  ax[1,0].set_ylabel("frequency")
-  ax[1,0].set_title("Distribution of transition times")
+  # ax[1,0].set_xlim(-0.1, 10)
+  # ax[1,0].set_ylim(-0.001, 0.05)
+  # ax[1,0].set_xlabel("time (log)")
+  # ax[1,0].set_ylabel("frequency")
+  # ax[1,0].set_title("Distribution of transition times")
 
   #ax[1,1].set_xlim(0, 300)
   # ax[1,1].set_ylim(-5, 5)
@@ -109,11 +109,13 @@ def init():
   # ax[1,1].set_ylabel("entropy")
   # ax[1,1].set_title("Entropy")
 
-  return particle,
+  return phasespace,
 
 times = []
 
 def evo(frames):
+    df = pd.DataFrame()
+
     for i in range(realizations):
       prima = rn.activity(qx[i],N,M,number_of_clusters=2)
       prima[0] = - prima[0]
@@ -177,9 +179,18 @@ def evo(frames):
     
    # shan.set_data(x,y)
     
+    
+    
+    # if frames == 10:
+    #     plt.savefig("dist.png")
+    
+    df[0] = binx[1:]
+    df[1] = np.array(rhox/20)
+    df.to_csv("tesi/data/gif/dist"+str(frames)+".dat",sep = " ",decimal=".",index=False,header=False)
+
     return phasespace, #maxwelldist,  #entr, shan
 
 
-ani = FuncAnimation(fig, evo, frames = np.arange(0,1000), interval = 50,init_func = init, blit = False)
+ani = FuncAnimation(fig, evo, frames = np.arange(0,1000), interval = 100,init_func = init, blit = True)
 #plt.tight_layout()
 #ani.save('Doublewell.gif', dpi=140, writer='imagemagick')

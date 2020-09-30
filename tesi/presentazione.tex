@@ -1,4 +1,6 @@
 \documentclass{beamer}
+\usepackage{animate}
+
 \usepackage[T1]{fontenc}
 %\usepackage{arevtext,arevmath}
 %\usepackage{ccfonts} 
@@ -21,11 +23,11 @@
 {\left\lbrace\begin{array}{@{}l@{}}}%
 {\end{array}\right.}
 
-\title{Modelling genetic dynamical data using stochastic dynamical systems on
+\title{Modelling cell differentiation using stochastic dynamical systems on
 graphs}%\author{Riccardo Scheda \\ %\flushleft{Relatore: Prof. Armando Bazzani}}
-\institute[]{\\PhD Application in Data Science and Computation - Università di Bologna}
+\institute[]{\\University of Bologna}
 \author{\Large{Riccardo Scheda}}
-%\date{Luglio 2020}
+\date{1 October 2020}
 
 
 \begin{document}
@@ -36,124 +38,186 @@ graphs}%\author{Riccardo Scheda \\ %\flushleft{Relatore: Prof. Armando Bazzani}}
 
 
 \begin{frame}
+\frametitle{Waddington potential}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{landscape.jpg}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
 \frametitle{Introduction - Gene Regulatory Networks}
-\begin{enumerate} 
-\item Gene Regulatory Networks in cellular processes:
-\begin{enumerate}[] \item cell  differentiation \item metabolism \item signal  transduction
-\end{enumerate}
-\item GRNs are the focus of the research in systems biology
-\item huge amount of genetic data
-
-\end{enumerate}
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{GRN.png}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Big Data -  GRNs}
-GRNs in Data Science:
-\begin{enumerate}
-\item Huge amount of data from gene expression measurements
-\item heterogeneous data (different cells, proteins, etc)
-\item dynamical data
-\end{enumerate}
+Gene Regulatory Networks for cell differentiation
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{bigdata.jpg}
+\includegraphics[scale=0.2]{images/grnn.pdf}
 \end{figure}
 \end{frame}
 
 \begin{frame}
-\frametitle{Open Problems}
-\begin{enumerate}
-\item Gene regulatory networks are not fully understood \footnote{(Hartwell et al., 1999),(Ramons et al., 2010),(Shen-Orr et al. 2002)} 
-\item biological  networks  are  often very large  \footnote{(Hallinan, J,2007)},
-\item noisy data
-\item GRNs are only indirectly observable  through  noisy  gene  expression  measurements.
-\end{enumerate}
+
+
+\frametitle{Random Boolean Networks}
+Random Boolean Networks are networks in which each node can have only the values 0 or 1:
+$$
+\sigma_i(t) \in \{0,1\}
+$$
+And the discrete evolution of the network is given by:
+$$
+\sigma_i(t+1)=\Phi_i(\sigma(t))=\Theta\left (\sum_j A_{ij}\sigma_j(t)\right )
+$$
+where $A$ is the connectivity matrix and $\Theta(x)$ is the Heaviside function.
 \end{frame}
 
 \begin{frame}
-\frametitle{The Role of Noise in biological systems}
-We have 3 different type of noise in biological data:
-\begin{enumerate}
-\item Experimental noise (measurements)
-\item Environmental noise 
-\item Intrinsic noise (genes activity)
-\end{enumerate}
+\frametitle{Random Boolean Networks}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{images/singlecluster.pdf}
+\end{figure}
+The connectivity matrix $A$ of this network will be constructed as follows:
+$$
+A = \left (
+\begin{array}{ccccc}
+
+0 & 0 & 0 & 0 & 0  \\
+1 & 0 & 0 & 0 & 0  \\
+0 & 1 & 0 & 0 & 1  \\
+0 & 0 & 1 & 0 & 0  \\
+0 & 0 & 0 & 1 & 0  \\
+
+\end{array}
+\right )
+$$
 \end{frame}
 
-\begin{frame}
-\frametitle{$1^o$ part of the PhD project - Filtering}
-Deep learning:
-\begin{enumerate}
-\item Filtering data to reduce noise
-\item Classification of communities of genes $\to$ Deep Neural Networks
-\end{enumerate}
-\end{frame}
 
 \begin{frame}
-\frametitle{$2^o$ part of the PhD project - The model}
-\begin{enumerate}
-\item Teoretical model for GRNs $\to$  Random Boolean Networks
-\item multilayer network $\to$ interacting GRNs 
-
-\end{enumerate}
+\frametitle{The model - Deterministic Evolution}
+Deterministic evolution of the activity:
 \begin{figure}
-\includegraphics[scale = 0.5]{grn1.pdf}
+\includegraphics[scale = 0.8]{images/det.pdf}
 \end{figure}
 \end{frame}
 
 
 \begin{frame}
-\frametitle{The model}
-A subnetwork hinibits the other: 
+\frametitle{Discrete evolution}
+The system is deterministic, but during the evolution we can add noise to the system:
 \begin{enumerate}
-\item cellular differentiation 
-\item cancer cells
-\end {enumerate}
-\begin{figure}[scale=0.5]
-\includegraphics{grn.pdf}
-\end{figure}
-\end{frame}
-
-
-
-
-\begin{frame}
-\frametitle{Expected results}
-\begin{enumerate}
-\item Find a method to filter genomics data
-\item Comparison of the model with experimental data
-\item Determine the relation between the network structure and the dynamical properties of the system
-\item Applications in genomics medicine
-
+\item internal noise, which hinibits the activation of the nodes
+\item envinromental noise, which can activate some nodes in the network
 \end{enumerate}
+
+\begin{figure}
+\includegraphics[scale = 0.6]{images/n.pdf}
+\end{figure}
 \end{frame}
 
+
+\begin{frame}
+\frametitle{The model - Multiple cluster networks}
+We can construct networks with multiple clusters 
+\begin{figure}
+\includegraphics[scale=0.7]{grn1.pdf}
+\end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{The model - Double-cluster networks}
+In this work we consider networks made by two clusters which hinibit each other:
+A subnetwork hinibits the other: 
+\begin{figure}
+\includegraphics[scale=0.8]{prova.pdf}
+\end{figure}
+The two clusters are connected by negative links.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Double-cluster networks}
+We can introduce a metadynamics where $\nu_k(t)$ is the state of the $k$ subnetwork and
+we have a relation
+$$
+\nu_k(t+\Delta t)-\nu_k(t)=\phi(\nu_k(t))-\gamma\left (H_{kj}\nu_j(t)\right )
+$$
+\begin{figure}
+\includegraphics[scale=0.8]{images/metad.pdf}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Kramer Transition Rate Theory}
+$$
+dx = -V'(x)dt + \sqrt{2T} dw_t
+$$
+\begin{figure}
+\includegraphics[scale=0.5]{images/kramerwell.pdf}
+\includegraphics[scale=0.5]{images/kramerpot.pdf}
+
+\end{figure}
+$$
+k_{a\to c} \simeq \frac{\omega_a \omega_b}{2 \pi} e^{\frac{V_b-V_a}{T}}
+$$
+So the log of transition rates gives us an estimate for the potential $V(x)$.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The model related to Kramer Theory}
+Given an ensemble of double-cluster networks, we can make an estimate for a double well potential: The local minima of the potential are the stationary states of the two clusters of the networs. We expect that the potential $V$ depends on the size and on the number of links per node:
+$$
+V = V(N,K)
+$$
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ensemble}
+To measure the activity transition, we can define the total activity of the network:
+$$
+I(t) = \nu_2(t) - \nu_1(t)
+$$
+with $\nu_k(t) \in [0,1]$ and $I(t) \in [-1,1]$.
+Starting from an initial condition in which only the second  cluster is active:
+$$
+\rho_0(I) = \delta(I-1)
+$$
+Every time the activity passes from one cluster to the other, we register the time of transition.
+\end{frame}
+
+\begin{frame}
+\frametitle{Evolution of the system}
+\begin{figure}
+\centering
+\animategraphics[scale=0.8,autoplay,loop]{10}{images/gif/graph}{0}{99}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Transition times}
+
+\begin{figure}
+\includegraphics[scale=0.8]{images/fittimes.pdf}
+\end{figure}
+
+The histogram of transition rates (in logarithmic scale) shows a possible form of the potential for the double-cluster networks.
+\end{frame}
 
 
 
 
 \end{document}
 
-\begin{frame}
-\frametitle{Conclusions}
-The problems for this model are:
-\begin{enumerate}
-\item Classifying the equilibrium states in relation to their robustness with respect
-the changes in the adjacency matrix
-\item Understanding the representativity of the average dynamics: i.e. substituting
-the adjacency matrix with an average matrix one highlights the dynamical
-properties that are correctly described by the average system
-\item Pointing out the existence of bifurcation phenomena so that it is possible to
-divide the ensemble in different communities with similar dynamical behaviors.
-\end{enumerate}
-\end{frame}
 
 
 

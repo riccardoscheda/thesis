@@ -12,36 +12,38 @@
 \centering
 
 
-%%%%%%%%%%%% PER FARE I PLOT %%%%%%%%%%%%%%%%%%%
-\begin{tikzpicture}[scale=1]
-\centering
-\begin{axis}[xmin=0,xmax=500,xlabel=$t$,ylabel=\emph{Average activity} ,ymin=0,ymax=1.5,grid]
-\addplot [thick, cyan]
-file {meanactivity00.3.dat};
-\addplot [thick, blue,dashed]
-file {fit2.dat};
 
-\addplot [thick, orange]
-file {meanactivity10.3.dat};
-\addplot [thick, red,dashed]
-file {fit3.dat};
 
-\legend{original,fit,without control node,fit}
+%PER FARE L'ISTOGRAMMA %%%%%%%%%%%%5
+\begin{tikzpicture}
+\begin{axis}[xlabel=$log_{10}(t)$,ylabel=\emph{Frequency} ,ymin=0,ymax=0.3]
+\addplot[ybar,fill,cyan] table [x, y] {histotimes.dat};
+
+\addplot[red,dashed] 
+file{fittimes0.dat};
+
 \end{axis}
 \end{tikzpicture}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 \end{document}
 
 
 
+%%%%%%%%%%%% PER FARE I PLOT %%%%%%%%%%%%%%%%%%%
+\begin{tikzpicture}[scale=1]
+\centering
+\begin{axis}[xmin=0,xmax=500,xlabel=$t$,ylabel=\emph{Average activity} ,ymin=0,ymax=1.5,grid]
 
+\addplot [thick, blue]
+file {meanactivity00.3.dat};
 
-%PER FARE L'ISTOGRAMMA %%%%%%%%%%%%5
-\begin{tikzpicture}
-\begin{axis}[xmin=0,xlabel=$t (log) $,ylabel=\emph{Frequency} ,ymin=0,ymax=1]
-\addplot[ybar,fill,cyan] table [x, y] {histotimes.dat};
+%\legend{original,fit,without control node,fit}
 \end{axis}
 \end{tikzpicture}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+

@@ -24,13 +24,13 @@
 \contentsline {chapter}{\numberline {5}The model}{34}{chapter.5}
 \contentsline {section}{\numberline {5.1}Assumptions for the theoretical model}{34}{section.5.1}
 \contentsline {section}{\numberline {5.2}The model}{35}{section.5.2}
-\contentsline {section}{\numberline {5.3}The model related to Kramer Theory}{44}{section.5.3}
-\contentsline {chapter}{\numberline {6}Analysis}{46}{chapter.6}
-\contentsline {section}{\numberline {6.1}Single Cluster - Implementation}{46}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Number of links}{48}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Control nodes}{49}{subsection.6.1.2}
+\contentsline {section}{\numberline {5.3}The model related to Kramer Theory}{43}{section.5.3}
+\contentsline {chapter}{\numberline {6}Analysis}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Single Cluster - Implementation}{45}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Number of links}{47}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Control nodes}{48}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Noise}{49}{section.6.2}
-\contentsline {section}{\numberline {6.3}Double Cluster Network}{54}{section.6.3}
-\contentsline {section}{\numberline {6.4}Discrete evolution}{55}{section.6.4}
-\contentsline {section}{\numberline {6.5}Transition Rates}{56}{section.6.5}
-\contentsline {chapter}{Bibliography}{59}{chapter*.7}
+\contentsline {section}{\numberline {6.3}Double Cluster Network}{52}{section.6.3}
+\contentsline {section}{\numberline {6.4}Discrete evolution}{53}{section.6.4}
+\contentsline {section}{\numberline {6.5}Transition Rates}{54}{section.6.5}
+\contentsline {chapter}{Bibliography}{58}{chapter*.7}

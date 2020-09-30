@@ -296,35 +296,9 @@ $$
 \par\noindent
 The stochastic effect has to be introduce but it is possible a thermodynamics approach and a thermodynamics equilibrium exists
 according to the Maxwell-Boltzmann distribution and the detailed balance condition. This means that the whole network does not
-satisfy this condition, but the metadynamic network realized a reversible Markov process. The existence of a thermodynamic equilibrium
+satisfy this condition, but the metadynamic network realizew a reversible Markov process. The existence of a thermodynamic equilibrium
 allows to use Maximal Entropy Principle and the Maxwell Boltzmann distribution when we introduce a thermal bath. 
 \par\noindent
-We are interested in networks with many different equilibria each one related to exited state of subnetworks (or a combination of subnetworks), 
-in the effect of a thermal noise and in the effect of external forcing. The external  we introduce in the network boundary nodes whose state is defined by a given external signal
-$\sigma_b(t)$ (possible a stochastic process) then the network dynamics reads
-$$
-\sigma_i(t+1)=\Theta\left (\sum_j A_{ij}\sigma_j(t)+\sum_b A_{ib}\sigma_b(t)\right )
-$$
-where $A_{ib}$ is the link between the environmental node $b$ and the node $i$. It is possible to introduce a probabilistic description of the evolution
-of the probability that the network is in the state $\sigma'$ at time $t+1$ according to
-\begin{equation}
-p(\sigma',t+1)=\sum_{\sigma}\pi(\sigma',\sigma)p(\sigma,t)
-\label{lapla}
-\end{equation}
-where
-$$
-\pi(\sigma'|\sigma)=E\left (\delta_{\sigma',\Phi_{\sigma_b}(\sigma)} \right )
-$$
-and the expectation value is computed on the realization of the input noise. $\pi(\sigma'|\sigma)$ is the transition rate per unit time (the continuous limit could be considered).
-Let $\sigma_{eq}$ stable equilibrium state the effect of external random perturbations could be to move the network state in a neighborhood of the equilibrium solution
-or it could induce a transition to other equilibrium basin attractions so that the dynamics starts to perform an intermittence behavior. In such a case the relevant quantities are  
-the residence times in the different basins that can be associated to metastable states.
-\par\noindent
-We introduce the stochasticity in the system assuming that the adjacency matrix is not known: i.e. $A_{ij}$ is a extracted from an ensemble of random matrices.
-As the result of an experimental one could assume that each entry $A_{ij}$ is a dichotomous random variable with probability $p_{ij}$ to get the value $\pm 1$ (i.e. the
-link is active). The value $p_{ij}=0$ is admitted so that the corresponding link it always inactive. The problem is pointing out the existence of bifurcation phenomena so that it is possible to divide the ensemble in different communities with similar dynamical behaviors.
-In the next Chapter we will focus on the implemantation of this model in order to do some analytical considerations and to analyse the dynamical process of networks made by two clusters.
-
 \section{The model related to Kramer Theory}
 Given a network made by two hinibitory clusters, the system will undergo bistable phenomena. As explained in Chapter \ref{kramer}, a bistable system can be represented by a stochastic process in which the stationary probability distributrion satisfies the Fokker Plank equation
 \begin{equation}

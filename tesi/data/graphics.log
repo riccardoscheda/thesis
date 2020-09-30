@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  29 SEP 2020 15:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  30 SEP 2020 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -715,33 +715,32 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-PGFPlots: reading {meanactivity00.3.dat}
-PGFPlots: reading {fit2.dat}
-PGFPlots: reading {meanactivity10.3.dat}
-PGFPlots: reading {fit3.dat}
+PGFPlots: reading {histotimes.dat}
+PGFPlots: reading {fittimes0.dat}
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 30.
+(Font)              <7> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 30.
+(Font)              <5> on input line 25.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./graphics.aux) ) 
 Here is how much of TeX's memory you used:
- 24061 strings out of 494839
- 617190 string characters out of 6178684
- 1070971 words of memory out of 5000000
- 26936 multiletter control sequences out of 15000+600000
+ 24046 strings out of 494839
+ 617065 string characters out of 6178684
+ 768351 words of memory out of 5000000
+ 26922 multiletter control sequences out of 15000+600000
  3986 words of font info for 15 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 62i,18n,100p,721b,2059s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,100p,721b,1840s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on graphics.pdf (1 page, 47411 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on graphics.pdf (1 page, 36219 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
+ 27 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

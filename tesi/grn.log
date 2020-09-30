@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.21)  3 JUL 2020 10:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.9.14)  30 SEP 2020 09:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **grn.tex
 (./grn.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 8 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.cls
 Document Class: standalone 2015/07/15 v1.2 Class to compile TeX sub-files stand
 alone
@@ -470,17 +470,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./grn.aux) ) 
 Here is how much of TeX's memory you used:
- 12710 strings out of 494847
- 258885 string characters out of 6179080
- 280156 words of memory out of 5000000
- 15789 multiletter control sequences out of 15000+600000
+ 12717 strings out of 494839
+ 258976 string characters out of 6178684
+ 281188 words of memory out of 5000000
+ 15797 multiletter control sequences out of 15000+600000
  10212 words of font info for 38 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 55i,9n,56p,404b,764s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,9n,56p,404b,773s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb>
-Output written on grn.pdf (1 page, 17928 bytes).
+Output written on grn.pdf (1 page, 18090 bytes).
 PDF statistics:
  19 PDF objects out of 1000 (max. 8388607)
  13 compressed objects within 1 object stream

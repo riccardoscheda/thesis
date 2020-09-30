@@ -53,7 +53,7 @@ In the case of $K=1$ (i.e. the average number of incoming link for each network 
 \end{figure}
 In the case of $K=1$, i.e. the average number of incoming links for each network is one, the average activity decreases exponentially with the size of the network; in the case of $K=2$ instead, the average activity of the nodes remains stable with networks of increasing size. Moreover, network with only one incoming link means that the network is composed by only one big loop, which is unstable against envinromental noise. Instead, we look for networks which are stable in their state but also can be perturbed by noise. For this reason, the network considered for this model will take the parameter K constant: $K=2$.
 Moreover, we can analyze the average number of outgoing links depending on the network size: In Figure \ref{fig:outgoing}, we can see that the average number of outgoing links tends to the parameter $K$.
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=1.5]{images/outgoing.pdf}
 \caption{\emph{Plot of the number of the outgoing links depending on the network size. We can see that the average tends to the parameter $K$. }}
@@ -65,18 +65,19 @@ Moreover, we can analyze the average number of outgoing links depending on the n
 \subsection{Control nodes}
 In simple random networks one can always find the number of loops.
 Loops determine the complexity of the networks\cite{K38}, and are important for the construction of the model. In fact from loops one can find the \emph{control nodes} of the network, which are the nodes that their state are able to force the state of the whole network, and are the nodes with maximum connectivity. Control nodes determine the whole activity and stability of the network. 
-In RBNs with parameter $K=2$, we can see in Figure \ref{fig:loops} that the number of independent loops is linear with the network size.
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1.5]{images/loops.pdf}
-\caption{\emph{Plot of the number of loops in the networks depending on the network size.}}
-\label{fig:loops}
-\end{figure}
+In figure \ref{fig:controlnodes} we can see that control nodes, independetely from the network size, control the $80\%$ of the whole loops in the network.
+%In RBNs with parameter $K=2$, we can see in Figure \ref{fig:loops} that the number of %independent loops is linear with the network size.
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=1.5]{images/loops.pdf}
+%\caption{\emph{Plot of the number of loops in the networks depending on the network size.}}
+%\label{fig:loops}
+%\end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-\includegraphics[scale=1.5]{images/controlnodes.pdf}
+\includegraphics[scale=1.2]{images/controlnodes.pdf}
 \caption{\emph{Plot of the loops which belong to the control node, depending on the network size.}}
 \label{fig:controlnodes}
 \end{figure}
@@ -140,13 +141,35 @@ In figure \ref{fig:metad} we can see an example of the metadynamics of the syste
 
 \section{Transition Rates}
 To estimate the form of the potential, we can measure the transition rates of the system, in which during the evolution of the system the network activity can move from a cluster to the other.
-We made a MonteCarlo simulation of 1000 double-cluster networks. Each network undergo a discrete evolution subject to noise and envinromental noise.
+We made a MonteCarlo simulation of 1000 double-cluster networks. Each network undergoes a discrete evolution subject to noise and envinromental noise.
+To measure the activity transition, we can define the total activity of the network:
+\begin{equation}
+I(t) = \nu_2(t) - \nu_1(t)
+\end{equation}
+with $\nu_k(t) \in [0,1]$ and $I(t) \in [-1,1]$ .
+In this way, we can see the distribution of the activities of the networks during the discrete evolution.
+If we choose the two clusters with different size and different number of incoming links $K$, we can see that the system relaxes on the cluster with bigger size and links.
+In figure \ref{fig:distr} we can see an example of the average activity of the system in the stationary state: We choose two cluster of different size and linking: the first cluster is made $N=20$ nodes and $K=2$ incoming links per node. While the second cluster is made by $N=10$ and $K=1$. Starting from an initial condition in which only the second  cluster is active:
+$$
+\rho_0(I) = \delta(I-1)
+$$
+the system relaxes to the state in which only the first cluster is active and the second is totally inactive.
 
 
-
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-\includegraphics[scale=1.4]{images/doublecluster.pdf}
+\includegraphics[scale=0.85]{images/init.pdf}
+\includegraphics[scale=0.85]{images/mid.pdf}
+\includegraphics[scale=0.9]{images/histoact.pdf}
+\caption{\emph{Evolution of the histogram of activity of the network. The first cluster is constructed with $N=20$ and $K=2$, while the second cluster is constructed with $N=10$ and $K=1$. With initial conditions in which only the second cluster is active, during the evolution the system relaxes to the state in which only the first cluster is active and the second cluster is inactive.}}
+\label{fig:distr}
+\end{figure}
+In figure \ref{fig:times}, we can see the transition times of the system from one cluster to the other. According to Kramer theory, the transition rate $k_c$ can estimate the form of the potential $V$. In this case, we can see that the fit of the histogram of transition times seems to be a double well function.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.4]{images/fittimes.pdf}
+%\includegraphics[scale=1.4]{images/fittimes1.pdf}
 \caption{\emph{Histogram of transition rates of activity from a cluster to one other. We can see the shape of the histogram which can estimate the form of the potential.}}
 \label{fig:times}
 \end{figure}
